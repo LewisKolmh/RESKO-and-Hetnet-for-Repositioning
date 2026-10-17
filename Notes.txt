@@ -1,0 +1,880 @@
+RESKO side project: eEF1A-binding candidate discovery
+Updated: 16 October 2026
+
+PROJECT AIM
+Use a disease-forward, RESKO-inspired approach to identify cancer-associated
+drugs that might directly bind eEF1A and ultimately selectively alter its
+interaction with HIV-1 reverse transcriptase (RT), ideally allosterically while
+preserving normal translation. RT-binding drugs alone do not satisfy the target
+requirement. Binding, inhibition, PPI disruption, allostery and translation-sparing
+selectivity are distinct claims and must be recorded separately.
+
+This is a PhD side project, implemented in R with scripts explained step by step.
+The user ran the early setup code in the VS Code R console. Scripts 04 through 06c
+were subsequently run successfully by the assistant.
+Documentation convention: after every successful script run, record the script,
+outputs, results, a brief interpretation of what they mean, limitations and next
+step. Keep historical run records distinct from the current script summary.
+
+SCRIPT 00 - Setup (scripts/00_Setup.R)
+Status: setup code ran successfully in the user's R console.
+Created scripts/, config/, data/raw/, data/curated/ and outputs/.
+Checked readr, dplyr, tidyr, stringr, tibble, httr2 and jsonlite availability.
+Output: outputs/setup_session_info.txt.
+Output explanation: records R and package versions to help reproduce the
+computational environment. Successful setup is not a biological result.
+Reproducibility gap: the saved script is currently empty. Restore the executed
+setup code before treating the project as reproducible from scripts alone.
+
+SCRIPT 01 - Cancer selection (scripts/01_define_cancers.R)
+Status: code ran successfully in the user's R console; configuration exists.
+Outputs:
+  config/cancers.csv
+  data/curated/cancer_eef1a_evidence.csv
+Output explanation: the configuration defines which cancers enter discovery;
+the evidence table records why they were selected. It does not identify drugs
+that bind eEF1A or prove all tumours of these types depend on eEF1A.
+Initial discovery contexts:
+  Ovarian cancer: EEF1A2 amplification/expression and functional evidence.
+    https://pubmed.ncbi.nlm.nih.gov/12053177/
+  Breast cancer: eEF1A2 tumour overexpression evidence.
+    https://pmc.ncbi.nlm.nih.gov/articles/PMC1236916/
+  Multiple myeloma: pharmacological starting point through plitidepsin and
+    its eEF1A2 target evidence; this is not a claim of general myeloma dependency.
+    https://pmc.ncbi.nlm.nih.gov/articles/PMC5054363/
+These contexts were selected for different kinds of evidence, not equivalent
+proof of eEF1A dependency. EEF1A1 and EEF1A2 must remain distinct. Transfer of
+EEF1A2 cancer evidence to the eEF1A isoform/state relevant to RT remains open.
+Reproducibility gap: the saved script is currently empty and needs restoration.
+
+SCRIPT 02 - Database manifest (scripts/02_database_manifest.R)
+Status: code ran successfully in the user's R console; manifest exists.
+Output: config/database_manifest.csv and per-source raw-data directories.
+Output explanation: this is an inventory of planned sources and acquisition
+metadata, not an integrated dataset. Registering a source does not download it.
+Registered UMLS, DrugBank, SIDER, ChEMBL, STITCH, STRING, Reactome,
+Gene Ontology and Disease Ontology, preserving Ken McGarry's source framework.
+Paper: https://doi.org/10.1016/j.knosys.2018.06.017
+STITCH is already present in the published RESKO workflow and will be retained.
+At script 02, DrugBank was locally available and the other eight sources were
+not_acquired. Script 10b later acquired limited ChEMBL identity API records;
+this does not constitute acquisition of ChEMBL activity data.
+The earlier proposed NCI drug-list download was superseded; NCI can be a
+supplementary indication cross-check, not a replacement for DrugBank.
+Reproducibility gap: the saved script is currently empty and needs restoration.
+
+SCRIPT 03 - DrugBank registration (scripts/03_register_drugbank.R)
+Status: ran successfully in the user's R console after correcting a variable
+name collision that initially left export_date missing.
+Input: /Users/lewis/Downloads/DrugBank full database.xml
+File size: 2,766,440,346 bytes.
+XML header version: 5.1 (header value, not independently verified release ID).
+Export date: 2026-06-27.
+Updated: config/database_manifest.csv.
+Output explanation: later scripts can locate the exact local export and retain
+its provenance. Registration itself does not extract any drug records.
+The download date and licence details have not been independently established.
+The large XML remains in Downloads rather than being copied into the project.
+
+SCRIPT 04 - DrugBank extraction (scripts/04_extract_drugbank.R)
+Status: corrected and successfully run to completion by the assistant,
+16 October 2026. No rerun is needed.
+Input: registered DrugBank XML.
+Output: data/curated/drugbank_drugs.csv.
+Fields: DrugBank ID, name, drug type, groups, indication, mechanism of action,
+CAS number and source export date.
+Original slowdown: the NADH record (drug 148) contains approximately 171 MB
+and 5.46 million lines. Accumulating and parsing the entire record caused
+severe copying/memory overhead after the last visible checkpoint at drug 125.
+Fix: retain only the requested direct-child fields while reading chunks,
+discarding large unrelated sections before record accumulation and parsing.
+The reader relies on this export's line breaks and two-space child indentation;
+it is not a general parser for arbitrarily formatted DrugBank XML.
+Results:
+  Total drugs: 19,878.
+  Small molecules: 15,510.
+  Biotech entries: 4,368.
+  Drugs with nonempty indication text: 4,490.
+  Output size: 5,954,448 bytes.
+Validation: CSV row count equals the source top-level drug count; IDs are
+unique; five records' extracted text/groups match full original XML parses;
+NADH is present; no .partial output remained after successful completion.
+The script refuses to overwrite an existing final or partial output.
+Output explanation: the compact CSV replaces repeated reads of the large XML
+for indication screening. Only 4,490 of 19,878 records have indication text, so
+text-based screening cannot assess the remaining records. The CSV includes all
+drug groups/types and is not a cancer-treatment or eEF1A-inhibitor shortlist.
+
+SCRIPT 05 - Provisional cancer-drug matches
+File: scripts/05_identify_cancer_drugs.R
+Status: written and successfully run by the assistant, 16 October 2026.
+Inputs:
+  data/curated/drugbank_drugs.csv
+  config/cancers.csv
+  config/cancer_search_terms.csv (editable regular-expression search rules)
+Searches indication text only, using cancer/malignancy wording variants.
+Uses dplyr joins to link cancers, search hits and drug records; collapses
+multiple rule hits to one row per cancer and DrugBank ID.
+Outputs:
+  data/curated/cancer_drug_candidates_for_review.csv
+  outputs/cancer_drug_match_counts.csv
+  outputs/drugs_matching_multiple_cancers.csv
+Results:
+  Ovarian cancer: 48 provisional matches.
+  Breast cancer: 116 provisional matches.
+  Multiple myeloma: 53 provisional matches.
+  Total drug-cancer associations: 217.
+  Unique drugs: 189.
+  Drugs matching more than one selected cancer: 26.
+Validation: all 217 associations have unique drug-cancer keys, supporting
+matched text and full indication text, and review_status = pending.
+Each row retains DrugBank URL and export date. Prevention/supportive-care
+language flags are review aids and may refer to another disease in the text.
+These are NOT 189 confirmed cancer treatments or eEF1A inhibitors. Matches
+include investigational, diagnostic, supportive-care and potentially unrelated
+mentions. An 'approved' DrugBank group does not establish approval for the
+particular matched cancer. Regex searches can also miss relevant indications.
+The review output is protected against accidental overwriting on reruns.
+Output explanation: the review CSV contains provisional evidence to inspect;
+the counts CSV summarises associations by cancer; the shared-drugs CSV shows
+cross-cancer overlap. The 217 associations exceed 189 unique drugs because some
+drugs match several cancers. Multiple matches are not stronger binding evidence.
+
+SCRIPT 06 - Review worksheet and validated seed exports
+File: scripts/06_review_cancer_drugs.R
+Status: successfully run; all original association-screening batches completed.
+Initial run: 217 pending associations and header-only seed exports.
+Current state after batches 001-005: 83 primary treatment associations,
+92 investigational associations, 18 documented-use associations and 24 excluded
+associations. Total 217; zero pending or deferred screening decisions.
+Output explanation: the worksheet stores evidence-backed decisions; the summary
+counts review progress; the instructions define allowed classifications. The
+primary, investigational and documented-use CSVs contain accepted associations
+in separate evidence tiers; the excluded CSV records non-seed dispositions.
+Investigational rows may describe historical or preclinical work, not active
+clinical trials. Documented-use rows do not claim verified current approval.
+The primary set is the output of screening these matches, not an exhaustive
+inventory of all drugs used in the three cancers or a full current-label audit.
+Each successful run automatically appends a dated execution record to Notes.txt.
+Existing worksheet decisions are preserved on reruns; decisions are joined back
+to the original script 05 evidence using cancer_id and drugbank_id.
+
+SCRIPT 06a - Apply first evidence-review batch
+File: scripts/06a_apply_review_batch_001.R
+Status: successfully run; see the dated batch record below.
+Output explanation: the batch evidence CSV makes the seven decisions traceable
+to US label sources and the backup preserves the worksheet before these edits.
+The script updates those decisions and reruns 06 to rebuild accepted seed files.
+Six drugs yield seven accepted associations because olaparib is included for
+both breast and ovarian cancer. These are cancer-treatment seeds for later
+RESKO analysis, not predictions of eEF1A activity. At the initial batch run, the
+other 210 rows were unchanged; their later review is recorded below.
+
+SCRIPT 06b - Remaining initial review batches (002-004)
+File: scripts/06b_complete_review_batches.R
+Status: successfully run on 16 October 2026.
+Reviewed 113 remaining breast, 51 myeloma and 46 ovarian associations.
+Outputs: per-batch evidence CSVs 002/003/004, pre-batch worksheet backup,
+outputs/cancer_drug_all_batches_summary.csv and regenerated script 06 exports.
+Output explanation: role, disposition, evidence basis and research stage are
+separate fields. NCI cancer lists corroborate active-moiety treatment mappings;
+selected FDA, EMA and UK sources resolve jurisdiction-specific exceptions.
+Source-only investigational entries remain explicitly historical/unspecified.
+Added include_documented so historical/off-label treatment mentions are retained
+without being misrepresented as currently approval-verified primary seeds.
+Six thin or conflicting records were initially deferred for targeted follow-up.
+
+SCRIPT 06c - Targeted follow-up batch (005) and completion report
+File: scripts/06c_resolve_followups.R
+Status: successfully run on 16 October 2026; all six follow-ups given dispositions.
+Outputs: batch 005 evidence CSV, pre-batch backup, regenerated seed/disposition
+files, outputs/cancer_drug_review_unique_counts.csv and
+outputs/06_review_completion_summary.txt.
+Output explanation: minodronic acid (two cancers) and norelgestromin have
+preclinical research evidence; IDM-1 is historical cell-therapy development.
+99mTc-14F7 is excluded as imaging use; the apparent PV10/PV-10 synonym collision
+is excluded because the breast trial names rose bengal, not the cathinone entry.
+The 24 exclusions are not evidence of absent eEF1A activity; they concern seed
+eligibility for the stated disease-forward treatment approach.
+All original matches now have screening dispositions. Literature depth differs:
+individual labels/primary studies, official lists and historical DrugBank-only
+research annotations remain distinguishable in evidence_basis/research_stage.
+
+SCRIPT 07 - Seed coverage and modality audit
+File: scripts/07_audit_seed_coverage_and_modality.R
+Status: successfully run. The detailed run record and interpretation appear below.
+Found 21 additional unreviewed mentions: 13 ovarian and eight breast; none for
+myeloma. These are audit candidates, not newly accepted treatment associations.
+The audit recovered the known ovarian/paclitaxel shared-list wording missed by 05.
+The 74 unique primary drugs are routed to 54 structure/identifier checks and 20
+manual modality checks, preserving all 83 primary associations between the queues.
+These are provisional routes, not validated small-molecule suitability decisions.
+
+SCRIPT 08 - Review audit mentions and primary modality descriptions
+File: scripts/08_review_audit_mentions_and_modality.R
+Status: successfully run; detailed result interpretation is in the run log below.
+Reviewed all 21 new mentions: two primary additions (fluorouracil/breast and
+paclitaxel/ovarian), one documented-use addition (mitomycin/breast), 18 exclusions.
+Expanded totals: 238 associations; primary 85 (75 unique drugs), investigational
+92 (77), documented-use 19 (19), excluded 42 (39). Unique counts across tiers
+overlap and must not be summed as distinct compounds.
+Output explanation: cancer_drug_review_all.csv consolidates the original 217
+with the audit extension; *_seeds_expanded.csv are the inputs for later mapping.
+Original 06 files are preserved and still describe the initial 217 associations.
+DrugBank descriptions support subtyping of the 20 flagged primary products:
+eight monoclonal antibodies, four bispecific antibodies, six antibody-drug
+conjugates, two CAR-T products. Keep these disease seeds separate from direct
+small-molecule candidates; free payloads are different entities.
+55 unique primary drugs remain for chemical-structure/identifier checks, not
+validated eEF1A binding. Investigational/documented modalities remain to be checked.
+Technical repair: source descriptions can span physical lines. The new reader
+buffers only selected descriptions across lines, not full interaction records.
+Validation: original decisions unchanged, all audit keys unique, modality
+descriptions support the assigned classes, and mapping queue has 55 unique IDs.
+
+SCRIPT 09 - Extract source chemical identities and identifier leads
+File: scripts/09_extract_seed_identifiers.R
+Status: successfully run, then rerun from validated local cache after generalising
+the traditional-name discrepancy audit. Detailed run records appear below.
+Extracted identity/property/cross-reference records for all 170 unique accepted
+seed drugs across the expanded tiers. Registry: data/curated/seed_chemical_registry.csv.
+55 primary structure-check compounds have SMILES, syntactically valid InChIKeys
+and ChEMBL IDs; 47 have a source-reported PubChem Compound ID (eight lack one).
+Across all tiers: 113 have SMILES/InChIKeys, 116 ChEMBL IDs, 84 Compound IDs.
+Output explanation: these are source-reported mapping leads, not independently
+confirmed chemical identities. PubChem Compound IDs and Substance IDs are stored
+separately. Long-form cross-references retain one-to-many product identifiers.
+The 16 multi-valued resource rows concern product IDs (DPD), not conflicting
+PubChem CIDs. Shared selected external-ID and selected structure-conflict
+reports are empty in this extraction; empty does not mean all identities valid.
+Traditional-name fields match other named DrugBank records for 49 seed drugs,
+including 22 primary compounds. Examples: fluorouracil/biotin and
+paclitaxel/tetrahydrofolic acid. The cross-record-name report flags these possible
+source inconsistencies without repairing or merging records; structures may
+still be correct and require independent checking.
+Source signature and target-ID set protect the extraction cache from reuse
+against changed inputs. ChEMBL itself remains not_acquired: its IDs came from
+DrugBank cross-references, not a ChEMBL query.
+Validation checked all 170 accepted identities, 55 primary IDs, exact resource
+cross-references, CID/SID separation, anomaly counts and unchanged seed decisions.
+
+SCRIPT 10a - Recover alternative names and exact-key source records
+File: scripts/10a_collect_identity_aliases.R
+Status: successfully run; outputs validated (outputs/10a_validation.txt).
+Indexed all 19,878 DrugBank records; retained 171 seed-to-record links for the
+170 seed drugs and 1,194 source-labelled alias rows. The one additional record
+is DB17419 (S-3APG), linked to DB08910 (pomalidomide) by their full source InChIKey.
+Its two names and BindingDB reference 51569147 are retained with provenance.
+That additional record has no indication or mechanism text to add. The link
+compares source structure representations; labels, stereochemical claims and
+external activity evidence still need their own checks. No name-only merging.
+Outputs: seed_equivalent_drugbank_records.csv; seed_drugbank_aliases.csv;
+seed_equivalent_record_data.csv; seed_equivalent_record_identifiers.csv and
+full source structure index (all in data/curated/). These supplement the seed
+registry without changing the original cancer/tier review decisions.
+
+SCRIPT 10b - Cross-source identities and enriched aliases
+File: scripts/10b_crosscheck_identities.R
+Status: successfully run. ChEMBL server errors/timeouts were resolved with
+smaller batches; successful raw responses are cached in data/raw/identity_api/.
+All 170 seed drugs are retained. Of the 113 with source structure keys, 105
+agree on the full key with both ChEMBL and PubChem, five with PubChem only,
+and three remain unresolved. The 57 without source keys need separate identity
+handling; many are biologics. Lack of a structure is not a negative assay result.
+Primary queue: 53/55 match both external sources; carboplatin matches PubChem
+only; cisplatin remains unresolved. All eight missing primary source CIDs were
+recovered by exact-key PubChem lookup (30 recovered across all tiers).
+Outputs: seed_identity_crosscheck.csv, seed_aliases_enriched.csv (15,563
+provenance-bearing label rows, not 15,563 compounds), ChEMBL and PubChem identity
+record tables in data/curated/; coverage, follow-up and request-provenance reports
+in outputs/10b_*. ChEMBL manifest status now records limited identity acquisition.
+PubChem is a supplementary identity source, not a replacement for an original
+RESKO source. Full-key agreement checks database representations, not independent
+laboratory identity; the databases may share upstream sources. Source traditional
+name anomalies remain flagged. Individual aliases can name related forms or
+products and do not establish equivalence on their own.
+
+SCRIPT 10c - Retain source/resolved identities and extra identifiers
+File: scripts/10c_preserve_identity_relationships.R
+Status: successfully run from 10a/10b outputs; no further network calls.
+Outputs: data/curated/seed_pubchem_record_relationships.csv and
+seed_external_identifiers_enriched.csv (1,481 provenance-bearing identifier rows);
+source-CID comparison/disagreement tables and interpretation in outputs/10c_*.
+Result explanation: preserve source CID records alongside the exact-key resolved
+records, so stereochemical, protonation/coordination and other differences remain
+reviewable rather than silently collapsed. Nine seeds resolved to a CID different
+from the source CID; this is NOT evidence that the original CID was merely retired.
+Across source-CID comparisons, 71 match fully, five match connectivity only,
+seven differ in structure/representation, one has no source key, and 86 have no
+source CID. The twelve differing source representations remain separate.
+Cisplatin, motexafin lutetium and DOTMP HO-166 have no unique exact-key PubChem
+resolution; only cisplatin is in the primary queue. No binding data are inferred.
+Validation: outputs/10a_validation.txt and outputs/10b_10c_validation.txt confirm
+seed coverage, full-key match flags, record uniqueness, provenance and the intact
+238-row consolidated cancer review. Extra aliases/xrefs supplement that review.
+
+SCRIPT 10d - Resolve platinum-compound structural coverage
+File: scripts/10d_resolve_platinum_identities.R
+Status: successfully run; raw supplementary ChEBI and PubChem responses cached.
+Cisplatin CHEBI:27899 and carboplatin CHEBI:31355 both match the full DrugBank
+InChI and InChIKey. PubChem CID 5460033 is the named cisplatin record with the
+source CAS number among synonyms; carboplatin is supported by CID 10339178.
+Cisplatin's earlier unresolved status was due to non-unique exact-key matches
+(84691 and 5460033), not lack of a matching PubChem key. Standard InChI does not
+supply sufficient assurance of coordination geometry by itself. ChEMBL explicitly
+has structure_type NONE for these two records; this remains a coverage limitation.
+Result: all 55 primary compounds now have external full-key mapping support.
+Outputs: seed_identity_crosscheck_reviewed.csv; seed_external_identifiers_reviewed.csv;
+seed_aliases_reviewed.csv; platinum_chebi_identity_records.csv in data/curated/.
+These reviewed tables supersede 10b/10c tables for future joins; original snapshots
+remain unchanged for audit. ChEBI is supplementary identity evidence, not a
+replacement for a RESKO database. No compounds were merged merely by name/key,
+and geometry-sensitive applications still require suitable structure validation.
+
+SCRIPT 11a - Acquire original SIDER aggregate tables
+File: scripts/11a_acquire_sider.R
+Status: successfully run. Seven original publisher files are saved under
+ data/raw/sider/: README, names, ATC, aggregate side effects, frequencies,
+ indication mentions and MedDRA term mapping. Acquisition manifest records URLs,
+ release 4.1 (2015-10-21), retrieval/registration times, sizes and MD5 hashes.
+The database manifest now records SIDER acquisition. Total raw/compressed bytes:
+5,940,062. Label-level files are not acquired; aggregate rows are not trials.
+Output explanation: raw label-derived annotations for mapping, not clinical risk
+estimates. This 2015 snapshot has substantial missing coverage for newer drugs.
+MedDRA/UMLS identifiers in these tables do not mean UMLS itself was acquired.
+
+SCRIPT 11b - Structure-supported SIDER joins and coverage
+File: scripts/11b_map_sider_seeds.R
+Status: successfully run; additional PubChem queries cached with provenance.
+Inputs: reviewed 10d registry/aliases, raw SIDER files and PubChem structures.
+SIDER contains 1,430 flat-group drug IDs and 1,556 stereo-specific records in
+these aggregate side-effect files. Flat IDs are not treated as exact molecules.
+59 candidate seed/SIDER pairs cover 46 unique seeds. Full InChIKey agreement
+accepts 34 pairs/seed drugs; 25 candidate pairs remain outside the strict join.
+Strict main output: data/curated/seed_sider_PT_binary_long.csv, containing
+5,946 unique seed/UMLS-PT pairs across 34 seed drugs (23 of the primary 55).
+seed_sider_PT_associations.csv retains corresponding SIDER IDs/names/provenance.
+seed_sider_mapping_all.csv and seed_sider_mapping_accepted.csv preserve decisions.
+seed_sider_frequencies.csv retains raw frequency descriptions, ranges and placebo
+status; values are not pooled into cross-study risks. seed_sider_indication_context.csv
+retains flat-group NLP indication/precondition/text mentions without changing seed
+approval decisions. Coverage and initial review queue are in outputs/11b_*.
+Output explanation: PT-only deduplicated label features for later similarity.
+No zero-filled feature matrix is generated; missing coverage remains missing.
+No eEF1A binding claim, p-value, similarity ranking or BH adjustment is generated.
+
+SCRIPT 11c - Review SIDER identity exceptions and retain label context
+File: scripts/11c_review_sider_mapping_exceptions.R
+Status: successfully run. All 25 exception rows have explicit dispositions:
+22 exact-primary-name rows retained ONLY as historical named-label context;
+two related-name/synonym leads retained without transferring profiles; one
+cross-entity alias rejected for mapping. The latter is ChEMBL CHEMBL3137320's
+BICALUTAMIDE PND synonym for talazoparib: its different structure prevents
+transferring SIDER bicalutamide side effects to talazoparib.
+Outputs: data/curated/sider_mapping_exception_decisions.csv and
+seed_sider_named_label_context_PT.csv; reviewed coverage and rejected-alias
+provenance in outputs/11c_*. The context table is separate from the strict binary
+table: shared label names do not resolve salt, stereo or coordination differences.
+Reviewed primary-55 coverage: 23 strict profiles; 11 additional named-label-only
+profiles; one rejected/unaccepted mapping (talazoparib); 20 without candidates.
+All-170 coverage: 34 strict; 11 additional label-only; one unaccepted; 124 without
+candidates. Primary-55 is the structure queue, not all 75 primary seed drugs.
+Result explanation: historical label information is preserved for a separate
+sensitivity analysis, while strict structural mapping remains conservative.
+Validation: outputs/11_sider_validation.txt checks full-key acceptance, distinct
+PT features, ordered frequency bounds in [0,1], retained placebo fields, 170 seed
+coverage, 238 original disease-review rows and missingness preserved as NA.
+
+NEXT - Script 12: side-effect similarity and candidate expansion
+Use strict seed/PT profiles and the full SIDER PT comparison universe to calculate
+side-effect similarity and produce an auditable candidate shortlist. Keep historical
+named-label-only results as a separate sensitivity analysis. Preserve release
+coverage and common-side-effect/label-size biases when interpreting similarities.
+Validate identities of expanded candidates before pooling target or activity data.
+Similarity itself is not a p-value; specify a defensible null, background and
+multiple-testing family before introducing Benjamini-Hochberg correction.
+No side-effect similarity will establish direct eEF1A binding, inhibition,
+allostery or selective PPI disruption. Subsequent target/pathway evidence must
+support those distinct claims. Continue retaining all original RESKO sources.
+Restore empty scripts 00-02 as a separate reproducibility task.
+
+LATER RESKO WORK - not yet implemented
+Acquire and version the remaining original data sources and establish ID
+crosswalks for CSV joins using dplyr. Integrate side effects, chemistry, protein
+associations, pathways and ontology similarities. Keep the cancer seed set and
+any later side-effect-driven expansion clearly distinguished.
+For STITCH, preserve evidence channels and distinguish functional/predicted
+associations from measured direct binding. Avoid treating overlapping DrugBank,
+ChEMBL and STITCH reports as independent experimental confirmations.
+Implement Benjamini-Hochberg correction with p.adjust(..., method = 'BH') only
+after specifying valid statistical tests, null/background and test families.
+BH controls FDR under its assumptions and is generally less conservative than
+Bonferroni; it does not manufacture p-values from confidence/similarity scores.
+Retain effect sizes and similarity scores alongside adjusted p-values.
+No eEF1A binding predictions, enrichment p-values, RESKO rankings or allosteric
+claims have been generated by scripts 00-06c.
+
+SCRIPT 06 RUN - 2026-10-16 19:32:20 CEST
+Script: scripts/06_review_cancer_drugs.R
+Input: data/curated/cancer_drug_candidates_for_review.csv
+Worksheet (preserved on reruns): data/curated/cancer_drug_review_decisions.csv
+Associations: 217 | Pending: 217 | Primary: 0 | Investigational: 0
+Outputs: outputs/cancer_drug_review_summary.csv;
+outputs/cancer_drug_review_instructions.txt;
+data/curated/cancer_treatment_seeds.csv;
+data/curated/cancer_investigational_seeds.csv.
+Review hints are automated; treatment and approval decisions require evidence.
+No eEF1A binding assessment has been performed.
+
+SCRIPT 06 RUN - 2026-10-16 19:32:42 CEST
+Script: scripts/06_review_cancer_drugs.R
+Input: data/curated/cancer_drug_candidates_for_review.csv
+Worksheet (preserved on reruns): data/curated/cancer_drug_review_decisions.csv
+Associations: 217 | Pending: 217 | Primary: 0 | Investigational: 0
+Outputs: outputs/cancer_drug_review_summary.csv;
+outputs/cancer_drug_review_instructions.txt;
+data/curated/cancer_treatment_seeds.csv;
+data/curated/cancer_investigational_seeds.csv.
+Review hints are automated; treatment and approval decisions require evidence.
+No eEF1A binding assessment has been performed.
+
+SCRIPT 06 RUN - 2026-10-16 19:36:04 CEST
+Script: scripts/06_review_cancer_drugs.R
+Input: data/curated/cancer_drug_candidates_for_review.csv
+Worksheet (preserved on reruns): data/curated/cancer_drug_review_decisions.csv
+Associations: 217 | Pending: 210 | Primary: 7 | Investigational: 0
+Outputs: outputs/cancer_drug_review_summary.csv;
+outputs/cancer_drug_review_instructions.txt;
+data/curated/cancer_treatment_seeds.csv;
+data/curated/cancer_investigational_seeds.csv.
+Review hints are automated; treatment and approval decisions require evidence.
+No eEF1A binding assessment has been performed.
+
+SCRIPT 06a - Evidence review batch 001 applied successfully
+Script: scripts/06a_apply_review_batch_001.R
+Evidence checked: 2026-10-16; US labels on DailyMed, reached via NCI.
+Seven associations / six drugs accepted: abemaciclib, palbociclib,
+olaparib (breast and ovarian separately), niraparib, bortezomib, lenalidomide.
+Source summaries are paraphrases. Label restrictions are retained in notes.
+This is an initial review batch, not a representative or final seed set.
+210 associations remain pending; none have been excluded by this batch.
+Evidence: outputs/cancer_drug_review_batch_001_evidence.csv.
+Backup: outputs/cancer_drug_review_before_batch_001.csv.
+Next: continue evidence review, then assess SIDER identifier/coverage.
+eEF1A binding and inhibition remain unassessed.
+
+SCRIPT 06 RUN - 2026-10-16 19:42:48 CEST
+Script: scripts/06_review_cancer_drugs.R
+Input: data/curated/cancer_drug_candidates_for_review.csv
+Worksheet (preserved on reruns): data/curated/cancer_drug_review_decisions.csv
+Associations: 217 | Pending: 0 | Primary: 83 | Investigational: 88
+Outputs: outputs/cancer_drug_review_summary.csv;
+outputs/cancer_drug_review_instructions.txt;
+data/curated/cancer_treatment_seeds.csv;
+data/curated/cancer_investigational_seeds.csv.
+Additional outputs: cancer_documented_use_seeds.csv, cancer_drug_deferred.csv,
+cancer_drug_excluded.csv (all under data/curated/).
+Documented-use: 18 | Deferred: 6 | Excluded: 22
+Result explanation: primary seeds represent 83 accepted drug-cancer associations across 74 unique drugs.
+The summary measures review progress; pending associations are unresolved,
+not negative results. Empty seed files mean none accepted in that category.
+Review hints are automated; treatment and approval decisions require evidence.
+No eEF1A binding assessment has been performed.
+
+SCRIPT 06b - Remaining review batches applied (2026-10-16)
+Script: scripts/06b_complete_review_batches.R
+Batches 002/003/004 cover breast/myeloma/ovarian pending associations.
+Outputs: batch evidence CSVs, pre-batch backup, all-batches summary, and
+the validated script 06 seed/exclusion/deferred exports.
+Output explanation: every original association has a screening disposition.
+Primary seeds have official cancer-use corroboration; documented-use seeds
+have unverified current approval; investigations may be historical/preclinical.
+Deferred records remain unresolved and are not accepted seeds or negatives.
+Source evidence tiers remain explicit; this is not a complete label/trial audit.
+No binding, inhibition, allostery or translation-selectivity claims were assessed.
+
+SCRIPT 06 RUN - 2026-10-16 19:45:39 CEST
+Script: scripts/06_review_cancer_drugs.R
+Input: data/curated/cancer_drug_candidates_for_review.csv
+Worksheet (preserved on reruns): data/curated/cancer_drug_review_decisions.csv
+Associations: 217 | Pending: 0 | Primary: 83 | Investigational: 92
+Outputs: outputs/cancer_drug_review_summary.csv;
+outputs/cancer_drug_review_instructions.txt;
+data/curated/cancer_treatment_seeds.csv;
+data/curated/cancer_investigational_seeds.csv.
+Additional outputs: cancer_documented_use_seeds.csv, cancer_drug_deferred.csv,
+cancer_drug_excluded.csv (all under data/curated/).
+Documented-use: 18 | Deferred: 0 | Excluded: 24
+Result explanation: primary seeds represent 83 accepted drug-cancer associations across 74 unique drugs.
+The summary measures review progress; pending associations are unresolved,
+not negative results. Empty seed files mean none accepted in that category.
+Review hints are automated; treatment and approval decisions require evidence.
+No eEF1A binding assessment has been performed.
+
+SCRIPT 06c - Batch 005 targeted follow-ups and completion summary
+Script: scripts/06c_resolve_followups.R
+Six follow-ups resolved: four research associations accepted; imaging and
+a likely PV10 identifier collision excluded. Prior deferred decisions remain
+auditable in the pre-batch backup and batch 002-004 evidence exports.
+Outputs: outputs/cancer_drug_review_batch_005_evidence.csv;
+outputs/cancer_drug_review_before_batch_005.csv; updated script 06 exports;
+outputs/cancer_drug_review_unique_counts.csv;
+outputs/06_review_completion_summary.txt.
+Result explanation: all original matches have screening dispositions, with
+source certainty and research stage preserved. Not all are clinical treatments.
+# A tibble: 4 × 3
+  decision                associations unique_drugs
+  <chr>                          <int>        <int>
+1 exclude                           24           22
+2 include_documented                18           18
+3 include_investigational           92           77
+4 include_primary                   83           74
+No unreviewed/deferred rows remain. No eEF1A activity conclusions were drawn.
+Next: seed-coverage/modality audit, then SIDER acquisition and identifier mapping.
+
+SCRIPT 07 RUN - 2026-10-16 19:52:37 CEST
+Script: scripts/07_audit_seed_coverage_and_modality.R
+Inputs: DrugBank drug CSV, section 06 worksheet, cancer config,
+config/coverage_audit_terms.csv.
+SCRIPT 07 - COVERAGE AND MODALITY AUDIT
+DrugBank records: 19878
+Records with indication text: 4490
+Additional unreviewed mention associations: 21
+Unique drugs in accepted tiers: 168
+Primary structure-mapping queue: 61 associations / 54 unique drugs
+Primary manual-modality queue: 22 associations / 20 unique drugs
+
+# A tibble: 3 × 5
+  cancer_id        cancer_name     broad_mention_associ…¹ previously_reviewed_…²
+  <chr>            <chr>                            <int>                  <int>
+1 ovarian_cancer   Ovarian cancer                      61                     48
+2 breast_cancer    Breast cancer                      124                    116
+3 multiple_myeloma Multiple myelo…                     53                     53
+# ℹ abbreviated names: ¹​broad_mention_associations,
+#   ²​previously_reviewed_associations
+# ℹ 1 more variable: additional_mentions_to_review <int>
+
+Output interpretation:
+07_additional_indication_mentions.csv is a new REVIEW QUEUE, not new accepted seeds.
+Broad organ mentions include benign physiology, prevention and adverse effects.
+The audit measures gaps relative to the original screen, not recall against a gold standard.
+Missing indication text cannot be searched; no claim of exhaustive drug coverage is made.
+Modality hints are provisional. DrugBank small-molecule/biotech labels can be coarse
+or wrong and do not establish size, permeability, binding or suitability for this project.
+Peptides and macrocycles are not automatically discarded. Conjugate payloads must not
+inherit parent drug evidence without separately resolving their identities.
+Both queues retain all primary associations. No modality-based biological negative is assigned.
+Source review decisions and seed tiers are unchanged. No eEF1A activity is predicted.
+
+NEXT: review additional mentions and verify modality/structures before final seed selection;
+then map the retained drug identifiers to SIDER and report coverage by evidence tier.
+Other outputs: outputs/07_seed_coverage_summary.csv;
+outputs/07_seed_modality_summary.csv;
+data/curated/seed_associations_modality_audit.csv;
+data/curated/unique_seed_drugs_modality_audit.csv;
+outputs/07_primary_structure_mapping_queue.csv;
+outputs/07_primary_modality_review_queue.csv.
+
+SCRIPT 08 RUN - 2026-10-16 20:09:30 CEST
+Script: scripts/08_review_audit_mentions_and_modality.R
+SCRIPT 08 - AUDIT EXTENSION AND PRIMARY MODALITY REVIEW
+21 audit mentions reviewed: 2 primary additions, 1 documented-use addition, 18 exclusions.
+Original 217 decisions remain in their original file; consolidated review has 238 rows.
+Expanded seed files, not original 06 exports, are the inputs for subsequent mapping.
+# A tibble: 4 × 3
+  decision                associations unique_drugs
+  <chr>                          <int>        <int>
+1 exclude                           42           39
+2 include_documented                19           19
+3 include_investigational           92           77
+4 include_primary                   85           75
+
+20 primary product identities: 8 monoclonal antibodies, 4 bispecific antibodies,
+6 antibody-drug conjugates and 2 CAR-T cell products, based on source descriptions.
+They remain disease-treatment seeds, but are separated from direct small-molecule candidates.
+55 distinct primary drugs remain in the structure/identifier queue; this is not a
+validated list of cell-permeable compounds or evidence of eEF1A binding.
+The wider investigational/documented tiers still need their own modality/identity checks.
+All reviews are evidence-specific; exclusions are not target-activity negatives.
+Next: extract stable identifiers/structures from DrugBank, obtain SIDER and audit mapping coverage.
+Outputs: data/curated/audit_mention_review_decisions.csv; cancer_drug_review_all.csv;
+cancer_primary_seeds_expanded.csv; cancer_investigational_seeds_expanded.csv;
+cancer_documented_seeds_expanded.csv; primary_modality_review.csv;
+primary_seed_associations_routed.csv. Summaries and mapping queue: outputs/08_*.
+
+SCRIPT 09 RUN - 2026-10-16 20:13:21 CEST
+Script: scripts/09_extract_seed_identifiers.R
+Inputs: expanded review, primary structure queue, registered DrugBank XML.
+Raw extraction cache: data/raw/drugbank/09_seed_*.csv.
+Outputs: data/curated/seed_chemical_registry.csv; seed_external_identifiers_long.csv;
+primary_compound_mapping_candidates.csv. Conflict, anomaly and coverage reports: outputs/09_*.
+SCRIPT 09 - SOURCE CHEMICAL IDENTITY EXTRACTION
+# A tibble: 2 × 7
+  scope                   drugs with_smiles with_valid_cid_format
+  <chr>                   <int>       <int>                 <int>
+1 all_accepted_seed_drugs   170         113                    84
+2 primary_structure_queue    55          55                    47
+  with_valid_chembl_format with_valid_inchikey_format source_name_anomalies
+                     <int>                      <int>                 <int>
+1                      116                        113                     2
+2                       55                         55                     2
+
+Result meaning: cross-references and structures are extracted, not independently verified.
+CID and SID are separate namespaces; never use a Substance ID as a Compound ID.
+Identifier format checks establish syntax only, not molecular identity.
+Shared identifiers may reflect active-moiety/formulation relationships or source errors.
+Conflicting values are left unselected and reported; no salts are stripped or records merged.
+Source traditional-name anomalies are retained and flagged, not silently corrected.
+SMILES have not been sanitised or compared to InChI using a chemistry toolkit.
+Missing structures in biologics or investigational products are not negative target results.
+Peptide/macrocycle and mass flags guide review; they are not exclusion criteria.
+ChEMBL/PubChem cross-references in DrugBank do not mean those databases were acquired.
+No direct binding, inhibition, allostery, permeability or therapeutic selectivity is established.
+Next: independently check identity leads, obtain SIDER and join its compound IDs with explicit coverage reporting.
+
+SCRIPT 09 RUN - 2026-10-16 20:13:51 CEST
+Script: scripts/09_extract_seed_identifiers.R
+Inputs: expanded review, primary structure queue, registered DrugBank XML.
+Raw extraction cache: data/raw/drugbank/09_seed_*.csv.
+Outputs: data/curated/seed_chemical_registry.csv; seed_external_identifiers_long.csv;
+primary_compound_mapping_candidates.csv. Conflict, anomaly and coverage reports: outputs/09_*.
+SCRIPT 09 - SOURCE CHEMICAL IDENTITY EXTRACTION
+# A tibble: 2 × 7
+  scope                   drugs with_smiles with_valid_cid_format
+  <chr>                   <int>       <int>                 <int>
+1 all_accepted_seed_drugs   170         113                    84
+2 primary_structure_queue    55          55                    47
+  with_valid_chembl_format with_valid_inchikey_format source_name_anomalies
+                     <int>                      <int>                 <int>
+1                      116                        113                    49
+2                       55                         55                    22
+
+Result meaning: cross-references and structures are extracted, not independently verified.
+CID and SID are separate namespaces; never use a Substance ID as a Compound ID.
+Identifier format checks establish syntax only, not molecular identity.
+Shared identifiers may reflect active-moiety/formulation relationships or source errors.
+Conflicting values are left unselected and reported; no salts are stripped or records merged.
+Source traditional-name anomalies are retained and flagged, not silently corrected.
+SMILES have not been sanitised or compared to InChI using a chemistry toolkit.
+Missing structures in biologics or investigational products are not negative target results.
+Peptide/macrocycle and mass flags guide review; they are not exclusion criteria.
+ChEMBL/PubChem cross-references in DrugBank do not mean those databases were acquired.
+No direct binding, inhibition, allostery, permeability or therapeutic selectivity is established.
+Next: independently check identity leads, obtain SIDER and join its compound IDs with explicit coverage reporting.
+
+SCRIPT 10a RUN - 2026-10-16 20:20:05 CEST
+Script: scripts/10a_collect_identity_aliases.R
+Outputs: data/curated/drugbank_structure_identity_index.csv; seed_equivalent_drugbank_records.csv;
+seed_drugbank_aliases.csv; seed_equivalent_record_data.csv; seed_equivalent_record_identifiers.csv.
+Indexed DrugBank records: 19878
+Seed-to-record links: 171
+Additional exact-key record links: 1
+Alias rows with provenance: 1194
+Result meaning: full source InChIKeys link exact-structure records, retaining
+their names, indications, mechanisms and cross-references as separate evidence rows.
+Original seed decisions are not transferred to other indications or formulations.
+Brand labels and synonyms are search leads, not proof of equivalent formulations.
+No charge/stereo/salt stripping or name-only merges are performed.
+Full InChIKey agreement still requires independent-source checking; standard
+InChI representations do not preserve every tautomeric representation.
+Next: ChEMBL/PubChem structure checks, synonym retrieval and conflict reporting.
+
+SCRIPT 10b RUN - 2026-10-16 20:33:35 CEST
+Script: scripts/10b_crosscheck_identities.R
+Inputs: source identity registry and 10a local alias/index tables.
+Outputs: seed_identity_crosscheck.csv; seed_aliases_enriched.csv;
+chembl_seed_identity_records.csv; pubchem_seed_identity_records.csv (data/curated/).
+API snapshots: data/raw/identity_api/*.rds; provenance and reports: outputs/10b_*.
+SCRIPT 10b - CROSS-SOURCE IDENTITY AND ALIAS CHECK
+# A tibble: 3 × 2
+  identity_status                          unique_drugs
+  <chr>                                           <int>
+1 full_key_agreement_PubChem_only                     5
+2 full_key_agreement_both_external_records          105
+3 unresolved_structure_identity                      60
+PRIMARY STRUCTURE QUEUE
+# A tibble: 3 × 2
+  identity_status                          unique_drugs
+  <chr>                                           <int>
+1 full_key_agreement_PubChem_only                     1
+2 full_key_agreement_both_external_records           53
+3 unresolved_structure_identity                       1
+Recovered previously missing source CIDs: 30
+Resolved CIDs different from source CID: 9
+Alias rows retained with provenance: 15563
+Result meaning: full-key agreement compares DrugBank, ChEMBL and PubChem
+record representations; it is not an independent laboratory identity assay.
+Database records may share upstream evidence. Source-name errors are retained.
+Aliases/brand labels can refer to related salts, formulations or products and
+are not individually validated molecular equivalences. No name-only merges occur.
+ChEMBL parents and connectivity-only matches remain explicit, not equivalent.
+Additional exact-key DrugBank record indications/mechanisms/xrefs are in the
+10a enrichment tables and retain their own source IDs; seed decisions are unchanged.
+No eEF1A binding, inhibition, allostery or activity data were inferred from names.
+Next: inspect primary identity disagreements, then use verified IDs and synonym
+leads for SIDER mapping with explicit confidence, coverage and missingness.
+
+SCRIPT 10c RUN - 2026-10-16 20:34:48 CEST
+Script: scripts/10c_preserve_identity_relationships.R
+Inputs: cached 10a/10b curated identity and cross-reference outputs. No new API calls.
+SCRIPT 10c - RETAIN SOURCE AND RESOLVED STRUCTURE RELATIONSHIPS
+# A tibble: 5 × 2
+  source_cid_structure_status                            n
+  <chr>                                              <int>
+1 connectivity_only_DO_NOT_merge                         5
+2 different_representation_or_structure_DO_NOT_merge     7
+3 full_key_match                                        71
+4 no_DrugBank_key_for_comparison                         1
+5 no_source_CID                                         86
+Provenance-bearing identifier rows: 1481
+Different source/resolved CIDs are NOT assumed to be retired-ID redirects.
+Source records include stereochemical, protonation/coordination or other differences.
+These require chemical review; related forms are retained separately, not pooled.
+Cisplatin, motexafin lutetium and DOTMP HO-166 have source keys without unique
+exact-key PubChem resolution. The latter two are outside the primary queue.
+Carboplatin has an exact-key PubChem record but no ChEMBL structure returned.
+No missing structures or unverified forms are counted as negative binding results.
+Outputs: seed_pubchem_record_relationships.csv; seed_external_identifiers_enriched.csv
+(data/curated/); source CID comparison and disagreement reports (outputs/10c_*).
+Result meaning: names, cross-references and alternative source representations are
+available for future searches, with entity equivalence kept separate from relatedness.
+No biological activity, approval or eEF1A selectivity is inferred from these mappings.
+
+SCRIPT 10d RUN - 2026-10-16 20:39:00 CEST
+Script: scripts/10d_resolve_platinum_identities.R
+Inputs: 10b/10c outputs plus cached ChEBI pages and PubChem candidate/synonym API records.
+SCRIPT 10d - PLATINUM IDENTITY REVIEW
+Cisplatin: CHEBI:27899; LXZZYRPGZAFOLE-UHFFFAOYSA-L; PubChem 5460033.
+Carboplatin: CHEBI:31355; OLESAACUTLOWQZ-UHFFFAOYSA-L; PubChem 10339178.
+Both ChEBI full InChI and InChIKey fields agree with DrugBank.
+Cisplatin was non-unique in PubChem key lookup, not absent: 84691 and 5460033
+share that key. Named record 5460033 is supported by CAS 15663-27-1 among synonyms.
+ChEMBL records CHEMBL11359 and CHEMBL1351 have structure_type NONE.
+Result: all 55 primary compounds now have an external full-key match, with
+53 matching ChEMBL/PubChem and two supported by ChEBI/PubChem review.
+Standard InChI/key agreement alone does not establish platinum coordination geometry;
+keep curated compound identities and source structure drawings for geometry-sensitive work.
+No different CID records were collapsed; original 10b/10c outputs remain audit snapshots.
+Reviewed outputs (data/curated/): seed_identity_crosscheck_reviewed.csv;
+seed_external_identifiers_reviewed.csv; seed_aliases_reviewed.csv;
+platinum_chebi_identity_records.csv. Candidate comparison: outputs/10d_*.
+These data establish mapping support, not eEF1A binding or inhibition.
+Next: SIDER mapping using the reviewed tables; retain source-specific representation caveats.
+
+SCRIPT 11a RUN - 2026-10-16 20:41:50 CEST
+Script: scripts/11a_acquire_sider.R
+SCRIPT 11a - SIDER 4.1 ACQUISITION
+Raw files acquired/registered: 7
+Compressed/raw bytes: 5940062
+Inputs: original publisher URLs. Outputs: data/raw/sider/ and acquisition_manifest.csv.
+Contains names, ATC, aggregate side effects, frequencies, indication mentions and term mapping.
+Label-level source files are not acquired in this step; aggregate rows are not independent trials.
+SIDER 4.1 was released in 2015. Missing drugs/events do not establish safety or lack of activity.
+MedDRA PT and LLT are distinct; UMLS CUIs remain identifiers, not ontology acquisition.
+The raw README specifies each column; retain placebo rows and frequency ranges explicitly.
+Next: map seed identities with dplyr, preserving flat versus stereo IDs and coverage limitations.
+
+SCRIPT 11b RUN - 2026-10-16 20:43:57 CEST
+Script: scripts/11b_map_sider_seeds.R
+SCRIPT 11b - SIDER MAPPING AND COVERAGE
+# A tibble: 6 × 3
+  coverage_status                    drugs scope                     
+  <chr>                              <int> <chr>                     
+1 candidate_requires_identity_review    12 all_170_seeds             
+2 mapped_with_PT_side_effect_data       34 all_170_seeds             
+3 not_mapped_in_this_release           124 all_170_seeds             
+4 candidate_requires_identity_review    12 primary_55_structure_queue
+5 mapped_with_PT_side_effect_data       23 primary_55_structure_queue
+6 not_mapped_in_this_release            20 primary_55_structure_queue
+Accepted seed/SIDER pairs: 34
+Distinct seed/PT associations: 5946
+Candidate pairs retained for review: 25
+Inputs: reviewed 10d seeds/aliases, original SIDER tables and cached PubChem structures.
+Outputs: data/curated/seed_sider_*; sider_compound_index.csv; candidate structures.
+Coverage and identity-review queue: outputs/11b_*. Primary queue is 55, not all 75 primary drugs.
+Only full-key stereo-CID mappings enter the current main side-effect feature table.
+Other names/structures and biologics remain review candidates, not negative results.
+PT CUIs are deduplicated per seed. LLT rows do not become additional independent events.
+Frequency rows retain placebo status, raw descriptions and ranges; no pooling across trials.
+SIDER is a 2015 label-derived snapshot. Absence is missing coverage, not evidence of safety.
+Flat-group indication mentions (including NLP preconditions/text mentions) do not alter seed approval decisions.
+No similarity scores, p-values, BH correction or eEF1A binding claims are generated here.
+Next: review identity exceptions before computing side-effect similarity on mapped seeds.
+
+SCRIPT 11c RUN - 2026-10-16 20:45:26 CEST
+Script: scripts/11c_review_sider_mapping_exceptions.R
+Inputs: 11b mapping, raw PT records and 10d alias provenance. No new API calls.
+SCRIPT 11c - SIDER IDENTITY EXCEPTION REVIEW
+# A tibble: 8 × 3
+  reviewed_coverage_status              drugs scope                     
+  <chr>                                 <int> <chr>                     
+1 named_label_context_only_NOT_strict      11 all_170_seeds             
+2 no_accepted_mapping_after_review          1 all_170_seeds             
+3 no_candidate_mapping                    124 all_170_seeds             
+4 strict_structure_supported_PT_profile    34 all_170_seeds             
+5 named_label_context_only_NOT_strict      11 primary_55_structure_queue
+6 no_accepted_mapping_after_review          1 primary_55_structure_queue
+7 no_candidate_mapping                     20 primary_55_structure_queue
+8 strict_structure_supported_PT_profile    23 primary_55_structure_queue
+# A tibble: 3 × 2
+  review_decision                              n
+  <chr>                                    <int>
+1 reject_cross_entity_alias                    1
+2 retain_named_label_context_ONLY             22
+3 retain_unverified_related_name_lead_ONLY     2
+Outputs: sider_mapping_exception_decisions.csv; seed_sider_named_label_context_PT.csv
+(data/curated/), reviewed coverage and rejected-alias provenance reports (outputs/11c_*).
+Exact primary-name historical profiles are retained as a SEPARATE sensitivity/context table.
+These are not exact-structure joins. Salt, stereochemical and coordination differences remain unresolved.
+The ChEMBL BICALUTAMIDE alias is rejected for transferring SIDER data to talazoparib.
+Two other synonym-only/related-name leads are retained without transferring profiles.
+Main analysis remains 34 seed drugs (23 primary structure-queue drugs), with 5,946 unique seed/PT pairs.
+Validation: outputs/11_sider_validation.txt. Unmapped values are not observed negative events.
+Next: define a side-effect similarity/background analysis with strict and contextual results separate;
+then expand candidate identities and integrate target/pathway evidence. BH applies to valid tests only.
+
+SCRIPT 11d RUN - 2026-10-17 19:41:45 BST
+Script: scripts/11d_collect_current_labels.R
+SCRIPT 11d - CURRENT LABEL COLLECTION
+Seeds queried: 170
+Candidate seed/label records: 783
+Seeds with selected identity-supported adverse-reaction labels: 52
+Selected representative labels: 108
+Queries with >50 results: 2
+Outputs: current_label_candidates.csv/current_label_selection.csv; outputs/11d_*; raw response caches.
+Select up to three label sets per seed, requiring exact primary name and source UNII agreement
+with one harmonised ingredient. Other formulations, combinations and ambiguous names remain reviewable.
+This is a bounded representative-label supplement, not exhaustive current-label acquisition.
+US-label absence does not establish lack of adverse effects or lack of approval elsewhere.
+No extracted adverse event is yet an accepted drug/PT association. Next: controlled-vocabulary extraction and review.
+
+SCRIPT 11e RUN - 2026-10-17 19:46:23 BST
+Script: scripts/11e_extract_current_label_terms.R
+SCRIPT 11e - CURRENT-LABEL TERM EXTRACTION
+Dictionary aliases/PT links: 15941
+Evidence rows: 42820
+Seeds with candidate PT matches: 52
+Outputs: current_label_PT_dictionary.csv, current_label_PT_candidate_evidence.csv,
+current_label_evidence_segments.csv (data/curated/); coverage and summary review queue (outputs/11e_*).
+Map PT names and existing LLT-to-PT CUI links only. No embedding/fuzzy matches or invented synonym equivalences.
+Every hit retains label ID/date, source field, evidence segment and context flags.
+Narrative sentences and HTML table rows are retained separately; duplicate labels do not become independent evidence.
+All matches are candidates until reviewed; placebo, negation, combinations, broad terms and ambiguous dictionary links are flagged.
+Labels may contain outcomes/diseases unrelated to adverse reactions even within this section.
+Dictionary coverage is limited to PTs/mappings represented in SIDER; novel terms can be missed.
+No current-label candidates are inserted into the original SIDER feature table.
+Next: review explicit common-reaction statements and create a separately sourced supplementary PT feature table.
+
+SCRIPT 11f RUN - 2026-10-17 19:48:11 BST
+Script: scripts/11f_resolve_label_moieties.R
+SCRIPT 11f - DAILYMED ACTIVE-MOIETY LABEL SUPPLEMENT
+Seeds checked: 118
+Additional seeds with supported labels: 27
+Total seeds with selected labels: 79
+Output: current_label_selection_supplemented.csv and current_label_moiety_review.csv (data/curated/).
+Queries/versions and raw XML are retained; up to three candidate sets examined per seed.
+Accept only literal seed-name plus UNII agreement with a single ingredient or its explicit active moiety.
+An active-moiety relation supports clinical label attribution, not salt/free-base structural equivalence.
+Combination products and unmatched/ambiguous ingredients remain outside the accepted extraction selection.
+DailyMed and openFDA describe overlapping SPL labels, not independent experimental evidence.
+Next: rerun 11e on the supplemented selection, then context-review term candidates.

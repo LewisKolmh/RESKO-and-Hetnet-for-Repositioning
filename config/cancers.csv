@@ -1,0 +1,4 @@
+cancer_id,cancer_name,include,selection_reason
+ovarian_cancer,Ovarian cancer,TRUE,Cancer biology linked to EEF1A2
+breast_cancer,Breast cancer,TRUE,Cancer biology linked to EEF1A2
+multiple_myeloma,Multiple myeloma,TRUE,Pharmacological link through plitidepsin

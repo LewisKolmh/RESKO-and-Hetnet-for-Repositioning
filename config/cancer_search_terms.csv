@@ -1,0 +1,7 @@
+cancer_id,term_id,pattern
+breast_cancer,breast_malignancy,"\bbreast\b[^.;\n]{0,80}\b(cancers?|carcinomas?|adenocarcinomas?|tumou?rs?|neoplasms?)\b"
+breast_cancer,malignancy_of_breast,"\b(cancers?|carcinomas?|adenocarcinomas?|tumou?rs?|neoplasms?)\b[^.;\n]{0,40}\bbreast\b"
+breast_cancer,mammary_malignancy,"\bmammary\s+(cancers?|carcinomas?|adenocarcinomas?)\b"
+ovarian_cancer,ovarian_malignancy,"\bovarian\b[^.;\n]{0,80}\b(cancers?|carcinomas?|adenocarcinomas?|tumou?rs?|neoplasms?)\b"
+ovarian_cancer,malignancy_of_ovary,"\b(cancers?|carcinomas?|adenocarcinomas?|tumou?rs?|neoplasms?)\b[^.;\n]{0,40}\b(ovary|ovaries)\b"
+multiple_myeloma,myeloma,"\bmyeloma\b"

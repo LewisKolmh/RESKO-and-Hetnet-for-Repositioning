@@ -1,0 +1,10 @@
+SCRIPT 11a - SIDER 4.1 ACQUISITION
+Raw files acquired/registered: 7
+Compressed/raw bytes: 5940062
+Inputs: original publisher URLs. Outputs: data/raw/sider/ and acquisition_manifest.csv.
+Contains names, ATC, aggregate side effects, frequencies, indication mentions and term mapping.
+Label-level source files are not acquired in this step; aggregate rows are not independent trials.
+SIDER 4.1 was released in 2015. Missing drugs/events do not establish safety or lack of activity.
+MedDRA PT and LLT are distinct; UMLS CUIs remain identifiers, not ontology acquisition.
+The raw README specifies each column; retain placebo rows and frequency ranges explicitly.
+Next: map seed identities with dplyr, preserving flat versus stereo IDs and coverage limitations.

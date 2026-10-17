@@ -1,0 +1,3 @@
+10d validation passed: both full InChI strings and full keys match ChEBI;
+cisplatin selected CID 5460033 has the source CAS synonym; 170 seeds retained;
+original 238 disease-review rows retained. ChEMBL structures remain missing.

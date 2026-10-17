@@ -1,0 +1,23 @@
+SCRIPT 09 - SOURCE CHEMICAL IDENTITY EXTRACTION
+# A tibble: 2 × 7
+  scope                   drugs with_smiles with_valid_cid_format
+  <chr>                   <int>       <int>                 <int>
+1 all_accepted_seed_drugs   170         113                    84
+2 primary_structure_queue    55          55                    47
+  with_valid_chembl_format with_valid_inchikey_format source_name_anomalies
+                     <int>                      <int>                 <int>
+1                      116                        113                    49
+2                       55                         55                    22
+
+Result meaning: cross-references and structures are extracted, not independently verified.
+CID and SID are separate namespaces; never use a Substance ID as a Compound ID.
+Identifier format checks establish syntax only, not molecular identity.
+Shared identifiers may reflect active-moiety/formulation relationships or source errors.
+Conflicting values are left unselected and reported; no salts are stripped or records merged.
+Source traditional-name anomalies are retained and flagged, not silently corrected.
+SMILES have not been sanitised or compared to InChI using a chemistry toolkit.
+Missing structures in biologics or investigational products are not negative target results.
+Peptide/macrocycle and mass flags guide review; they are not exclusion criteria.
+ChEMBL/PubChem cross-references in DrugBank do not mean those databases were acquired.
+No direct binding, inhibition, allostery, permeability or therapeutic selectivity is established.
+Next: independently check identity leads, obtain SIDER and join its compound IDs with explicit coverage reporting.

@@ -1,0 +1,7 @@
+coverage_status,drugs,scope
+candidate_requires_identity_review,12,all_170_seeds
+mapped_with_PT_side_effect_data,34,all_170_seeds
+not_mapped_in_this_release,124,all_170_seeds
+candidate_requires_identity_review,12,primary_55_structure_queue
+mapped_with_PT_side_effect_data,23,primary_55_structure_queue
+not_mapped_in_this_release,20,primary_55_structure_queue

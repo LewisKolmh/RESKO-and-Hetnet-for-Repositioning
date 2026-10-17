@@ -1,0 +1,28 @@
+SCRIPT 10b - CROSS-SOURCE IDENTITY AND ALIAS CHECK
+# A tibble: 3 × 2
+  identity_status                          unique_drugs
+  <chr>                                           <int>
+1 full_key_agreement_PubChem_only                     5
+2 full_key_agreement_both_external_records          105
+3 unresolved_structure_identity                      60
+PRIMARY STRUCTURE QUEUE
+# A tibble: 3 × 2
+  identity_status                          unique_drugs
+  <chr>                                           <int>
+1 full_key_agreement_PubChem_only                     1
+2 full_key_agreement_both_external_records           53
+3 unresolved_structure_identity                       1
+Recovered previously missing source CIDs: 30
+Resolved CIDs different from source CID: 9
+Alias rows retained with provenance: 15563
+Result meaning: full-key agreement compares DrugBank, ChEMBL and PubChem
+record representations; it is not an independent laboratory identity assay.
+Database records may share upstream evidence. Source-name errors are retained.
+Aliases/brand labels can refer to related salts, formulations or products and
+are not individually validated molecular equivalences. No name-only merges occur.
+ChEMBL parents and connectivity-only matches remain explicit, not equivalent.
+Additional exact-key DrugBank record indications/mechanisms/xrefs are in the
+10a enrichment tables and retain their own source IDs; seed decisions are unchanged.
+No eEF1A binding, inhibition, allostery or activity data were inferred from names.
+Next: inspect primary identity disagreements, then use verified IDs and synonym
+leads for SIDER mapping with explicit confidence, coverage and missingness.

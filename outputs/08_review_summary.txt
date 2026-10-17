@@ -1,0 +1,20 @@
+SCRIPT 08 - AUDIT EXTENSION AND PRIMARY MODALITY REVIEW
+21 audit mentions reviewed: 2 primary additions, 1 documented-use addition, 18 exclusions.
+Original 217 decisions remain in their original file; consolidated review has 238 rows.
+Expanded seed files, not original 06 exports, are the inputs for subsequent mapping.
+# A tibble: 4 × 3
+  decision                associations unique_drugs
+  <chr>                          <int>        <int>
+1 exclude                           42           39
+2 include_documented                19           19
+3 include_investigational           92           77
+4 include_primary                   85           75
+
+20 primary product identities: 8 monoclonal antibodies, 4 bispecific antibodies,
+6 antibody-drug conjugates and 2 CAR-T cell products, based on source descriptions.
+They remain disease-treatment seeds, but are separated from direct small-molecule candidates.
+55 distinct primary drugs remain in the structure/identifier queue; this is not a
+validated list of cell-permeable compounds or evidence of eEF1A binding.
+The wider investigational/documented tiers still need their own modality/identity checks.
+All reviews are evidence-specific; exclusions are not target-activity negatives.
+Next: extract stable identifiers/structures from DrugBank, obtain SIDER and audit mapping coverage.

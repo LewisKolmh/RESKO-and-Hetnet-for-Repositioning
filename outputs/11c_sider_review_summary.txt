@@ -1,0 +1,28 @@
+SCRIPT 11c - SIDER IDENTITY EXCEPTION REVIEW
+# A tibble: 8 × 3
+  reviewed_coverage_status              drugs scope                     
+  <chr>                                 <int> <chr>                     
+1 named_label_context_only_NOT_strict      11 all_170_seeds             
+2 no_accepted_mapping_after_review          1 all_170_seeds             
+3 no_candidate_mapping                    124 all_170_seeds             
+4 strict_structure_supported_PT_profile    34 all_170_seeds             
+5 named_label_context_only_NOT_strict      11 primary_55_structure_queue
+6 no_accepted_mapping_after_review          1 primary_55_structure_queue
+7 no_candidate_mapping                     20 primary_55_structure_queue
+8 strict_structure_supported_PT_profile    23 primary_55_structure_queue
+# A tibble: 3 × 2
+  review_decision                              n
+  <chr>                                    <int>
+1 reject_cross_entity_alias                    1
+2 retain_named_label_context_ONLY             22
+3 retain_unverified_related_name_lead_ONLY     2
+Outputs: sider_mapping_exception_decisions.csv; seed_sider_named_label_context_PT.csv
+(data/curated/), reviewed coverage and rejected-alias provenance reports (outputs/11c_*).
+Exact primary-name historical profiles are retained as a SEPARATE sensitivity/context table.
+These are not exact-structure joins. Salt, stereochemical and coordination differences remain unresolved.
+The ChEMBL BICALUTAMIDE alias is rejected for transferring SIDER data to talazoparib.
+Two other synonym-only/related-name leads are retained without transferring profiles.
+Main analysis remains 34 seed drugs (23 primary structure-queue drugs), with 5,946 unique seed/PT pairs.
+Validation: outputs/11_sider_validation.txt. Unmapped values are not observed negative events.
+Next: define a side-effect similarity/background analysis with strict and contextual results separate;
+then expand candidate identities and integrate target/pathway evidence. BH applies to valid tests only.

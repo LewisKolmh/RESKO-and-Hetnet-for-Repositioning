@@ -1,0 +1,17 @@
+.DS_Store
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.env
+.Renviron
+*.partial
+/data/raw/
+/data/curated/
+/outputs/*
+!/outputs/*summary*.txt
+!/outputs/*summary*.csv
+!/outputs/*coverage*.csv
+!/outputs/*validation*.txt
+!/outputs/setup_session_info.txt
+!/outputs/*_PT_features.csv

@@ -1,0 +1,5 @@
+decision,associations,unique_drugs
+exclude,42,39
+include_documented,19,19
+include_investigational,92,77
+include_primary,85,75

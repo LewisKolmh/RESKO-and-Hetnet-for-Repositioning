@@ -1,0 +1,22 @@
+SCRIPT 10c - RETAIN SOURCE AND RESOLVED STRUCTURE RELATIONSHIPS
+# A tibble: 5 × 2
+  source_cid_structure_status                            n
+  <chr>                                              <int>
+1 connectivity_only_DO_NOT_merge                         5
+2 different_representation_or_structure_DO_NOT_merge     7
+3 full_key_match                                        71
+4 no_DrugBank_key_for_comparison                         1
+5 no_source_CID                                         86
+Provenance-bearing identifier rows: 1481
+Different source/resolved CIDs are NOT assumed to be retired-ID redirects.
+Source records include stereochemical, protonation/coordination or other differences.
+These require chemical review; related forms are retained separately, not pooled.
+Cisplatin, motexafin lutetium and DOTMP HO-166 have source keys without unique
+exact-key PubChem resolution. The latter two are outside the primary queue.
+Carboplatin has an exact-key PubChem record but no ChEMBL structure returned.
+No missing structures or unverified forms are counted as negative binding results.
+Outputs: seed_pubchem_record_relationships.csv; seed_external_identifiers_enriched.csv
+(data/curated/); source CID comparison and disagreement reports (outputs/10c_*).
+Result meaning: names, cross-references and alternative source representations are
+available for future searches, with entity equivalence kept separate from relatedness.
+No biological activity, approval or eEF1A selectivity is inferred from these mappings.

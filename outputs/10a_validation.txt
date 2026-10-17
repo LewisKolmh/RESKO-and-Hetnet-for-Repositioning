@@ -1,0 +1,3 @@
+10a validation passed: all 170 seed IDs retained; 19,878 source records indexed;
+171 provenance rows retained; additional-record link agrees on full InChIKey;
+238 consolidated disease-review rows remain unchanged.

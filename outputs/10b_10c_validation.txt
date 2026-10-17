@@ -1,0 +1,6 @@
+10b/10c validation passed: 170 unique seeds retained; 55 primary IDs retained;
+all exact-match flags agree with full keys; PubChem record IDs are unique;
+all seed drugs have alias coverage; source and match-status provenance retained;
+238 consolidated disease-review rows retained without transferring seed decisions.
+Primary missing CIDs recovered: 8
+Total alias rows: 15563

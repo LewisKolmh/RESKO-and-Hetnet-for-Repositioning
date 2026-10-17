@@ -1,0 +1,24 @@
+SCRIPT 11b - SIDER MAPPING AND COVERAGE
+# A tibble: 6 × 3
+  coverage_status                    drugs scope                     
+  <chr>                              <int> <chr>                     
+1 candidate_requires_identity_review    12 all_170_seeds             
+2 mapped_with_PT_side_effect_data       34 all_170_seeds             
+3 not_mapped_in_this_release           124 all_170_seeds             
+4 candidate_requires_identity_review    12 primary_55_structure_queue
+5 mapped_with_PT_side_effect_data       23 primary_55_structure_queue
+6 not_mapped_in_this_release            20 primary_55_structure_queue
+Accepted seed/SIDER pairs: 34
+Distinct seed/PT associations: 5946
+Candidate pairs retained for review: 25
+Inputs: reviewed 10d seeds/aliases, original SIDER tables and cached PubChem structures.
+Outputs: data/curated/seed_sider_*; sider_compound_index.csv; candidate structures.
+Coverage and identity-review queue: outputs/11b_*. Primary queue is 55, not all 75 primary drugs.
+Only full-key stereo-CID mappings enter the current main side-effect feature table.
+Other names/structures and biologics remain review candidates, not negative results.
+PT CUIs are deduplicated per seed. LLT rows do not become additional independent events.
+Frequency rows retain placebo status, raw descriptions and ranges; no pooling across trials.
+SIDER is a 2015 label-derived snapshot. Absence is missing coverage, not evidence of safety.
+Flat-group indication mentions (including NLP preconditions/text mentions) do not alter seed approval decisions.
+No similarity scores, p-values, BH correction or eEF1A binding claims are generated here.
+Next: review identity exceptions before computing side-effect similarity on mapped seeds.

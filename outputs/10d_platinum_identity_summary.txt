@@ -1,0 +1,17 @@
+SCRIPT 10d - PLATINUM IDENTITY REVIEW
+Cisplatin: CHEBI:27899; LXZZYRPGZAFOLE-UHFFFAOYSA-L; PubChem 5460033.
+Carboplatin: CHEBI:31355; OLESAACUTLOWQZ-UHFFFAOYSA-L; PubChem 10339178.
+Both ChEBI full InChI and InChIKey fields agree with DrugBank.
+Cisplatin was non-unique in PubChem key lookup, not absent: 84691 and 5460033
+share that key. Named record 5460033 is supported by CAS 15663-27-1 among synonyms.
+ChEMBL records CHEMBL11359 and CHEMBL1351 have structure_type NONE.
+Result: all 55 primary compounds now have an external full-key match, with
+53 matching ChEMBL/PubChem and two supported by ChEBI/PubChem review.
+Standard InChI/key agreement alone does not establish platinum coordination geometry;
+keep curated compound identities and source structure drawings for geometry-sensitive work.
+No different CID records were collapsed; original 10b/10c outputs remain audit snapshots.
+Reviewed outputs (data/curated/): seed_identity_crosscheck_reviewed.csv;
+seed_external_identifiers_reviewed.csv; seed_aliases_reviewed.csv;
+platinum_chebi_identity_records.csv. Candidate comparison: outputs/10d_*.
+These data establish mapping support, not eEF1A binding or inhibition.
+Next: SIDER mapping using the reviewed tables; retain source-specific representation caveats.

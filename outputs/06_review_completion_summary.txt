@@ -1,0 +1,46 @@
+SECTION 06 - ASSOCIATION SCREENING COMPLETE (2026-10-16)
+All 217 original associations / 189 drugs have an explicit review disposition.
+There are no pending or deferred association-screening decisions.
+
+# A tibble: 4 × 3
+  decision                associations unique_drugs
+  <chr>                          <int>        <int>
+1 exclude                           24           22
+2 include_documented                18           18
+3 include_investigational           92           77
+4 include_primary                   83           74
+
+# A tibble: 12 × 3
+   cancer_name      decision                associations
+   <chr>            <chr>                          <int>
+ 1 Breast cancer    exclude                           13
+ 2 Breast cancer    include_documented                14
+ 3 Breast cancer    include_investigational           45
+ 4 Breast cancer    include_primary                   44
+ 5 Multiple myeloma exclude                            6
+ 6 Multiple myeloma include_documented                 1
+ 7 Multiple myeloma include_investigational           24
+ 8 Multiple myeloma include_primary                   22
+ 9 Ovarian cancer   exclude                            5
+10 Ovarian cancer   include_documented                 3
+11 Ovarian cancer   include_investigational           23
+12 Ovarian cancer   include_primary                   17
+
+Interpretation:
+Primary: official cancer-use corroboration, with jurisdiction retained.
+Documented-use: treatment mentioned but current approval not independently verified.
+Investigational: historical and preclinical research, not necessarily active trials.
+Excluded: non-treatment uses, false mentions or an unreliable compound mapping.
+This completes screening of the original 217 matches, not a comprehensive audit
+of all cancer drugs or every current label/trial. Evidence tiers are explicit.
+NCI list corroboration is weaker than a complete formulation-specific label review.
+Do not use absence from a list as proof of no approval or biological activity.
+Candidate discovery used DrugBank; NCI/FDA/EMA/UK sources corroborate use only.
+The original text search can miss treatments (e.g. shared-list phrasing for paclitaxel
+and ovarian cancer); audit seed coverage before describing the set as exhaustive.
+Biologics, cell products and conjugates remain identified by drug_type; assess
+modality/identity suitability before direct small-molecule target analyses.
+No eEF1A binding, inhibition, allostery or PPI selectivity has been established.
+
+Next: audit seed coverage and modality, then obtain SIDER and map identifiers.
+Preserve primary, documented and investigational sets separately for sensitivity analyses.

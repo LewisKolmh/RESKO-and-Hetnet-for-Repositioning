@@ -1,0 +1,4 @@
+cancer_id,pattern
+breast_cancer,"\b(breast|mammary)\b"
+ovarian_cancer,"\b(ovarian|ovary|ovaries)\b"
+multiple_myeloma,"\b(myeloma|plasma[ -]cell)\b"

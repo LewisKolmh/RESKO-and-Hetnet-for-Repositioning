@@ -1,0 +1,5 @@
+11a/11b/11c validation passed: raw manifest hashes retained; schema parsing succeeded;
+all accepted mappings agree on full structure key; seed/PT features unique;
+frequency bounds ordered within [0,1]; placebo fields retained separately;
+170 seeds and 238 disease-review rows retained; unmapped coverage remains NA;
+25 exception decisions retained; context data kept outside strict 5,946-row feature table.

@@ -1,0 +1,4 @@
+cancer_id,cancer_name,broad_mention_associations,previously_reviewed_associations,additional_mentions_to_review
+ovarian_cancer,Ovarian cancer,61,48,13
+breast_cancer,Breast cancer,124,116,8
+multiple_myeloma,Multiple myeloma,53,53,0

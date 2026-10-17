@@ -1,0 +1,32 @@
+SCRIPT 07 - COVERAGE AND MODALITY AUDIT
+DrugBank records: 19878
+Records with indication text: 4490
+Additional unreviewed mention associations: 21
+Unique drugs in accepted tiers: 168
+Primary structure-mapping queue: 61 associations / 54 unique drugs
+Primary manual-modality queue: 22 associations / 20 unique drugs
+
+# A tibble: 3 × 5
+  cancer_id        cancer_name     broad_mention_associ…¹ previously_reviewed_…²
+  <chr>            <chr>                            <int>                  <int>
+1 ovarian_cancer   Ovarian cancer                      61                     48
+2 breast_cancer    Breast cancer                      124                    116
+3 multiple_myeloma Multiple myelo…                     53                     53
+# ℹ abbreviated names: ¹​broad_mention_associations,
+#   ²​previously_reviewed_associations
+# ℹ 1 more variable: additional_mentions_to_review <int>
+
+Output interpretation:
+07_additional_indication_mentions.csv is a new REVIEW QUEUE, not new accepted seeds.
+Broad organ mentions include benign physiology, prevention and adverse effects.
+The audit measures gaps relative to the original screen, not recall against a gold standard.
+Missing indication text cannot be searched; no claim of exhaustive drug coverage is made.
+Modality hints are provisional. DrugBank small-molecule/biotech labels can be coarse
+or wrong and do not establish size, permeability, binding or suitability for this project.
+Peptides and macrocycles are not automatically discarded. Conjugate payloads must not
+inherit parent drug evidence without separately resolving their identities.
+Both queues retain all primary associations. No modality-based biological negative is assigned.
+Source review decisions and seed tiers are unchanged. No eEF1A activity is predicted.
+
+NEXT: review additional mentions and verify modality/structures before final seed selection;
+then map the retained drug identifiers to SIDER and report coverage by evidence tier.

@@ -1,0 +1,13 @@
+cancer_id,cancer_name,review_status,decision,associations
+breast_cancer,Breast cancer,reviewed,exclude,13
+breast_cancer,Breast cancer,reviewed,include_documented,14
+breast_cancer,Breast cancer,reviewed,include_investigational,45
+breast_cancer,Breast cancer,reviewed,include_primary,44
+multiple_myeloma,Multiple myeloma,reviewed,exclude,6
+multiple_myeloma,Multiple myeloma,reviewed,include_documented,1
+multiple_myeloma,Multiple myeloma,reviewed,include_investigational,24
+multiple_myeloma,Multiple myeloma,reviewed,include_primary,22
+ovarian_cancer,Ovarian cancer,reviewed,exclude,5
+ovarian_cancer,Ovarian cancer,reviewed,include_documented,3
+ovarian_cancer,Ovarian cancer,reviewed,include_investigational,23
+ovarian_cancer,Ovarian cancer,reviewed,include_primary,17

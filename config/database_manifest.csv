@@ -1,0 +1,10 @@
+source_id,source_name,role,access_note,status,release_version,retrieved_date,download_url,local_file,licence_note,raw_directory,export_date,file_bytes
+umls,Unified Medical Language System,Cancer and subtype identifiers,"Check account, licence and available exports",not_acquired,,,,,,data/raw/umls,,
+drugbank,DrugBank,"Cancer treatment drugs, identifiers and known targets","Check account, licence and permitted data exports",local_file_registered,XML header version 5.1,,,/Users/lewis/Downloads/DrugBank full database.xml,,data/raw/drugbank,2026-06-27,2766440346
+sider,SIDER,Drug side effects and indication annotations,Check available release and identifier mappings,aggregate_release_acquired,4.1 (2015-10-21),2026-10-16,https://sideeffects.embl.de/media/download/,data/raw/sider/acquisition_manifest.csv,Publisher download page states CC BY-SA 4.0 except where otherwise noted; preserve original attribution and per-file notices.,data/raw/sider,,
+chembl,ChEMBL,Chemical structures and activity evidence,Check API or downloadable release,partial_identity_API_records_acquired,,2026-10-16,https://www.ebi.ac.uk/chembl/api/data/,data/curated/chembl_seed_identity_records.csv,,data/raw/chembl,,
+stitch,STITCH,Chemical-protein associations and evidence channels,Check human interaction files and identifier mappings,not_acquired,,,,,,data/raw/stitch,,
+string,STRING,Protein-protein association networks,Check human network release and evidence channels,not_acquired,,,,,,data/raw/string,,
+reactome,Reactome,Protein-pathway annotations,Check human pathway mapping release,not_acquired,,,,,,data/raw/reactome,,
+go,Gene Ontology,Functional annotations and semantic similarity,Obtain ontology and human annotations separately,not_acquired,,,,,,data/raw/go,,
+do,Disease Ontology,"Disease hierarchy, annotations and semantic similarity",Obtain ontology and suitable gene-disease mappings,not_acquired,,,,,,data/raw/do,,

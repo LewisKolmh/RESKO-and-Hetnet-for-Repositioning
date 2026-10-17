@@ -1,0 +1,6 @@
+cancer_name,decision,associations
+Breast cancer,exclude,6
+Breast cancer,include_documented,1
+Breast cancer,include_primary,1
+Ovarian cancer,exclude,12
+Ovarian cancer,include_primary,1
