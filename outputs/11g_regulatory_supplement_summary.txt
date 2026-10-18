@@ -1,0 +1,20 @@
+SCRIPT 11g - CONTEXT-REVIEWED REGULATORY LABEL SUPPLEMENT
+Primary seed drugs with reviewed positive clauses: 32
+Primary seed drugs with supplementary PT features: 32
+Distinct supplementary seed/PT pairs: 303
+Narrow single-agent/monotherapy profiles: 9
+Clause-boundary followups: 0
+Inputs: identity-supported FDA/DailyMed labels; explicit co-pack moiety evidence; named EMA Pepaxti overview.
+Outputs: reviewed positive clauses, per-alias mapping decisions and separate current-label PT supplement (data/curated/).
+Versioned compact feature export: outputs/11g_current_label_PT_features.csv; coverage: outputs/11g_supplement_coverage.csv.
+Context decisions and delimiters: config/current_label_positive_clause_rules.csv.
+Only explicit positive reaction lists are promoted, with unambiguous existing dictionary mappings.
+Cohort, indication and formulation prefixes are removed before matching; full source clauses remain available.
+Literal hot-flush variants are manually resolved to C0600142 using the supplied MedDRA term-CUI rows; broader alternatives remain held.
+Other broad/ambiguous matches remain held. This is an assistant-reviewed common-reaction subset, not exhaustive adverse-event curation.
+Combination and mixed-cohort features are labelled context only; individual causality is not inferred.
+The avutometinib/defactinib co-pack uses ONE shared evidence group, not two independent confirmations.
+Pepaxti is an EU overview supplement, not a current US label; its publication date is not inferred from retrieval.
+No incidence values are pooled or extracted. Different formulations/routes remain source-labelled.
+Original SIDER tables remain unchanged. Missing features are not negative observations.
+Next: run a descriptive term-overlap pilot with explicit monotherapy profiles, keeping context-only results separate.

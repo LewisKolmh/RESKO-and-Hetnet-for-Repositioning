@@ -1,10 +1,10 @@
 SCRIPT 11b - SIDER MAPPING AND COVERAGE
 # A tibble: 6 × 3
-  coverage_status                    drugs scope                     
-  <chr>                              <int> <chr>                     
-1 candidate_requires_identity_review    12 all_170_seeds             
-2 mapped_with_PT_side_effect_data       34 all_170_seeds             
-3 not_mapped_in_this_release           124 all_170_seeds             
+  coverage_status                    drugs scope
+  <chr>                              <int> <chr>
+1 candidate_requires_identity_review    12 all_170_seeds
+2 mapped_with_PT_side_effect_data       34 all_170_seeds
+3 not_mapped_in_this_release           124 all_170_seeds
 4 candidate_requires_identity_review    12 primary_55_structure_queue
 5 mapped_with_PT_side_effect_data       23 primary_55_structure_queue
 6 not_mapped_in_this_release            20 primary_55_structure_queue

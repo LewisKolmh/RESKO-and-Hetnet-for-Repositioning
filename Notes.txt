@@ -1,5 +1,5 @@
 RESKO side project: eEF1A-binding candidate discovery
-Updated: 16 October 2026
+Updated: 18 October 2026
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -385,17 +385,118 @@ Validation: outputs/11_sider_validation.txt checks full-key acceptance, distinct
 PT features, ordered frequency bounds in [0,1], retained placebo fields, 170 seed
 coverage, 238 original disease-review rows and missingness preserved as NA.
 
-NEXT - Script 12: side-effect similarity and candidate expansion
-Use strict seed/PT profiles and the full SIDER PT comparison universe to calculate
-side-effect similarity and produce an auditable candidate shortlist. Keep historical
-named-label-only results as a separate sensitivity analysis. Preserve release
-coverage and common-side-effect/label-size biases when interpreting similarities.
-Validate identities of expanded candidates before pooling target or activity data.
-Similarity itself is not a p-value; specify a defensible null, background and
-multiple-testing family before introducing Benjamini-Hochberg correction.
-No side-effect similarity will establish direct eEF1A binding, inhibition,
-allostery or selective PPI disruption. Subsequent target/pathway evidence must
-support those distinct claims. Continue retaining all original RESKO sources.
+PROJECT RENAME AND GITHUB - 18 October 2026
+Local folder: RESKO HetNet eEF1A_Cancer (formerly RESKONew).
+Remote: https://github.com/LewisKolmh/RESKO-and-Hetnet-for-Repositioning
+Branch: main. The user explicitly requests committing and pushing after every
+completed section, including the Notes.txt update. This instruction is persisted
+in AGENTS.md. Baseline/folder-name fixes were pushed as commit 27746c6.
+Seventeen older R scripts now identify the project by its scripts/config/data
+folders rather than requiring basename RESKONew. All scripts parse successfully.
+The repository is public: code, configuration, compact results and notes are
+tracked. Raw downloads, rich curated/source-export tables, credentials/session
+files and temporary files are excluded by .gitignore. They remain local.
+
+SCRIPT 11d - Acquire current openFDA label candidates
+File: scripts/11d_collect_current_labels.R
+Status: successfully run for all 170 seed drugs; raw responses cached.
+783 candidate seed/label records; 52 seeds initially supported by exact primary
+name plus UNII agreement and a single harmonised ingredient. Up to 50 candidate
+labels per query and three representative label sets per seed; two searches had
+more than 50 results. This is bounded label sampling, not exhaustive acquisition.
+Outputs: current_label_candidates.csv, current_label_selection.csv in data/curated/;
+query provenance and coverage in outputs/11d_*. Store source update dates, label
+versions, Set IDs, URLs and raw response caches. No synonym-only identity merging.
+Result meaning: confirms available label sources, not accepted adverse events.
+
+SCRIPT 11f - Resolve explicit active-moiety and missing-label coverage
+File: scripts/11f_resolve_label_moieties.R
+Status: successfully run, then rerun to recover the relevant intravenous gemcitabine
+route rather than substituting its intravesical-device profile for cancer labels.
+DailyMed SPL XML identifies both ingredient and active-moiety UNIIs/names. These
+explicit relationships recover 27 additional seeds. Final supplemented selection:
+79 seed drugs, 155 representative US label records; 52 of the primary-55 queue.
+Outputs: current_label_selection_supplemented.csv, current_label_moiety_review.csv;
+query/version provenance in outputs/11f_*, original XML/normalised records locally.
+Result meaning: a label active-moiety match supports clinical label context, not
+salt/free-base structural equivalence. Combination products stay outside this
+single-ingredient selection; their context is reviewed separately in 11g.
+DailyMed and openFDA overlap: they are not independent evidence sources.
+
+SCRIPT 11e - Extract candidate PT evidence (rerun after 11f)
+File: scripts/11e_extract_current_label_terms.R
+Status: successfully run and refreshed after moiety/route supplementation.
+Final run uses all 155 selected labels for 79 seeds, with 15,941 dictionary
+alias/PT links and 52,213 candidate evidence rows. Earlier counts are historical
+runs, superseded by this refreshed result. Vectorised matching avoids recompiling
+the whole dictionary for each sentence. All text hits remain candidates.
+Outputs: current_label_PT_dictionary.csv; current_label_PT_candidate_evidence.csv;
+current_label_evidence_segments.csv; coverage and summary-review queues.
+Result meaning: maps existing SIDER PT names and supplied LLT/CUI links with
+source excerpts, not semantic proof of a drug-specific adverse reaction.
+Negation, placebo/comparators, combinations, broad terms and mapping ambiguity
+are flagged. Unrepresented/new terms may be missed by the 2015 vocabulary.
+
+SCRIPT 11g - Review positive reaction lists and build a separate supplement
+File: scripts/11g_review_label_supplement.R
+Status: successfully run; all 32 target clause rules now have matching evidence.
+Final result: 303 distinct supplementary seed/PT pairs across the 32 primary
+compounds without strict SIDER profiles. This is a bounded common-reaction subset,
+not comprehensive adverse-event curation. Earlier provisional 31/32-profile and
+299/301/310-pair reports below are superseded by the final 303-pair result.
+Source context is reviewed and bounded by explicit positive reaction-list clauses.
+Indication/cohort prefixes are removed before term matching: breast/ovarian/small
+cell lung cancer are not promoted from descriptions of study populations.
+Literal hot-flush variants are resolved to C0600142 using the supplied MedDRA
+term-CUI rows, holding the broader Menopausal symptoms alternative. Other broad
+or ambiguous dictionary mappings remain held for further review.
+Nine profiles have explicit single-agent/monotherapy context; other profiles retain
+combination, mixed-cohort, formulation or unspecified-regimen context separately.
+Avutometinib/defactinib co-pack data share ONE evidence group and are not attributed
+independently to either ingredient. Melphalan flufenamide uses the named EMA
+Pepaxti overview and retains its dexamethasone-regimen/EU-source qualification;
+retrieval date is not treated as a current SmPC publication/version date.
+Outputs: current_label_reviewed_positive_clauses.csv, current_label_clause_PT_review.csv,
+current_label_PT_supplement.csv (rich local evidence under data/curated/).
+Versioned compact export: outputs/11g_current_label_PT_features.csv, with source,
+Set ID/evidence group, PT CUI, regimen scope and comparison stratum.
+Review delimiters: config/current_label_positive_clause_rules.csv.
+Original SIDER tables remain untouched. No incidence estimates are pooled.
+
+SCRIPT 12 - Descriptive current-label/SIDER overlap pilot
+File: scripts/12_pilot_label_sider_similarity.R
+Status: successfully run. Eight explicit single-agent/monotherapy profiles have
+at least five mapped PTs and are compared with 1,430 SIDER flat-group profiles.
+11,439 non-self pairs scored; forty top-five rows retained as descriptive output.
+A ninth single-agent profile has fewer than five terms and is excluded from this
+pilot. Regimen/mixed-cohort context is excluded from these comparisons.
+Outputs: current_label_SIDER_similarity_pilot.csv locally; versioned top-five
+summary, input-profile coverage and interpretation under outputs/12_*.
+Result meaning: shared UMLS-PT vocabulary permits term-set comparison. Jaccard
+is intersection/union; containment is shared/seed PTs. Neither is a p-value.
+Common toxicities, list size, formulation, indication and source-era differences
+can dominate rankings. These are feasibility scores, not validated eEF1A candidates.
+No BH correction is applied without a calibrated null/background/test family.
+Reference SIDER flat groups still require identity verification before target joins.
+
+SCRIPT 12a - Validate the supplementary layer and comparison
+File: scripts/12a_validate_label_supplement.R
+Status: successfully run. Checks source/seed links, exclusion of cohort headers,
+hot-flush CUI resolution, separate regimen strata, shared co-pack evidence, bounded
+scores and the intact original SIDER hashes, 5,946 seed/PT pairs and 238 cancer
+review rows. Also confirms all R scripts parse. Report: outputs/12a_label_supplement_validation.txt.
+Supplementary source inventory: config/supplementary_source_manifest.csv. This
+records PubChem, ChEBI, openFDA labels, DailyMed and the specific EMA overview;
+it does not replace or imply full acquisition of the original nine RESKO sources.
+
+NEXT - Inspect overlap contributions and build comparable candidate profiles
+Review which shared PTs drive the pilot, with common-toxicity and label-size
+biases visible. Retrieve consistently processed current labels for selected
+comparison candidates before treating cross-era ranks as robust. Keep the original
+SIDER analysis as the RESKO baseline and the current-label layer as supplementary.
+Then validate expanded chemical identities and acquire the remaining chemical/
+protein/pathway/ontology evidence for target-aware prioritisation. Association
+scores do not establish direct binding, inhibition, allostery or PPI selectivity.
 Restore empty scripts 00-02 as a separate reproducibility task.
 
 LATER RESKO WORK - not yet implemented
@@ -778,11 +879,11 @@ SCRIPT 11b RUN - 2026-10-16 20:43:57 CEST
 Script: scripts/11b_map_sider_seeds.R
 SCRIPT 11b - SIDER MAPPING AND COVERAGE
 # A tibble: 6 × 3
-  coverage_status                    drugs scope                     
-  <chr>                              <int> <chr>                     
-1 candidate_requires_identity_review    12 all_170_seeds             
-2 mapped_with_PT_side_effect_data       34 all_170_seeds             
-3 not_mapped_in_this_release           124 all_170_seeds             
+  coverage_status                    drugs scope
+  <chr>                              <int> <chr>
+1 candidate_requires_identity_review    12 all_170_seeds
+2 mapped_with_PT_side_effect_data       34 all_170_seeds
+3 not_mapped_in_this_release           124 all_170_seeds
 4 candidate_requires_identity_review    12 primary_55_structure_queue
 5 mapped_with_PT_side_effect_data       23 primary_55_structure_queue
 6 not_mapped_in_this_release            20 primary_55_structure_queue
@@ -806,12 +907,12 @@ Script: scripts/11c_review_sider_mapping_exceptions.R
 Inputs: 11b mapping, raw PT records and 10d alias provenance. No new API calls.
 SCRIPT 11c - SIDER IDENTITY EXCEPTION REVIEW
 # A tibble: 8 × 3
-  reviewed_coverage_status              drugs scope                     
-  <chr>                                 <int> <chr>                     
-1 named_label_context_only_NOT_strict      11 all_170_seeds             
-2 no_accepted_mapping_after_review          1 all_170_seeds             
-3 no_candidate_mapping                    124 all_170_seeds             
-4 strict_structure_supported_PT_profile    34 all_170_seeds             
+  reviewed_coverage_status              drugs scope
+  <chr>                                 <int> <chr>
+1 named_label_context_only_NOT_strict      11 all_170_seeds
+2 no_accepted_mapping_after_review          1 all_170_seeds
+3 no_candidate_mapping                    124 all_170_seeds
+4 strict_structure_supported_PT_profile    34 all_170_seeds
 5 named_label_context_only_NOT_strict      11 primary_55_structure_queue
 6 no_accepted_mapping_after_review          1 primary_55_structure_queue
 7 no_candidate_mapping                     20 primary_55_structure_queue
@@ -878,3 +979,197 @@ An active-moiety relation supports clinical label attribution, not salt/free-bas
 Combination products and unmatched/ambiguous ingredients remain outside the accepted extraction selection.
 DailyMed and openFDA describe overlapping SPL labels, not independent experimental evidence.
 Next: rerun 11e on the supplemented selection, then context-review term candidates.
+
+SCRIPT 11e RUN - 2026-10-17 19:50:31 BST
+Script: scripts/11e_extract_current_label_terms.R
+SCRIPT 11e - CURRENT-LABEL TERM EXTRACTION
+Selection input: data/curated/current_label_selection_supplemented.csv
+Dictionary aliases/PT links: 15941
+Evidence rows: 51498
+Seeds with candidate PT matches: 79
+Outputs: current_label_PT_dictionary.csv, current_label_PT_candidate_evidence.csv,
+current_label_evidence_segments.csv (data/curated/); coverage and summary review queue (outputs/11e_*).
+Map PT names and existing LLT-to-PT CUI links only. No embedding/fuzzy matches or invented synonym equivalences.
+Every hit retains label ID/date, source field, evidence segment and context flags.
+Narrative sentences and HTML table rows are retained separately; duplicate labels do not become independent evidence.
+All matches are candidates until reviewed; placebo, negation, combinations, broad terms and ambiguous dictionary links are flagged.
+Labels may contain outcomes/diseases unrelated to adverse reactions even within this section.
+Dictionary coverage is limited to PTs/mappings represented in SIDER; novel terms can be missed.
+No current-label candidates are inserted into the original SIDER feature table.
+Next: review explicit common-reaction statements and create a separately sourced supplementary PT feature table.
+
+SCRIPT 11g RUN - 2026-10-17 19:54:23 BST
+Script: scripts/11g_review_label_supplement.R
+SCRIPT 11g - CONTEXT-REVIEWED REGULATORY LABEL SUPPLEMENT
+Primary seed drugs with reviewed positive clauses: 31
+Primary seed drugs with supplementary PT features: 31
+Distinct supplementary seed/PT pairs: 301
+Narrow single-agent/monotherapy profiles: 9
+Clause-boundary followups: 1
+Inputs: identity-supported FDA/DailyMed labels; explicit co-pack moiety evidence; named EMA Pepaxti overview.
+Outputs: reviewed positive clauses, per-alias mapping decisions and separate current-label PT supplement (data/curated/).
+Versioned compact feature export: outputs/11g_current_label_PT_features.csv; coverage: outputs/11g_supplement_coverage.csv.
+Context decisions and delimiters: config/current_label_positive_clause_rules.csv.
+Only explicit positive reaction lists are promoted, with unambiguous existing dictionary mappings.
+Broad/ambiguous matches remain held. This is an assistant-reviewed common-reaction subset, not exhaustive adverse-event curation.
+Combination and mixed-cohort features are labelled context only; individual causality is not inferred.
+The avutometinib/defactinib co-pack uses ONE shared evidence group, not two independent confirmations.
+Pepaxti is an EU overview supplement, not a current US label; its publication date is not inferred from retrieval.
+No incidence values are pooled or extracted. Different formulations/routes remain source-labelled.
+Original SIDER tables remain unchanged. Missing features are not negative observations.
+Next: run a descriptive term-overlap pilot with explicit monotherapy profiles, keeping context-only results separate.
+
+SCRIPT 11f RUN - 2026-10-17 19:56:22 BST
+Script: scripts/11f_resolve_label_moieties.R
+SCRIPT 11f - DAILYMED ACTIVE-MOIETY LABEL SUPPLEMENT
+Seeds checked: 119
+Additional seeds with supported labels: 27
+Total seeds with selected labels: 79
+Output: current_label_selection_supplemented.csv and current_label_moiety_review.csv (data/curated/).
+Queries/versions and raw XML are retained; up to three candidate sets examined per seed.
+Accept only literal seed-name plus UNII agreement with a single ingredient or its explicit active moiety.
+An active-moiety relation supports clinical label attribution, not salt/free-base structural equivalence.
+Combination products and unmatched/ambiguous ingredients remain outside the accepted extraction selection.
+Gemcitabine intravenous labels are explicitly recovered; intravesical-device data do not substitute for systemic cancer-label data.
+DailyMed and openFDA describe overlapping SPL labels, not independent experimental evidence.
+Next: rerun 11e on the supplemented selection, then context-review term candidates.
+
+SCRIPT 11g RUN - 2026-10-17 19:56:23 BST
+Script: scripts/11g_review_label_supplement.R
+SCRIPT 11g - CONTEXT-REVIEWED REGULATORY LABEL SUPPLEMENT
+Primary seed drugs with reviewed positive clauses: 32
+Primary seed drugs with supplementary PT features: 32
+Distinct supplementary seed/PT pairs: 310
+Narrow single-agent/monotherapy profiles: 9
+Clause-boundary followups: 0
+Inputs: identity-supported FDA/DailyMed labels; explicit co-pack moiety evidence; named EMA Pepaxti overview.
+Outputs: reviewed positive clauses, per-alias mapping decisions and separate current-label PT supplement (data/curated/).
+Versioned compact feature export: outputs/11g_current_label_PT_features.csv; coverage: outputs/11g_supplement_coverage.csv.
+Context decisions and delimiters: config/current_label_positive_clause_rules.csv.
+Only explicit positive reaction lists are promoted, with unambiguous existing dictionary mappings.
+Broad/ambiguous matches remain held. This is an assistant-reviewed common-reaction subset, not exhaustive adverse-event curation.
+Combination and mixed-cohort features are labelled context only; individual causality is not inferred.
+The avutometinib/defactinib co-pack uses ONE shared evidence group, not two independent confirmations.
+Pepaxti is an EU overview supplement, not a current US label; its publication date is not inferred from retrieval.
+No incidence values are pooled or extracted. Different formulations/routes remain source-labelled.
+Original SIDER tables remain unchanged. Missing features are not negative observations.
+Next: run a descriptive term-overlap pilot with explicit monotherapy profiles, keeping context-only results separate.
+
+SCRIPT 11g RUN - 2026-10-17 22:47:06 BST
+Script: scripts/11g_review_label_supplement.R
+SCRIPT 11g - CONTEXT-REVIEWED REGULATORY LABEL SUPPLEMENT
+Primary seed drugs with reviewed positive clauses: 32
+Primary seed drugs with supplementary PT features: 31
+Distinct supplementary seed/PT pairs: 299
+Narrow single-agent/monotherapy profiles: 9
+Clause-boundary followups: 0
+Inputs: identity-supported FDA/DailyMed labels; explicit co-pack moiety evidence; named EMA Pepaxti overview.
+Outputs: reviewed positive clauses, per-alias mapping decisions and separate current-label PT supplement (data/curated/).
+Versioned compact feature export: outputs/11g_current_label_PT_features.csv; coverage: outputs/11g_supplement_coverage.csv.
+Context decisions and delimiters: config/current_label_positive_clause_rules.csv.
+Only explicit positive reaction lists are promoted, with unambiguous existing dictionary mappings.
+Cohort, indication and formulation prefixes are removed before matching; full source clauses remain available.
+Broad/ambiguous matches remain held. This is an assistant-reviewed common-reaction subset, not exhaustive adverse-event curation.
+Combination and mixed-cohort features are labelled context only; individual causality is not inferred.
+The avutometinib/defactinib co-pack uses ONE shared evidence group, not two independent confirmations.
+Pepaxti is an EU overview supplement, not a current US label; its publication date is not inferred from retrieval.
+No incidence values are pooled or extracted. Different formulations/routes remain source-labelled.
+Original SIDER tables remain unchanged. Missing features are not negative observations.
+Next: run a descriptive term-overlap pilot with explicit monotherapy profiles, keeping context-only results separate.
+
+SCRIPT 12 RUN - 2026-10-17 23:31:20 BST
+Script: scripts/12_pilot_label_sider_similarity.R
+SCRIPT 12 - DESCRIPTIVE CURRENT-LABEL/SIDER OVERLAP PILOT
+Explicit monotherapy/single-agent seed profiles with >=5 PTs: 8
+SIDER flat-group comparison profiles: 1430
+Non-self pairs scored: 11439
+Top-five rows retained: 40
+Inputs: reviewed supplementary PT features and original SIDER 4.1 PT associations.
+Outputs: full scores in data/curated/current_label_SIDER_similarity_pilot.csv;
+top-five descriptive summary and input-profile coverage in outputs/12_*.
+Jaccard measures shared PTs divided by union PTs. Containment measures shared PTs divided by seed PTs.
+This demonstrates vocabulary compatibility for newer seeds; it does not establish candidate efficacy.
+Only explicit single-agent/monotherapy lists are included; regimen/mixed-cohort profiles remain separate.
+The comparison mixes a bounded common-reaction subset with older fuller labels; profile size,
+common toxicities, route/formulation and source-era differences can dominate apparent similarity.
+Reference flat groups are not automatically verified chemical identities. Validate any expanded candidate before target joins.
+No p-values or BH adjustment are produced: the pilot has no calibrated null model.
+Next: review overlap contributions, construct consistently processed current-label comparison profiles,
+and integrate target/pathway evidence while retaining the original RESKO baseline.
+
+SCRIPT 11g RUN - 2026-10-18 01:50:42 BST
+Script: scripts/11g_review_label_supplement.R
+SCRIPT 11g - CONTEXT-REVIEWED REGULATORY LABEL SUPPLEMENT
+Primary seed drugs with reviewed positive clauses: 32
+Primary seed drugs with supplementary PT features: 32
+Distinct supplementary seed/PT pairs: 303
+Narrow single-agent/monotherapy profiles: 9
+Clause-boundary followups: 0
+Inputs: identity-supported FDA/DailyMed labels; explicit co-pack moiety evidence; named EMA Pepaxti overview.
+Outputs: reviewed positive clauses, per-alias mapping decisions and separate current-label PT supplement (data/curated/).
+Versioned compact feature export: outputs/11g_current_label_PT_features.csv; coverage: outputs/11g_supplement_coverage.csv.
+Context decisions and delimiters: config/current_label_positive_clause_rules.csv.
+Only explicit positive reaction lists are promoted, with unambiguous existing dictionary mappings.
+Cohort, indication and formulation prefixes are removed before matching; full source clauses remain available.
+Literal hot-flush variants are manually resolved to C0600142 using the supplied MedDRA term-CUI rows; broader alternatives remain held.
+Other broad/ambiguous matches remain held. This is an assistant-reviewed common-reaction subset, not exhaustive adverse-event curation.
+Combination and mixed-cohort features are labelled context only; individual causality is not inferred.
+The avutometinib/defactinib co-pack uses ONE shared evidence group, not two independent confirmations.
+Pepaxti is an EU overview supplement, not a current US label; its publication date is not inferred from retrieval.
+No incidence values are pooled or extracted. Different formulations/routes remain source-labelled.
+Original SIDER tables remain unchanged. Missing features are not negative observations.
+Next: run a descriptive term-overlap pilot with explicit monotherapy profiles, keeping context-only results separate.
+
+SCRIPT 12 RUN - 2026-10-18 01:50:43 BST
+Script: scripts/12_pilot_label_sider_similarity.R
+SCRIPT 12 - DESCRIPTIVE CURRENT-LABEL/SIDER OVERLAP PILOT
+Explicit monotherapy/single-agent seed profiles with >=5 PTs: 8
+SIDER flat-group comparison profiles: 1430
+Non-self pairs scored: 11439
+Top-five rows retained: 40
+Inputs: reviewed supplementary PT features and original SIDER 4.1 PT associations.
+Outputs: full scores in data/curated/current_label_SIDER_similarity_pilot.csv;
+top-five descriptive summary and input-profile coverage in outputs/12_*.
+Jaccard measures shared PTs divided by union PTs. Containment measures shared PTs divided by seed PTs.
+This demonstrates vocabulary compatibility for newer seeds; it does not establish candidate efficacy.
+Only explicit single-agent/monotherapy lists are included; regimen/mixed-cohort profiles remain separate.
+The comparison mixes a bounded common-reaction subset with older fuller labels; profile size,
+common toxicities, route/formulation and source-era differences can dominate apparent similarity.
+Reference flat groups are not automatically verified chemical identities. Validate any expanded candidate before target joins.
+No p-values or BH adjustment are produced: the pilot has no calibrated null model.
+Next: review overlap contributions, construct consistently processed current-label comparison profiles,
+and integrate target/pathway evidence while retaining the original RESKO baseline.
+
+SCRIPT 11e RUN - 2026-10-18 01:50:49 BST
+Script: scripts/11e_extract_current_label_terms.R
+SCRIPT 11e - CURRENT-LABEL TERM EXTRACTION
+Selection input: data/curated/current_label_selection_supplemented.csv
+Dictionary aliases/PT links: 15941
+Evidence rows: 52213
+Seeds with candidate PT matches: 79
+Outputs: current_label_PT_dictionary.csv, current_label_PT_candidate_evidence.csv,
+current_label_evidence_segments.csv (data/curated/); coverage and summary review queue (outputs/11e_*).
+Map PT names and existing LLT-to-PT CUI links only. No embedding/fuzzy matches or invented synonym equivalences.
+Every hit retains label ID/date, source field, evidence segment and context flags.
+Narrative sentences and HTML table rows are retained separately; duplicate labels do not become independent evidence.
+All matches are candidates until reviewed; placebo, negation, combinations, broad terms and ambiguous dictionary links are flagged.
+Labels may contain outcomes/diseases unrelated to adverse reactions even within this section.
+Dictionary coverage is limited to PTs/mappings represented in SIDER; novel terms can be missed.
+No current-label candidates are inserted into the original SIDER feature table.
+Next: review explicit common-reaction statements and create a separately sourced supplementary PT feature table.
+
+SCRIPT 12a RUN - 2026-10-18 01:51:53 BST
+Script: scripts/12a_validate_label_supplement.R
+SCRIPT 12a - LABEL SUPPLEMENT VALIDATION
+Seeds with selected current US labels: 79
+Selected US label records: 155
+Reviewed supplementary seed/PT pairs: 303
+Reviewed supplementary primary seed profiles: 32
+Pilot seed profiles: 8
+Passed: label/seed coverage, phenotype-header exclusion, hot-flush CUI resolution,
+combination stratum separation, shared co-pack evidence, unique original SIDER features,
+SIDER raw-file hashes, original 238 disease-review rows, pilot strata and all R-script parsing.
+Supplementary source manifest: config/supplementary_source_manifest.csv.
+Original nine-source manifest remains distinct. Source archives and rich curated evidence stay local.
+These checks do not establish exhaustive clinical curation, drug-specific causality,
+eEF1A binding/inhibition, allostery, HIV-1 RT PPI disruption or a calibrated statistical null.

@@ -1,0 +1,80 @@
+drugbank_id,drug_name,candidate_PT_terms,evidence_rows,selected_label_records
+DB00014,Goserelin,181,566,2
+DB00072,Trastuzumab,110,1222,3
+DB00112,Bevacizumab,134,1555,3
+DB00188,Bortezomib,228,2068,3
+DB00262,Carmustine,34,106,1
+DB00286,Conjugated estrogens,85,190,2
+DB00305,Mitomycin,50,171,3
+DB00351,Megestrol acetate,86,175,3
+DB00361,Vinorelbine,105,522,2
+DB00441,Gemcitabine,109,787,4
+DB00445,Epirubicin,60,129,1
+DB00480,Lenalidomide,331,3991,3
+DB00515,Cisplatin,92,234,3
+DB00531,Cyclophosphamide,198,457,2
+DB00539,Toremifene,56,274,3
+DB00544,Fluorouracil,48,73,3
+DB00563,Methotrexate,144,459,3
+DB00570,Vinblastine,49,58,1
+DB00675,Tamoxifen,109,640,3
+DB00783,Estradiol,78,200,3
+DB00947,Fulvestrant,148,1782,3
+DB00958,Carboplatin,73,358,3
+DB00990,Exemestane,89,815,3
+DB00997,Doxorubicin,145,690,3
+DB01006,Letrozole,129,1410,3
+DB01030,Topotecan,76,222,1
+DB01042,Melphalan,34,75,2
+DB01101,Capecitabine,185,1452,3
+DB01181,Ifosfamide,272,1035,2
+DB01217,Anastrozole,121,1492,3
+DB01229,Paclitaxel,184,1341,3
+DB01234,Dexamethasone,129,290,3
+DB01248,Docetaxel,166,2882,3
+DB01259,Lapatinib,45,336,3
+DB01590,Everolimus,309,1193,3
+DB04845,Ixabepilone,129,244,1
+DB05109,Trabectedin,47,245,2
+DB05773,Trastuzumab emtansine,88,324,1
+DB06287,Temsirolimus,115,546,3
+DB06317,Elotuzumab,60,180,1
+DB06366,Pertuzumab,74,602,1
+DB06374,Elacestrant,36,94,1
+DB06399,Atacicept,7,10,1
+DB06603,Panobinostat,98,155,1
+DB06710,Methyltestosterone,24,72,3
+DB08871,Eribulin,87,676,3
+DB08889,Carfilzomib,213,1256,1
+DB08910,Pomalidomide,145,1088,3
+DB09037,Pembrolizumab,454,4520,1
+DB09073,Palbociclib,124,1974,3
+DB09074,Olaparib,130,755,1
+DB09331,Daratumumab,130,800,1
+DB09570,Ixazomib,35,72,1
+DB11652,Tucatinib,92,242,1
+DB11730,Ribociclib,84,281,1
+DB11760,Talazoparib,59,465,3
+DB11793,Niraparib,72,236,1
+DB11828,Neratinib,78,237,1
+DB11942,Selinexor,74,305,1
+DB12001,Abemaciclib,78,422,1
+DB12015,Alpelisib,79,283,2
+DB12218,Capivasertib,71,256,1
+DB12332,Rucaparib,91,289,1
+DB12489,Mirvetuximab soravtansine,89,266,1
+DB12893,Sacituzumab govitecan,83,509,1
+DB13944,Testosterone enanthate,60,161,3
+DB14811,Isatuximab,144,684,2
+DB14962,Trastuzumab deruxtecan,221,2147,1
+DB14967,Margetuximab,48,224,2
+DB14976,Relacorilant,37,67,1
+DB15275,Inavolisib,62,167,1
+DB15395,Elranatamab,120,276,1
+DB15719,Belantamab mafodotin,41,102,1
+DB16410,Datopotamab deruxtecan,76,369,1
+DB16655,Teclistamab,138,442,1
+DB16678,Talquetamab,185,459,1
+DB17447,Linvoseltamab,73,148,1
+DB19006,Vepdegestrant,33,163,2
+DB19043,Imlunestrant,54,150,1

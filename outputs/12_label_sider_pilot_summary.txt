@@ -1,0 +1,17 @@
+SCRIPT 12 - DESCRIPTIVE CURRENT-LABEL/SIDER OVERLAP PILOT
+Explicit monotherapy/single-agent seed profiles with >=5 PTs: 8
+SIDER flat-group comparison profiles: 1430
+Non-self pairs scored: 11439
+Top-five rows retained: 40
+Inputs: reviewed supplementary PT features and original SIDER 4.1 PT associations.
+Outputs: full scores in data/curated/current_label_SIDER_similarity_pilot.csv;
+top-five descriptive summary and input-profile coverage in outputs/12_*.
+Jaccard measures shared PTs divided by union PTs. Containment measures shared PTs divided by seed PTs.
+This demonstrates vocabulary compatibility for newer seeds; it does not establish candidate efficacy.
+Only explicit single-agent/monotherapy lists are included; regimen/mixed-cohort profiles remain separate.
+The comparison mixes a bounded common-reaction subset with older fuller labels; profile size,
+common toxicities, route/formulation and source-era differences can dominate apparent similarity.
+Reference flat groups are not automatically verified chemical identities. Validate any expanded candidate before target joins.
+No p-values or BH adjustment are produced: the pilot has no calibrated null model.
+Next: review overlap contributions, construct consistently processed current-label comparison profiles,
+and integrate target/pathway evidence while retaining the original RESKO baseline.

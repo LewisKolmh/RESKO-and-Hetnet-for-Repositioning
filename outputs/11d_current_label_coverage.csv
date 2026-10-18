@@ -1,0 +1,171 @@
+drugbank_id,drug_name,drug_type,seed_tiers,cancers,candidate_SIDER_records,accepted_SIDER_records,unique_PT_side_effects,coverage_status,named_label_context_PT_count,reviewed_coverage_status,candidate_labels,supported_labels,selected_labels
+DB00014,Goserelin,small molecule,include_primary,Breast cancer,1,0,,candidate_requires_identity_review,229,named_label_context_only_NOT_strict,2,0,0
+DB00072,Trastuzumab,biotech,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,8,5,3
+DB00112,Bevacizumab,biotech,include_primary,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,7,6,3
+DB00188,Bortezomib,small molecule,include_primary,Multiple myeloma,1,1,588,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,30,30,3
+DB00262,Carmustine,small molecule,include_primary,Multiple myeloma,1,1,163,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,14,1,1
+DB00286,Conjugated estrogens,small molecule,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,11,2,2
+DB00305,Mitomycin,small molecule,include_documented,Breast cancer,1,1,58,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,21,18,3
+DB00351,Megestrol acetate,small molecule,include_primary,Breast cancer,2,1,52,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,20,20,3
+DB00357,Aminoglutethimide,small molecule,include_documented,Breast cancer,1,1,32,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,0,0,0
+DB00361,Vinorelbine,small molecule,include_documented | include_primary,Breast cancer | Ovarian cancer,1,0,,candidate_requires_identity_review,140,named_label_context_only_NOT_strict,2,0,0
+DB00441,Gemcitabine,small molecule,include_primary,Breast cancer | Ovarian cancer,1,0,,candidate_requires_identity_review,161,named_label_context_only_NOT_strict,18,1,1
+DB00445,Epirubicin,small molecule,include_primary,Breast cancer,1,1,138,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,1,0,0
+DB00480,Lenalidomide,small molecule,include_primary,Multiple myeloma,1,1,462,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,19,19,3
+DB00488,Altretamine,small molecule,include_documented,Ovarian cancer,1,1,22,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,0,0,0
+DB00515,Cisplatin,small molecule,include_primary,Ovarian cancer,1,0,,candidate_requires_identity_review,139,named_label_context_only_NOT_strict,12,12,3
+DB00531,Cyclophosphamide,small molecule,include_primary,Breast cancer | Multiple myeloma | Ovarian cancer,1,1,281,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,31,2,2
+DB00539,Toremifene,small molecule,include_primary,Breast cancer,1,0,,candidate_requires_identity_review,83,named_label_context_only_NOT_strict,3,0,0
+DB00544,Fluorouracil,small molecule,include_primary,Breast cancer,1,1,148,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,36,36,3
+DB00563,Methotrexate,small molecule,include_primary,Breast cancer,1,1,276,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,47,11,3
+DB00570,Vinblastine,small molecule,include_primary,Breast cancer,2,1,52,mapped_with_PT_side_effect_data,54,strict_structure_supported_PT_profile,1,0,0
+DB00675,Tamoxifen,small molecule,include_primary,Breast cancer,2,0,,candidate_requires_identity_review,192,named_label_context_only_NOT_strict,14,0,0
+DB00783,Estradiol,small molecule,include_documented,Breast cancer,4,1,377,mapped_with_PT_side_effect_data,95,strict_structure_supported_PT_profile,50,24,3
+DB00894,Testolactone,small molecule,include_documented,Breast cancer,1,1,14,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,0,0,0
+DB00947,Fulvestrant,small molecule,include_primary,Breast cancer,1,1,78,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,22,22,3
+DB00958,Carboplatin,small molecule,include_primary,Ovarian cancer,1,0,,candidate_requires_identity_review,109,named_label_context_only_NOT_strict,14,14,3
+DB00984,Nandrolone phenpropionate,small molecule,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB00990,Exemestane,small molecule,include_primary,Breast cancer,1,1,114,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,10,10,3
+DB00997,Doxorubicin,small molecule,include_primary,Breast cancer | Multiple myeloma | Ovarian cancer,3,1,437,mapped_with_PT_side_effect_data,453,strict_structure_supported_PT_profile,29,0,0
+DB01006,Letrozole,small molecule,include_primary,Breast cancer,1,1,154,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,24,24,3
+DB01030,Topotecan,small molecule,include_primary,Ovarian cancer,1,0,,candidate_requires_identity_review,99,named_label_context_only_NOT_strict,7,1,1
+DB01042,Melphalan,small molecule,include_primary,Multiple myeloma | Ovarian cancer,1,1,106,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,15,0,0
+DB01101,Capecitabine,small molecule,include_primary,Breast cancer,1,1,427,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,20,20,3
+DB01181,Ifosfamide,small molecule,include_documented,Ovarian cancer,1,1,291,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,3,3,2
+DB01185,Fluoxymesterone,small molecule,include_documented,Breast cancer,1,1,27,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,0,0,0
+DB01217,Anastrozole,small molecule,include_primary,Breast cancer,1,1,152,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,39,39,3
+DB01229,Paclitaxel,small molecule,include_primary,Breast cancer | Ovarian cancer,2,0,,candidate_requires_identity_review,397,named_label_context_only_NOT_strict,26,26,3
+DB01234,Dexamethasone,small molecule,include_primary,Multiple myeloma,3,1,199,mapped_with_PT_side_effect_data,228,strict_structure_supported_PT_profile,50,19,3
+DB01248,Docetaxel,small molecule,include_primary,Breast cancer,2,0,,candidate_requires_identity_review,258,named_label_context_only_NOT_strict,30,10,3
+DB01259,Lapatinib,small molecule,include_primary,Breast cancer,1,1,68,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,4,0,0
+DB01564,Calusterone,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB01590,Everolimus,small molecule,include_primary,Breast cancer,1,1,388,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,18,18,3
+DB01616,Alverine,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB01873,Epothilone D,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB02187,Equilin,small molecule,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB02342,2-Methoxyestradiol,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB03010,Patupilone,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB04575,Quinestrol,small molecule,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB04845,Ixabepilone,small molecule,include_primary,Breast cancer,1,1,140,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,1,0,0
+DB04901,Galiximab,biotech,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB04964,Oregovomab,biotech,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05003,Imexon,small molecule,include_investigational,Multiple myeloma | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05006,Adecatumumab,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05022,Amonafide,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05033,INCB7839,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05051,BZL101,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05109,Trabectedin,small molecule,include_primary,Ovarian cancer,1,1,90,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,2,2,2
+DB05136,Bavituximab,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05292,IDM-1,small molecule,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05296,Motexafin lutetium,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05297,Paclitaxel docosahexaenoic acid,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05308,Folitixorin calcium,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05322,Contusugene ladenovec,biotech,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05325,INGN 225,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05380,DOTMP HO-166,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05387,Neovastat,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05393,NOV-002,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05414,Pipendoxifene,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05420,Gallium maltolate,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05424,Canertinib,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05477,MUC1 Dendritic Cell Vaccine,biotech,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05485,ADH-1,biotech,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05487,Custirsen,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05489,ACA 125,small molecule,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05500,AVN-944,biotech,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05513,Atiprimod,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05592,Blarcamesine,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05595,Farletuzumab,biotech,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05608,MKC-1,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05626,Retaspimycin,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05706,13-deoxydoxorubicin,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05733,MVA-BN-HER-2,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05773,Trastuzumab emtansine,biotech,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB05786,Irofulven,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05800,Alethine,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05801,GTI 2040,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05808,Muparfostat,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05818,SGN-15,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05842,AI-850,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05928,Dovitinib,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05929,GPI-0100,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05953,EGEN-001,small molecule,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05966,TAS-108,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05969,SNS-032,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB05983,Bardoxolone methyl,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06049,IPH 2101,biotech,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06159,Rubitecan,small molecule,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06174,Noscapine,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06177,Glufosfamide,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06179,Darinaparsin,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06188,Ispinesib,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06193,Pixantrone,small molecule,include_investigational,Breast cancer,1,1,138,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,0,0,0
+DB06195,Seliciclib,small molecule,include_investigational,Breast cancer | Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06226,Nelipepimut-S,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06235,Vadimezan,small molecule,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06240,Tariquidar,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06249,Arzoxifene,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06255,Incadronic acid,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06276,Tanomastat,small molecule,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06287,Temsirolimus,small molecule,include_investigational,Breast cancer | Multiple myeloma,2,1,177,mapped_with_PT_side_effect_data,185,strict_structure_supported_PT_profile,5,0,0
+DB06317,Elotuzumab,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB06360,Lucatumumab,biotech,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06366,Pertuzumab,biotech,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB06373,ASI402,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06374,Elacestrant,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB06399,Atacicept,biotech,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB06420,Annamycin,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06453,Mirostipen,small molecule,include_investigational,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06461,Squalamine,small molecule,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06500,IGN101,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06548,Minodronic acid,small molecule,include_investigational,Breast cancer | Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06584,Mesmulogene ancovacivec,biotech,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06603,Panobinostat,small molecule,include_documented,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06641,Perifosine,small molecule,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06647,Volociximab,biotech,include_investigational,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB06710,Methyltestosterone,small molecule,include_documented,Breast cancer,1,1,25,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,20,3,3
+DB06713,Norelgestromin,small molecule,include_investigational,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,8,0,0
+DB06719,Buserelin,biotech,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB08871,Eribulin,small molecule,include_primary,Breast cancer,1,0,,candidate_requires_identity_review,129,named_label_context_only_NOT_strict,16,0,0
+DB08889,Carfilzomib,small molecule,include_primary,Multiple myeloma,1,1,62,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,1,1,1
+DB08905,Formestane,small molecule,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB08910,Pomalidomide,small molecule,include_primary,Multiple myeloma,1,1,105,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,11,11,3
+DB09037,Pembrolizumab,biotech,include_primary,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,2,1,1
+DB09073,Palbociclib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,3,3,3
+DB09074,Olaparib,small molecule,include_primary,Breast cancer | Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB09331,Daratumumab,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB09381,Esterified estrogens,small molecule,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,17,0,0
+DB09570,Ixazomib,small molecule,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,0,0
+DB11652,Tucatinib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB11730,Ribociclib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,0,0
+DB11760,Talazoparib,small molecule,include_primary,Breast cancer,1,0,,candidate_requires_identity_review,,no_accepted_mapping_after_review,4,0,0
+DB11793,Niraparib,small molecule,include_primary,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,2,0,0
+DB11828,Neratinib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,0,0
+DB11942,Selinexor,small molecule,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB12001,Abemaciclib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB12015,Alpelisib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,2,2,2
+DB12218,Capivasertib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB12282,Defactinib,small molecule,include_primary,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,0,0
+DB12332,Rucaparib,small molecule,include_primary,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,0,0
+DB12489,Mirvetuximab soravtansine,biotech,include_primary,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB12589,Dacetuzumab,biotech,include_investigational,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB12893,Sacituzumab govitecan,biotech,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB13944,Testosterone enanthate,small molecule,include_documented,Breast cancer,1,1,105,mapped_with_PT_side_effect_data,,strict_structure_supported_PT_profile,3,3,3
+DB14655,Drostanolone propionate,small molecule,include_documented,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB14811,Isatuximab,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,2,2,2
+DB14962,Trastuzumab deruxtecan,biotech,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB14967,Margetuximab,biotech,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,2,2,2
+DB14976,Relacorilant,small molecule,include_primary,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,0,0
+DB15254,Avutometinib,small molecule,include_primary,Ovarian cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,0,0
+DB15275,Inavolisib,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB15395,Elranatamab,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB15719,Belantamab mafodotin,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB16410,Datopotamab deruxtecan,biotech,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB16627,Melphalan flufenamide,small molecule,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB16655,Teclistamab,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB16665,Idecabtagene vicleucel,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB16678,Talquetamab,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,1,1,1
+DB16738,Ciltacabtagene autoleucel,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB17447,Linvoseltamab,biotech,include_primary,Multiple myeloma,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0
+DB19006,Vepdegestrant,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,2,2,2
+DB19043,Imlunestrant,small molecule,include_primary,Breast cancer,0,0,,not_mapped_in_this_release,,no_candidate_mapping,0,0,0

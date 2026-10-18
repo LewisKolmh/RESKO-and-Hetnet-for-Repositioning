@@ -1,0 +1,6 @@
+source_id,source_name,scope,canonical_url,version_provenance
+pubchem,PubChem,Partial compound identities/synonyms,https://pubchem.ncbi.nlm.nih.gov/,data/raw/identity_api/; outputs/10b_api_provenance.csv
+chebi,ChEBI,Cisplatin/carboplatin identity support,https://www.ebi.ac.uk/chebi/,data/curated/platinum_chebi_identity_records.csv
+openfda_labels,openFDA drug labels,Bounded seed label queries; up to 50 results/seed,https://open.fda.gov/apis/drug/label/,outputs/11d_current_label_query_provenance.csv; per-label dates/versions
+dailymed_labels,DailyMed SPL,Missing-label and explicit active-moiety/route support,https://dailymed.nlm.nih.gov/dailymed/,outputs/11f_DailyMed_query_provenance.csv; cached SPL versions
+ema_pepaxti,EMA Pepaxti medicine overview,Named European combination-regimen context,https://www.ema.europa.eu/en/medicines/human/EPAR/pepaxti,data/raw/current_labels/EMA_pepaxti_overview.rds; publication date not inferred from retrieval

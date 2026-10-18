@@ -1,0 +1,15 @@
+SCRIPT 11e - CURRENT-LABEL TERM EXTRACTION
+Selection input: data/curated/current_label_selection_supplemented.csv
+Dictionary aliases/PT links: 15941
+Evidence rows: 52213
+Seeds with candidate PT matches: 79
+Outputs: current_label_PT_dictionary.csv, current_label_PT_candidate_evidence.csv,
+current_label_evidence_segments.csv (data/curated/); coverage and summary review queue (outputs/11e_*).
+Map PT names and existing LLT-to-PT CUI links only. No embedding/fuzzy matches or invented synonym equivalences.
+Every hit retains label ID/date, source field, evidence segment and context flags.
+Narrative sentences and HTML table rows are retained separately; duplicate labels do not become independent evidence.
+All matches are candidates until reviewed; placebo, negation, combinations, broad terms and ambiguous dictionary links are flagged.
+Labels may contain outcomes/diseases unrelated to adverse reactions even within this section.
+Dictionary coverage is limited to PTs/mappings represented in SIDER; novel terms can be missed.
+No current-label candidates are inserted into the original SIDER feature table.
+Next: review explicit common-reaction statements and create a separately sourced supplementary PT feature table.

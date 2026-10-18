@@ -1,0 +1,13 @@
+SCRIPT 12a - LABEL SUPPLEMENT VALIDATION
+Seeds with selected current US labels: 79
+Selected US label records: 155
+Reviewed supplementary seed/PT pairs: 303
+Reviewed supplementary primary seed profiles: 32
+Pilot seed profiles: 8
+Passed: label/seed coverage, phenotype-header exclusion, hot-flush CUI resolution,
+combination stratum separation, shared co-pack evidence, unique original SIDER features,
+SIDER raw-file hashes, original 238 disease-review rows, pilot strata and all R-script parsing.
+Supplementary source manifest: config/supplementary_source_manifest.csv.
+Original nine-source manifest remains distinct. Source archives and rich curated evidence stay local.
+These checks do not establish exhaustive clinical curation, drug-specific causality,
+eEF1A binding/inhibition, allostery, HIV-1 RT PPI disruption or a calibrated statistical null.

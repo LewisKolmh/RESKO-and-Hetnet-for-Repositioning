@@ -26,7 +26,11 @@ manifest; the original export is not part of this repository.
 ```r
 # From the project root, after the previously completed seed and identity steps:
 source("scripts/11d_collect_current_labels.R")
+source("scripts/11f_resolve_label_moieties.R")
 source("scripts/11e_extract_current_label_terms.R")
+source("scripts/11g_review_label_supplement.R")
+source("scripts/12_pilot_label_sider_similarity.R")
+source("scripts/12a_validate_label_supplement.R")
 ```
 
 ## Data layers
@@ -54,3 +58,22 @@ Downloaded raw data, cached API responses and temporary R session files are excl
 from Git; reproducible scripts, configuration, compact result tables and notes are versioned. Source-rich curated tables remain local;
 curated code and approved compact feature exports are versioned.
 The designated remote is `LewisKolmh/RESKO-and-Hetnet-for-Repositioning`, branch `main`.
+
+## Current-label supplement results
+
+The representative US-label collection covers 79 seeds (155 label records).
+A separate reviewed common-reaction subset supplies 303 drug/PT pairs for the
+32 primary compounds without strict SIDER mappings. Combination, mixed-cohort
+and formulation contexts remain explicit. Eight profiles with explicit single-agent
+context and at least five terms enter the descriptive overlap pilot; its ranks
+are not validated target-binding predictions or statistical significance.
+
+Compact features and coverage/validation reports are versioned in `outputs/`.
+Full source evidence and API caches remain local. The original SIDER layer is
+unchanged. See `Notes.txt` for counts, decisions, limitations and run history.
+
+Sources: [SIDER](https://sideeffects.embl.de/download/),
+[openFDA labels](https://open.fda.gov/apis/drug/label/),
+[DailyMed](https://dailymed.nlm.nih.gov/dailymed/), and the specific
+[EMA Pepaxti overview](https://www.ema.europa.eu/en/medicines/human/EPAR/pepaxti).
+Preserve source attribution and publisher terms when reusing data.

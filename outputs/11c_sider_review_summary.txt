@@ -1,11 +1,11 @@
 SCRIPT 11c - SIDER IDENTITY EXCEPTION REVIEW
 # A tibble: 8 × 3
-  reviewed_coverage_status              drugs scope                     
-  <chr>                                 <int> <chr>                     
-1 named_label_context_only_NOT_strict      11 all_170_seeds             
-2 no_accepted_mapping_after_review          1 all_170_seeds             
-3 no_candidate_mapping                    124 all_170_seeds             
-4 strict_structure_supported_PT_profile    34 all_170_seeds             
+  reviewed_coverage_status              drugs scope
+  <chr>                                 <int> <chr>
+1 named_label_context_only_NOT_strict      11 all_170_seeds
+2 no_accepted_mapping_after_review          1 all_170_seeds
+3 no_candidate_mapping                    124 all_170_seeds
+4 strict_structure_supported_PT_profile    34 all_170_seeds
 5 named_label_context_only_NOT_strict      11 primary_55_structure_queue
 6 no_accepted_mapping_after_review          1 primary_55_structure_queue
 7 no_candidate_mapping                     20 primary_55_structure_queue

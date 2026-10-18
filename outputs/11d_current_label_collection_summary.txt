@@ -1,0 +1,12 @@
+SCRIPT 11d - CURRENT LABEL COLLECTION
+Seeds queried: 170
+Candidate seed/label records: 783
+Seeds with selected identity-supported adverse-reaction labels: 52
+Selected representative labels: 108
+Queries with >50 results: 2
+Outputs: current_label_candidates.csv/current_label_selection.csv; outputs/11d_*; raw response caches.
+Select up to three label sets per seed, requiring exact primary name and source UNII agreement
+with one harmonised ingredient. Other formulations, combinations and ambiguous names remain reviewable.
+This is a bounded representative-label supplement, not exhaustive current-label acquisition.
+US-label absence does not establish lack of adverse effects or lack of approval elsewhere.
+No extracted adverse event is yet an accepted drug/PT association. Next: controlled-vocabulary extraction and review.

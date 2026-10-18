@@ -1,0 +1,12 @@
+SCRIPT 11f - DAILYMED ACTIVE-MOIETY LABEL SUPPLEMENT
+Seeds checked: 119
+Additional seeds with supported labels: 27
+Total seeds with selected labels: 79
+Output: current_label_selection_supplemented.csv and current_label_moiety_review.csv (data/curated/).
+Queries/versions and raw XML are retained; up to three candidate sets examined per seed.
+Accept only literal seed-name plus UNII agreement with a single ingredient or its explicit active moiety.
+An active-moiety relation supports clinical label attribution, not salt/free-base structural equivalence.
+Combination products and unmatched/ambiguous ingredients remain outside the accepted extraction selection.
+Gemcitabine intravenous labels are explicitly recovered; intravesical-device data do not substitute for systemic cancer-label data.
+DailyMed and openFDA describe overlapping SPL labels, not independent experimental evidence.
+Next: rerun 11e on the supplemented selection, then context-review term candidates.
