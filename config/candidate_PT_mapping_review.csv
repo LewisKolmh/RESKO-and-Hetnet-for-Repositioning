@@ -1,0 +1,5 @@
+alias_norm,reviewed_pt_cui,reason
+abdominal pain,C0000737,Literal source term exactly names the supplied SIDER PT; alternate LLT-derived PT is not asserted
+rash,C0015230,Literal source term exactly names the supplied SIDER PT; alternate LLT-derived PT is not asserted
+fatigue,C0015672,Literal source term exactly names the supplied SIDER PT; alternate LLT-derived PT is not asserted
+arthralgia,C0003862,Literal source term exactly names the supplied SIDER PT; alternate LLT-derived PT is not asserted

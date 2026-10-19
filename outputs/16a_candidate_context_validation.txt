@@ -1,0 +1,2 @@
+PASS: all candidate common-summary rows adjudicated; exact reviewed source spans present once and accepted mentions wholly contained.
+PASS: accepted identity support, unique entity/PT/context features, explicit pending comparison status and unchanged source hashes.

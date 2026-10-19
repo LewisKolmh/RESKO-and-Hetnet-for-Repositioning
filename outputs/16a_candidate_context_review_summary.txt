@@ -1,0 +1,19 @@
+SCRIPT 16a - CANDIDATE COMMON-SUMMARY CONTEXT REVIEW
+Candidate summary segments reviewed: 39
+Candidate queue evidence rows adjudicated: 234
+Bounded positive lists retained: 6
+Reviewed distinct entity/PT/context features: 38
+Candidate profiles represented: 6
+Seed common-summary evidence rows still pending in this batch: 3669
+Inputs: script-15 candidate common-summary queue, full source segments and full term evidence.
+Outputs: candidate_common_summary_* review tables and candidate_positive_list_* (local); compact features/reports in outputs/16a_*.
+Exact reviewed reaction-list spans prevent indication prefixes, adjacent tables and unreviewed surrounding sentences becoming accepted features.
+Six representative profiles use one selected source list each; repeated label/summary mentions are not independent evidence.
+Four ambiguous aliases reviewed explicitly: abdominal pain, rash, fatigue and arthralgia use exact source PT names, not alternate LLT-derived concepts.
+Accepted lists retain population/regimen qualifiers. None is promoted to confirmed single-agent, translation-sparing or target-binding evidence.
+Technetium-pentetate formulation and carfilzomib combination summaries are held; historical SIDER structure/formulation uncertainty persists.
+Discontinuation, dose modification, other cohorts and causality-unspecified lists remain outside the selected profiles.
+All comparison_ready flags are FALSE: seed/candidate sampling, regimen and route compatibility must be resolved before scoring.
+Only this candidate common-summary batch is adjudicated; seed summaries, dictionary ambiguities, narrative/table evidence and sacrosidase context remain pending.
+Original extracted evidence and prior reviewed features are unchanged. No ranks, p-values, BH adjustment or eEF1A activity claims generated.
+Next: review seed common-summary batches using the same bounded-list approach, then check comparable identity/regimen/route strata.

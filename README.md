@@ -38,6 +38,7 @@ source("scripts/helpers/validate_candidate_labels.R")
 source("scripts/14c_resolve_sacrosidase_context.R")
 source("scripts/15_extract_comparable_label_terms.R")
 source("scripts/helpers/validate_comparable_labels.R")
+source("scripts/16a_review_candidate_summaries.R")
 ```
 
 ## Data layers
@@ -168,3 +169,20 @@ The validation helper checks every match against its source span/dictionary and
 exports full-inventory coverage, including drugs without collected labels.
 Historical SIDER data and previously reviewed features remain separate. Next is
 bounded source-context review before constructing comparable PT features or ranks.
+
+## Candidate summary context review (script 16a)
+
+All 39 candidate common-summary passages (234 queued evidence rows) have explicit
+batch decisions. Six reviewed exact reaction-list spans yield 38 entity/PT/context
+features. Rules and four exact-PT disambiguation decisions are versioned in
+`config/candidate_positive_list_review_rules.csv` and
+`config/candidate_PT_mapping_review.csv`. All other surrounding content stays
+outside those accepted spans. Full source text/review evidence remains local.
+
+Technetium-pentetate radiopharmaceutical summaries and carfilzomib combination
+summaries are held. Duplicate source lists, distinct populations and discontinuation
+endpoints are not silently pooled. Regimen/population qualifiers remain attached;
+all profiles have `comparison_ready = FALSE`. This is a bounded candidate batch,
+not completion of seed, table, narrative or named-biologic review. The compact
+feature export is `outputs/16a_candidate_PT_features.csv`; coverage and validation
+are in `outputs/16a_*`. Next is seed summary review using the same approach.

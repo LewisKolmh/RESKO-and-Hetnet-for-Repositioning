@@ -1,19 +1,17 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SCRIPT 15 EXTRACTION AND VALIDATION COMPLETE
-Processed all 210 collected entity/label associations (155 seed, 54 candidate
-review records, one sacrosidase context label), representing 206 distinct label
-documents and 102 entities. Extracted 59,500 candidate evidence rows; 3,903 rows
-enter the explicit common-summary review queue. Every hit remains unaccepted
-until context review. Unresolved identities and sacrosidase named-biologic
-context are kept outside identity-eligible comparisons.
-Full inventory coverage retains 200 entities (170 seeds plus 30 SIDER groups);
-98 have no collected label. Missing labels/zero dictionary matches do not mean
-no adverse effects or no activity. Independent validation checked every match
-against its source text and dictionary and confirmed input hashes unchanged.
-Next: review source clauses and table contexts, retaining identity/regimen/route
-strata before creating comparable PT features or similarity scores.
+CURRENT CHECKPOINT - SCRIPT 16a CANDIDATE SUMMARY REVIEW COMPLETE
+Reviewed all 39 candidate common-summary passages (234 queued evidence rows).
+Six bounded positive lists yield 38 distinct entity/PT/context features. Four
+ambiguous dictionary aliases are explicitly resolved to their exact PT names.
+Technetium-pentetate formulation and carfilzomib combination summaries are held.
+Duplicate, discontinuation/dose-change, distinct-cohort and causality-unspecified
+lists are not pooled. All comparison_ready flags remain FALSE; regimen/route
+compatibility and historical identity uncertainty need attention before ranking.
+The 3,669 seed common-summary evidence rows remain pending in this batch; next
+is seed review with the same bounded-source-list method. Full narrative/table,
+unresolved identity and named-biologic context queues remain separate.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1499,3 +1497,46 @@ candidate had both supported and unresolved label records. Coverage now joins
 counts by entity AND identity layer; full-inventory totals aggregate those layers
 once. The complete extraction was rerun and independent validation passed.
 This correction affects coverage reporting, not the 59,500 extracted matches.
+
+SCRIPT 16a RUN - 2026-10-19 11:34:32 BST
+Script: scripts/16a_review_candidate_summaries.R
+SCRIPT 16a - CANDIDATE COMMON-SUMMARY CONTEXT REVIEW
+Candidate summary segments reviewed: 39
+Candidate queue evidence rows adjudicated: 234
+Bounded positive lists retained: 6
+Reviewed distinct entity/PT/context features: 31
+Candidate profiles represented: 6
+Seed common-summary evidence rows still pending in this batch: 3669
+Inputs: script-15 candidate common-summary queue, full source segments and full term evidence.
+Outputs: candidate_common_summary_* review tables and candidate_positive_list_* (local); compact features/reports in outputs/16a_*.
+Exact reviewed reaction-list spans prevent indication prefixes, adjacent tables and unreviewed surrounding sentences becoming accepted features.
+Six representative profiles use one selected source list each; repeated label/summary mentions are not independent evidence.
+Accepted lists retain population/regimen qualifiers. None is promoted to confirmed single-agent, translation-sparing or target-binding evidence.
+Technetium-pentetate formulation and carfilzomib combination summaries are held; historical SIDER structure/formulation uncertainty persists.
+Discontinuation, dose modification, other cohorts and causality-unspecified lists remain outside the selected profiles.
+All comparison_ready flags are FALSE: seed/candidate sampling, regimen and route compatibility must be resolved before scoring.
+Only this candidate common-summary batch is adjudicated; seed summaries, dictionary ambiguities, narrative/table evidence and sacrosidase context remain pending.
+Original extracted evidence and prior reviewed features are unchanged. No ranks, p-values, BH adjustment or eEF1A activity claims generated.
+Next: review seed common-summary batches using the same bounded-list approach, then check comparable identity/regimen/route strata.
+
+SCRIPT 16a RUN - 2026-10-19 11:35:07 BST
+Script: scripts/16a_review_candidate_summaries.R
+SCRIPT 16a - CANDIDATE COMMON-SUMMARY CONTEXT REVIEW
+Candidate summary segments reviewed: 39
+Candidate queue evidence rows adjudicated: 234
+Bounded positive lists retained: 6
+Reviewed distinct entity/PT/context features: 38
+Candidate profiles represented: 6
+Seed common-summary evidence rows still pending in this batch: 3669
+Inputs: script-15 candidate common-summary queue, full source segments and full term evidence.
+Outputs: candidate_common_summary_* review tables and candidate_positive_list_* (local); compact features/reports in outputs/16a_*.
+Exact reviewed reaction-list spans prevent indication prefixes, adjacent tables and unreviewed surrounding sentences becoming accepted features.
+Six representative profiles use one selected source list each; repeated label/summary mentions are not independent evidence.
+Four ambiguous aliases reviewed explicitly: abdominal pain, rash, fatigue and arthralgia use exact source PT names, not alternate LLT-derived concepts.
+Accepted lists retain population/regimen qualifiers. None is promoted to confirmed single-agent, translation-sparing or target-binding evidence.
+Technetium-pentetate formulation and carfilzomib combination summaries are held; historical SIDER structure/formulation uncertainty persists.
+Discontinuation, dose modification, other cohorts and causality-unspecified lists remain outside the selected profiles.
+All comparison_ready flags are FALSE: seed/candidate sampling, regimen and route compatibility must be resolved before scoring.
+Only this candidate common-summary batch is adjudicated; seed summaries, dictionary ambiguities, narrative/table evidence and sacrosidase context remain pending.
+Original extracted evidence and prior reviewed features are unchanged. No ranks, p-values, BH adjustment or eEF1A activity claims generated.
+Next: review seed common-summary batches using the same bounded-list approach, then check comparable identity/regimen/route strata.

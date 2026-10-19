@@ -1,0 +1,6 @@
+batch_review_decision,reason,evidence_rows
+accept_positive_list_context,Only mentions inside the exact reviewed reaction list are accepted,31
+hold_outside_accepted_span,"Duplicate label support, distinct cohort, discontinuation/dose-change endpoint or causality-unspecified summary; not pooled into chosen profile",154
+hold_outside_accepted_span,Isatuximab/carfilzomib/dexamethasone combination context; no single-drug attribution,35
+hold_outside_accepted_span,Only mentions inside the exact reviewed reaction list are accepted,12
+hold_outside_accepted_span,Technetium Tc-99m pentetate formulation; do not attribute complex-specific reactions to free pentetic acid,2
