@@ -1,20 +1,19 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SCRIPTS 14b AND 14c COMPLETE
-Thirty historical SIDER groups retained; the sacrosidase identity conflict remains
-blocked. Current label collection covers 22 groups with 51 distinct SPL sets
-(54 group/label rows). Eleven groups have 23 UNII/name-supported single-ingredient
-label records with adverse-reaction text. Thirteen searches are truncated by the
-representative-panel limits; missing coverage is not evidence of no effects.
-Raw AR sections and tables are local; no PT features or target claims are accepted
-by this section. Independent XML checks passed. Next: script 15, comparable PT
-candidate extraction and context review for seed and candidate labels.
-Sacrosidase update (14c): recovered one separate named-biologic context label via
-DrugBank DB06760 and matching UNII 8A7F670F2Y in the Sucraid SPL (version 21,
-effective 20251229). Its 746-character AR section is available for context review.
-This does not change the 11-group strict 14b coverage. The incorrect CID remains
-blocked and the enzyme is excluded from small-molecule structure screening.
+CURRENT CHECKPOINT - SCRIPT 15 EXTRACTION AND VALIDATION COMPLETE
+Processed all 210 collected entity/label associations (155 seed, 54 candidate
+review records, one sacrosidase context label), representing 206 distinct label
+documents and 102 entities. Extracted 59,500 candidate evidence rows; 3,903 rows
+enter the explicit common-summary review queue. Every hit remains unaccepted
+until context review. Unresolved identities and sacrosidase named-biologic
+context are kept outside identity-eligible comparisons.
+Full inventory coverage retains 200 entities (170 seeds plus 30 SIDER groups);
+98 have no collected label. Missing labels/zero dictionary matches do not mean
+no adverse effects or no activity. Independent validation checked every match
+against its source text and dictionary and confirmed input hashes unchanged.
+Next: review source clauses and table contexts, retaining identity/regimen/route
+strata before creating comparable PT features or similarity scores.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1442,3 +1441,61 @@ Historical name context is recovered; historical SIDER chemical/formulation iden
 Keep this enzyme outside the small-molecule structure screen; it may enter a separately labelled side-effect/context comparison.
 The recovered label is not a new strict full-key match and must not be pooled silently into the 14b selection.
 Current label source text still needs the same PT/context review as other labels. No eEF1A binding claim is made.
+
+SCRIPT 15 RUN - 2026-10-19 11:00:39 BST
+Script: scripts/15_extract_comparable_label_terms.R
+SCRIPT 15 - SHARED CURRENT-LABEL PT CANDIDATE EXTRACTION
+Entity/label associations processed: 210
+Distinct label documents: 206
+Entities with collected labels: 102
+Candidate evidence rows: 59500
+Entities with at least one dictionary match: 98
+Explicit common-summary review rows: 3903
+Inputs: all 155 seed selections, all 54 candidate group/label review records and the recovered sacrosidase context label; existing SIDER PT dictionary.
+Outputs locally: comparable_label_registry.csv, comparable_label_PT_candidate_evidence.csv, comparable_label_evidence_segments.csv, comparable_label_common_summary_review_queue.csv.
+Public reports: outputs/15_* coverage, review workload, input hashes and validation.
+Same normalisation, exact dictionary boundaries, sentence/table segmentation and context flags applied across cohorts.
+Unresolved candidate identities are processed for audit but remain outside identity-eligible comparisons; sacrosidase stays named-biologic context only.
+Shared label/segment IDs make repeated source documents visible; multiple labels/mentions are not independent experiments.
+All hits require context review: flags are screening aids, not proof of positive adverse-event attribution.
+Tables may contain placebo columns, mixed regimens, grades and frequencies; narrative may mention indications, negation and outcomes.
+Dictionary is limited to SIDER mappings; newer/unmapped terms may be missed. Longest non-overlapping literal matches are extraction candidates.
+Prior reviewed features and historical SIDER tables are unchanged. No accepted features, new ranks, p-values or BH correction generated.
+Next: review bounded source clauses/table contexts to build comparable PT profiles, retaining identity, regimen and route strata before scoring.
+
+SCRIPT 15 RUN - 2026-10-19 11:02:14 BST
+Script: scripts/15_extract_comparable_label_terms.R
+SCRIPT 15 - SHARED CURRENT-LABEL PT CANDIDATE EXTRACTION
+Entity/label associations processed: 210
+Distinct label documents: 206
+Entities with collected labels: 102
+Candidate evidence rows: 59500
+Entities with at least one dictionary match: 98
+Explicit common-summary review rows: 3903
+Inputs: all 155 seed selections, all 54 candidate group/label review records and the recovered sacrosidase context label; existing SIDER PT dictionary.
+Outputs locally: comparable_label_registry.csv, comparable_label_PT_candidate_evidence.csv, comparable_label_evidence_segments.csv, comparable_label_common_summary_review_queue.csv.
+Public reports: outputs/15_* coverage, review workload, input hashes and validation.
+Same normalisation, exact dictionary boundaries, sentence/table segmentation and context flags applied across cohorts.
+Unresolved candidate identities are processed for audit but remain outside identity-eligible comparisons; sacrosidase stays named-biologic context only.
+Shared label/segment IDs make repeated source documents visible; multiple labels/mentions are not independent experiments.
+All hits require context review: flags are screening aids, not proof of positive adverse-event attribution.
+Tables may contain placebo columns, mixed regimens, grades and frequencies; narrative may mention indications, negation and outcomes.
+Dictionary is limited to SIDER mappings; newer/unmapped terms may be missed. Longest non-overlapping literal matches are extraction candidates.
+Prior reviewed features and historical SIDER tables are unchanged. No accepted features, new ranks, p-values or BH correction generated.
+Next: review bounded source clauses/table contexts to build comparable PT profiles, retaining identity, regimen and route strata before scoring.
+
+SCRIPT 15 - INDEPENDENT VALIDATION AND INVENTORY COVERAGE
+PASS: every evidence span rechecked against its full source segment and dictionary/PT link.
+PASS: all unresolved and named-biologic contexts remain identity-ineligible; all review decisions remain unassigned.
+PASS: input checksums and cross-table evidence counts agree; no unmatched segment keys.
+Full inventory coverage rows: 200
+Entities without collected labels: 98
+Zero counts describe extraction/collection coverage only, never an absence of adverse effects or target activity.
+Output: outputs/15_full_inventory_coverage.csv (all seed and queued SIDER entities, including missing-label coverage).
+
+SCRIPT 15 - VALIDATION CORRECTION
+Independent validation caught repeated entity-level coverage totals when the same
+candidate had both supported and unresolved label records. Coverage now joins
+counts by entity AND identity layer; full-inventory totals aggregate those layers
+once. The complete extraction was rerun and independent validation passed.
+This correction affects coverage reporting, not the 59,500 extracted matches.

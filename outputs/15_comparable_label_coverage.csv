@@ -1,0 +1,105 @@
+entity_id,cohort,entity_name,comparison_layer,label_records,source_segments,literal_mentions,candidate_PT_terms,evidence_rows
+seed:DB00014,seed,Goserelin,seed_selected_label,2,227,471,181,571
+seed:DB00072,seed,Trastuzumab,seed_selected_label,3,828,1175,110,1286
+seed:DB00112,seed,Bevacizumab,seed_selected_label,3,1086,1315,134,1573
+seed:DB00188,seed,Bortezomib,seed_selected_label,3,697,1877,228,2180
+seed:DB00262,seed,Carmustine,seed_selected_label,1,81,115,34,117
+seed:DB00286,seed,Conjugated estrogens,seed_selected_label,2,112,163,85,191
+seed:DB00305,seed,Mitomycin,seed_selected_label,3,122,144,50,171
+seed:DB00351,seed,Megestrol acetate,seed_selected_label,3,49,154,86,176
+seed:DB00361,seed,Vinorelbine,seed_selected_label,2,270,482,105,528
+seed:DB00441,seed,Gemcitabine,seed_selected_label,4,632,698,109,794
+seed:DB00445,seed,Epirubicin,seed_selected_label,1,88,118,60,129
+seed:DB00480,seed,Lenalidomide,seed_selected_label,3,1769,3944,331,4379
+seed:DB00515,seed,Cisplatin,seed_selected_label,3,46,242,92,265
+seed:DB00531,seed,Cyclophosphamide,seed_selected_label,2,60,425,198,461
+seed:DB00539,seed,Toremifene,seed_selected_label,3,138,255,56,276
+seed:DB00544,seed,Fluorouracil,seed_selected_label,3,18,68,48,73
+seed:DB00563,seed,Methotrexate,seed_selected_label,3,52,409,144,465
+seed:DB00570,seed,Vinblastine,seed_selected_label,1,17,49,49,58
+seed:DB00675,seed,Tamoxifen,seed_selected_label,3,612,538,109,648
+seed:DB00783,seed,Estradiol,seed_selected_label,3,83,170,78,201
+seed:DB00947,seed,Fulvestrant,seed_selected_label,3,955,1621,148,1809
+seed:DB00958,seed,Carboplatin,seed_selected_label,3,314,362,73,388
+seed:DB00990,seed,Exemestane,seed_selected_label,3,458,677,89,831
+seed:DB00997,seed,Doxorubicin,seed_selected_label,3,308,646,145,759
+seed:DB01006,seed,Letrozole,seed_selected_label,3,799,1274,129,1470
+seed:DB01030,seed,Topotecan,seed_selected_label,1,122,220,76,247
+seed:DB01042,seed,Melphalan,seed_selected_label,2,23,69,34,75
+seed:DB01101,seed,Capecitabine,seed_selected_label,3,561,1356,185,1542
+seed:DB01181,seed,Ifosfamide,seed_selected_label,2,182,959,272,1067
+seed:DB01217,seed,Anastrozole,seed_selected_label,3,727,1302,121,1550
+seed:DB01229,seed,Paclitaxel,seed_selected_label,3,1028,1236,184,1407
+seed:DB01234,seed,Dexamethasone,seed_selected_label,3,82,262,129,295
+seed:DB01248,seed,Docetaxel,seed_selected_label,3,1766,2804,166,3030
+seed:DB01259,seed,Lapatinib,seed_selected_label,3,392,304,45,363
+seed:DB01590,seed,Everolimus,seed_selected_label,3,469,1112,309,1238
+seed:DB04845,seed,Ixabepilone,seed_selected_label,1,90,222,129,252
+seed:DB05109,seed,Trabectedin,seed_selected_label,2,126,213,47,259
+seed:DB05773,seed,Trastuzumab emtansine,seed_selected_label,1,142,319,88,378
+seed:DB06287,seed,Temsirolimus,seed_selected_label,3,228,506,115,579
+seed:DB06317,seed,Elotuzumab,seed_selected_label,1,126,186,60,205
+seed:DB06366,seed,Pertuzumab,seed_selected_label,1,295,570,74,652
+seed:DB06374,seed,Elacestrant,seed_selected_label,1,55,81,36,94
+seed:DB06399,seed,Atacicept,seed_selected_label,1,12,11,7,11
+seed:DB06603,seed,Panobinostat,seed_selected_label,1,48,142,98,173
+seed:DB06710,seed,Methyltestosterone,seed_selected_label,3,44,63,24,72
+seed:DB08871,seed,Eribulin,seed_selected_label,3,314,615,87,716
+seed:DB08889,seed,Carfilzomib,seed_selected_label,1,438,1283,213,1417
+seed:DB08910,seed,Pomalidomide,seed_selected_label,3,533,983,145,1097
+seed:DB09037,seed,Pembrolizumab,seed_selected_label,1,1820,4410,454,4958
+seed:DB09073,seed,Palbociclib,seed_selected_label,3,767,1896,124,2097
+seed:DB09074,seed,Olaparib,seed_selected_label,1,369,766,130,860
+seed:DB09331,seed,Daratumumab,seed_selected_label,1,365,802,130,865
+seed:DB09570,seed,Ixazomib,seed_selected_label,1,41,65,35,72
+seed:DB11652,seed,Tucatinib,seed_selected_label,1,115,221,92,254
+seed:DB11730,seed,Ribociclib,seed_selected_label,1,203,271,84,296
+seed:DB11760,seed,Talazoparib,seed_selected_label,3,233,432,59,489
+seed:DB11793,seed,Niraparib,seed_selected_label,1,168,218,72,238
+seed:DB11828,seed,Neratinib,seed_selected_label,1,106,230,78,268
+seed:DB11942,seed,Selinexor,seed_selected_label,1,152,306,74,337
+seed:DB12001,seed,Abemaciclib,seed_selected_label,1,297,371,78,422
+seed:DB12015,seed,Alpelisib,seed_selected_label,2,168,270,79,314
+seed:DB12218,seed,Capivasertib,seed_selected_label,1,91,263,71,295
+seed:DB12332,seed,Rucaparib,seed_selected_label,1,161,291,91,327
+seed:DB12489,seed,Mirvetuximab soravtansine,seed_selected_label,1,132,272,89,306
+seed:DB12893,seed,Sacituzumab govitecan,seed_selected_label,1,361,448,83,524
+seed:DB13944,seed,Testosterone enanthate,seed_selected_label,3,103,143,60,166
+seed:DB14811,seed,Isatuximab,seed_selected_label,2,339,767,144,855
+seed:DB14962,seed,Trastuzumab deruxtecan,seed_selected_label,1,771,2059,221,2363
+seed:DB14967,seed,Margetuximab,seed_selected_label,2,120,194,48,236
+seed:DB14976,seed,Relacorilant,seed_selected_label,1,48,54,37,67
+seed:DB15275,seed,Inavolisib,seed_selected_label,1,92,149,62,172
+seed:DB15395,seed,Elranatamab,seed_selected_label,1,99,276,120,302
+seed:DB15719,seed,Belantamab mafodotin,seed_selected_label,1,67,101,41,108
+seed:DB16410,seed,Datopotamab deruxtecan,seed_selected_label,1,178,355,76,409
+seed:DB16655,seed,Teclistamab,seed_selected_label,1,183,444,138,482
+seed:DB16678,seed,Talquetamab,seed_selected_label,1,107,495,185,536
+seed:DB17447,seed,Linvoseltamab,seed_selected_label,1,71,147,73,160
+seed:DB19006,seed,Vepdegestrant,seed_selected_label,2,93,147,33,163
+seed:DB19043,seed,Imlunestrant,seed_selected_label,1,106,139,54,158
+sider:CID100002341,candidate,benzphetamine,candidate_identity_unresolved,3,23,48,15,48
+sider:CID100003053,candidate,diethylenetriaminepentaacetic,candidate_identity_supported,3,21,44,24,56
+sider:CID100003783,candidate,isoxsuprine,candidate_identity_unresolved,3,0,0,0,0
+sider:CID100003872,candidate,lactulose,candidate_identity_unresolved,3,11,25,10,25
+sider:CID100004680,candidate,papaverine,candidate_identity_supported,3,6,42,17,54
+sider:CID100004989,candidate,pyrantel,candidate_identity_supported,3,0,0,0,0
+sider:CID100006116,candidate,calcium,candidate_identity_supported,1,13,28,18,30
+sider:CID100006116,candidate,calcium,candidate_identity_unresolved,2,2,2,1,2
+sider:CID100023926,candidate,lanthanum,candidate_identity_unresolved,3,28,66,16,74
+sider:CID100040632,candidate,pirfenidone,candidate_identity_supported,3,113,210,33,252
+sider:CID100054949,candidate,NSC,candidate_identity_unresolved,1,0,0,0,0
+sider:CID100064929,candidate,fenofibric,candidate_identity_supported,3,75,112,47,129
+sider:CID100135113,named_biologic_context,sacrosidase,named_biologic_context_only,1,3,13,16,16
+sider:CID100148121,candidate,pralatrexate,candidate_identity_supported,3,151,254,40,278
+sider:CID100168924,candidate,lanthanum,candidate_identity_unresolved,3,28,66,16,74
+sider:CID106328144,candidate,radium,candidate_identity_unresolved,3,0,0,0,0
+sider:CID109846180,candidate,eltrombopag,candidate_identity_unresolved,3,282,405,67,467
+sider:CID109912092,candidate,apremilast,candidate_identity_supported,1,95,138,38,145
+sider:CID110482134,candidate,glycerol,candidate_identity_supported,3,79,247,44,274
+sider:CID111304743,candidate,riociguat,candidate_identity_supported,2,41,75,21,77
+sider:CID111556711,candidate,Carfilzomib,candidate_identity_supported,1,399,999,204,1092
+sider:CID116126651,candidate,PCI-32765,candidate_identity_supported,1,379,483,104,563
+sider:CID116126651,candidate,PCI-32765,candidate_identity_unresolved,1,0,0,0,0
+sider:CID116132446,candidate,Symlin,candidate_identity_unresolved,1,57,54,20,58
+sider:CID144564722,candidate,Promacta,candidate_identity_unresolved,1,129,146,67,169

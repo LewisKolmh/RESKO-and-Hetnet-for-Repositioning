@@ -1,0 +1,9 @@
+PASS: unique entity/label and evidence keys; each cache resolves exactly one selected label and its set ID.
+PASS: word boundaries and distinct negation/comparator/combination flag controls.
+PASS: original input checksums unchanged; zero-hit selected entities retained in coverage.
+PASS: every evidence span rechecked against its full source segment and dictionary/PT link.
+PASS: all unresolved and named-biologic contexts remain identity-ineligible; all review decisions remain unassigned.
+PASS: input checksums and cross-table evidence counts agree; no unmatched segment keys.
+Full inventory coverage rows: 200
+Entities without collected labels: 98
+Zero counts describe extraction/collection coverage only, never an absence of adverse effects or target activity.

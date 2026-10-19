@@ -36,6 +36,8 @@ source("scripts/14a_resolve_candidate_identities.R")
 source("scripts/14b_collect_candidate_labels.R")
 source("scripts/helpers/validate_candidate_labels.R")
 source("scripts/14c_resolve_sacrosidase_context.R")
+source("scripts/15_extract_comparable_label_terms.R")
+source("scripts/helpers/validate_comparable_labels.R")
 ```
 
 ## Data layers
@@ -146,3 +148,23 @@ structure match. The incorrect small-molecule lead remains blocked, the original
 SIDER files and strict selections remain unchanged, and sacrosidase stays outside
 the small-molecule structure screen. Script 15 must retain this context distinction.
 The source and decision summary are in `outputs/14c_*`.
+
+## Comparable label extraction (script 15)
+
+Script 15 uses the same dictionary, normalisation, boundaries and sentence/table
+processing for all 210 collected entity/label associations (206 distinct label
+documents). It processes 155 seed associations, all 54 candidate review records
+and the separately verified sacrosidase label. Unresolved candidate identities
+and named-biologic context remain explicitly separate from supported identities.
+
+The extraction yields 59,500 candidate evidence rows. Every term retains a source
+segment, label version, cohort, identity layer and context flags. All matches
+require review; none becomes a confirmed adverse effect solely through a literal
+dictionary match. Repeated labels and table/narrative mentions are not independent
+evidence. Full source text and review queues remain local.
+
+`outputs/15_*` contains coverage, review workload, input hashes and validation.
+The validation helper checks every match against its source span/dictionary and
+exports full-inventory coverage, including drugs without collected labels.
+Historical SIDER data and previously reviewed features remain separate. Next is
+bounded source-context review before constructing comparable PT features or ranks.

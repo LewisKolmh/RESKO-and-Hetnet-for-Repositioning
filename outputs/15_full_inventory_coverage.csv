@@ -1,0 +1,201 @@
+entity_id,entity_name,inventory,comparison_layers,label_records,source_segments,literal_mentions,evidence_rows,candidate_PT_terms,label_coverage_status
+seed:DB00014,Goserelin,seed,seed_selected_label,2,227,471,571,181,dictionary_candidates_require_review
+seed:DB00072,Trastuzumab,seed,seed_selected_label,3,828,1175,1286,110,dictionary_candidates_require_review
+seed:DB00112,Bevacizumab,seed,seed_selected_label,3,1086,1315,1573,134,dictionary_candidates_require_review
+seed:DB00188,Bortezomib,seed,seed_selected_label,3,697,1877,2180,228,dictionary_candidates_require_review
+seed:DB00262,Carmustine,seed,seed_selected_label,1,81,115,117,34,dictionary_candidates_require_review
+seed:DB00286,Conjugated estrogens,seed,seed_selected_label,2,112,163,191,85,dictionary_candidates_require_review
+seed:DB00305,Mitomycin,seed,seed_selected_label,3,122,144,171,50,dictionary_candidates_require_review
+seed:DB00351,Megestrol acetate,seed,seed_selected_label,3,49,154,176,86,dictionary_candidates_require_review
+seed:DB00357,Aminoglutethimide,seed,,0,0,0,0,0,no_collected_label
+seed:DB00361,Vinorelbine,seed,seed_selected_label,2,270,482,528,105,dictionary_candidates_require_review
+seed:DB00441,Gemcitabine,seed,seed_selected_label,4,632,698,794,109,dictionary_candidates_require_review
+seed:DB00445,Epirubicin,seed,seed_selected_label,1,88,118,129,60,dictionary_candidates_require_review
+seed:DB00480,Lenalidomide,seed,seed_selected_label,3,1769,3944,4379,331,dictionary_candidates_require_review
+seed:DB00488,Altretamine,seed,,0,0,0,0,0,no_collected_label
+seed:DB00515,Cisplatin,seed,seed_selected_label,3,46,242,265,92,dictionary_candidates_require_review
+seed:DB00531,Cyclophosphamide,seed,seed_selected_label,2,60,425,461,198,dictionary_candidates_require_review
+seed:DB00539,Toremifene,seed,seed_selected_label,3,138,255,276,56,dictionary_candidates_require_review
+seed:DB00544,Fluorouracil,seed,seed_selected_label,3,18,68,73,48,dictionary_candidates_require_review
+seed:DB00563,Methotrexate,seed,seed_selected_label,3,52,409,465,144,dictionary_candidates_require_review
+seed:DB00570,Vinblastine,seed,seed_selected_label,1,17,49,58,49,dictionary_candidates_require_review
+seed:DB00675,Tamoxifen,seed,seed_selected_label,3,612,538,648,109,dictionary_candidates_require_review
+seed:DB00783,Estradiol,seed,seed_selected_label,3,83,170,201,78,dictionary_candidates_require_review
+seed:DB00894,Testolactone,seed,,0,0,0,0,0,no_collected_label
+seed:DB00947,Fulvestrant,seed,seed_selected_label,3,955,1621,1809,148,dictionary_candidates_require_review
+seed:DB00958,Carboplatin,seed,seed_selected_label,3,314,362,388,73,dictionary_candidates_require_review
+seed:DB00984,Nandrolone phenpropionate,seed,,0,0,0,0,0,no_collected_label
+seed:DB00990,Exemestane,seed,seed_selected_label,3,458,677,831,89,dictionary_candidates_require_review
+seed:DB00997,Doxorubicin,seed,seed_selected_label,3,308,646,759,145,dictionary_candidates_require_review
+seed:DB01006,Letrozole,seed,seed_selected_label,3,799,1274,1470,129,dictionary_candidates_require_review
+seed:DB01030,Topotecan,seed,seed_selected_label,1,122,220,247,76,dictionary_candidates_require_review
+seed:DB01042,Melphalan,seed,seed_selected_label,2,23,69,75,34,dictionary_candidates_require_review
+seed:DB01101,Capecitabine,seed,seed_selected_label,3,561,1356,1542,185,dictionary_candidates_require_review
+seed:DB01181,Ifosfamide,seed,seed_selected_label,2,182,959,1067,272,dictionary_candidates_require_review
+seed:DB01185,Fluoxymesterone,seed,,0,0,0,0,0,no_collected_label
+seed:DB01217,Anastrozole,seed,seed_selected_label,3,727,1302,1550,121,dictionary_candidates_require_review
+seed:DB01229,Paclitaxel,seed,seed_selected_label,3,1028,1236,1407,184,dictionary_candidates_require_review
+seed:DB01234,Dexamethasone,seed,seed_selected_label,3,82,262,295,129,dictionary_candidates_require_review
+seed:DB01248,Docetaxel,seed,seed_selected_label,3,1766,2804,3030,166,dictionary_candidates_require_review
+seed:DB01259,Lapatinib,seed,seed_selected_label,3,392,304,363,45,dictionary_candidates_require_review
+seed:DB01564,Calusterone,seed,,0,0,0,0,0,no_collected_label
+seed:DB01590,Everolimus,seed,seed_selected_label,3,469,1112,1238,309,dictionary_candidates_require_review
+seed:DB01616,Alverine,seed,,0,0,0,0,0,no_collected_label
+seed:DB01873,Epothilone D,seed,,0,0,0,0,0,no_collected_label
+seed:DB02187,Equilin,seed,,0,0,0,0,0,no_collected_label
+seed:DB02342,2-Methoxyestradiol,seed,,0,0,0,0,0,no_collected_label
+seed:DB03010,Patupilone,seed,,0,0,0,0,0,no_collected_label
+seed:DB04575,Quinestrol,seed,,0,0,0,0,0,no_collected_label
+seed:DB04845,Ixabepilone,seed,seed_selected_label,1,90,222,252,129,dictionary_candidates_require_review
+seed:DB04901,Galiximab,seed,,0,0,0,0,0,no_collected_label
+seed:DB04964,Oregovomab,seed,,0,0,0,0,0,no_collected_label
+seed:DB05003,Imexon,seed,,0,0,0,0,0,no_collected_label
+seed:DB05006,Adecatumumab,seed,,0,0,0,0,0,no_collected_label
+seed:DB05022,Amonafide,seed,,0,0,0,0,0,no_collected_label
+seed:DB05033,INCB7839,seed,,0,0,0,0,0,no_collected_label
+seed:DB05051,BZL101,seed,,0,0,0,0,0,no_collected_label
+seed:DB05109,Trabectedin,seed,seed_selected_label,2,126,213,259,47,dictionary_candidates_require_review
+seed:DB05136,Bavituximab,seed,,0,0,0,0,0,no_collected_label
+seed:DB05292,IDM-1,seed,,0,0,0,0,0,no_collected_label
+seed:DB05296,Motexafin lutetium,seed,,0,0,0,0,0,no_collected_label
+seed:DB05297,Paclitaxel docosahexaenoic acid,seed,,0,0,0,0,0,no_collected_label
+seed:DB05308,Folitixorin calcium,seed,,0,0,0,0,0,no_collected_label
+seed:DB05322,Contusugene ladenovec,seed,,0,0,0,0,0,no_collected_label
+seed:DB05325,INGN 225,seed,,0,0,0,0,0,no_collected_label
+seed:DB05380,DOTMP HO-166,seed,,0,0,0,0,0,no_collected_label
+seed:DB05387,Neovastat,seed,,0,0,0,0,0,no_collected_label
+seed:DB05393,NOV-002,seed,,0,0,0,0,0,no_collected_label
+seed:DB05414,Pipendoxifene,seed,,0,0,0,0,0,no_collected_label
+seed:DB05420,Gallium maltolate,seed,,0,0,0,0,0,no_collected_label
+seed:DB05424,Canertinib,seed,,0,0,0,0,0,no_collected_label
+seed:DB05477,MUC1 Dendritic Cell Vaccine,seed,,0,0,0,0,0,no_collected_label
+seed:DB05485,ADH-1,seed,,0,0,0,0,0,no_collected_label
+seed:DB05487,Custirsen,seed,,0,0,0,0,0,no_collected_label
+seed:DB05489,ACA 125,seed,,0,0,0,0,0,no_collected_label
+seed:DB05500,AVN-944,seed,,0,0,0,0,0,no_collected_label
+seed:DB05513,Atiprimod,seed,,0,0,0,0,0,no_collected_label
+seed:DB05592,Blarcamesine,seed,,0,0,0,0,0,no_collected_label
+seed:DB05595,Farletuzumab,seed,,0,0,0,0,0,no_collected_label
+seed:DB05608,MKC-1,seed,,0,0,0,0,0,no_collected_label
+seed:DB05626,Retaspimycin,seed,,0,0,0,0,0,no_collected_label
+seed:DB05706,13-deoxydoxorubicin,seed,,0,0,0,0,0,no_collected_label
+seed:DB05733,MVA-BN-HER-2,seed,,0,0,0,0,0,no_collected_label
+seed:DB05773,Trastuzumab emtansine,seed,seed_selected_label,1,142,319,378,88,dictionary_candidates_require_review
+seed:DB05786,Irofulven,seed,,0,0,0,0,0,no_collected_label
+seed:DB05800,Alethine,seed,,0,0,0,0,0,no_collected_label
+seed:DB05801,GTI 2040,seed,,0,0,0,0,0,no_collected_label
+seed:DB05808,Muparfostat,seed,,0,0,0,0,0,no_collected_label
+seed:DB05818,SGN-15,seed,,0,0,0,0,0,no_collected_label
+seed:DB05842,AI-850,seed,,0,0,0,0,0,no_collected_label
+seed:DB05928,Dovitinib,seed,,0,0,0,0,0,no_collected_label
+seed:DB05929,GPI-0100,seed,,0,0,0,0,0,no_collected_label
+seed:DB05953,EGEN-001,seed,,0,0,0,0,0,no_collected_label
+seed:DB05966,TAS-108,seed,,0,0,0,0,0,no_collected_label
+seed:DB05969,SNS-032,seed,,0,0,0,0,0,no_collected_label
+seed:DB05983,Bardoxolone methyl,seed,,0,0,0,0,0,no_collected_label
+seed:DB06049,IPH 2101,seed,,0,0,0,0,0,no_collected_label
+seed:DB06159,Rubitecan,seed,,0,0,0,0,0,no_collected_label
+seed:DB06174,Noscapine,seed,,0,0,0,0,0,no_collected_label
+seed:DB06177,Glufosfamide,seed,,0,0,0,0,0,no_collected_label
+seed:DB06179,Darinaparsin,seed,,0,0,0,0,0,no_collected_label
+seed:DB06188,Ispinesib,seed,,0,0,0,0,0,no_collected_label
+seed:DB06193,Pixantrone,seed,,0,0,0,0,0,no_collected_label
+seed:DB06195,Seliciclib,seed,,0,0,0,0,0,no_collected_label
+seed:DB06226,Nelipepimut-S,seed,,0,0,0,0,0,no_collected_label
+seed:DB06235,Vadimezan,seed,,0,0,0,0,0,no_collected_label
+seed:DB06240,Tariquidar,seed,,0,0,0,0,0,no_collected_label
+seed:DB06249,Arzoxifene,seed,,0,0,0,0,0,no_collected_label
+seed:DB06255,Incadronic acid,seed,,0,0,0,0,0,no_collected_label
+seed:DB06276,Tanomastat,seed,,0,0,0,0,0,no_collected_label
+seed:DB06287,Temsirolimus,seed,seed_selected_label,3,228,506,579,115,dictionary_candidates_require_review
+seed:DB06317,Elotuzumab,seed,seed_selected_label,1,126,186,205,60,dictionary_candidates_require_review
+seed:DB06360,Lucatumumab,seed,,0,0,0,0,0,no_collected_label
+seed:DB06366,Pertuzumab,seed,seed_selected_label,1,295,570,652,74,dictionary_candidates_require_review
+seed:DB06373,ASI402,seed,,0,0,0,0,0,no_collected_label
+seed:DB06374,Elacestrant,seed,seed_selected_label,1,55,81,94,36,dictionary_candidates_require_review
+seed:DB06399,Atacicept,seed,seed_selected_label,1,12,11,11,7,dictionary_candidates_require_review
+seed:DB06420,Annamycin,seed,,0,0,0,0,0,no_collected_label
+seed:DB06453,Mirostipen,seed,,0,0,0,0,0,no_collected_label
+seed:DB06461,Squalamine,seed,,0,0,0,0,0,no_collected_label
+seed:DB06500,IGN101,seed,,0,0,0,0,0,no_collected_label
+seed:DB06548,Minodronic acid,seed,,0,0,0,0,0,no_collected_label
+seed:DB06584,Mesmulogene ancovacivec,seed,,0,0,0,0,0,no_collected_label
+seed:DB06603,Panobinostat,seed,seed_selected_label,1,48,142,173,98,dictionary_candidates_require_review
+seed:DB06641,Perifosine,seed,,0,0,0,0,0,no_collected_label
+seed:DB06647,Volociximab,seed,,0,0,0,0,0,no_collected_label
+seed:DB06710,Methyltestosterone,seed,seed_selected_label,3,44,63,72,24,dictionary_candidates_require_review
+seed:DB06713,Norelgestromin,seed,,0,0,0,0,0,no_collected_label
+seed:DB06719,Buserelin,seed,,0,0,0,0,0,no_collected_label
+seed:DB08871,Eribulin,seed,seed_selected_label,3,314,615,716,87,dictionary_candidates_require_review
+seed:DB08889,Carfilzomib,seed,seed_selected_label,1,438,1283,1417,213,dictionary_candidates_require_review
+seed:DB08905,Formestane,seed,,0,0,0,0,0,no_collected_label
+seed:DB08910,Pomalidomide,seed,seed_selected_label,3,533,983,1097,145,dictionary_candidates_require_review
+seed:DB09037,Pembrolizumab,seed,seed_selected_label,1,1820,4410,4958,454,dictionary_candidates_require_review
+seed:DB09073,Palbociclib,seed,seed_selected_label,3,767,1896,2097,124,dictionary_candidates_require_review
+seed:DB09074,Olaparib,seed,seed_selected_label,1,369,766,860,130,dictionary_candidates_require_review
+seed:DB09331,Daratumumab,seed,seed_selected_label,1,365,802,865,130,dictionary_candidates_require_review
+seed:DB09381,Esterified estrogens,seed,,0,0,0,0,0,no_collected_label
+seed:DB09570,Ixazomib,seed,seed_selected_label,1,41,65,72,35,dictionary_candidates_require_review
+seed:DB11652,Tucatinib,seed,seed_selected_label,1,115,221,254,92,dictionary_candidates_require_review
+seed:DB11730,Ribociclib,seed,seed_selected_label,1,203,271,296,84,dictionary_candidates_require_review
+seed:DB11760,Talazoparib,seed,seed_selected_label,3,233,432,489,59,dictionary_candidates_require_review
+seed:DB11793,Niraparib,seed,seed_selected_label,1,168,218,238,72,dictionary_candidates_require_review
+seed:DB11828,Neratinib,seed,seed_selected_label,1,106,230,268,78,dictionary_candidates_require_review
+seed:DB11942,Selinexor,seed,seed_selected_label,1,152,306,337,74,dictionary_candidates_require_review
+seed:DB12001,Abemaciclib,seed,seed_selected_label,1,297,371,422,78,dictionary_candidates_require_review
+seed:DB12015,Alpelisib,seed,seed_selected_label,2,168,270,314,79,dictionary_candidates_require_review
+seed:DB12218,Capivasertib,seed,seed_selected_label,1,91,263,295,71,dictionary_candidates_require_review
+seed:DB12282,Defactinib,seed,,0,0,0,0,0,no_collected_label
+seed:DB12332,Rucaparib,seed,seed_selected_label,1,161,291,327,91,dictionary_candidates_require_review
+seed:DB12489,Mirvetuximab soravtansine,seed,seed_selected_label,1,132,272,306,89,dictionary_candidates_require_review
+seed:DB12589,Dacetuzumab,seed,,0,0,0,0,0,no_collected_label
+seed:DB12893,Sacituzumab govitecan,seed,seed_selected_label,1,361,448,524,83,dictionary_candidates_require_review
+seed:DB13944,Testosterone enanthate,seed,seed_selected_label,3,103,143,166,60,dictionary_candidates_require_review
+seed:DB14655,Drostanolone propionate,seed,,0,0,0,0,0,no_collected_label
+seed:DB14811,Isatuximab,seed,seed_selected_label,2,339,767,855,144,dictionary_candidates_require_review
+seed:DB14962,Trastuzumab deruxtecan,seed,seed_selected_label,1,771,2059,2363,221,dictionary_candidates_require_review
+seed:DB14967,Margetuximab,seed,seed_selected_label,2,120,194,236,48,dictionary_candidates_require_review
+seed:DB14976,Relacorilant,seed,seed_selected_label,1,48,54,67,37,dictionary_candidates_require_review
+seed:DB15254,Avutometinib,seed,,0,0,0,0,0,no_collected_label
+seed:DB15275,Inavolisib,seed,seed_selected_label,1,92,149,172,62,dictionary_candidates_require_review
+seed:DB15395,Elranatamab,seed,seed_selected_label,1,99,276,302,120,dictionary_candidates_require_review
+seed:DB15719,Belantamab mafodotin,seed,seed_selected_label,1,67,101,108,41,dictionary_candidates_require_review
+seed:DB16410,Datopotamab deruxtecan,seed,seed_selected_label,1,178,355,409,76,dictionary_candidates_require_review
+seed:DB16627,Melphalan flufenamide,seed,,0,0,0,0,0,no_collected_label
+seed:DB16655,Teclistamab,seed,seed_selected_label,1,183,444,482,138,dictionary_candidates_require_review
+seed:DB16665,Idecabtagene vicleucel,seed,,0,0,0,0,0,no_collected_label
+seed:DB16678,Talquetamab,seed,seed_selected_label,1,107,495,536,185,dictionary_candidates_require_review
+seed:DB16738,Ciltacabtagene autoleucel,seed,,0,0,0,0,0,no_collected_label
+seed:DB17447,Linvoseltamab,seed,seed_selected_label,1,71,147,160,73,dictionary_candidates_require_review
+seed:DB19006,Vepdegestrant,seed,seed_selected_label,2,93,147,163,33,dictionary_candidates_require_review
+seed:DB19043,Imlunestrant,seed,seed_selected_label,1,106,139,158,54,dictionary_candidates_require_review
+sider:CID100002559,carbenicillin,candidate,,0,0,0,0,0,no_collected_label
+sider:CID100003872,lactulose,candidate,candidate_identity_unresolved,3,11,25,25,10,dictionary_candidates_require_review
+sider:CID100005582,trimetrexate,candidate,,0,0,0,0,0,no_collected_label
+sider:CID100040703,pinaverium,candidate,,0,0,0,0,0,no_collected_label
+sider:CID100004989,pyrantel,candidate,candidate_identity_supported,3,0,0,0,0,collected_label_no_dictionary_hit
+sider:CID100054949,NSC,candidate,candidate_identity_unresolved,1,0,0,0,0,collected_label_no_dictionary_hit
+sider:CID100006116,calcium,candidate,candidate_identity_supported|candidate_identity_unresolved,3,15,30,32,19,dictionary_candidates_require_review
+sider:CID100023926,lanthanum,candidate,candidate_identity_unresolved,3,28,66,74,16,dictionary_candidates_require_review
+sider:CID109898619,Depreotide,candidate,,0,0,0,0,0,no_collected_label
+sider:CID100040632,pirfenidone,candidate,candidate_identity_supported,3,113,210,252,33,dictionary_candidates_require_review
+sider:CID100064929,fenofibric,candidate,candidate_identity_supported,3,75,112,129,47,dictionary_candidates_require_review
+sider:CID100004680,papaverine,candidate,candidate_identity_supported,3,6,42,54,17,dictionary_candidates_require_review
+sider:CID100003053,diethylenetriaminepentaacetic,candidate,candidate_identity_supported,3,21,44,56,24,dictionary_candidates_require_review
+sider:CID100135113,sacrosidase,candidate,named_biologic_context_only,1,3,13,16,16,dictionary_candidates_require_review
+sider:CID100148121,pralatrexate,candidate,candidate_identity_supported,3,151,254,278,40,dictionary_candidates_require_review
+sider:CID109912092,apremilast,candidate,candidate_identity_supported,1,95,138,145,38,dictionary_candidates_require_review
+sider:CID111556711,Carfilzomib,candidate,candidate_identity_supported,1,399,999,1092,204,dictionary_candidates_require_review
+sider:CID116132446,Symlin,candidate,candidate_identity_unresolved,1,57,54,58,20,dictionary_candidates_require_review
+sider:CID100003783,isoxsuprine,candidate,candidate_identity_unresolved,3,0,0,0,0,collected_label_no_dictionary_hit
+sider:CID100060867,levosimendan,candidate,,0,0,0,0,0,no_collected_label
+sider:CID100168924,lanthanum,candidate,candidate_identity_unresolved,3,28,66,74,16,dictionary_candidates_require_review
+sider:CID109846180,eltrombopag,candidate,candidate_identity_unresolved,3,282,405,467,67,dictionary_candidates_require_review
+sider:CID111304743,riociguat,candidate,candidate_identity_supported,2,41,75,77,21,dictionary_candidates_require_review
+sider:CID110482134,glycerol,candidate,candidate_identity_supported,3,79,247,274,44,dictionary_candidates_require_review
+sider:CID116126651,PCI-32765,candidate,candidate_identity_supported|candidate_identity_unresolved,2,379,483,563,104,dictionary_candidates_require_review
+sider:CID144564722,Promacta,candidate,candidate_identity_unresolved,1,129,146,169,67,dictionary_candidates_require_review
+sider:CID102761171,ethionamide,candidate,,0,0,0,0,0,no_collected_label
+sider:CID100002762,cinoxacin,candidate,,0,0,0,0,0,no_collected_label
+sider:CID106328144,radium,candidate,candidate_identity_unresolved,3,0,0,0,0,collected_label_no_dictionary_hit
+sider:CID100002341,benzphetamine,candidate,candidate_identity_unresolved,3,23,48,48,15,dictionary_candidates_require_review
