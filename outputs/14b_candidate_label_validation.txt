@@ -1,0 +1,7 @@
+PASS: all 30 original groups retained once in coverage; identity conflict excluded from selection.
+PASS: group/set keys unique; selected records have supported identity and nonempty AR text; normalised caches exist.
+PASS: downloaded SPL set IDs equal requested IDs; source versions, retrieval times and query truncation recorded.
+PASS: independent reread of all selected raw XML confirms ingredient UNIIs, single-ingredient scope, versions and exact normalised AR text.
+PASS: maximum three examined sets per group and original conflict exclusion confirmed; R parsing passed.
+PASS: independent reread of all selected raw XML confirms ingredient UNIIs, single-ingredient scope, versions and exact normalised AR text.
+PASS: maximum three examined sets per group and original conflict exclusion confirmed; R parsing passed.

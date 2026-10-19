@@ -1,14 +1,15 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SCRIPT 14a COMPLETE
-Identity cross-check and cache-only rerun validated: 30 SIDER groups retained,
-19 full-key DrugBank matches, 2611 provenance-bearing alias rows. Sixteen names
-have exact alias support; historical identity/formulation remains unverified.
-One group already matches a seed key. Sacrosidase CID 135113 resolves to a
-small molecule and is blocked from automatic label mapping. No eEF1A binding
-has been established. Script 14b (current-label acquisition and ingredient/
-active-moiety validation) is next and has not yet run.
+CURRENT CHECKPOINT - SCRIPT 14b COMPLETE
+Thirty historical SIDER groups retained; the sacrosidase identity conflict remains
+blocked. Current label collection covers 22 groups with 51 distinct SPL sets
+(54 group/label rows). Eleven groups have 23 UNII/name-supported single-ingredient
+label records with adverse-reaction text. Thirteen searches are truncated by the
+representative-panel limits; missing coverage is not evidence of no effects.
+Raw AR sections and tables are local; no PT features or target claims are accepted
+by this section. Independent XML checks passed. Next: script 15, comparable PT
+candidate extraction and context review for seed and candidate labels.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1347,3 +1348,62 @@ saved full-XML identity index. R parsing and a cache-only rerun passed.
 Output: outputs/14a_identity_validation.txt.
 Interpretation: identity outputs are internally consistent; historical label
 identity and current clinical label coverage still need review in script 14b.
+
+SCRIPT 14b RUN - 2026-10-19 09:56:35 BST
+Script: scripts/14b_collect_candidate_labels.R
+SCRIPT 14b - CURRENT CANDIDATE LABEL COLLECTION AND INGREDIENT CHECKS
+Historical SIDER groups retained: 30
+Identity-conflict groups blocked: 1
+Groups with any downloaded SPL: 18
+Group/label records checked: 42
+Distinct SPL sets downloaded: 42
+Groups with UNII/name-supported single-ingredient adverse-reaction text: 9
+Selected group/label records: 19
+Groups with truncated representative searches: 9
+Inputs: 14a identity registry and exact-full-key DrugBank enrichment; DailyMed search and current SPL XML.
+Outputs: candidate_label_identity_review.csv, candidate_label_selection.csv, query/download provenance (data/curated/).
+Coverage and compact source crosswalk: outputs/14b_*; raw XML and normalised AR text/tables remain local.
+One page (up to 100 rows) per query; at most three most recently published sets checked per group. Coverage is bounded.
+Exact source-record UNII plus literal ingredient/moiety name and single-ingredient human Rx/OTC scope are required.
+Explicit active-moiety mapping permits clinical label attribution, not salt/free-base structural equivalence.
+SPL presence is not regulatory approval or marketing-status verification. Combination/nonhuman/unmatched records remain review-only.
+Historical SIDER identity is not established by current-label agreement. Conflicting sacrosidase CID is excluded automatically.
+No adverse-reaction section or missing labels is missing coverage, not evidence of safety or absence of effects.
+This script preserves AR sections, not accepted PT features; regimen, route, placebo, negation and frequency need context review.
+No similarity ranks, p-values, BH correction, direct binding, inhibition, allostery or PPI claims are generated.
+Next: script 15, comparably extract PT candidates from collected seed/candidate labels and review context before scoring.
+
+SCRIPT 14b RUN - 2026-10-19 09:57:20 BST
+Script: scripts/14b_collect_candidate_labels.R
+SCRIPT 14b - CURRENT CANDIDATE LABEL COLLECTION AND INGREDIENT CHECKS
+Historical SIDER groups retained: 30
+Identity-conflict groups blocked: 1
+Groups with any downloaded SPL: 22
+Group/label records checked: 54
+Distinct SPL sets downloaded: 51
+Groups with UNII/name-supported single-ingredient adverse-reaction text: 11
+Selected group/label records: 23
+Groups with truncated representative searches: 13
+Inputs: 14a identity registry and exact-full-key DrugBank enrichment; DailyMed search and current SPL XML.
+Outputs: candidate_label_identity_review.csv, candidate_label_selection.csv, query/download provenance (data/curated/).
+Coverage and compact source crosswalk: outputs/14b_*; raw XML and normalised AR text/tables remain local.
+UNII search first; name fallback if no UNII result. Without a matched source UNII, name hits remain review-only.
+One page (up to 100 rows) per query; at most three most recently published sets checked per group. Coverage is bounded.
+Exact source-record UNII plus literal ingredient/moiety name and single-ingredient human Rx/OTC scope are required.
+Explicit active-moiety mapping permits clinical label attribution, not salt/free-base structural equivalence.
+SPL presence is not regulatory approval or marketing-status verification. Combination/nonhuman/unmatched records remain review-only.
+Historical SIDER identity is not established by current-label agreement. Conflicting sacrosidase CID is excluded automatically.
+No adverse-reaction section or missing labels is missing coverage, not evidence of safety or absence of effects.
+This script preserves AR sections, not accepted PT features; regimen, route, placebo, negation and frequency need context review.
+No similarity ranks, p-values, BH correction, direct binding, inhibition, allostery or PPI claims are generated.
+Next: script 15, comparably extract PT candidates from collected seed/candidate labels and review context before scoring.
+
+SCRIPT 14b - INDEPENDENT VALIDATION
+All 23 selected group/label rows were rechecked against raw XML: ingredient UNIIs, single-ingredient scope, document versions and normalised adverse-reaction text agree.
+All groups retain at most three examined sets; the sacrosidase conflict remains excluded. R parsing passed.
+Outputs: outputs/14b_candidate_label_validation.txt and outputs/14b_input_summary.csv (input hashes).
+
+SCRIPT 14b - INDEPENDENT VALIDATION
+All 23 selected group/label rows were rechecked against raw XML: ingredient UNIIs, single-ingredient scope, document versions and normalised adverse-reaction text agree.
+All groups retain at most three examined sets; the sacrosidase conflict remains excluded. R parsing passed.
+Outputs: outputs/14b_candidate_label_validation.txt and outputs/14b_input_summary.csv (input hashes).

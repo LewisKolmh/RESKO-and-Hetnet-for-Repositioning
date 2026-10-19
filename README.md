@@ -33,6 +33,8 @@ source("scripts/12_pilot_label_sider_similarity.R")
 source("scripts/12a_validate_label_supplement.R")
 source("scripts/13_audit_side_effect_similarity.R")
 source("scripts/14a_resolve_candidate_identities.R")
+source("scripts/14b_collect_candidate_labels.R")
+source("scripts/helpers/validate_candidate_labels.R")
 ```
 
 ## Data layers
@@ -110,6 +112,25 @@ is explicitly blocked from automatic label mapping in
 `config/candidate_identity_exceptions.csv`. One group already matches a seed key.
 
 API responses and DrugBank enrichment are cached locally; reruns reuse caches.
-Compact results are in `outputs/14a_*`; source-rich tables remain local. Next is
-script 14b: current-label acquisition with ingredient/active-moiety validation,
-keeping unresolved identities and combination/formulation contexts separate.
+Compact results are in `outputs/14a_*`; source-rich tables remain local. Script 14b follows with ingredient/active-moiety validation, keeping unresolved
+identities and combination/formulation contexts separate.
+
+## Current candidate labels (script 14b)
+
+The bounded DailyMed collection retains 51 distinct SPL sets across 22 SIDER
+groups (54 group/label records). Eleven groups have 23 single-ingredient records
+with adverse-reaction text supported by source-record UNII and ingredient or
+explicit active-moiety name agreement. These remain inputs for context review;
+they are not accepted PT profiles or evidence of eEF1A activity.
+
+Searches use UNIIs first, names as fallback, one API page per query and at most
+three recently published sets per group. Thirteen searches hit a panel/page limit.
+The sacrosidase conflict is blocked; unmatched, combination and nonhuman records
+stay outside selection. Coverage gaps are missing data. Current clinical label
+attribution does not establish historical SIDER identity or salt equivalence.
+
+Coverage, source crosswalk, input hashes and validation are in `outputs/14b_*`.
+Raw XML, normalised AR text/tables and source-rich review tables stay local. The
+validation helper independently checks selected XML records and text. Next is
+script 15: process candidate and seed labels comparably and review PT context.
+API reference: [DailyMed SPL search](https://dailymed.nlm.nih.gov/dailymed/webservices-help/v2/spls_api.cfm).

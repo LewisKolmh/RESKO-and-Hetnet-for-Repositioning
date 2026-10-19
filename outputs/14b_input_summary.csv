@@ -1,0 +1,5 @@
+file,md5
+data/curated/candidate_identity_registry.csv,110b5ddcbd335a8400b6ffce0d7f41c4
+data/curated/candidate_DrugBank_record_enrichment.csv,cb189c4897264bc504516107da792ed7
+config/candidate_identity_exceptions.csv,b9663752aa0b7bab462a42f4508d62d4
+scripts/14b_collect_candidate_labels.R,b045a7ebd3c485da5d12bba5ae74e528
