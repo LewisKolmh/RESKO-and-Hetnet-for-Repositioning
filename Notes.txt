@@ -1,5 +1,5 @@
 RESKO side project: eEF1A-binding candidate discovery
-Updated: 18 October 2026
+Updated: 19 October 2026
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -489,15 +489,59 @@ Supplementary source inventory: config/supplementary_source_manifest.csv. This
 records PubChem, ChEBI, openFDA labels, DailyMed and the specific EMA overview;
 it does not replace or imply full acquisition of the original nine RESKO sources.
 
-NEXT - Inspect overlap contributions and build comparable candidate profiles
-Review which shared PTs drive the pilot, with common-toxicity and label-size
-biases visible. Retrieve consistently processed current labels for selected
-comparison candidates before treating cross-era ranks as robust. Keep the original
-SIDER analysis as the RESKO baseline and the current-label layer as supplementary.
-Then validate expanded chemical identities and acquire the remaining chemical/
-protein/pathway/ontology evidence for target-aware prioritisation. Association
-scores do not establish direct binding, inhibition, allostery or PPI selectivity.
-Restore empty scripts 00-02 as a separate reproducibility task.
+SCRIPT 13 - Audit shared terms and ranking sensitivity
+File: scripts/13_audit_side_effect_similarity.R
+Status: successfully run and rerun after adding review-context flags and full
+source-consistency validation. Original seed, SIDER and pilot inputs are unchanged.
+Inputs: eight explicit single-agent supplementary profiles, 11,439 non-self
+script-12 pairs and 1,430 SIDER flat-group reference profiles.
+Settings: config/side_effect_audit_settings.csv. IDF = 1 + log((N+1)/(df+1));
+weighted Jaccard sums these weights in intersection/union. A separate sensitivity
+removes terms found in >=20% of SIDER profiles. Both reduced profiles must retain
+at least three PTs; otherwise the score and rank remain NA, not zero.
+Review windows use tied ranks <=10 in raw and weighted comparisons, with at least
+three shared PTs for the descriptive identity-review queue. These settings were
+declared before inspecting the ranks and are workload/sensitivity rules, not tests.
+Results: 126 of 4,251 observed reference PTs meet the common-term cutoff.
+155 seed/reference pairs enter the union of review windows; 769 shared-term
+contribution rows expose each PT's prevalence and weighted score contribution.
+73 of the 88 leading baseline pairs (including ties) share ONLY common terms.
+Nausea occurs in 1,207/1,430 profiles (84.4%); headache 1,115/1,430 (78.0%).
+All eight seeds have a median common-term overlap fraction of 1 within their
+leading baseline window. Downweighting alone therefore does not establish a
+mechanistic signal. Leading-window overlap under raw/weighted scores ranges
+from 41.7% to 90% across seeds; ranking is sensitive to the weighting choice.
+Thirty unique SIDER groups remain in both main leading windows with >=3 shared
+PTs. Eleven have some overlap below the common-term cutoff; nineteen have only
+common-term overlap in the qualifying pairs. These are explicitly flagged, not
+called eEF1A inhibitors or verified molecular candidates. Multiple seed appearances
+are not independent evidence. Generic/brand labels and repeated names remain
+separate SIDER IDs until chemical identity is checked.
+Six seeds retain >=3 PTs after common-term removal. Olaparib retains zero and
+imlunestrant two, so their reduced-profile comparisons remain unranked.
+Versioned outputs: outputs/13_rank_comparison_summary.csv;
+13_shared_term_contributions_summary.csv; 13_seed_term_prevalence_summary.csv;
+13_rank_stability_summary.csv; 13_identity_review_queue_summary.csv;
+13_similarity_audit_summary.txt; 13_similarity_audit_validation.txt;
+13_input_provenance_summary.csv and 13_environment_summary.txt.
+Full audit tables remain local under data/curated/.
+Result explanation: contribution tables show why a match scores highly; rank
+sensitivity and reference-size correlations expose profile-size/common-toxicity
+bias. Lower-frequency overlap is not target specificity, and scores are not
+probabilities. No p-values, BH adjustment or target-binding claims are produced.
+Validation: independent set calculations reproduce raw/weighted/reduced scores;
+PT contributions sum to weighted scores; every cached pilot pair has matching
+current source counts; keys are unique; exclusions remain NA. Input MD5 hashes
+and sessionInfo are recorded. Original comparison universe is preserved.
+
+NEXT - Script 14: verify review-group identities and label comparability
+Resolve the thirty SIDER group IDs to chemical identities, preserving aliases,
+brands, salts/formulations and provenance rather than merging by name. Keep the
+common-only versus lower-frequency-overlap flags visible when planning effort.
+Acquire comparable current-label profiles before interpreting cross-era ranks.
+Then continue chemical/protein/pathway integration through the original RESKO
+sources, including ChEMBL and STITCH. Direct binding and functional association
+must remain distinct. Restore empty scripts 00-02 as a separate reproducibility task.
 
 LATER RESKO WORK - not yet implemented
 Acquire and version the remaining original data sources and establish ID
@@ -1173,3 +1217,76 @@ Supplementary source manifest: config/supplementary_source_manifest.csv.
 Original nine-source manifest remains distinct. Source archives and rich curated evidence stay local.
 These checks do not establish exhaustive clinical curation, drug-specific causality,
 eEF1A binding/inhibition, allostery, HIV-1 RT PPI disruption or a calibrated statistical null.
+
+SCRIPT 13 RUN - 2026-10-19 09:20:46 BST
+Script: scripts/13_audit_side_effect_similarity.R
+SCRIPT 13 - SIDE-EFFECT OVERLAP AND RANK SENSITIVITY AUDIT
+Seed profiles: 8
+Non-self comparisons: 11439
+Common terms at declared cutoff: 126 of 4251
+Review-union seed/reference pairs (including ties): 155
+Shared-term contribution rows: 769
+Unique SIDER groups queued for identity/comparable-label review: 30
+Seeds with >= 3 terms after common-term removal: 6
+Inputs: original script-12 comparisons, reviewed single-agent supplementary profiles, raw SIDER PT profiles.
+IDF weight = 1 + log((N+1)/(df+1)); N is all SIDER flat-group profiles, df is profile frequency.
+Weighted Jaccard sums term weights in intersection divided by union; it is descriptive, not a probability.
+Sensitivity removes terms found in >= 20 % of profiles; retain >= 3 terms in BOTH profiles.
+Excluded reduced profiles receive NA, not a zero score. No ranking cutoff was optimised after inspecting results.
+Top-window review uses tied ranks and >=3 shared PTs in both raw and IDF windows; it is a workload rule, not significance.
+Shared-term contributions sum to weighted scores. Profile-size correlations are descriptive, with no causal interpretation.
+Outputs: full audit/term prevalence/contributions locally; compact rank, contribution, stability and review-queue CSVs in outputs/13_*.
+The review queue consists of unverified SIDER flat-group identities. Multiple seed appearances are not independent target evidence.
+Common toxicities, sparse common-reaction lists, historical labels, route/formulation and source-era differences remain confounders.
+No p-values, BH correction, binding, inhibition, allostery or PPI-disruption claims are generated.
+Next: verify queued chemical identities and obtain comparably processed current labels before target-evidence prioritisation.
+
+SCRIPT 13 RUN - 2026-10-19 09:22:12 BST
+Script: scripts/13_audit_side_effect_similarity.R
+SCRIPT 13 - SIDE-EFFECT OVERLAP AND RANK SENSITIVITY AUDIT
+Seed profiles: 8
+Non-self comparisons: 11439
+Common terms at declared cutoff: 126 of 4251
+Review-union seed/reference pairs (including ties): 155
+Shared-term contribution rows: 769
+Unique SIDER groups queued for identity/comparable-label review: 30
+Queued groups with any overlap below common-term cutoff: 11
+Leading baseline pairs with common-term-only overlap: 73 of 88
+Seeds with >= 3 terms after common-term removal: 6
+Inputs: original script-12 comparisons, reviewed single-agent supplementary profiles, raw SIDER PT profiles.
+IDF weight = 1 + log((N+1)/(df+1)); N is all SIDER flat-group profiles, df is profile frequency.
+Weighted Jaccard sums term weights in intersection divided by union; it is descriptive, not a probability.
+Sensitivity removes terms found in >= 20 % of profiles; retain >= 3 terms in BOTH profiles.
+Excluded reduced profiles receive NA, not a zero score. No ranking cutoff was optimised after inspecting results.
+Top-window review uses tied ranks <= 10 and >= 3 shared PTs in both raw/IDF windows; workload rule, not significance.
+Shared-term contributions sum to weighted scores. Profile-size correlations are descriptive, with no causal interpretation.
+Outputs: full audit/term prevalence/contributions locally; compact rank, contribution, stability and review-queue CSVs in outputs/13_*.
+The review queue consists of unverified SIDER flat-group identities. Multiple seed appearances are not independent target evidence.
+Common toxicities, sparse common-reaction lists, historical labels, route/formulation and source-era differences remain confounders.
+No p-values, BH correction, binding, inhibition, allostery or PPI-disruption claims are generated.
+Next: verify queued chemical identities and obtain comparably processed current labels before target-evidence prioritisation.
+
+SCRIPT 13 RUN - 2026-10-19 09:23:55 BST
+Script: scripts/13_audit_side_effect_similarity.R
+SCRIPT 13 - SIDE-EFFECT OVERLAP AND RANK SENSITIVITY AUDIT
+Seed profiles: 8
+Non-self comparisons: 11439
+Common terms at declared cutoff: 126 of 4251
+Review-union seed/reference pairs (including ties): 155
+Shared-term contribution rows: 769
+Unique SIDER groups queued for identity/comparable-label review: 30
+Queued groups with any overlap below common-term cutoff: 11
+Leading baseline pairs with common-term-only overlap: 73 of 88
+Seeds with >= 3 terms after common-term removal: 6
+Inputs: original script-12 comparisons, reviewed single-agent supplementary profiles, raw SIDER PT profiles.
+IDF weight = 1 + log((N+1)/(df+1)); N is all SIDER flat-group profiles, df is profile frequency.
+Weighted Jaccard sums term weights in intersection divided by union; it is descriptive, not a probability.
+Sensitivity removes terms found in >= 20 % of profiles; retain >= 3 terms in BOTH profiles.
+Excluded reduced profiles receive NA, not a zero score. No ranking cutoff was optimised after inspecting results.
+Top-window review uses tied ranks <= 10 and >= 3 shared PTs in both raw/IDF windows; workload rule, not significance.
+Shared-term contributions sum to weighted scores. Profile-size correlations are descriptive, with no causal interpretation.
+Outputs: full audit/term prevalence/contributions locally; compact rank, contribution, stability and review-queue CSVs in outputs/13_*.
+The review queue consists of unverified SIDER flat-group identities. Multiple seed appearances are not independent target evidence.
+Common toxicities, sparse common-reaction lists, historical labels, route/formulation and source-era differences remain confounders.
+No p-values, BH correction, binding, inhibition, allostery or PPI-disruption claims are generated.
+Next: verify queued chemical identities and obtain comparably processed current labels before target-evidence prioritisation.

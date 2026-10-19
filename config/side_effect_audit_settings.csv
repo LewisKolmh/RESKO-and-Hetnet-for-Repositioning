@@ -1,0 +1,5 @@
+parameter,value,purpose
+common_term_profile_fraction,0.20,Declared sensitivity cutoff; not optimised on ranks
+minimum_retained_terms,3,Both reduced profiles must retain this many terms
+top_rank_review_window,10,Review window includes score ties
+minimum_shared_PT_terms,3,Descriptive corroboration threshold; not statistical significance

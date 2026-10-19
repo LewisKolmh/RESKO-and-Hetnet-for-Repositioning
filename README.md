@@ -31,6 +31,7 @@ source("scripts/11e_extract_current_label_terms.R")
 source("scripts/11g_review_label_supplement.R")
 source("scripts/12_pilot_label_sider_similarity.R")
 source("scripts/12a_validate_label_supplement.R")
+source("scripts/13_audit_side_effect_similarity.R")
 ```
 
 ## Data layers
@@ -77,3 +78,22 @@ Sources: [SIDER](https://sideeffects.embl.de/download/),
 [DailyMed](https://dailymed.nlm.nih.gov/dailymed/), and the specific
 [EMA Pepaxti overview](https://www.ema.europa.eu/en/medicines/human/EPAR/pepaxti).
 Preserve source attribution and publisher terms when reusing data.
+
+## Shared-term and rank audit (script 13)
+
+Script 13 retains the raw overlap scores, adds smoothed inverse-frequency weighted
+Jaccard, and runs a declared sensitivity analysis removing terms seen in at least
+20% of SIDER profiles. Too-small reduced profiles remain unranked. Settings are
+versioned in `config/side_effect_audit_settings.csv`; score ties remain visible.
+
+Of 88 leading baseline pairs including ties, 73 share only common terms. Thirty
+SIDER groups enter the descriptive identity-review queue; eleven have some
+lower-frequency overlap. These are unverified reference groups, not eEF1A-binding
+candidates. Common-only matches are explicitly flagged. No p-values or BH
+adjustment are produced by this descriptive analysis.
+
+Term contributions, rank comparisons, stability, reference term prevalence and
+the identity-review queue are exported as `outputs/13_*summary.csv`. Input hashes
+and validation/session reports are retained. Full tables stay local. Next, resolve
+chemical identities and construct comparable current-label profiles before
+interpreting the ranks or joining target evidence.

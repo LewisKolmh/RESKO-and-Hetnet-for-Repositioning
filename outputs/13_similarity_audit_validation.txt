@@ -1,0 +1,3 @@
+Script 13 checks passed: independent set scores; IDF contribution sums;
+unchanged comparison universe; unique pair keys; bounded weights/scores;
+tied-rank review windows; too-small reduced profiles remain NA.

@@ -1,0 +1,6 @@
+input_file,md5
+scripts/13_audit_side_effect_similarity.R,53ae1935f3283cd2d57f1346838bceb5
+config/side_effect_audit_settings.csv,972645d569833f36bacd7b0dd6f8df1e
+data/curated/current_label_SIDER_similarity_pilot.csv,2a39b3e7c14bbbd3d7cb588fafefcc63
+data/curated/current_label_PT_supplement.csv,169f701e1ddf0f71549c1b01c432efba
+data/raw/sider/meddra_all_se.tsv.gz,e05270a185a67b059466e26549da425e
