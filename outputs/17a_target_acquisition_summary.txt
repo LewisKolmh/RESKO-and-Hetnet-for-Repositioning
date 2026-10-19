@@ -1,0 +1,15 @@
+SCRIPT 17a - TARGET IDENTITY AND SOURCE ACQUISITION
+Resolved human isoforms: 2
+ChEMBL activity rows acquired: 39
+Unique target-assay pairs: 23
+Verified STITCH identifier responses: 2
+Exact human UniProt accessions are required in single-component ChEMBL targets; isoforms remain separate.
+Activity pagination is exhaustive for these two target IDs; target families, other species and indirectly annotated records are outside this query scope.
+Raw ChEMBL records and UniProt source responses remain cached locally with URLs, dates and source versions.
+STITCH resolution is validated against gene/taxon and UniProt STRING cross-references. Wrong gene resolutions are rejected.
+STITCH HTTPS certificate validation is not bypassed; public HTTP lookups have explicit transport provenance.
+No STITCH chemical-protein associations are acquired by identifier resolution alone.
+Assay type B is not proof of direct compound binding; partner-binding and translation effects remain separate review routes.
+No inventory compound has been promoted to eEF1A binding, isoform selectivity, allostery or RT-PPI disruption.
+Outputs: target registry (config/); eef1a_chembl_activity_records.csv and API provenance (local); outputs/17a_* coverage/identity/resolution reports.
+Next: retrieve complete assay and ligand records, cross-check inventory identities, and review physical-binding versus functional evidence; acquire STITCH associations only after valid target resolution.

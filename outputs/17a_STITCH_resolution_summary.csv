@@ -1,0 +1,9 @@
+gene,url,status,error,retrieved_utc,transport,returned_preferred_name,returned_string_id,preferred_gene_and_taxon_match,uniprot_STRING_crossreference_match,disposition
+EEF1A1,http://stitch.embl.de/api/tsv/resolve?identifier=EEF1A1&species=9606,200,,2026-10-19 14:28:11 UTC,HTTP_public_query,PARP1|PASK|EEF1A1,9606.ENSP00000355759|9606.ENSP00000234040|9606.ENSP00000330054,FALSE,FALSE,rejected_or_unavailable_target_lookup
+EEF1A1,http://stitch.embl.de/api/tsv/resolve?identifier=P68104&species=9606,200,,2026-10-19 14:28:12 UTC,HTTP_public_query,EEF1A1,9606.ENSP00000330054,TRUE,FALSE,review_historical_identifier_crosswalk
+EEF1A1,https://stitch.embl.de/api/tsv/resolve?identifier=P68104&species=9606,,"Failed to perform HTTP request.
+Caused by error in `curl::curl_fetch_memory()`:
+! SSL peer certificate or SSH remote key was not OK [stitch.embl.de]:
+SSL: no alternative certificate subject name matches target hostname 'stitch.embl.de'",2026-10-19 14:28:12 UTC,HTTPS,,,FALSE,FALSE,rejected_or_unavailable_target_lookup
+EEF1A2,http://stitch.embl.de/api/tsv/resolve?identifier=EEF1A2&species=9606,200,,2026-10-19 14:28:15 UTC,HTTP_public_query,EEF1A2,9606.ENSP00000217182,TRUE,TRUE,verified_target_identifier_only
+EEF1A2,http://stitch.embl.de/api/tsv/resolve?identifier=Q05639&species=9606,200,,2026-10-19 14:28:16 UTC,HTTP_public_query,EEF1A2,9606.ENSP00000217182,TRUE,TRUE,verified_target_identifier_only

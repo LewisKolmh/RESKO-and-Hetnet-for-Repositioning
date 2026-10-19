@@ -1,0 +1,3 @@
+gene,uniprot,chembl_target_id,activity_rows,unique_molecules,unique_assays,pages,complete_target_query
+EEF1A1,P68104,CHEMBL1795120,28,19,15,1,TRUE
+EEF1A2,Q05639,CHEMBL1795122,11,4,8,1,TRUE

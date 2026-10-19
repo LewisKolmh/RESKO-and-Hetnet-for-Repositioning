@@ -1,0 +1,1 @@
+PASS: exact human accessions and one-component target identity, exhaustive activity page totals, unique activity IDs, and checked STITCH returned identities.

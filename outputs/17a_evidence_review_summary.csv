@@ -1,0 +1,7 @@
+queried_gene,assay_type,review_route,activity_rows
+EEF1A1,B,assay_context_review_required,8
+EEF1A1,B,candidate_physical_binding_method_requires_assay_review,18
+EEF1A1,B,functional_or_partner_binding_effect_requires_review,2
+EEF1A2,B,assay_context_review_required,2
+EEF1A2,B,candidate_physical_binding_method_requires_assay_review,5
+EEF1A2,B,functional_or_partner_binding_effect_requires_review,4
