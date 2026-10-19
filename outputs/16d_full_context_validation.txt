@@ -1,0 +1,1 @@
+PASS: six distinct candidate profiles, pinned source IDs/set IDs, all reviewed source markers and sacrosidase count/context markers; input hashes unchanged.

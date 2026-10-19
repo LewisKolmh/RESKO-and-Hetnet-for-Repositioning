@@ -1603,3 +1603,19 @@ SCRIPT 16c - INDEPENDENT VALIDATION
 PASS: independent feature counts agree for every profile; complete seed/candidate pair coverage checked both directions.
 PASS: candidate route and identity support agree with original label records; unique full-inventory rows and input hashes confirmed.
 Scope: no ready strict pair is a coverage/context finding, not negative pharmacological evidence.
+
+SCRIPT 16d RUN - 2026-10-19 15:15:37 BST
+Script: scripts/16d_review_full_label_context.R
+SCRIPT 16d - FULL CANDIDATE SOURCE CONTEXT REVIEW
+All six retained candidate profiles and the sacrosidase reference reviewed against cached source labels.
+Pirfenidone: placebo-filtered >=10% list from pooled IPF trials; single study drug versus placebo, without proof of absent background treatment.
+Pralatrexate: single-arm PDX-008 context; >35% summary cutoff explains the four-term sparse list.
+Apremilast: concomitant DMARDs allowed; 65% used at least one DMARD. Its PsA summary is not an isolated monotherapy profile.
+Ibrutinib: the selected B-cell list pools monotherapy and combination exposures; do not label it single-agent.
+Glycerol phenylbutyrate: adult short-term active-control crossover with dietary background; retain other ages and durations separately.
+Calcium acetate: pooled solid/liquid ESRD studies; summary >10% heading is inconsistent with nausea/vomiting pooled table rates below 10%.
+Sacrosidase: clinical patient counts plus postmarketing context; not a common-frequency small-molecule profile.
+Source markers, document IDs/versions, cache hashes and local evidence excerpts are retained.
+No strict candidate monotherapy claim is upgraded; thresholds/comparator rules are documented but cross-drug cohort alignment is not established.
+Outputs: reviewed_candidate_full_context.csv, candidate_full_context_source_evidence.csv, sacrosidase_context_review.csv (local); outputs/16d_* summaries.
+Next: re-assess all pair barriers with these context findings, then close section 16 with consolidated features, review coverage and an explicit limitations ledger.
