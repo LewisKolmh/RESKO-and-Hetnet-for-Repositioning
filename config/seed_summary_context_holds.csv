@@ -1,0 +1,7 @@
+drugbank_id,hold_reason
+DB00286,Summary points to a table without listing reactions; table review required
+DB00570,Underlining determines common reactions; plain text loses this formatting
+DB00990,Sentence segmentation truncates the comparator expression; wider source review required
+DB01259,Selected passage concerns discontinuation and Grade 3/4 effects; not a general common-reaction profile
+DB06366,Selected passage is Grade 3/4 only; not a general all-grade profile
+DB09037,Selected passage concerns permanent discontinuation only; endpoint-specific context held

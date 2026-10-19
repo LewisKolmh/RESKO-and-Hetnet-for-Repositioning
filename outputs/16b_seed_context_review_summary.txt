@@ -1,0 +1,18 @@
+SCRIPT 16b - SEED REPRESENTATIVE COMMON-SUMMARY REVIEW
+Representative seed passages inspected: 70
+Positive source-list profiles retained: 64
+Representative profiles held for source context: 6
+Reviewed entity/PT/context features: 634
+Seed common-summary evidence rows tracked: 3669
+Nonrepresentative evidence rows still pending: 2848
+Inputs: script-15 seed summary queue/segments/evidence; label route metadata, seed tiers and supplied dictionary.
+Outputs locally: seed_positive_list_* tables, seed_representative_summary_review.csv, seed_common_summary_batch_review.csv.
+Public compact feature, coverage, representative decisions, workload, hashes and validation: outputs/16b_*.
+One representative passage per seed with a queued narrative summary; no uninspected duplicate is labelled reviewed.
+Exact list boundaries exclude indication prefixes, warning lists, other cohorts, adjacent tables and laboratory summaries beyond the chosen list.
+Formulation/population labels and original routes are retained: intravesical gemcitabine, ocular dexamethasone, albumin-bound paclitaxel and non-cancer transplant everolimus remain distinct.
+Six source-context holds require tables, lost underlining, comparator repair or endpoint/grade-specific review.
+Four exact PT-name decisions plus previously reviewed hot-flush variant mapping are explicit; other ambiguous/broad dictionary hits stay held.
+All comparison_ready flags are FALSE. Regimen-unspecified lists are not inferred single-agent; no ranking or eEF1A binding claim is produced.
+Existing seed/candidate identity, original SIDER data and prior reviewed feature layers are unchanged.
+Next: audit seed/candidate identity, route, regimen and list coverage to define comparison strata; retain pending narrative/table and named-biologic evidence separately.

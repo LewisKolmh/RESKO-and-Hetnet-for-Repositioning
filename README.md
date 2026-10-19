@@ -39,6 +39,8 @@ source("scripts/14c_resolve_sacrosidase_context.R")
 source("scripts/15_extract_comparable_label_terms.R")
 source("scripts/helpers/validate_comparable_labels.R")
 source("scripts/16a_review_candidate_summaries.R")
+source("scripts/16b_review_seed_summaries.R")
+source("scripts/helpers/validate_seed_summary_review.R")
 ```
 
 ## Data layers
@@ -186,3 +188,24 @@ all profiles have `comparison_ready = FALSE`. This is a bounded candidate batch,
 not completion of seed, table, narrative or named-biologic review. The compact
 feature export is `outputs/16a_candidate_PT_features.csv`; coverage and validation
 are in `outputs/16a_*`. Next is seed summary review using the same approach.
+
+## Seed representative summary review (script 16b)
+
+Seventy representative seed passages were inspected using pinned source keys and
+exact list boundaries. Sixty-four source-context profiles yield 634 reviewed
+entity/PT features. Six representatives are held for source formatting, comparator
+repair or endpoint/grade-specific review. The other 2,848 queued matches from
+nonrepresentative passages remain pending; they are not labelled reviewed.
+
+Features retain source versions, route, population/regimen qualifiers, seed tiers
+and cancer membership. Intravesical, ocular, albumin-bound and non-cancer transplant
+contexts remain explicit. All profiles have `comparison_ready = FALSE`; missing
+regimen details are not inferred single-agent. Four exact PT decisions and the
+previously reviewed hot-flush mapping are explicit; other ambiguities stay held.
+
+Rules and holds are in `config/seed_*review*.csv` and
+`config/seed_summary_context_holds.csv`. Compact features, coverage, workflow counts
+and validation are in `outputs/16b_*`; full source/review evidence stays local. The
+validation helper independently checks accepted source spans, PT provenance and
+original routes. Next is a compatibility audit across seed and candidate identity,
+route, regimen and profile coverage before ranking.

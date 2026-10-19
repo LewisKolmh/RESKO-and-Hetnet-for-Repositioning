@@ -1,17 +1,17 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SCRIPT 16a CANDIDATE SUMMARY REVIEW COMPLETE
-Reviewed all 39 candidate common-summary passages (234 queued evidence rows).
-Six bounded positive lists yield 38 distinct entity/PT/context features. Four
-ambiguous dictionary aliases are explicitly resolved to their exact PT names.
-Technetium-pentetate formulation and carfilzomib combination summaries are held.
-Duplicate, discontinuation/dose-change, distinct-cohort and causality-unspecified
-lists are not pooled. All comparison_ready flags remain FALSE; regimen/route
-compatibility and historical identity uncertainty need attention before ranking.
-The 3,669 seed common-summary evidence rows remain pending in this batch; next
-is seed review with the same bounded-source-list method. Full narrative/table,
-unresolved identity and named-biologic context queues remain separate.
+CURRENT CHECKPOINT - SCRIPT 16b SEED REPRESENTATIVE REVIEW COMPLETE
+Inspected 70 representative seed common-summary passages. Retained 64 bounded
+positive-list profiles containing 634 reviewed entity/PT/context features. Six
+representatives are held for missing table/underlining information, truncated
+comparator text or grade/discontinuation-specific endpoints. All 3,669 seed queue
+rows have workflow status; 2,848 nonrepresentative evidence rows remain pending.
+Routes, formulation/population qualifiers, original seed tiers and cancers are
+retained. All comparison_ready flags remain FALSE. The six candidate profiles
+from 16a (38 features) remain separate. Independent source-span, route and input
+hash checks passed. Next: audit identity, route, regimen and profile coverage to
+define compatible comparison strata before any new similarity ranking.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1540,3 +1540,28 @@ All comparison_ready flags are FALSE: seed/candidate sampling, regimen and route
 Only this candidate common-summary batch is adjudicated; seed summaries, dictionary ambiguities, narrative/table evidence and sacrosidase context remain pending.
 Original extracted evidence and prior reviewed features are unchanged. No ranks, p-values, BH adjustment or eEF1A activity claims generated.
 Next: review seed common-summary batches using the same bounded-list approach, then check comparable identity/regimen/route strata.
+
+SCRIPT 16b RUN - 2026-10-19 11:52:13 BST
+Script: scripts/16b_review_seed_summaries.R
+SCRIPT 16b - SEED REPRESENTATIVE COMMON-SUMMARY REVIEW
+Representative seed passages inspected: 70
+Positive source-list profiles retained: 64
+Representative profiles held for source context: 6
+Reviewed entity/PT/context features: 634
+Seed common-summary evidence rows tracked: 3669
+Nonrepresentative evidence rows still pending: 2848
+Inputs: script-15 seed summary queue/segments/evidence; label route metadata, seed tiers and supplied dictionary.
+Outputs locally: seed_positive_list_* tables, seed_representative_summary_review.csv, seed_common_summary_batch_review.csv.
+Public compact feature, coverage, representative decisions, workload, hashes and validation: outputs/16b_*.
+One representative passage per seed with a queued narrative summary; no uninspected duplicate is labelled reviewed.
+Exact list boundaries exclude indication prefixes, warning lists, other cohorts, adjacent tables and laboratory summaries beyond the chosen list.
+Formulation/population labels and original routes are retained: intravesical gemcitabine, ocular dexamethasone, albumin-bound paclitaxel and non-cancer transplant everolimus remain distinct.
+Six source-context holds require tables, lost underlining, comparator repair or endpoint/grade-specific review.
+Four exact PT-name decisions plus previously reviewed hot-flush variant mapping are explicit; other ambiguous/broad dictionary hits stay held.
+All comparison_ready flags are FALSE. Regimen-unspecified lists are not inferred single-agent; no ranking or eEF1A binding claim is produced.
+Existing seed/candidate identity, original SIDER data and prior reviewed feature layers are unchanged.
+Next: audit seed/candidate identity, route, regimen and list coverage to define comparison strata; retain pending narrative/table and named-biologic evidence separately.
+
+SCRIPT 16b - INDEPENDENT VALIDATION
+Every accepted mention was independently checked against its full source text and approved boundaries. Exported PT features trace to accepted evidence; original route metadata and input hashes agree. No profile is comparison-ready.
+Output: outputs/16b_seed_context_validation.txt.

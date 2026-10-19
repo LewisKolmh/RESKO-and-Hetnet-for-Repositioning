@@ -1,0 +1,71 @@
+entity_id,entity_name,segment_review_decision,reason
+seed:DB00014,Goserelin,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00072,Trastuzumab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00112,Bevacizumab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00188,Bortezomib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00262,Carmustine,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00286,Conjugated estrogens,hold_source_context,Summary points to a table without listing reactions; table review required
+seed:DB00351,Megestrol acetate,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00361,Vinorelbine,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00441,Gemcitabine,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00445,Epirubicin,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00480,Lenalidomide,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00515,Cisplatin,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00531,Cyclophosphamide,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00539,Toremifene,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00563,Methotrexate,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00570,Vinblastine,hold_source_context,Underlining determines common reactions; plain text loses this formatting
+seed:DB00783,Estradiol,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00947,Fulvestrant,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB00990,Exemestane,hold_source_context,Sentence segmentation truncates the comparator expression; wider source review required
+seed:DB00997,Doxorubicin,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01006,Letrozole,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01101,Capecitabine,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01181,Ifosfamide,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01217,Anastrozole,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01229,Paclitaxel,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01234,Dexamethasone,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01248,Docetaxel,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB01259,Lapatinib,hold_source_context,Selected passage concerns discontinuation and Grade 3/4 effects; not a general common-reaction profile
+seed:DB01590,Everolimus,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB04845,Ixabepilone,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB05109,Trabectedin,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB05773,Trastuzumab emtansine,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB06287,Temsirolimus,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB06317,Elotuzumab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB06366,Pertuzumab,hold_source_context,Selected passage is Grade 3/4 only; not a general all-grade profile
+seed:DB06374,Elacestrant,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB06603,Panobinostat,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB08871,Eribulin,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB08889,Carfilzomib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB08910,Pomalidomide,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB09037,Pembrolizumab,hold_source_context,Selected passage concerns permanent discontinuation only; endpoint-specific context held
+seed:DB09073,Palbociclib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB09074,Olaparib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB09331,Daratumumab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB09570,Ixazomib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB11652,Tucatinib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB11730,Ribociclib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB11760,Talazoparib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB11793,Niraparib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB11828,Neratinib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB11942,Selinexor,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB12001,Abemaciclib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB12015,Alpelisib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB12218,Capivasertib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB12332,Rucaparib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB12489,Mirvetuximab soravtansine,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB12893,Sacituzumab govitecan,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB13944,Testosterone enanthate,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB14811,Isatuximab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB14962,Trastuzumab deruxtecan,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB14976,Relacorilant,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB15275,Inavolisib,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB15395,Elranatamab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB15719,Belantamab mafodotin,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB16410,Datopotamab deruxtecan,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB16655,Teclistamab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB16678,Talquetamab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB17447,Linvoseltamab,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB19006,Vepdegestrant,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated
+seed:DB19043,Imlunestrant,accept_bounded_list_only,Only mentions inside the inspected positive-list span accepted; other text is not adjudicated

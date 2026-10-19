@@ -1,0 +1,4 @@
+PASS: exact representative source keys and boundary markers; accepted hits contained in reviewed spans.
+PASS: unique feature keys, valid source routes and seed tiers, explicit holds/pending statuses, unchanged source input hashes.
+PASS: every accepted mention independently checked against full source text and approved span; exported PTs trace to accepted evidence.
+PASS: route metadata agrees with original selected labels; protected input hashes unchanged and all comparison-ready flags remain false.
