@@ -1,0 +1,9 @@
+PASS: complete reviewed-profile Cartesian product, unique pair/profile keys, all inventory entities retained.
+PASS: candidate routes joined by exact group/label key; source identity support checked; raw input hashes unchanged.
+PASS: strict readiness derived from explicit evidence fields; all failed pair constraints recorded rather than hidden.
+PASS: independent feature counts agree for every profile; complete seed/candidate pair coverage checked both directions.
+PASS: candidate route and identity support agree with original label records; unique full-inventory rows and input hashes confirmed.
+Scope: no ready strict pair is a coverage/context finding, not negative pharmacological evidence.
+PASS: independent feature counts agree for every profile; complete seed/candidate pair coverage checked both directions.
+PASS: candidate route and identity support agree with original label records; unique full-inventory rows and input hashes confirmed.
+Scope: no ready strict pair is a coverage/context finding, not negative pharmacological evidence.

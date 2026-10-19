@@ -1,0 +1,4 @@
+setting,value,rationale
+minimum_reviewed_PT_terms,5,"Retains the earlier script-12 minimum as a declared sparsity screen, not statistical significance"
+strict_comparison_scope,current_label_explicit_single_agent_same_route,A deliberately narrow sensitivity stratum; different routes are not universally scientifically incomparable
+frequency_alignment_required,TRUE,Common-reaction thresholds and clinical cohorts differ; alignment must be reviewed before strict comparison

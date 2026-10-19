@@ -41,6 +41,8 @@ source("scripts/helpers/validate_comparable_labels.R")
 source("scripts/16a_review_candidate_summaries.R")
 source("scripts/16b_review_seed_summaries.R")
 source("scripts/helpers/validate_seed_summary_review.R")
+source("scripts/16c_audit_profile_compatibility.R")
+source("scripts/helpers/validate_profile_compatibility.R")
 ```
 
 ## Data layers
@@ -209,3 +211,25 @@ and validation are in `outputs/16b_*`; full source/review evidence stays local. 
 validation helper independently checks accepted source spans, PT provenance and
 original routes. Next is a compatibility audit across seed and candidate identity,
 route, regimen and profile coverage before ranking.
+
+## Profile compatibility audit (script 16c)
+
+All 384 seed/candidate combinations from 64 seed profiles and six candidate
+profiles are retained with explicit context constraints. The declared strict
+sensitivity stratum requires explicit single-agent context, a shared single label
+route, at least five reviewed PTs, no same-key self-comparison and reviewed
+frequency/cohort alignment. These constraints define this analysis stratum;
+different routes are not universally incompatible for exploratory comparison.
+
+Four seed profiles and no candidate summaries explicitly establish single-agent
+context. Ten profiles fall below the declared term minimum, 159 pairs share a
+single route, and frequency/cohort alignment remains pending. Consequently no
+strict pair is ready. A single active ingredient does not establish trial
+monotherapy. No missing context is turned into zero similarity or negative
+eEF1A evidence. Prior readiness flags are not used as the audit decision rule.
+
+`outputs/16c_*` contains profile/pair audits, actionable profile follow-up, all 200
+inventory entries, checksums and validation. Exact source-list prefixes stay local
+in `data/curated/profile_comparison_source_context.csv`. Settings are versioned
+in `config/profile_compatibility_settings.csv`. Next is 16d: inspect full candidate
+source cohorts/regimens and threshold definitions before reassessing compatibility.

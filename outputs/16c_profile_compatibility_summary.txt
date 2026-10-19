@@ -1,0 +1,23 @@
+SCRIPT 16c - REVIEWED PROFILE COMPATIBILITY AUDIT
+Reviewed seed profiles: 64
+Reviewed candidate profiles: 6
+Seed/candidate profile pairs audited: 384
+Seed profiles explicitly described as single-agent: 4
+Candidate profiles explicitly described as single-agent: 0
+Profiles below declared minimum of 5 PTs: 10
+Pairs satisfying the same-single-route condition: 159
+Pairs with frequency/cohort alignment already reviewed: 0
+Pairs ready for the declared strict stratum: 0
+Full inventory entities retained: 200
+Inputs: reviewed 16a/16b features, label routes, current structure registry and original inventory coverage.
+Outputs: reviewed_profile_compatibility_registry.csv and reviewed_profile_pair_compatibility.csv locally;
+outputs/16c_* profile/pair audit, follow-up queue, full inventory coverage, hashes and validation.
+The strict stratum requires explicit single-agent context, one identical label route, at least five reviewed PTs, no self full-key comparison and reviewed frequency/cohort alignment.
+These are declared analysis constraints, not universal biological incompatibility rules or significance tests.
+Single active ingredient does not establish a monotherapy trial. Source label routes may be broader than trial routes and require context review.
+Current named DrugBank identities accompany abbreviated SIDER labels; historical SIDER identity/formulation uncertainty is not repaired by this audit.
+Current-label attribution is separate from strict structural equivalence; related salts, active moieties and nonidentical stereochemistry are not silently merged.
+All barriers are retained per pair; incomplete coverage is not scored as zero similarity or negative target evidence.
+Regimen and frequency/cohort gaps explain zero strict-ready comparisons; prior FALSE readiness flags were not used as the decision rule.
+No similarity ranks, p-values, BH correction or eEF1A binding/inhibition/PPI claims are generated.
+Next: inspect full candidate source cohorts/regimens and threshold definitions using the profile-level follow-up queue; then reassess the declared stratum.

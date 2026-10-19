@@ -1,17 +1,19 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SCRIPT 16b SEED REPRESENTATIVE REVIEW COMPLETE
-Inspected 70 representative seed common-summary passages. Retained 64 bounded
-positive-list profiles containing 634 reviewed entity/PT/context features. Six
-representatives are held for missing table/underlining information, truncated
-comparator text or grade/discontinuation-specific endpoints. All 3,669 seed queue
-rows have workflow status; 2,848 nonrepresentative evidence rows remain pending.
-Routes, formulation/population qualifiers, original seed tiers and cancers are
-retained. All comparison_ready flags remain FALSE. The six candidate profiles
-from 16a (38 features) remain separate. Independent source-span, route and input
-hash checks passed. Next: audit identity, route, regimen and profile coverage to
-define compatible comparison strata before any new similarity ranking.
+CURRENT CHECKPOINT - SCRIPT 16c COMPATIBILITY AUDIT COMPLETE
+Audited 64 reviewed seed profiles and six candidate profiles (384 pairs), retaining
+all 200 inventory entities. Four seed profiles explicitly state single-agent
+context; none of the six candidate list summaries does. Ten profiles have fewer
+than five reviewed PTs under the declared earlier-pilot sparsity rule. There are
+159 same-single-route pairs, but frequency/cohort alignment is not yet reviewed.
+Zero pairs meet the declared strict current-label single-agent/same-route stratum.
+This is a context/coverage result, not negative target or adverse-effect evidence.
+No similarity ranking is generated and prior feature layers remain unchanged.
+Profile-level follow-up actions and every failed pair constraint are saved.
+Independent counts, Cartesian coverage, route/identity and hash checks passed.
+Next: 16d, inspect full candidate source cohorts/regimens and frequency cutoffs,
+then reassess compatibility; keep other strata and pending evidence explicit.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1565,3 +1567,39 @@ Next: audit seed/candidate identity, route, regimen and list coverage to define 
 SCRIPT 16b - INDEPENDENT VALIDATION
 Every accepted mention was independently checked against its full source text and approved boundaries. Exported PT features trace to accepted evidence; original route metadata and input hashes agree. No profile is comparison-ready.
 Output: outputs/16b_seed_context_validation.txt.
+
+SCRIPT 16c RUN - 2026-10-19 12:02:37 BST
+Script: scripts/16c_audit_profile_compatibility.R
+SCRIPT 16c - REVIEWED PROFILE COMPATIBILITY AUDIT
+Reviewed seed profiles: 64
+Reviewed candidate profiles: 6
+Seed/candidate profile pairs audited: 384
+Seed profiles explicitly described as single-agent: 4
+Candidate profiles explicitly described as single-agent: 0
+Profiles below declared minimum of 5 PTs: 10
+Pairs satisfying the same-single-route condition: 159
+Pairs with frequency/cohort alignment already reviewed: 0
+Pairs ready for the declared strict stratum: 0
+Full inventory entities retained: 200
+Inputs: reviewed 16a/16b features, label routes, current structure registry and original inventory coverage.
+Outputs: reviewed_profile_compatibility_registry.csv and reviewed_profile_pair_compatibility.csv locally;
+outputs/16c_* profile/pair audit, follow-up queue, full inventory coverage, hashes and validation.
+The strict stratum requires explicit single-agent context, one identical label route, at least five reviewed PTs, no self full-key comparison and reviewed frequency/cohort alignment.
+These are declared analysis constraints, not universal biological incompatibility rules or significance tests.
+Single active ingredient does not establish a monotherapy trial. Source label routes may be broader than trial routes and require context review.
+Current named DrugBank identities accompany abbreviated SIDER labels; historical SIDER identity/formulation uncertainty is not repaired by this audit.
+Current-label attribution is separate from strict structural equivalence; related salts, active moieties and nonidentical stereochemistry are not silently merged.
+All barriers are retained per pair; incomplete coverage is not scored as zero similarity or negative target evidence.
+Regimen and frequency/cohort gaps explain zero strict-ready comparisons; prior FALSE readiness flags were not used as the decision rule.
+No similarity ranks, p-values, BH correction or eEF1A binding/inhibition/PPI claims are generated.
+Next: inspect full candidate source cohorts/regimens and threshold definitions using the profile-level follow-up queue; then reassess the declared stratum.
+
+SCRIPT 16c - INDEPENDENT VALIDATION
+PASS: independent feature counts agree for every profile; complete seed/candidate pair coverage checked both directions.
+PASS: candidate route and identity support agree with original label records; unique full-inventory rows and input hashes confirmed.
+Scope: no ready strict pair is a coverage/context finding, not negative pharmacological evidence.
+
+SCRIPT 16c - INDEPENDENT VALIDATION
+PASS: independent feature counts agree for every profile; complete seed/candidate pair coverage checked both directions.
+PASS: candidate route and identity support agree with original label records; unique full-inventory rows and input hashes confirmed.
+Scope: no ready strict pair is a coverage/context finding, not negative pharmacological evidence.

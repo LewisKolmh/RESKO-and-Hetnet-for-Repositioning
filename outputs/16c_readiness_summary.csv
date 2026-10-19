@@ -1,0 +1,9 @@
+cohort,regimen_class,route_status,sparse_profile,profiles
+candidate,regimen_unresolved_or_pooled,single_label_route,FALSE,2
+candidate,regimen_unresolved_or_pooled,single_label_route,TRUE,4
+seed,explicit_combination,single_label_route,FALSE,3
+seed,explicit_single_agent,single_label_route,FALSE,4
+seed,regimen_unresolved_or_pooled,multiple_label_routes,FALSE,1
+seed,regimen_unresolved_or_pooled,multiple_label_routes,TRUE,1
+seed,regimen_unresolved_or_pooled,single_label_route,FALSE,50
+seed,regimen_unresolved_or_pooled,single_label_route,TRUE,5
