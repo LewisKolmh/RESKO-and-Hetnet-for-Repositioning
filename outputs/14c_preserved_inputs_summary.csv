@@ -1,0 +1,5 @@
+file,md5
+data/raw/sider/drug_names.tsv,ffec201670bf8599a7a22b2dd811fc89
+data/raw/sider/meddra_all_se.tsv.gz,e05270a185a67b059466e26549da425e
+data/curated/candidate_identity_registry.csv,110b5ddcbd335a8400b6ffce0d7f41c4
+data/curated/candidate_label_selection.csv,4fd02bdca0f66b91d2ef594ebc7b9875

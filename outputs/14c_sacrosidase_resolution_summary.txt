@@ -1,0 +1,12 @@
+SCRIPT 14c - SACROSIDASE NAMED-BIOLOGIC CONTEXT RECOVERY
+Verified local DrugBank DB06760: Sacrosidase, biotech, UNII 8A7F670F2Y.
+Verified current Sucraid SPL: literal sacrosidase ingredient and the same UNII, single active ingredient, human Rx.
+Selected named-context label records: 1; adverse-reaction text characters: 746
+SPL effective time: 20251229 version: 21
+Outputs: candidate_label_named_context_selection.csv (local source-context selection); outputs/14c_* summaries.
+Original SIDER files, 14a identity registry and 14b strict selection hashes are unchanged.
+The invalid CID association is quarantined, not replaced by another guessed CID or fabricated InChIKey.
+Historical name context is recovered; historical SIDER chemical/formulation identity remains unresolved.
+Keep this enzyme outside the small-molecule structure screen; it may enter a separately labelled side-effect/context comparison.
+The recovered label is not a new strict full-key match and must not be pooled silently into the 14b selection.
+Current label source text still needs the same PT/context review as other labels. No eEF1A binding claim is made.

@@ -1,7 +1,7 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SCRIPT 14b COMPLETE
+CURRENT CHECKPOINT - SCRIPTS 14b AND 14c COMPLETE
 Thirty historical SIDER groups retained; the sacrosidase identity conflict remains
 blocked. Current label collection covers 22 groups with 51 distinct SPL sets
 (54 group/label rows). Eleven groups have 23 UNII/name-supported single-ingredient
@@ -10,6 +10,11 @@ representative-panel limits; missing coverage is not evidence of no effects.
 Raw AR sections and tables are local; no PT features or target claims are accepted
 by this section. Independent XML checks passed. Next: script 15, comparable PT
 candidate extraction and context review for seed and candidate labels.
+Sacrosidase update (14c): recovered one separate named-biologic context label via
+DrugBank DB06760 and matching UNII 8A7F670F2Y in the Sucraid SPL (version 21,
+effective 20251229). Its 746-character AR section is available for context review.
+This does not change the 11-group strict 14b coverage. The incorrect CID remains
+blocked and the enzyme is excluded from small-molecule structure screening.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1407,3 +1412,33 @@ SCRIPT 14b - INDEPENDENT VALIDATION
 All 23 selected group/label rows were rechecked against raw XML: ingredient UNIIs, single-ingredient scope, document versions and normalised adverse-reaction text agree.
 All groups retain at most three examined sets; the sacrosidase conflict remains excluded. R parsing passed.
 Outputs: outputs/14b_candidate_label_validation.txt and outputs/14b_input_summary.csv (input hashes).
+
+SCRIPT 14c RUN - 2026-10-19 10:57:17 BST
+Script: scripts/14c_resolve_sacrosidase_context.R
+SCRIPT 14c - SACROSIDASE NAMED-BIOLOGIC CONTEXT RECOVERY
+Verified local DrugBank DB06760: Sacrosidase, biotech, UNII 8A7F670F2Y.
+Verified current Sucraid SPL: literal sacrosidase ingredient and the same UNII, single active ingredient, human Rx.
+Selected named-context label records: 1; adverse-reaction text characters: 746
+SPL effective time: 20251229 version: 21
+Outputs: candidate_label_named_context_selection.csv (local source-context selection); outputs/14c_* summaries.
+Original SIDER files, 14a identity registry and 14b strict selection hashes are unchanged.
+The invalid CID association is quarantined, not replaced by another guessed CID or fabricated InChIKey.
+Historical name context is recovered; historical SIDER chemical/formulation identity remains unresolved.
+Keep this enzyme outside the small-molecule structure screen; it may enter a separately labelled side-effect/context comparison.
+The recovered label is not a new strict full-key match and must not be pooled silently into the 14b selection.
+Current label source text still needs the same PT/context review as other labels. No eEF1A binding claim is made.
+
+SCRIPT 14c RUN - 2026-10-19 10:57:31 BST
+Script: scripts/14c_resolve_sacrosidase_context.R
+SCRIPT 14c - SACROSIDASE NAMED-BIOLOGIC CONTEXT RECOVERY
+Verified local DrugBank DB06760: Sacrosidase, biotech, UNII 8A7F670F2Y.
+Verified current Sucraid SPL: literal sacrosidase ingredient and the same UNII, single active ingredient, human Rx.
+Selected named-context label records: 1; adverse-reaction text characters: 746
+SPL effective time: 20251229 version: 21
+Outputs: candidate_label_named_context_selection.csv (local source-context selection); outputs/14c_* summaries.
+Original SIDER files, 14a identity registry and 14b strict selection hashes are unchanged.
+The invalid CID association is quarantined, not replaced by another guessed CID or fabricated InChIKey.
+Historical name context is recovered; historical SIDER chemical/formulation identity remains unresolved.
+Keep this enzyme outside the small-molecule structure screen; it may enter a separately labelled side-effect/context comparison.
+The recovered label is not a new strict full-key match and must not be pooled silently into the 14b selection.
+Current label source text still needs the same PT/context review as other labels. No eEF1A binding claim is made.

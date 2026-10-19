@@ -35,6 +35,7 @@ source("scripts/13_audit_side_effect_similarity.R")
 source("scripts/14a_resolve_candidate_identities.R")
 source("scripts/14b_collect_candidate_labels.R")
 source("scripts/helpers/validate_candidate_labels.R")
+source("scripts/14c_resolve_sacrosidase_context.R")
 ```
 
 ## Data layers
@@ -134,3 +135,14 @@ Raw XML, normalised AR text/tables and source-rich review tables stay local. The
 validation helper independently checks selected XML records and text. Next is
 script 15: process candidate and seed labels comparably and review PT context.
 API reference: [DailyMed SPL search](https://dailymed.nlm.nih.gov/dailymed/webservices-help/v2/spls_api.cfm).
+
+## Sacrosidase exception (script 14c)
+
+Script 14c verifies DrugBank DB06760 (a biotech enzyme) and the Sucraid SPL
+ingredient name/UNII, recovering one current label in a separate named-context
+selection: `data/curated/candidate_label_named_context_selection.csv`. This is
+clinical label attribution, not a repair of the historical CID or a strict
+structure match. The incorrect small-molecule lead remains blocked, the original
+SIDER files and strict selections remain unchanged, and sacrosidase stays outside
+the small-molecule structure screen. Script 15 must retain this context distinction.
+The source and decision summary are in `outputs/14c_*`.
