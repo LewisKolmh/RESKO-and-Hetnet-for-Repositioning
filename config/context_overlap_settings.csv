@@ -1,0 +1,5 @@
+setting,value,interpretation
+descriptive_minimum_PT_terms,5,Sparsity screen retained from earlier pilot
+descriptive_require_same_route,TRUE,One shared label route only
+descriptive_require_same_nominal_cutoff,TRUE,Same cutoff does not imply equal populations or ascertainment
+candidate_descriptive_treatment_scope,single_investigational_treatment_arm_supported_by_source,Permits reviewed study-arm context; does not assert absence of supportive care or other background treatment

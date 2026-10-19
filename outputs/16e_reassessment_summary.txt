@@ -1,0 +1,14 @@
+SCRIPT 16e - CONTEXT REASSESSMENT AND DESCRIPTIVE OVERLAP
+Full reviewed profile pairs retained: 384
+Strict-ready pairs: 0
+Pairs in declared descriptive aligned-cutoff stratum: 1
+Four explicitly single-agent seed lists have reviewed nominal frequency cutoffs; all six candidate contexts are retained.
+Pirfenidone and pralatrexate have source-supported single investigational treatment arms, without asserting no background/supportive treatment.
+Descriptive stratum requires reviewed seed single-agent scope, candidate study-arm support, same label route, >=5 terms on both sides, same nominal cutoff and no self full-key comparison.
+This relaxed descriptive stratum does not supersede the original stricter audit or prove cross-disease cohort comparability.
+All 384 raw set overlaps are labelled cross-context or aligned-summary descriptions; no rank, p-value or BH-adjusted claim is made.
+Shared common terms use the previously declared >=20% prevalence threshold across original SIDER profiles; lower prevalence is not target specificity.
+Source frequency definitions, comparator filtering, era, indication and population remain confounders even when nominal cutoffs match.
+Outputs: context_annotated_profile_pairs.csv (local); outputs/16e_* pair, eligible-pair and shared-term summaries.
+Next: final section-16 source/evidence ledger, consolidated feature export and target-evidence handoff without hiding pending review work.
+Aligned descriptive pair: Olaparib / Pirfenidone; shared=8; union=23; Jaccard=0.3478; shared common terms=8; shared below common cutoff=0.

@@ -1,0 +1,1 @@
+PASS: four seed source-scope markers, all 384 unique pairs, bounded set scores, explicit analysis strata and unchanged protected inputs.

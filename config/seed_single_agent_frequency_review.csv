@@ -1,0 +1,5 @@
+entity_id,threshold_operator,threshold_percent,marker,population_scope
+seed:DB01101,>,30,metastatic breast cancer who received capecitabine as a single agent,metastatic_breast_cancer
+seed:DB01181,>=,10,ifosfamide monotherapy,ifosfamide_trials
+seed:DB01229,>=,20,single-agent use of paclitaxel protein-bound,albumin_bound_metastatic_breast
+seed:DB09074,>=,10,pooled single agent safety population,pooled_olaparib_safety
