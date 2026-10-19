@@ -1,0 +1,21 @@
+molecule_chembl_id,molecule_name,molecule_type,standard_inchikey,parent_chembl_id,source_url,retrieved_utc
+CHEMBL1221911,LACTIMIDOMYCIN,Small molecule,OYOKHBHOTQDIPM-BRHOHSSQSA-N,CHEMBL1221911,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1221911.json,2026-10-19 14:30:48 UTC
+CHEMBL1232461,MOLIBRESIB,Small molecule,AAAQFGUYHFJNHI-SFHVURJKSA-N,CHEMBL1232461,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1232461.json,2026-10-19 14:30:48 UTC
+CHEMBL123292,CYCLOHEXIMIDE,Small molecule,YPHMISFOHDHNIV-FSZOTQKASA-N,CHEMBL123292,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL123292.json,2026-10-19 14:30:48 UTC
+CHEMBL1802814,,Small molecule,JEZQQOPCGJRMDS-IPBJYNAHSA-N,CHEMBL1802814,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1802814.json,2026-10-19 14:30:49 UTC
+CHEMBL1802815,,Small molecule,XDQGSQOIWVSUFW-PMERELPUSA-N,CHEMBL1802815,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1802815.json,2026-10-19 14:30:50 UTC
+CHEMBL1802973,,Small molecule,OYKRHXHJPJWNMX-KOSHJBKYSA-N,CHEMBL1802973,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1802973.json,2026-10-19 14:30:51 UTC
+CHEMBL2303630,SPARSOMYCIN,Small molecule,XKLZIVIOZDNKEQ-CKIHNWHUSA-N,CHEMBL2303630,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2303630.json,2026-10-19 14:30:51 UTC
+CHEMBL3799977,,Small molecule,NPHGQQXLLBUDCN-JCMHNJIXSA-N,CHEMBL3799977,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3799977.json,2026-10-19 14:30:51 UTC
+CHEMBL4066032,,Small molecule,SLTAVSAARNQYTL-AGJHTDJMSA-N,CHEMBL4066032,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4066032.json,2026-10-19 14:30:52 UTC
+CHEMBL4067648,,Small molecule,BGBIJENWTOVPPV-UHFFFAOYSA-N,CHEMBL4067648,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4067648.json,2026-10-19 14:30:52 UTC
+CHEMBL4070348,,Small molecule,REYDOWUGQFICLN-UHFFFAOYSA-N,CHEMBL4070348,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4070348.json,2026-10-19 14:30:53 UTC
+CHEMBL4072881,,Small molecule,UZHKYJSLLNBJAR-UHFFFAOYSA-N,CHEMBL4072881,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4072881.json,2026-10-19 14:30:53 UTC
+CHEMBL4088864,,Small molecule,VYNPGCZPSZTZMT-UHFFFAOYSA-N,CHEMBL4088864,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4088864.json,2026-10-19 14:30:54 UTC
+CHEMBL4094319,,Small molecule,SBQVZJRVMSRAGO-UHFFFAOYSA-N,CHEMBL4094319,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4094319.json,2026-10-19 14:30:54 UTC
+CHEMBL4095101,,Small molecule,ZELHMSIJUWMTIZ-RYUVBBIPSA-N,CHEMBL4095101,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4095101.json,2026-10-19 14:30:54 UTC
+CHEMBL4097524,,Small molecule,BSVUQTTWPPMTHY-UHFFFAOYSA-N,CHEMBL4097524,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4097524.json,2026-10-19 14:30:55 UTC
+CHEMBL4105227,,Small molecule,CVNJPJCBBHOAGM-UHFFFAOYSA-N,CHEMBL4105227,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4105227.json,2026-10-19 14:30:55 UTC
+CHEMBL4294164,,Small molecule,VEFSVJGWJQPWFS-ZXKKMYOJSA-N,CHEMBL4294164,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4294164.json,2026-10-19 14:30:55 UTC
+CHEMBL514569,GAMENDAZOLE,Small molecule,KYYQMVUKYQCSQY-AATRIKPKSA-N,CHEMBL514569,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL514569.json,2026-10-19 14:30:56 UTC
+CHEMBL5653589,,,MWKSRKSEWLRPBL-UHFFFAOYSA-N,CHEMBL5653589,https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL5653589.json,2026-10-19 14:30:57 UTC

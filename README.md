@@ -46,6 +46,9 @@ source("scripts/helpers/validate_profile_compatibility.R")
 source("scripts/16d_review_full_label_context.R")
 source("scripts/16e_reassess_context_and_overlap.R")
 source("scripts/16f_finalize_section16.R")
+source("scripts/17a_acquire_target_records.R")
+source("scripts/17b_expand_assays_and_match_ligands.R")
+source("scripts/helpers/validate_target_source_records.R")
 ```
 
 ## Data layers
@@ -268,3 +271,38 @@ The handoff keeps EEF1A1/EEF1A2 binding and downstream activity fields missing u
 assessed; missing side-effect coverage is not a negative filter. Sacrosidase's
 wrong CID remains quarantined. Next is section 17 target-evidence integration,
 including STITCH/ChEMBL, while preserving the original nine-source framework.
+
+## Target evidence acquisition (17a–17b; section 17 ongoing)
+
+Human EEF1A1 (P68104/CHEMBL1795120) and EEF1A2 (Q05639/CHEMBL1795122) are
+resolved against UniProt and exact single-component ChEMBL targets. The complete
+query returns 39 activity records: 28 for EEF1A1 and 11 for EEF1A2, representing
+23 assays, 20 ligands and seven source documents. Full source JSON, assay metadata,
+confidence/organism fields and versions stay local. UniProt is supplementary
+identity evidence; the original nine-source framework is retained.
+
+No source ligand exactly matches an inventory full InChIKey. All 200 inventory
+entries retain explicit source-coverage status; no match is not a negative binding
+result. One assay description names EEF1A1 but is assigned to EEF1A2 and is held
+for review. Assay type B can describe an effect on tRNA binding rather than direct
+compound binding. Neither database annotation nor an affinity-named assay is
+automatically accepted as direct binding, allostery or RT-PPI disruption.
+
+The EEF1A1 STITCH gene-name query is ambiguous; accession lookup plus current
+UniProt Ensembl cross-references supports its alternate protein ID. EEF1A2 matches
+current STRING/Ensembl cross-references. Both checked crosswalks are in
+`config/eef1a_STITCH_protein_crosswalk.csv`; sequence-variant equivalence remains
+unasserted. HTTPS certificate validation failed at STITCH, and public HTTP
+transport is explicit in acquisition provenance; TLS validation is not disabled.
+No chemical-protein associations are acquired merely by resolving a target ID.
+
+Compact reports are in `outputs/17a_*` and `outputs/17b_*`. Exact source records
+remain under `data/raw/target_evidence/` and source-rich curated evidence stays
+local. The independent helper checks every ligand key/assay target and the full
+inventory join. Next is 17c STITCH association/evidence-channel acquisition,
+followed by primary-source and positive-control review.
+
+References: [ChEMBL web services](https://chembl.gitbook.io/chembl-interface-documentation/web-services/chembl-data-web-services),
+[EEF1A1 UniProt](https://www.uniprot.org/uniprotkb/P68104/entry),
+[EEF1A2 UniProt](https://www.uniprot.org/uniprotkb/Q05639/entry), and
+[STITCH 5 source paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC4702904/).

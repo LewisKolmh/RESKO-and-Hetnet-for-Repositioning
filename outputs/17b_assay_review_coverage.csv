@@ -1,0 +1,5 @@
+queried_gene,evidence_review_status,confidence_score,activity_rows
+EEF1A1,pending_primary_assay_review,8,4
+EEF1A1,pending_primary_assay_review,9,24
+EEF1A2,hold_isoform_description_target_conflict,9,1
+EEF1A2,pending_primary_assay_review,9,10

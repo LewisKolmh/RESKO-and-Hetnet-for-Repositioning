@@ -1,0 +1,3 @@
+gene,uniprot,stitch_protein_id,canonical_STRING_crossreference_match,current_UniProt_Ensembl_protein_match,crosswalk_supported,sequence_variant_equivalence_established,source_query_url,uniprot_source_url
+EEF1A1,P68104,9606.ENSP00000330054,FALSE,TRUE,TRUE,FALSE,http://stitch.embl.de/api/tsv/resolve?identifier=P68104&species=9606,https://rest.uniprot.org/uniprotkb/P68104.json
+EEF1A2,Q05639,9606.ENSP00000217182,TRUE,TRUE,TRUE,FALSE,http://stitch.embl.de/api/tsv/resolve?identifier=EEF1A2&species=9606,https://rest.uniprot.org/uniprotkb/Q05639.json

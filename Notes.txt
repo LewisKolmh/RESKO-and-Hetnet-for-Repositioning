@@ -1,30 +1,29 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SECTION 16 COMPLETE: BOUNDED REVIEW, AUDIT AND HANDOFF
-16d reviewed all six retained candidate source contexts plus sacrosidase. Findings:
-apremilast permits background DMARDs (65% at least one); selected ibrutinib list
-pools monotherapy/combination; pirfenidone has placebo-filtered >=10% IPF data;
-pralatrexate >35% cutoff leaves four terms; calcium acetate summary threshold
-conflicts with some table rates; glycerol phenylbutyrate is adult short-term
-active-control context; sacrosidase is clinical counts/postmarketing context.
-16e retained all 384 pairs. Zero meet the original strict stratum. One pair meets
-the declared relaxed descriptive route/nominal-cutoff/list-size stratum:
-olaparib/pirfenidone share 8/23 union terms (Jaccard 0.3478); all eight shared terms
-are common in original SIDER. This is not eEF1A-specific evidence or a target rank.
-16f consolidated 672 distinct reviewed features across 64 seed and six candidate
-profiles. All 59,500 evidence rows have explicit status; 675 accepted mentions
-support those features and the other 58,825 rows retain held/rejected/pending or
-other workflow statuses. All 200 inventory entities remain in the independent
-target-evidence handoff, including missing-label cases and verified biologic
-context. Sacrosidase's incorrect structure stays quarantined.
-All six stage input manifests, source links/counts, feature uniqueness, pair set
-arithmetic and R parsing passed final validation. Section completion does NOT mean
-all extracted text is manually adjudicated or any eEF1A activity established.
-Next: section 17 direct target-evidence integration, including STITCH/ChEMBL,
-keeping EEF1A1/EEF1A2 and binding, functional inhibition, RT-PPI disruption,
-allostery and translation-sparing evidence distinct. Other original source layers
-remain in the database manifest; side-effect coverage does not gate target search.
+CURRENT CHECKPOINT - SECTION 17 UNDERWAY; 17a/17b COMPLETE
+Exact human targets resolved: EEF1A1/P68104/CHEMBL1795120 and
+EEF1A2/Q05639/CHEMBL1795122. Acquired all 39 activity records returned for these
+two targets (28 EEF1A1, 11 EEF1A2), with 23 assays, 20 ligands and seven document
+references. Complete source JSON, pagination, versions, confidence and organism
+metadata are retained. Target query scope excludes families/other annotations.
+No inventory full-key matches to these 20 source ligands; this is absent coverage
+in the bounded query, not negative binding evidence. One activity is held because
+its assay description names eEF1A1 while its target record is EEF1A2. Assay type B
+can describe inhibition of tRNA binding, so source annotation is not promoted
+automatically to physical compound binding, isoform selectivity or downstream claims.
+STITCH gene-name resolution for EEF1A1 is ambiguous. Accession lookup gives an
+alternative protein ID supported by current UniProt Ensembl cross-references.
+EEF1A2 matches current UniProt STRING/Ensembl IDs. Both gene/protein crosswalks
+are saved; canonical sequence-variant equivalence is not asserted. STITCH HTTPS
+certificate validation failed; public HTTP query provenance is explicit and TLS
+checks were not bypassed. No STITCH chemical-protein associations acquired yet.
+Independent raw ligand/assay checks, exact-key inventory join, hashes and parsing
+passed. Notes and compact code/results are synced section by section.
+Next: 17c STITCH association acquisition with evidence channels and checked protein
+IDs, then primary-document and positive-control evidence review. Keep EEF1A1/2,
+physical binding, functional inhibition, RT-PPI disruption, allostery and translation
+sparing separate. The original nine-source manifest remains the source framework.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1702,3 +1701,50 @@ Assay type B is not proof of direct compound binding; partner-binding and transl
 No inventory compound has been promoted to eEF1A binding, isoform selectivity, allostery or RT-PPI disruption.
 Outputs: target registry (config/); eef1a_chembl_activity_records.csv and API provenance (local); outputs/17a_* coverage/identity/resolution reports.
 Next: retrieve complete assay and ligand records, cross-check inventory identities, and review physical-binding versus functional evidence; acquire STITCH associations only after valid target resolution.
+
+SCRIPT 17b RUN - 2026-10-19 15:31:12 BST
+Script: scripts/17b_expand_assays_and_match_ligands.R
+SCRIPT 17b - FULL ASSAY/LIGAND EXPANSION AND INVENTORY IDENTITY LINKS
+Ligands: 20
+Assay records: 23
+Source documents: 7
+Enriched activity rows: 39
+Inventory entities with exact full-key ligand matches: 0
+Inventory source-activity rows linked: 0
+Activity rows held for isoform-description conflicts: 1
+All available assay fields and complete cached source JSON are retained; confidence score and organism are not dropped.
+Exact full-key links attach source activities, not automatically confirmed binding or inhibitory effects. ChEMBL-ID-only links stay separate.
+Parent/child compounds, undefined stereochemistry, salts and source-name aliases are not silently merged.
+Assay/target identity contradictions are held, not reassigned between EEF1A1 and EEF1A2 by text alone.
+Primary documents, assay design, activity relations/units and controls must be reviewed before physical binding, affinity or selectivity is asserted.
+No RT-PPI disruption, allostery or translation-sparing claim is created from these activity rows.
+Missing exact-target ChEMBL records is not negative evidence; target families, other annotations and literature remain outside this bounded query.
+Outputs: eef1a_chembl_* registries/evidence and eef1a_inventory_* links locally; compact identity/conflict/document/coverage reports in outputs/17b_*.
+Next: validate STITCH protein crosswalks and association channels; review source documents and add positive-control literature before prioritising binding candidates.
+
+SCRIPT 17b RUN - 2026-10-19 15:32:26 BST
+Script: scripts/17b_expand_assays_and_match_ligands.R
+SCRIPT 17b - FULL ASSAY/LIGAND EXPANSION AND INVENTORY IDENTITY LINKS
+Ligands: 20
+Assay records: 23
+Source documents: 7
+Enriched activity rows: 39
+Inventory entities with exact full-key ligand matches: 0
+Inventory source-activity rows linked: 0
+Activity rows held for isoform-description conflicts: 1
+STITCH target gene/protein crosswalks supported by current UniProt references: 2
+EEF1A1 alternative STITCH protein ID is present in current UniProt Ensembl cross-references; canonical sequence-variant equivalence is not asserted.
+All available assay fields and complete cached source JSON are retained; confidence score and organism are not dropped.
+Exact full-key links attach source activities, not automatically confirmed binding or inhibitory effects. ChEMBL-ID-only links stay separate.
+Parent/child compounds, undefined stereochemistry, salts and source-name aliases are not silently merged.
+Assay/target identity contradictions are held, not reassigned between EEF1A1 and EEF1A2 by text alone.
+Primary documents, assay design, activity relations/units and controls must be reviewed before physical binding, affinity or selectivity is asserted.
+No RT-PPI disruption, allostery or translation-sparing claim is created from these activity rows.
+Missing exact-target ChEMBL records is not negative evidence; target families, other annotations and literature remain outside this bounded query.
+Outputs: eef1a_chembl_* registries/evidence and eef1a_inventory_* links locally; compact identity/conflict/document/coverage reports in outputs/17b_*.
+Next: validate STITCH protein crosswalks and association channels; review source documents and add positive-control literature before prioritising binding candidates.
+
+SCRIPT 17b - INDEPENDENT VALIDATION
+PASS: all 20 ligand structure keys and 23 assay target/confidence records independently checked against raw cached JSON.
+PASS: full inventory exact-key join independently recomputed; 39 source activities retained and isoform conflict held.
+PASS: source input hashes unchanged and section R scripts parse. No negative binding conclusion follows from absent matches.

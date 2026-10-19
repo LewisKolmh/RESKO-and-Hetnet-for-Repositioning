@@ -1,0 +1,8 @@
+document_chembl_id,pubmed_id,doi,year,doc_type,source_url
+CHEMBL1221230,20118940,10.1038/nchembio.304,2010,PUBLICATION,https://www.ebi.ac.uk/chembl/api/data/document/CHEMBL1221230.json
+CHEMBL1799911,21599001,10.1021/jm101440r,2011,PUBLICATION,https://www.ebi.ac.uk/chembl/api/data/document/CHEMBL1799911.json
+CHEMBL3797061,26985290,10.1021/acsmedchemlett.5b00385,2016,PUBLICATION,https://www.ebi.ac.uk/chembl/api/data/document/CHEMBL3797061.json
+CHEMBL4020837,29498519,10.1021/acs.jmedchem.8b00078,2018,PUBLICATION,https://www.ebi.ac.uk/chembl/api/data/document/CHEMBL4020837.json
+CHEMBL4270485,28256837,10.1021/acs.jnatprod.6b00793,2017,PUBLICATION,https://www.ebi.ac.uk/chembl/api/data/document/CHEMBL4270485.json
+CHEMBL5649169,29928781,10.1002/cmdc.201800398,2018,PUBLICATION,https://www.ebi.ac.uk/chembl/api/data/document/CHEMBL5649169.json
+CHEMBL5696440,21964340,10.1038/nature10509,2011,PUBLICATION,https://www.ebi.ac.uk/chembl/api/data/document/CHEMBL5696440.json

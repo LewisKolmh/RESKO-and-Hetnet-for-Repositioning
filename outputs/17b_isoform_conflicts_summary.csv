@@ -1,0 +1,2 @@
+activity_id,queried_gene,queried_uniprot,target_chembl_id,assay_chembl_id,molecule_chembl_id,evidence_review_status
+6278015,EEF1A2,Q05639,CHEMBL1795122,CHEMBL1805286,CHEMBL1802973,hold_isoform_description_target_conflict

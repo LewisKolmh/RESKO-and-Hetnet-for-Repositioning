@@ -1,0 +1,4 @@
+PASS: unique source assay/ligand/activity IDs; exact source-target agreement; full-key inventory links; protected inputs unchanged and sacrosidase wrong structure excluded.
+PASS: all 20 ligand structure keys and 23 assay target/confidence records independently checked against raw cached JSON.
+PASS: full inventory exact-key join independently recomputed; 39 source activities retained and isoform conflict held.
+PASS: source input hashes unchanged and section R scripts parse. No negative binding conclusion follows from absent matches.

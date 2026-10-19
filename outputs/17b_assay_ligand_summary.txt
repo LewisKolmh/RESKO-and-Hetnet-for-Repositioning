@@ -1,0 +1,19 @@
+SCRIPT 17b - FULL ASSAY/LIGAND EXPANSION AND INVENTORY IDENTITY LINKS
+Ligands: 20
+Assay records: 23
+Source documents: 7
+Enriched activity rows: 39
+Inventory entities with exact full-key ligand matches: 0
+Inventory source-activity rows linked: 0
+Activity rows held for isoform-description conflicts: 1
+STITCH target gene/protein crosswalks supported by current UniProt references: 2
+EEF1A1 alternative STITCH protein ID is present in current UniProt Ensembl cross-references; canonical sequence-variant equivalence is not asserted.
+All available assay fields and complete cached source JSON are retained; confidence score and organism are not dropped.
+Exact full-key links attach source activities, not automatically confirmed binding or inhibitory effects. ChEMBL-ID-only links stay separate.
+Parent/child compounds, undefined stereochemistry, salts and source-name aliases are not silently merged.
+Assay/target identity contradictions are held, not reassigned between EEF1A1 and EEF1A2 by text alone.
+Primary documents, assay design, activity relations/units and controls must be reviewed before physical binding, affinity or selectivity is asserted.
+No RT-PPI disruption, allostery or translation-sparing claim is created from these activity rows.
+Missing exact-target ChEMBL records is not negative evidence; target families, other annotations and literature remain outside this bounded query.
+Outputs: eef1a_chembl_* registries/evidence and eef1a_inventory_* links locally; compact identity/conflict/document/coverage reports in outputs/17b_*.
+Next: validate STITCH protein crosswalks and association channels; review source documents and add positive-control literature before prioritising binding candidates.
