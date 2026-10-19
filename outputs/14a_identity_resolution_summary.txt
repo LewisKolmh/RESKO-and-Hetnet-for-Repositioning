@@ -1,0 +1,19 @@
+SCRIPT 14a - CANDIDATE IDENTITY CROSS-CHECK
+SIDER groups retained: 30
+Stereo CID leads requested: 30
+Groups with current structure keys: 30
+Groups linked to DrugBank by full key: 19
+DrugBank source records enriched: 19
+Provenance-bearing alias rows: 2611
+Outputs: candidate_identity_registry.csv; candidate_DrugBank_record_enrichment.csv; candidate_aliases.csv;
+candidate_external_identifiers.csv and API provenance (data/curated/); compact identity/structure summaries (outputs/14a_*).
+Historical SIDER IDs and requested/returned CIDs remain separate. No flat CID arithmetic or name-only merging.
+Full-key matches link current representations, not historical label/formulation equivalence or independent experimental identity.
+Matched source records retain names, UNIIs, CAS numbers, descriptions, indications, mechanisms and cross-references locally.
+Alias labels remain search leads. Same-key groups are navigational only; original SIDER side-effect profiles are not pooled.
+Groups with exact historical-name alias support: 16
+Groups already represented by a seed full key: 1
+Conflicting historical/current identities blocked from automatic label mapping: 1
+Sacrosidase CID lead 135113 resolves to 2-Methyl-5-tert-butyl-1,3-benzodioxole (C12H16O2); preserve as a conflict, not an enzyme structure.
+Current-record structure resolution is not confirmation of the historical SIDER drug identity.
+Next: verify current label ingredients/active moieties and preserve scope before constructing comparable PT profiles.

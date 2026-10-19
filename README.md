@@ -32,6 +32,7 @@ source("scripts/11g_review_label_supplement.R")
 source("scripts/12_pilot_label_sider_similarity.R")
 source("scripts/12a_validate_label_supplement.R")
 source("scripts/13_audit_side_effect_similarity.R")
+source("scripts/14a_resolve_candidate_identities.R")
 ```
 
 ## Data layers
@@ -97,3 +98,18 @@ the identity-review queue are exported as `outputs/13_*summary.csv`. Input hashe
 and validation/session reports are retained. Full tables stay local. Next, resolve
 chemical identities and construct comparable current-label profiles before
 interpreting the ranks or joining target evidence.
+
+## Candidate identity cross-check (script 14a)
+
+All 30 queued SIDER groups have current PubChem structure keys; 19 groups match
+DrugBank by full InChIKey, recovering source aliases and external identifiers.
+These are current-record links, not confirmed historical SIDER identities.
+Sixteen historical names have exact alias support; the remaining names require
+review. The sacrosidase lead resolves to an unrelated small-molecule record and
+is explicitly blocked from automatic label mapping in
+`config/candidate_identity_exceptions.csv`. One group already matches a seed key.
+
+API responses and DrugBank enrichment are cached locally; reruns reuse caches.
+Compact results are in `outputs/14a_*`; source-rich tables remain local. Next is
+script 14b: current-label acquisition with ingredient/active-moiety validation,
+keeping unresolved identities and combination/formulation contexts separate.

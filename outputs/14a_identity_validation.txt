@@ -1,0 +1,5 @@
+PASS: 30 unique queued groups retained; full key format and all cached PubChem structure keys checked.
+PASS: every enriched DrugBank link agrees with the independently saved full XML identity index.
+PASS: sacrosidase conflict blocks automatic label mapping; aliases are not treated as chemical equivalence.
+PASS: R scripts parse; successful cache-only rerun completed.
+Scope: identity cross-check only; current-label acquisition and historical identity adjudication remain pending.
