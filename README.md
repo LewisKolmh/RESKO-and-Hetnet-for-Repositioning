@@ -43,6 +43,9 @@ source("scripts/16b_review_seed_summaries.R")
 source("scripts/helpers/validate_seed_summary_review.R")
 source("scripts/16c_audit_profile_compatibility.R")
 source("scripts/helpers/validate_profile_compatibility.R")
+source("scripts/16d_review_full_label_context.R")
+source("scripts/16e_reassess_context_and_overlap.R")
+source("scripts/16f_finalize_section16.R")
 ```
 
 ## Data layers
@@ -233,3 +236,35 @@ inventory entries, checksums and validation. Exact source-list prefixes stay loc
 in `data/curated/profile_comparison_source_context.csv`. Settings are versioned
 in `config/profile_compatibility_settings.csv`. Next is 16d: inspect full candidate
 source cohorts/regimens and threshold definitions before reassessing compatibility.
+
+## Section 16 complete: source context and handoff (16d–16f)
+
+16d verifies all six candidate full-label contexts plus sacrosidase. The selected
+apremilast trials allow concomitant DMARDs; the ibrutinib summary pools mono and
+combination treatment. Pirfenidone is a placebo-filtered >=10% IPF list; the
+pralatrexate >35% summary is sparse. Calcium acetate has conflicting summary/table
+frequency presentation. Glycerol phenylbutyrate retains adult short-term active
+control context; sacrosidase retains clinical-count/postmarketing context.
+
+16e keeps all 384 pairs with explicit limitations. No original strict comparison
+is ready. A declared, relaxed descriptive stratum permits one olaparib/pirfenidone
+comparison with the same nominal cutoff, route and adequate list size: 8 shared
+terms across a 23-term union (Jaccard 0.3478). All eight terms are common under the
+original SIDER prevalence rule. This does not provide an eEF1A-specific signal,
+statistical significance or a validated target ranking. Supportive/background
+therapy uncertainty is not confused with absence of study-arm information.
+
+16f consolidates 672 reviewed entity/PT/context features (64 seed and six candidate
+profiles). A local ledger accounts for every one of the 59,500 extracted evidence
+rows: 675 accepted mentions support the feature export; the other rows retain
+explicit held, rejected, pending or other statuses. Completion refers to the
+bounded review, audit and handoff; it does not claim exhaustive manual review of
+all narratives and tables. Compact results are in `outputs/16f_*`; source-rich
+evidence remains local. Final validation checks all six stage input manifests,
+source provenance, feature keys, independent aligned-pair arithmetic and parsing.
+
+All 200 original entities remain available for independent target-evidence search.
+The handoff keeps EEF1A1/EEF1A2 binding and downstream activity fields missing until
+assessed; missing side-effect coverage is not a negative filter. Sacrosidase's
+wrong CID remains quarantined. Next is section 17 target-evidence integration,
+including STITCH/ChEMBL, while preserving the original nine-source framework.

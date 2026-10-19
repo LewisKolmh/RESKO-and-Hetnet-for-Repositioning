@@ -1,19 +1,30 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 19 October 2026
 
-CURRENT CHECKPOINT - SCRIPT 16c COMPATIBILITY AUDIT COMPLETE
-Audited 64 reviewed seed profiles and six candidate profiles (384 pairs), retaining
-all 200 inventory entities. Four seed profiles explicitly state single-agent
-context; none of the six candidate list summaries does. Ten profiles have fewer
-than five reviewed PTs under the declared earlier-pilot sparsity rule. There are
-159 same-single-route pairs, but frequency/cohort alignment is not yet reviewed.
-Zero pairs meet the declared strict current-label single-agent/same-route stratum.
-This is a context/coverage result, not negative target or adverse-effect evidence.
-No similarity ranking is generated and prior feature layers remain unchanged.
-Profile-level follow-up actions and every failed pair constraint are saved.
-Independent counts, Cartesian coverage, route/identity and hash checks passed.
-Next: 16d, inspect full candidate source cohorts/regimens and frequency cutoffs,
-then reassess compatibility; keep other strata and pending evidence explicit.
+CURRENT CHECKPOINT - SECTION 16 COMPLETE: BOUNDED REVIEW, AUDIT AND HANDOFF
+16d reviewed all six retained candidate source contexts plus sacrosidase. Findings:
+apremilast permits background DMARDs (65% at least one); selected ibrutinib list
+pools monotherapy/combination; pirfenidone has placebo-filtered >=10% IPF data;
+pralatrexate >35% cutoff leaves four terms; calcium acetate summary threshold
+conflicts with some table rates; glycerol phenylbutyrate is adult short-term
+active-control context; sacrosidase is clinical counts/postmarketing context.
+16e retained all 384 pairs. Zero meet the original strict stratum. One pair meets
+the declared relaxed descriptive route/nominal-cutoff/list-size stratum:
+olaparib/pirfenidone share 8/23 union terms (Jaccard 0.3478); all eight shared terms
+are common in original SIDER. This is not eEF1A-specific evidence or a target rank.
+16f consolidated 672 distinct reviewed features across 64 seed and six candidate
+profiles. All 59,500 evidence rows have explicit status; 675 accepted mentions
+support those features and the other 58,825 rows retain held/rejected/pending or
+other workflow statuses. All 200 inventory entities remain in the independent
+target-evidence handoff, including missing-label cases and verified biologic
+context. Sacrosidase's incorrect structure stays quarantined.
+All six stage input manifests, source links/counts, feature uniqueness, pair set
+arithmetic and R parsing passed final validation. Section completion does NOT mean
+all extracted text is manually adjudicated or any eEF1A activity established.
+Next: section 17 direct target-evidence integration, including STITCH/ChEMBL,
+keeping EEF1A1/EEF1A2 and binding, functional inhibition, RT-PPI disruption,
+allostery and translation-sparing evidence distinct. Other original source layers
+remain in the database manifest; side-effect coverage does not gate target search.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1652,3 +1663,24 @@ Source frequency definitions, comparator filtering, era, indication and populati
 Outputs: context_annotated_profile_pairs.csv (local); outputs/16e_* pair, eligible-pair and shared-term summaries.
 Next: final section-16 source/evidence ledger, consolidated feature export and target-evidence handoff without hiding pending review work.
 Aligned descriptive pair: Olaparib / Pirfenidone; shared=8; union=23; Jaccard=0.3478; shared common terms=8; shared below common cutoff=0.
+
+SCRIPT 16f RUN - 2026-10-19 15:20:11 BST
+Script: scripts/16f_finalize_section16.R
+SECTION 16 COMPLETE - BOUNDED LABEL REVIEW, AUDIT AND HANDOFF
+Consolidated reviewed entity/PT/context features: 672
+Seed profiles: 64
+Candidate profiles: 6
+Extracted evidence rows fully accounted for in review ledger: 59500
+Evidence rows accepted from reviewed positive-list spans: 675
+Evidence rows with other decisions/statuses: 58825
+Entities retained for independent target-evidence search: 200
+Strict-ready comparisons: 0
+Descriptive aligned-cutoff comparisons: 1
+The descriptive olaparib/pirfenidone pair shares 8/23 union terms (Jaccard 0.3478); all eight shared terms are common in original SIDER.
+Section completion means the bounded source review, compatibility audit, consolidated outputs and explicit unresolved-work ledger are complete.
+It does not mean every extracted term/table/narrative is manually adjudicated or that biological activity has been established.
+No p-values or BH adjustment: these set descriptions do not supply a valid null/test family.
+Outputs: section16_evidence_review_ledger.csv, section16_reviewed_PT_features.csv, section16_target_evidence_handoff.csv locally;
+outputs/16f_* compact features, review status, limitations, identity handoff, input hashes and final validation.
+All original 200 entities remain available for target-evidence searches; missing side-effect coverage is not a negative target filter.
+Next: section 17, direct eEF1A target-evidence integration (including STITCH/ChEMBL) with EEF1A1 versus EEF1A2 and binding versus functional/PPI evidence kept distinct.

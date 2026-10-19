@@ -1,0 +1,4 @@
+PASS: six section-stage input manifests unchanged; section R scripts parse.
+PASS: all 59,500 evidence rows assigned exactly one workflow status; consolidated feature keys unique and trace to accepted source evidence.
+PASS: all 200 handoff entities retained; sacrosidase structure quarantined; target activity fields remain missing, not negative.
+PASS: aligned-pair set counts and Jaccard independently recomputed from consolidated features; no strict-ready status invented.

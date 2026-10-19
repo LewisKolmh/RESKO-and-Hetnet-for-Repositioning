@@ -1,0 +1,5 @@
+section=16
+status=complete_bounded_review_and_handoff
+all_extracted_terms_manually_reviewed=FALSE
+strict_comparison_ready=FALSE
+next_section=17_target_evidence_integration

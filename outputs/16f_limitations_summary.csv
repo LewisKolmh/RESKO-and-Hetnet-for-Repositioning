@@ -1,0 +1,9 @@
+issue,section16_disposition,future_work
+Incomplete term adjudication,Every extracted row has an explicit status; accepted features come only from bounded inspected lists,Prioritise further tables/narratives when a later hypothesis requires them
+Strict comparison not ready,Zero strict-ready pairs retained as a source-context finding,Use direct target evidence independently; do not convert missing context to negative activity
+Only one aligned descriptive pair,Olaparib/pirfenidone share eight common terms; no target-specific signal,Do not promote descriptive overlap to a binding prediction
+Historical SIDER identity uncertainty,Current-label attribution and original source IDs remain distinct,Resolve individual historical forms only when needed; preserve original raw data
+Sacrosidase incorrect CID,Wrong structure excluded; verified biologic name/UNII retained separately,Keep outside small-molecule structure screening
+Formulation and regimen differences,"Routes, population qualifiers and full candidate context remain attached",Select source-compatible strata for any later comparison
+Incomplete original database framework,"This section concerns label context, not complete source integration","Continue the original manifest including STITCH, ChEMBL, STRING and pathway/ontology layers"
+No pharmacological validation,"No eEF1A or RT-PPI, allosteric or translation-sparing evidence established by this section",Assess EEF1A1 and EEF1A2 binding and downstream claims separately
