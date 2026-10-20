@@ -1,0 +1,12 @@
+lookup,role
+20118940,ChEMBL_source_document
+21599001,ChEMBL_source_document
+26985290,ChEMBL_source_document
+29498519,ChEMBL_source_document
+28256837,ChEMBL_source_document
+29928781,ChEMBL_source_document
+21964340,ChEMBL_source_document
+31496240,source_integrity_notice
+PMC5054363,positive_binding_control
+PMC4666417,RT_PPI_target_context
+PMC6613760,RT_PPI_chemical_countercontrol

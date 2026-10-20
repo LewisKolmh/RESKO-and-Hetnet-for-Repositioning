@@ -1,0 +1,1 @@
+PASS: all seven original document PMIDs resolved exactly; public XML front-matter PMID matches metadata; notice relations and protected input hashes retained.

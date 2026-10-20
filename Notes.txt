@@ -1810,3 +1810,16 @@ PASS: independent second scan of all 15,473,939 source rows exactly reproduces e
 PASS: text-mining-only counts independently recomputed from raw score fields; inventory join accounts for all 13 unique source-ID/protein links.
 PASS: all 200 entities/two isoforms retained in coverage; zero inventory experimental-channel links; no direct-binding status assigned.
 PASS: protected input hashes agree and source scripts parse. Flat/stereo rows are not independent experiments.
+
+SCRIPT 17d RUN - 2026-10-20 10:18:33 BST
+Script: scripts/17d_acquire_primary_literature.R
+SCRIPT 17d - PRIMARY LITERATURE AND SOURCE-INTEGRITY CHECK
+Publications checked: 11
+ChEMBL source documents covered: 7
+Public full-text XML records acquired: 2
+Includes a linked Expression of Concern notice, plitidepsin binding control and two RT/eEF1A context papers.
+The 2018 gamendazole/quinolinone paper (PMID 29498519) links to Expression of Concern PMID 31496240; derived records require quarantine.
+No returned notice is not proof that a paper is error-free. Full-text availability and abstract-only access remain explicit.
+Metadata, notices and available source XML are cached locally with source URLs, dates and license metadata.
+Original activity/inventory data are unchanged; no binding or allosteric claim is accepted merely from paper titles or assay type.
+Next: apply explicit assay-level evidence decisions, preserve limited-access holds and evaluate positive/RT-binding controls separately from the inventory.

@@ -1,0 +1,10 @@
+SCRIPT 17d - PRIMARY LITERATURE AND SOURCE-INTEGRITY CHECK
+Publications checked: 11
+ChEMBL source documents covered: 7
+Public full-text XML records acquired: 2
+Includes a linked Expression of Concern notice, plitidepsin binding control and two RT/eEF1A context papers.
+The 2018 gamendazole/quinolinone paper (PMID 29498519) links to Expression of Concern PMID 31496240; derived records require quarantine.
+No returned notice is not proof that a paper is error-free. Full-text availability and abstract-only access remain explicit.
+Metadata, notices and available source XML are cached locally with source URLs, dates and license metadata.
+Original activity/inventory data are unchanged; no binding or allosteric claim is accepted merely from paper titles or assay type.
+Next: apply explicit assay-level evidence decisions, preserve limited-access holds and evaluate positive/RT-binding controls separately from the inventory.
