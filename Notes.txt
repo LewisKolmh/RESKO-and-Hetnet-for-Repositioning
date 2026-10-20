@@ -1,29 +1,35 @@
 RESKO side project: eEF1A-binding candidate discovery
-Updated: 19 October 2026
+Updated: 20 October 2026
 
-CURRENT CHECKPOINT - SECTION 17 UNDERWAY; 17a/17b COMPLETE
-Exact human targets resolved: EEF1A1/P68104/CHEMBL1795120 and
-EEF1A2/Q05639/CHEMBL1795122. Acquired all 39 activity records returned for these
-two targets (28 EEF1A1, 11 EEF1A2), with 23 assays, 20 ligands and seven document
-references. Complete source JSON, pagination, versions, confidence and organism
-metadata are retained. Target query scope excludes families/other annotations.
-No inventory full-key matches to these 20 source ligands; this is absent coverage
-in the bounded query, not negative binding evidence. One activity is held because
-its assay description names eEF1A1 while its target record is EEF1A2. Assay type B
-can describe inhibition of tRNA binding, so source annotation is not promoted
-automatically to physical compound binding, isoform selectivity or downstream claims.
-STITCH gene-name resolution for EEF1A1 is ambiguous. Accession lookup gives an
-alternative protein ID supported by current UniProt Ensembl cross-references.
-EEF1A2 matches current UniProt STRING/Ensembl IDs. Both gene/protein crosswalks
-are saved; canonical sequence-variant equivalence is not asserted. STITCH HTTPS
-certificate validation failed; public HTTP query provenance is explicit and TLS
-checks were not bypassed. No STITCH chemical-protein associations acquired yet.
-Independent raw ligand/assay checks, exact-key inventory join, hashes and parsing
-passed. Notes and compact code/results are synced section by section.
-Next: 17c STITCH association acquisition with evidence channels and checked protein
-IDs, then primary-document and positive-control evidence review. Keep EEF1A1/2,
-physical binding, functional inhibition, RT-PPI disruption, allostery and translation
-sparing separate. The original nine-source manifest remains the source framework.
+CURRENT CHECKPOINT - SECTION 17 UNDERWAY; 17a/17b/17c COMPLETE
+17c acquired the complete human STITCH 5.0 detailed file (84,697,010 compressed
+bytes; source modified 2016-08-16; legacy/unsupported dataset). Scanned all
+15,473,939 source rows, retaining 3,198 exact eEF1A protein-ID association rows
+(1,651 EEF1A1 and 1,547 EEF1A2) across 1,769 distinct chemical IDs. There are
+3,069 text-mining-only rows and 36 with experimental-channel support; these are
+source rows, not independent experiments or measured direct binding events.
+Thirteen source-ID/protein links touch six inventory drugs: fluorouracil,
+estradiol, doxorubicin, dexamethasone, testosterone enanthate and epirubicin.
+None of these links has experimental-channel support. Five drugs have stereo-ID
+links backed by existing current identity checks; epirubicin is merged-group
+context only. STITCH 5 chemical InChIKeys were not separately revalidated, and
+merged salt/isomer/stereo rows are not pooled into independent biological evidence.
+Scores retain separate experimental/prediction/database/textmining/combined
+channels on 0..1000 scale; they are not p-values, affinities or inhibition scores.
+All 200 entities have coverage for both genes (400 rows), and sacrosidase's wrong
+structure remains excluded. Public HTTP transport and archive/build/retrieval
+provenance are explicit; TLS checks were not disabled. The raw file, publisher
+README/download documentation and detailed source-rich tables remain local.
+Independent second full-file scan, inventory join, source checksums and R parsing
+passed. Notes and compact outputs are synced to the designated GitHub repository.
+17a/17b findings remain: 39 exact-target ChEMBL activities, 23 assays, 20 ligands,
+seven document references; no exact inventory ligand matches in that bounded
+query, and one EEF1A1-description/EEF1A2-target contradiction is held. These are
+coverage findings, not evidence of absent binding. No activity claim is promoted.
+Next: 17d primary-source review and provenance tracing of experimental/database
+association leads, historical chemical forms, positive controls and overlap among
+STITCH/ChEMBL/DrugBank. Keep EEF1A1/2, binding, inhibition, RT-PPI disruption,
+allostery and translation sparing separate.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1748,3 +1754,59 @@ SCRIPT 17b - INDEPENDENT VALIDATION
 PASS: all 20 ligand structure keys and 23 assay target/confidence records independently checked against raw cached JSON.
 PASS: full inventory exact-key join independently recomputed; 39 source activities retained and isoform conflict held.
 PASS: source input hashes unchanged and section R scripts parse. No negative binding conclusion follows from absent matches.
+
+SCRIPT 17c RUN - 2026-10-20 10:06:20 BST
+Script: scripts/17c_acquire_stitch_associations.R
+SCRIPT 17c - HUMAN STITCH DETAILED ASSOCIATION ACQUISITION
+Human source rows scanned: 15473939
+Exact target-protein association rows: 3198
+Distinct STITCH chemical IDs across both targets: 1769
+Inventory entities with source-ID association links: 6
+Inventory entities with stereo-ID links and existing current full-key support: 5
+Inventory source-ID/protein association rows: 13
+Target rows supported only by textmining channel: 3069
+Target rows with experimental-channel support: 36
+Complete human detailed source file scanned; no API neighbour cap or additional score cutoff was applied.
+Source is legacy STITCH 5.0, not a current release; file modification date and retrieval date are distinct.
+Experimental, prediction, database, textmining and combined scores stay separate in their original 0..1000 scale.
+STITCH scores are association confidence, not affinity, p-values, direct binding or inhibition/selectivity measurements.
+The detailed file does not distinguish direct versus transferred evidence; experimental-channel support alone cannot establish direct human isoform binding.
+Stereo-ID inventory links use documented PubChem suffixes plus existing identity checks; original STITCH 5 InChIKeys were not independently revalidated.
+Merged salt/isomer IDs remain cross-release group-context leads only; merged/stereo rows are not independent biological evidence.
+No sacrosidase wrong-structure link accepted. Missing records or identity coverage is not negative activity evidence.
+Public HTTP transport is explicit; HTTPS certificate checks are not bypassed. Raw download and source-rich scores remain local.
+Outputs locally: eef1a_STITCH_association_channels.csv, STITCH_inventory_identifier_leads.csv, eef1a_STITCH_inventory_association_evidence.csv.
+Compact source/inventory coverage, evidence-layer counts and hashes in outputs/17c_*; source acquisition manifest is under data/raw/stitch/.
+Next: primary-source review of experimental/database-supported association leads, resolve historical chemical forms and provenance overlap with ChEMBL/DrugBank before binding prioritisation.
+
+SCRIPT 17c RUN - 2026-10-20 10:09:12 BST
+Script: scripts/17c_acquire_stitch_associations.R
+SCRIPT 17c - HUMAN STITCH DETAILED ASSOCIATION ACQUISITION
+Human source rows scanned: 15473939
+Exact target-protein association rows: 3198
+Distinct STITCH chemical IDs across both targets: 1769
+Inventory entities with source-ID association links: 6
+Inventory entities with stereo-ID links and existing current full-key support: 5
+Inventory source-ID/protein association rows: 13
+Target rows supported only by textmining channel: 3069
+Target rows with experimental-channel support: 36
+Inventory-linked rows with experimental-channel support: 0
+Inventory-linked drug names: Dexamethasone; Doxorubicin; Epirubicin; Estradiol; Fluorouracil; Testosterone enanthate
+Complete human detailed source file scanned; no API neighbour cap or additional score cutoff was applied.
+Source is legacy STITCH 5.0, not a current release; file modification date and retrieval date are distinct.
+Experimental, prediction, database, textmining and combined scores stay separate in their original 0..1000 scale.
+STITCH scores are association confidence, not affinity, p-values, direct binding or inhibition/selectivity measurements.
+The detailed file does not distinguish direct versus transferred evidence; experimental-channel support alone cannot establish direct human isoform binding.
+Stereo-ID inventory links use documented PubChem suffixes plus existing identity checks; original STITCH 5 InChIKeys were not independently revalidated.
+Merged salt/isomer IDs remain cross-release group-context leads only; merged/stereo rows are not independent biological evidence.
+No sacrosidase wrong-structure link accepted. Missing records or identity coverage is not negative activity evidence.
+Public HTTP transport is explicit; HTTPS certificate checks are not bypassed. Raw download and source-rich scores remain local.
+Outputs locally: eef1a_STITCH_association_channels.csv, STITCH_inventory_identifier_leads.csv, eef1a_STITCH_inventory_association_evidence.csv.
+Compact source/inventory coverage, evidence-layer counts and hashes in outputs/17c_*; source acquisition manifest is under data/raw/stitch/.
+Next: primary-source review of experimental/database-supported association leads, resolve historical chemical forms and provenance overlap with ChEMBL/DrugBank before binding prioritisation.
+
+SCRIPT 17c - INDEPENDENT VALIDATION
+PASS: independent second scan of all 15,473,939 source rows exactly reproduces every retained chemical/protein/channel field.
+PASS: text-mining-only counts independently recomputed from raw score fields; inventory join accounts for all 13 unique source-ID/protein links.
+PASS: all 200 entities/two isoforms retained in coverage; zero inventory experimental-channel links; no direct-binding status assigned.
+PASS: protected input hashes agree and source scripts parse. Flat/stereo rows are not independent experiments.

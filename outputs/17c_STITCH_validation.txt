@@ -1,0 +1,7 @@
+PASS: source gzip/MD5 and exact target protein fields; unique chemical/protein IDs, score ranges and source schema.
+PASS: unique inventory chemical/protein links, documented namespace mapping, quarantined structure excluded and all 400 entity/target coverage rows retained.
+Scope: ID links are not proof of historical structure equivalence or direct binding; source channel provenance remains explicit.
+PASS: independent second scan of all 15,473,939 source rows exactly reproduces every retained chemical/protein/channel field.
+PASS: text-mining-only counts independently recomputed from raw score fields; inventory join accounts for all 13 unique source-ID/protein links.
+PASS: all 200 entities/two isoforms retained in coverage; zero inventory experimental-channel links; no direct-binding status assigned.
+PASS: protected input hashes agree and source scripts parse. Flat/stereo rows are not independent experiments.

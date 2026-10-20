@@ -1,0 +1,7 @@
+entity_id,origin,source_name,current_record_name,target_genes,stereo_ID_with_current_key_support_any,experimental_channel_present_any,database_channel_present_any,all_linked_rows_textmining_only,max_combined_association_score
+seed:DB00445,seed,Epirubicin,Epirubicin,EEF1A2,FALSE,FALSE,FALSE,TRUE,170
+seed:DB00544,seed,Fluorouracil,Fluorouracil,EEF1A1,TRUE,FALSE,TRUE,FALSE,253
+seed:DB00783,seed,Estradiol,Estradiol,EEF1A2,TRUE,FALSE,TRUE,FALSE,150
+seed:DB00997,seed,Doxorubicin,Doxorubicin,EEF1A2,TRUE,FALSE,FALSE,TRUE,170
+seed:DB01234,seed,Dexamethasone,Dexamethasone,EEF1A2,TRUE,FALSE,TRUE,FALSE,230
+seed:DB13944,seed,Testosterone enanthate,Testosterone enanthate,EEF1A1|EEF1A2,TRUE,FALSE,FALSE,TRUE,154

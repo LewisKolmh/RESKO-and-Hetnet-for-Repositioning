@@ -49,6 +49,8 @@ source("scripts/16f_finalize_section16.R")
 source("scripts/17a_acquire_target_records.R")
 source("scripts/17b_expand_assays_and_match_ligands.R")
 source("scripts/helpers/validate_target_source_records.R")
+source("scripts/17c_acquire_stitch_associations.R")
+source("scripts/helpers/validate_stitch_associations.R")
 ```
 
 ## Data layers
@@ -299,10 +301,48 @@ No chemical-protein associations are acquired merely by resolving a target ID.
 Compact reports are in `outputs/17a_*` and `outputs/17b_*`. Exact source records
 remain under `data/raw/target_evidence/` and source-rich curated evidence stays
 local. The independent helper checks every ligand key/assay target and the full
-inventory join. Next is 17c STITCH association/evidence-channel acquisition,
-followed by primary-source and positive-control review.
+inventory join. Stage 17c below adds the detailed STITCH associations; primary-source and
+positive-control review follows.
 
 References: [ChEMBL web services](https://chembl.gitbook.io/chembl-interface-documentation/web-services/chembl-data-web-services),
 [EEF1A1 UniProt](https://www.uniprot.org/uniprotkb/P68104/entry),
 [EEF1A2 UniProt](https://www.uniprot.org/uniprotkb/Q05639/entry), and
 [STITCH 5 source paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC4702904/).
+
+## STITCH detailed association acquisition (17c complete)
+
+The official complete human detailed STITCH 5.0 file is downloaded locally
+(84,697,010 compressed bytes; source modified 2016-08-16). This is legacy,
+unsupported data. Streaming all 15,473,939 source rows retains 3,198 exact
+eEF1A protein-ID association rows: 1,651 EEF1A1 and 1,547 EEF1A2, involving
+1,769 distinct chemical IDs. No API neighbourhood cap or additional score
+threshold is applied. Raw source/caches remain outside Git.
+
+Experimental, prediction, database, textmining and combined scores remain separate
+on the original 0–1000 scale. There are 3,069 text-mining-only rows and 36 rows
+with experimental-channel support across the whole target subset. Those are
+association rows, not independent experiments: merged/stereo representations may
+repeat support, and this file does not separate direct from transferred evidence.
+Scores are neither affinities nor p-values and do not establish binding or
+isoform selectivity.
+
+Thirteen source-ID/protein links touch six inventory drugs: fluorouracil, estradiol,
+doxorubicin, dexamethasone, testosterone enanthate and epirubicin. None has
+experimental-channel support. Five have stereo-ID links with existing current
+identity support; epirubicin is merged-group context only. Original STITCH 5
+chemical InChIKeys are not separately revalidated. Namespace translation follows
+the cached publisher README; flat identifiers never become molecular structures.
+
+Coverage retains all 200 entities against both isoforms (400 rows). Missing
+identifiers/records remain missing coverage, not negative activity. Sacrosidase's
+incorrect CID stays excluded. Public HTTP download transport is recorded; HTTPS
+validation is not disabled. Publisher README/download documentation, detailed
+source rows and the acquisition manifest stay local under `data/raw/stitch/` and
+`data/curated/`. Compact source, channel and inventory reports are in
+`outputs/17c_*`. The validation helper independently rescans the entire source
+and checks every retained field, join count and input hash.
+
+Next: 17d primary-source/provenance review of experimental/database-supported
+leads, historical chemical forms and positive controls before binding
+prioritisation. STITCH imports can overlap ChEMBL/DrugBank evidence and must not
+be counted as independent confirmation.

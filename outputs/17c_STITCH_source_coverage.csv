@@ -1,0 +1,5 @@
+gene,uniprot,chemical_namespace,association_rows,distinct_chemical_IDs,experimental_channel_rows,database_channel_rows,prediction_channel_rows,textmining_only_rows
+EEF1A1,P68104,merged_salt_isomer_group,788,788,9,27,0,754
+EEF1A1,P68104,stereo_specific,863,863,9,28,0,828
+EEF1A2,Q05639,merged_salt_isomer_group,738,738,9,21,0,708
+EEF1A2,Q05639,stereo_specific,809,809,9,21,0,779

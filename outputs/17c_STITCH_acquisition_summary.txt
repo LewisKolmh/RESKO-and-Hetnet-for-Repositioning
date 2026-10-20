@@ -1,0 +1,23 @@
+SCRIPT 17c - HUMAN STITCH DETAILED ASSOCIATION ACQUISITION
+Human source rows scanned: 15473939
+Exact target-protein association rows: 3198
+Distinct STITCH chemical IDs across both targets: 1769
+Inventory entities with source-ID association links: 6
+Inventory entities with stereo-ID links and existing current full-key support: 5
+Inventory source-ID/protein association rows: 13
+Target rows supported only by textmining channel: 3069
+Target rows with experimental-channel support: 36
+Inventory-linked rows with experimental-channel support: 0
+Inventory-linked drug names: Dexamethasone; Doxorubicin; Epirubicin; Estradiol; Fluorouracil; Testosterone enanthate
+Complete human detailed source file scanned; no API neighbour cap or additional score cutoff was applied.
+Source is legacy STITCH 5.0, not a current release; file modification date and retrieval date are distinct.
+Experimental, prediction, database, textmining and combined scores stay separate in their original 0..1000 scale.
+STITCH scores are association confidence, not affinity, p-values, direct binding or inhibition/selectivity measurements.
+The detailed file does not distinguish direct versus transferred evidence; experimental-channel support alone cannot establish direct human isoform binding.
+Stereo-ID inventory links use documented PubChem suffixes plus existing identity checks; original STITCH 5 InChIKeys were not independently revalidated.
+Merged salt/isomer IDs remain cross-release group-context leads only; merged/stereo rows are not independent biological evidence.
+No sacrosidase wrong-structure link accepted. Missing records or identity coverage is not negative activity evidence.
+Public HTTP transport is explicit; HTTPS certificate checks are not bypassed. Raw download and source-rich scores remain local.
+Outputs locally: eef1a_STITCH_association_channels.csv, STITCH_inventory_identifier_leads.csv, eef1a_STITCH_inventory_association_evidence.csv.
+Compact source/inventory coverage, evidence-layer counts and hashes in outputs/17c_*; source acquisition manifest is under data/raw/stitch/.
+Next: primary-source review of experimental/database-supported association leads, resolve historical chemical forms and provenance overlap with ChEMBL/DrugBank before binding prioritisation.

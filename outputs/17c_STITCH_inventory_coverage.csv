@@ -1,0 +1,401 @@
+entity_id,gene,origin,source_name,current_record_name,structure_mapping_blocked,usable_source_ID_leads,associated_chemical_IDs,stereo_IDs_with_current_key_support,stereo_IDs_needing_identity_review,merged_group_context_IDs,experimental_channel_IDs,database_channel_IDs,textmining_only_IDs,max_combined_association_score,source_coverage_status
+seed:DB00014,EEF1A1,seed,Goserelin,Goserelin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00014,EEF1A2,seed,Goserelin,Goserelin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00072,EEF1A1,seed,Trastuzumab,Trastuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00072,EEF1A2,seed,Trastuzumab,Trastuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00112,EEF1A1,seed,Bevacizumab,Bevacizumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00112,EEF1A2,seed,Bevacizumab,Bevacizumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00188,EEF1A1,seed,Bortezomib,Bortezomib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00188,EEF1A2,seed,Bortezomib,Bortezomib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00262,EEF1A1,seed,Carmustine,Carmustine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00262,EEF1A2,seed,Carmustine,Carmustine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00286,EEF1A1,seed,Conjugated estrogens,Conjugated estrogens,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00286,EEF1A2,seed,Conjugated estrogens,Conjugated estrogens,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00305,EEF1A1,seed,Mitomycin,Mitomycin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00305,EEF1A2,seed,Mitomycin,Mitomycin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00351,EEF1A1,seed,Megestrol acetate,Megestrol acetate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00351,EEF1A2,seed,Megestrol acetate,Megestrol acetate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00357,EEF1A1,seed,Aminoglutethimide,Aminoglutethimide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00357,EEF1A2,seed,Aminoglutethimide,Aminoglutethimide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00361,EEF1A1,seed,Vinorelbine,Vinorelbine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00361,EEF1A2,seed,Vinorelbine,Vinorelbine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00441,EEF1A1,seed,Gemcitabine,Gemcitabine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00441,EEF1A2,seed,Gemcitabine,Gemcitabine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00445,EEF1A1,seed,Epirubicin,Epirubicin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00445,EEF1A2,seed,Epirubicin,Epirubicin,FALSE,2,1,0,0,1,0,0,1,170,source_association_for_review_NOT_binding_or_selectivity
+seed:DB00480,EEF1A1,seed,Lenalidomide,Lenalidomide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00480,EEF1A2,seed,Lenalidomide,Lenalidomide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00488,EEF1A1,seed,Altretamine,Altretamine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00488,EEF1A2,seed,Altretamine,Altretamine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00515,EEF1A1,seed,Cisplatin,Cisplatin,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00515,EEF1A2,seed,Cisplatin,Cisplatin,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB00531,EEF1A1,seed,Cyclophosphamide,Cyclophosphamide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00531,EEF1A2,seed,Cyclophosphamide,Cyclophosphamide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00539,EEF1A1,seed,Toremifene,Toremifene,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00539,EEF1A2,seed,Toremifene,Toremifene,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00544,EEF1A1,seed,Fluorouracil,Fluorouracil,FALSE,2,2,1,0,1,0,2,0,253,source_association_for_review_NOT_binding_or_selectivity
+seed:DB00544,EEF1A2,seed,Fluorouracil,Fluorouracil,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00563,EEF1A1,seed,Methotrexate,Methotrexate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00563,EEF1A2,seed,Methotrexate,Methotrexate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00570,EEF1A1,seed,Vinblastine,Vinblastine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00570,EEF1A2,seed,Vinblastine,Vinblastine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00675,EEF1A1,seed,Tamoxifen,Tamoxifen,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00675,EEF1A2,seed,Tamoxifen,Tamoxifen,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00783,EEF1A1,seed,Estradiol,Estradiol,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00783,EEF1A2,seed,Estradiol,Estradiol,FALSE,2,2,1,0,1,0,2,0,150,source_association_for_review_NOT_binding_or_selectivity
+seed:DB00894,EEF1A1,seed,Testolactone,Testolactone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00894,EEF1A2,seed,Testolactone,Testolactone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00947,EEF1A1,seed,Fulvestrant,Fulvestrant,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00947,EEF1A2,seed,Fulvestrant,Fulvestrant,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00958,EEF1A1,seed,Carboplatin,Carboplatin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00958,EEF1A2,seed,Carboplatin,Carboplatin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00984,EEF1A1,seed,Nandrolone phenpropionate,Nandrolone phenpropionate,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00984,EEF1A2,seed,Nandrolone phenpropionate,Nandrolone phenpropionate,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00990,EEF1A1,seed,Exemestane,Exemestane,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00990,EEF1A2,seed,Exemestane,Exemestane,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00997,EEF1A1,seed,Doxorubicin,Doxorubicin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB00997,EEF1A2,seed,Doxorubicin,Doxorubicin,FALSE,2,2,1,0,1,0,0,2,170,source_association_for_review_NOT_binding_or_selectivity
+seed:DB01006,EEF1A1,seed,Letrozole,Letrozole,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01006,EEF1A2,seed,Letrozole,Letrozole,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01030,EEF1A1,seed,Topotecan,Topotecan,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01030,EEF1A2,seed,Topotecan,Topotecan,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01042,EEF1A1,seed,Melphalan,Melphalan,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01042,EEF1A2,seed,Melphalan,Melphalan,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01101,EEF1A1,seed,Capecitabine,Capecitabine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01101,EEF1A2,seed,Capecitabine,Capecitabine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01181,EEF1A1,seed,Ifosfamide,Ifosfamide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01181,EEF1A2,seed,Ifosfamide,Ifosfamide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01185,EEF1A1,seed,Fluoxymesterone,Fluoxymesterone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01185,EEF1A2,seed,Fluoxymesterone,Fluoxymesterone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01217,EEF1A1,seed,Anastrozole,Anastrozole,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01217,EEF1A2,seed,Anastrozole,Anastrozole,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01229,EEF1A1,seed,Paclitaxel,Paclitaxel,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01229,EEF1A2,seed,Paclitaxel,Paclitaxel,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01234,EEF1A1,seed,Dexamethasone,Dexamethasone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01234,EEF1A2,seed,Dexamethasone,Dexamethasone,FALSE,2,2,1,0,1,0,2,0,230,source_association_for_review_NOT_binding_or_selectivity
+seed:DB01248,EEF1A1,seed,Docetaxel,Docetaxel,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01248,EEF1A2,seed,Docetaxel,Docetaxel,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01259,EEF1A1,seed,Lapatinib,Lapatinib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01259,EEF1A2,seed,Lapatinib,Lapatinib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01564,EEF1A1,seed,Calusterone,Calusterone,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01564,EEF1A2,seed,Calusterone,Calusterone,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01590,EEF1A1,seed,Everolimus,Everolimus,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01590,EEF1A2,seed,Everolimus,Everolimus,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01616,EEF1A1,seed,Alverine,Alverine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01616,EEF1A2,seed,Alverine,Alverine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01873,EEF1A1,seed,Epothilone D,Epothilone D,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB01873,EEF1A2,seed,Epothilone D,Epothilone D,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB02187,EEF1A1,seed,Equilin,Equilin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB02187,EEF1A2,seed,Equilin,Equilin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB02342,EEF1A1,seed,2-Methoxyestradiol,2-Methoxyestradiol,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB02342,EEF1A2,seed,2-Methoxyestradiol,2-Methoxyestradiol,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB03010,EEF1A1,seed,Patupilone,Patupilone,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB03010,EEF1A2,seed,Patupilone,Patupilone,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB04575,EEF1A1,seed,Quinestrol,Quinestrol,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB04575,EEF1A2,seed,Quinestrol,Quinestrol,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB04845,EEF1A1,seed,Ixabepilone,Ixabepilone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB04845,EEF1A2,seed,Ixabepilone,Ixabepilone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB04901,EEF1A1,seed,Galiximab,Galiximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB04901,EEF1A2,seed,Galiximab,Galiximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB04964,EEF1A1,seed,Oregovomab,Oregovomab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB04964,EEF1A2,seed,Oregovomab,Oregovomab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05003,EEF1A1,seed,Imexon,Imexon,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05003,EEF1A2,seed,Imexon,Imexon,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05006,EEF1A1,seed,Adecatumumab,Adecatumumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05006,EEF1A2,seed,Adecatumumab,Adecatumumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05022,EEF1A1,seed,Amonafide,Amonafide,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05022,EEF1A2,seed,Amonafide,Amonafide,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05033,EEF1A1,seed,INCB7839,INCB7839,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05033,EEF1A2,seed,INCB7839,INCB7839,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05051,EEF1A1,seed,BZL101,BZL101,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05051,EEF1A2,seed,BZL101,BZL101,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05109,EEF1A1,seed,Trabectedin,Trabectedin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05109,EEF1A2,seed,Trabectedin,Trabectedin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05136,EEF1A1,seed,Bavituximab,Bavituximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05136,EEF1A2,seed,Bavituximab,Bavituximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05292,EEF1A1,seed,IDM-1,IDM-1,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05292,EEF1A2,seed,IDM-1,IDM-1,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05296,EEF1A1,seed,Motexafin lutetium,Motexafin lutetium,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05296,EEF1A2,seed,Motexafin lutetium,Motexafin lutetium,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05297,EEF1A1,seed,Paclitaxel docosahexaenoic acid,Paclitaxel docosahexaenoic acid,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05297,EEF1A2,seed,Paclitaxel docosahexaenoic acid,Paclitaxel docosahexaenoic acid,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05308,EEF1A1,seed,Folitixorin calcium,Folitixorin calcium,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05308,EEF1A2,seed,Folitixorin calcium,Folitixorin calcium,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05322,EEF1A1,seed,Contusugene ladenovec,Contusugene ladenovec,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05322,EEF1A2,seed,Contusugene ladenovec,Contusugene ladenovec,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05325,EEF1A1,seed,INGN 225,INGN 225,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05325,EEF1A2,seed,INGN 225,INGN 225,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05380,EEF1A1,seed,DOTMP HO-166,DOTMP HO-166,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05380,EEF1A2,seed,DOTMP HO-166,DOTMP HO-166,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05387,EEF1A1,seed,Neovastat,Neovastat,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05387,EEF1A2,seed,Neovastat,Neovastat,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05393,EEF1A1,seed,NOV-002,NOV-002,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05393,EEF1A2,seed,NOV-002,NOV-002,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05414,EEF1A1,seed,Pipendoxifene,Pipendoxifene,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05414,EEF1A2,seed,Pipendoxifene,Pipendoxifene,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05420,EEF1A1,seed,Gallium maltolate,Gallium maltolate,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05420,EEF1A2,seed,Gallium maltolate,Gallium maltolate,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05424,EEF1A1,seed,Canertinib,Canertinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05424,EEF1A2,seed,Canertinib,Canertinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05477,EEF1A1,seed,MUC1 Dendritic Cell Vaccine,MUC1 Dendritic Cell Vaccine,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05477,EEF1A2,seed,MUC1 Dendritic Cell Vaccine,MUC1 Dendritic Cell Vaccine,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05485,EEF1A1,seed,ADH-1,ADH-1,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05485,EEF1A2,seed,ADH-1,ADH-1,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05487,EEF1A1,seed,Custirsen,Custirsen,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05487,EEF1A2,seed,Custirsen,Custirsen,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05489,EEF1A1,seed,ACA 125,ACA 125,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05489,EEF1A2,seed,ACA 125,ACA 125,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05500,EEF1A1,seed,AVN-944,AVN-944,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05500,EEF1A2,seed,AVN-944,AVN-944,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05513,EEF1A1,seed,Atiprimod,Atiprimod,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05513,EEF1A2,seed,Atiprimod,Atiprimod,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05592,EEF1A1,seed,Blarcamesine,Blarcamesine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05592,EEF1A2,seed,Blarcamesine,Blarcamesine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05595,EEF1A1,seed,Farletuzumab,Farletuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05595,EEF1A2,seed,Farletuzumab,Farletuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05608,EEF1A1,seed,MKC-1,MKC-1,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05608,EEF1A2,seed,MKC-1,MKC-1,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05626,EEF1A1,seed,Retaspimycin,Retaspimycin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05626,EEF1A2,seed,Retaspimycin,Retaspimycin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05706,EEF1A1,seed,13-deoxydoxorubicin,13-deoxydoxorubicin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05706,EEF1A2,seed,13-deoxydoxorubicin,13-deoxydoxorubicin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05733,EEF1A1,seed,MVA-BN-HER-2,MVA-BN-HER-2,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05733,EEF1A2,seed,MVA-BN-HER-2,MVA-BN-HER-2,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05773,EEF1A1,seed,Trastuzumab emtansine,Trastuzumab emtansine,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05773,EEF1A2,seed,Trastuzumab emtansine,Trastuzumab emtansine,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05786,EEF1A1,seed,Irofulven,Irofulven,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05786,EEF1A2,seed,Irofulven,Irofulven,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05800,EEF1A1,seed,Alethine,Alethine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05800,EEF1A2,seed,Alethine,Alethine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05801,EEF1A1,seed,GTI 2040,GTI 2040,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05801,EEF1A2,seed,GTI 2040,GTI 2040,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05808,EEF1A1,seed,Muparfostat,Muparfostat,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05808,EEF1A2,seed,Muparfostat,Muparfostat,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05818,EEF1A1,seed,SGN-15,SGN-15,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05818,EEF1A2,seed,SGN-15,SGN-15,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05842,EEF1A1,seed,AI-850,AI-850,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05842,EEF1A2,seed,AI-850,AI-850,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05928,EEF1A1,seed,Dovitinib,Dovitinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05928,EEF1A2,seed,Dovitinib,Dovitinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05929,EEF1A1,seed,GPI-0100,GPI-0100,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05929,EEF1A2,seed,GPI-0100,GPI-0100,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05953,EEF1A1,seed,EGEN-001,EGEN-001,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05953,EEF1A2,seed,EGEN-001,EGEN-001,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB05966,EEF1A1,seed,TAS-108,TAS-108,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05966,EEF1A2,seed,TAS-108,TAS-108,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05969,EEF1A1,seed,SNS-032,SNS-032,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05969,EEF1A2,seed,SNS-032,SNS-032,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05983,EEF1A1,seed,Bardoxolone methyl,Bardoxolone methyl,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB05983,EEF1A2,seed,Bardoxolone methyl,Bardoxolone methyl,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06049,EEF1A1,seed,IPH 2101,IPH 2101,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06049,EEF1A2,seed,IPH 2101,IPH 2101,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06159,EEF1A1,seed,Rubitecan,Rubitecan,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06159,EEF1A2,seed,Rubitecan,Rubitecan,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06174,EEF1A1,seed,Noscapine,Noscapine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06174,EEF1A2,seed,Noscapine,Noscapine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06177,EEF1A1,seed,Glufosfamide,Glufosfamide,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06177,EEF1A2,seed,Glufosfamide,Glufosfamide,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06179,EEF1A1,seed,Darinaparsin,Darinaparsin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06179,EEF1A2,seed,Darinaparsin,Darinaparsin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06188,EEF1A1,seed,Ispinesib,Ispinesib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06188,EEF1A2,seed,Ispinesib,Ispinesib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06193,EEF1A1,seed,Pixantrone,Pixantrone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06193,EEF1A2,seed,Pixantrone,Pixantrone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06195,EEF1A1,seed,Seliciclib,Seliciclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06195,EEF1A2,seed,Seliciclib,Seliciclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06226,EEF1A1,seed,Nelipepimut-S,Nelipepimut-S,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06226,EEF1A2,seed,Nelipepimut-S,Nelipepimut-S,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06235,EEF1A1,seed,Vadimezan,Vadimezan,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06235,EEF1A2,seed,Vadimezan,Vadimezan,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06240,EEF1A1,seed,Tariquidar,Tariquidar,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06240,EEF1A2,seed,Tariquidar,Tariquidar,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06249,EEF1A1,seed,Arzoxifene,Arzoxifene,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06249,EEF1A2,seed,Arzoxifene,Arzoxifene,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06255,EEF1A1,seed,Incadronic acid,Incadronic acid,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06255,EEF1A2,seed,Incadronic acid,Incadronic acid,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06276,EEF1A1,seed,Tanomastat,Tanomastat,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06276,EEF1A2,seed,Tanomastat,Tanomastat,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06287,EEF1A1,seed,Temsirolimus,Temsirolimus,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06287,EEF1A2,seed,Temsirolimus,Temsirolimus,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06317,EEF1A1,seed,Elotuzumab,Elotuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06317,EEF1A2,seed,Elotuzumab,Elotuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06360,EEF1A1,seed,Lucatumumab,Lucatumumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06360,EEF1A2,seed,Lucatumumab,Lucatumumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06366,EEF1A1,seed,Pertuzumab,Pertuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06366,EEF1A2,seed,Pertuzumab,Pertuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06373,EEF1A1,seed,ASI402,ASI402,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06373,EEF1A2,seed,ASI402,ASI402,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06374,EEF1A1,seed,Elacestrant,Elacestrant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06374,EEF1A2,seed,Elacestrant,Elacestrant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06399,EEF1A1,seed,Atacicept,Atacicept,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06399,EEF1A2,seed,Atacicept,Atacicept,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06420,EEF1A1,seed,Annamycin,Annamycin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06420,EEF1A2,seed,Annamycin,Annamycin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06453,EEF1A1,seed,Mirostipen,Mirostipen,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06453,EEF1A2,seed,Mirostipen,Mirostipen,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06461,EEF1A1,seed,Squalamine,Squalamine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06461,EEF1A2,seed,Squalamine,Squalamine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06500,EEF1A1,seed,IGN101,IGN101,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06500,EEF1A2,seed,IGN101,IGN101,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06548,EEF1A1,seed,Minodronic acid,Minodronic acid,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06548,EEF1A2,seed,Minodronic acid,Minodronic acid,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06584,EEF1A1,seed,Mesmulogene ancovacivec,Mesmulogene ancovacivec,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06584,EEF1A2,seed,Mesmulogene ancovacivec,Mesmulogene ancovacivec,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06603,EEF1A1,seed,Panobinostat,Panobinostat,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06603,EEF1A2,seed,Panobinostat,Panobinostat,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06641,EEF1A1,seed,Perifosine,Perifosine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06641,EEF1A2,seed,Perifosine,Perifosine,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06647,EEF1A1,seed,Volociximab,Volociximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06647,EEF1A2,seed,Volociximab,Volociximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06710,EEF1A1,seed,Methyltestosterone,Methyltestosterone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06710,EEF1A2,seed,Methyltestosterone,Methyltestosterone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06713,EEF1A1,seed,Norelgestromin,Norelgestromin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06713,EEF1A2,seed,Norelgestromin,Norelgestromin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB06719,EEF1A1,seed,Buserelin,Buserelin,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB06719,EEF1A2,seed,Buserelin,Buserelin,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB08871,EEF1A1,seed,Eribulin,Eribulin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB08871,EEF1A2,seed,Eribulin,Eribulin,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB08889,EEF1A1,seed,Carfilzomib,Carfilzomib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB08889,EEF1A2,seed,Carfilzomib,Carfilzomib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB08905,EEF1A1,seed,Formestane,Formestane,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB08905,EEF1A2,seed,Formestane,Formestane,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB08910,EEF1A1,seed,Pomalidomide,Pomalidomide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB08910,EEF1A2,seed,Pomalidomide,Pomalidomide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB09037,EEF1A1,seed,Pembrolizumab,Pembrolizumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB09037,EEF1A2,seed,Pembrolizumab,Pembrolizumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB09073,EEF1A1,seed,Palbociclib,Palbociclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB09073,EEF1A2,seed,Palbociclib,Palbociclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB09074,EEF1A1,seed,Olaparib,Olaparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB09074,EEF1A2,seed,Olaparib,Olaparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB09331,EEF1A1,seed,Daratumumab,Daratumumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB09331,EEF1A2,seed,Daratumumab,Daratumumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB09381,EEF1A1,seed,Esterified estrogens,Esterified estrogens,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB09381,EEF1A2,seed,Esterified estrogens,Esterified estrogens,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB09570,EEF1A1,seed,Ixazomib,Ixazomib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB09570,EEF1A2,seed,Ixazomib,Ixazomib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11652,EEF1A1,seed,Tucatinib,Tucatinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11652,EEF1A2,seed,Tucatinib,Tucatinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11730,EEF1A1,seed,Ribociclib,Ribociclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11730,EEF1A2,seed,Ribociclib,Ribociclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11760,EEF1A1,seed,Talazoparib,Talazoparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11760,EEF1A2,seed,Talazoparib,Talazoparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11793,EEF1A1,seed,Niraparib,Niraparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11793,EEF1A2,seed,Niraparib,Niraparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11828,EEF1A1,seed,Neratinib,Neratinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11828,EEF1A2,seed,Neratinib,Neratinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11942,EEF1A1,seed,Selinexor,Selinexor,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB11942,EEF1A2,seed,Selinexor,Selinexor,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12001,EEF1A1,seed,Abemaciclib,Abemaciclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12001,EEF1A2,seed,Abemaciclib,Abemaciclib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12015,EEF1A1,seed,Alpelisib,Alpelisib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12015,EEF1A2,seed,Alpelisib,Alpelisib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12218,EEF1A1,seed,Capivasertib,Capivasertib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12218,EEF1A2,seed,Capivasertib,Capivasertib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12282,EEF1A1,seed,Defactinib,Defactinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12282,EEF1A2,seed,Defactinib,Defactinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12332,EEF1A1,seed,Rucaparib,Rucaparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12332,EEF1A2,seed,Rucaparib,Rucaparib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB12489,EEF1A1,seed,Mirvetuximab soravtansine,Mirvetuximab soravtansine,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB12489,EEF1A2,seed,Mirvetuximab soravtansine,Mirvetuximab soravtansine,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB12589,EEF1A1,seed,Dacetuzumab,Dacetuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB12589,EEF1A2,seed,Dacetuzumab,Dacetuzumab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB12893,EEF1A1,seed,Sacituzumab govitecan,Sacituzumab govitecan,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB12893,EEF1A2,seed,Sacituzumab govitecan,Sacituzumab govitecan,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB13944,EEF1A1,seed,Testosterone enanthate,Testosterone enanthate,FALSE,2,2,1,0,1,0,0,2,154,source_association_for_review_NOT_binding_or_selectivity
+seed:DB13944,EEF1A2,seed,Testosterone enanthate,Testosterone enanthate,FALSE,2,2,1,0,1,0,0,2,154,source_association_for_review_NOT_binding_or_selectivity
+seed:DB14655,EEF1A1,seed,Drostanolone propionate,Drostanolone propionate,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB14655,EEF1A2,seed,Drostanolone propionate,Drostanolone propionate,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB14811,EEF1A1,seed,Isatuximab,Isatuximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB14811,EEF1A2,seed,Isatuximab,Isatuximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB14962,EEF1A1,seed,Trastuzumab deruxtecan,Trastuzumab deruxtecan,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB14962,EEF1A2,seed,Trastuzumab deruxtecan,Trastuzumab deruxtecan,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB14967,EEF1A1,seed,Margetuximab,Margetuximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB14967,EEF1A2,seed,Margetuximab,Margetuximab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB14976,EEF1A1,seed,Relacorilant,Relacorilant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB14976,EEF1A2,seed,Relacorilant,Relacorilant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB15254,EEF1A1,seed,Avutometinib,Avutometinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB15254,EEF1A2,seed,Avutometinib,Avutometinib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB15275,EEF1A1,seed,Inavolisib,Inavolisib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB15275,EEF1A2,seed,Inavolisib,Inavolisib,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB15395,EEF1A1,seed,Elranatamab,Elranatamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB15395,EEF1A2,seed,Elranatamab,Elranatamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB15719,EEF1A1,seed,Belantamab mafodotin,Belantamab mafodotin,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB15719,EEF1A2,seed,Belantamab mafodotin,Belantamab mafodotin,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16410,EEF1A1,seed,Datopotamab deruxtecan,Datopotamab deruxtecan,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16410,EEF1A2,seed,Datopotamab deruxtecan,Datopotamab deruxtecan,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16627,EEF1A1,seed,Melphalan flufenamide,Melphalan flufenamide,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB16627,EEF1A2,seed,Melphalan flufenamide,Melphalan flufenamide,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB16655,EEF1A1,seed,Teclistamab,Teclistamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16655,EEF1A2,seed,Teclistamab,Teclistamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16665,EEF1A1,seed,Idecabtagene vicleucel,Idecabtagene vicleucel,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16665,EEF1A2,seed,Idecabtagene vicleucel,Idecabtagene vicleucel,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16678,EEF1A1,seed,Talquetamab,Talquetamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16678,EEF1A2,seed,Talquetamab,Talquetamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16738,EEF1A1,seed,Ciltacabtagene autoleucel,Ciltacabtagene autoleucel,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB16738,EEF1A2,seed,Ciltacabtagene autoleucel,Ciltacabtagene autoleucel,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB17447,EEF1A1,seed,Linvoseltamab,Linvoseltamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB17447,EEF1A2,seed,Linvoseltamab,Linvoseltamab,FALSE,0,0,0,0,0,0,0,0,,no_usable_source_identifier_crosswalk
+seed:DB19006,EEF1A1,seed,Vepdegestrant,Vepdegestrant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB19006,EEF1A2,seed,Vepdegestrant,Vepdegestrant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB19043,EEF1A1,seed,Imlunestrant,Imlunestrant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+seed:DB19043,EEF1A2,seed,Imlunestrant,Imlunestrant,FALSE,1,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100002341,EEF1A1,candidate,benzphetamine,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100002341,EEF1A2,candidate,benzphetamine,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100002559,EEF1A1,candidate,carbenicillin,Carbenicillin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100002559,EEF1A2,candidate,carbenicillin,Carbenicillin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100002762,EEF1A1,candidate,cinoxacin,Cinoxacin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100002762,EEF1A2,candidate,cinoxacin,Cinoxacin,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100003053,EEF1A1,candidate,diethylenetriaminepentaacetic,Pentetic acid,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100003053,EEF1A2,candidate,diethylenetriaminepentaacetic,Pentetic acid,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100003783,EEF1A1,candidate,isoxsuprine,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100003783,EEF1A2,candidate,isoxsuprine,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100003872,EEF1A1,candidate,lactulose,Lactulose,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100003872,EEF1A2,candidate,lactulose,Lactulose,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100004680,EEF1A1,candidate,papaverine,Papaverine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100004680,EEF1A2,candidate,papaverine,Papaverine,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100004989,EEF1A1,candidate,pyrantel,Pyrantel,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100004989,EEF1A2,candidate,pyrantel,Pyrantel,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100005582,EEF1A1,candidate,trimetrexate,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100005582,EEF1A2,candidate,trimetrexate,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100006116,EEF1A1,candidate,calcium,Calcium acetate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100006116,EEF1A2,candidate,calcium,Calcium acetate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100023926,EEF1A1,candidate,lanthanum,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100023926,EEF1A2,candidate,lanthanum,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100040632,EEF1A1,candidate,pirfenidone,Pirfenidone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100040632,EEF1A2,candidate,pirfenidone,Pirfenidone,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100040703,EEF1A1,candidate,pinaverium,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100040703,EEF1A2,candidate,pinaverium,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100054949,EEF1A1,candidate,NSC,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100054949,EEF1A2,candidate,NSC,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100060867,EEF1A1,candidate,levosimendan,Levosimendan,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100060867,EEF1A2,candidate,levosimendan,Levosimendan,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100064929,EEF1A1,candidate,fenofibric,Fenofibric acid,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100064929,EEF1A2,candidate,fenofibric,Fenofibric acid,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100135113,EEF1A1,candidate,sacrosidase,Sacrosidase,TRUE,0,0,0,0,0,0,0,0,,quarantined_structure_named_biologic_context_only
+sider:CID100135113,EEF1A2,candidate,sacrosidase,Sacrosidase,TRUE,0,0,0,0,0,0,0,0,,quarantined_structure_named_biologic_context_only
+sider:CID100148121,EEF1A1,candidate,pralatrexate,Pralatrexate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100148121,EEF1A2,candidate,pralatrexate,Pralatrexate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100168924,EEF1A1,candidate,lanthanum,Lanthanum carbonate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID100168924,EEF1A2,candidate,lanthanum,Lanthanum carbonate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID102761171,EEF1A1,candidate,ethionamide,Ethionamide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID102761171,EEF1A2,candidate,ethionamide,Ethionamide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID106328144,EEF1A1,candidate,radium,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID106328144,EEF1A2,candidate,radium,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID109846180,EEF1A1,candidate,eltrombopag,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID109846180,EEF1A2,candidate,eltrombopag,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID109898619,EEF1A1,candidate,Depreotide,Depreotide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID109898619,EEF1A2,candidate,Depreotide,Depreotide,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID109912092,EEF1A1,candidate,apremilast,Apremilast,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID109912092,EEF1A2,candidate,apremilast,Apremilast,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID110482134,EEF1A1,candidate,glycerol,Glycerol phenylbutyrate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID110482134,EEF1A2,candidate,glycerol,Glycerol phenylbutyrate,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID111304743,EEF1A1,candidate,riociguat,Riociguat,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID111304743,EEF1A2,candidate,riociguat,Riociguat,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID111556711,EEF1A1,candidate,Carfilzomib,Carfilzomib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID111556711,EEF1A2,candidate,Carfilzomib,Carfilzomib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID116126651,EEF1A1,candidate,PCI-32765,Ibrutinib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID116126651,EEF1A2,candidate,PCI-32765,Ibrutinib,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID116132446,EEF1A1,candidate,Symlin,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID116132446,EEF1A2,candidate,Symlin,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID144564722,EEF1A1,candidate,Promacta,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence
+sider:CID144564722,EEF1A2,candidate,Promacta,,FALSE,2,0,0,0,0,0,0,0,,no_matching_ID_in_this_release_NOT_negative_evidence

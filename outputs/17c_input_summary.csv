@@ -1,0 +1,11 @@
+file,md5
+config/eef1a_STITCH_protein_crosswalk.csv,d5b06057d552c0bf58297ca406f21fe2
+outputs/16f_target_evidence_handoff_summary.csv,5214aed91425dd33c7d06945084acf17
+data/curated/seed_identity_crosscheck_reviewed.csv,c4dba8db70193d31b7e960adf6da244d
+data/curated/candidate_identity_registry.csv,110b5ddcbd335a8400b6ffce0d7f41c4
+data/curated/seed_sider_mapping_accepted.csv,f2927d9a5b0476a6c1de76fdb62eeb85
+data/raw/stitch/9606.protein_chemical.links.detailed.v5.0.tsv.gz,89051211a13b998a72deebdf3b88a63e
+data/raw/stitch/9606.protein_chemical.links.detailed.v5.0.tsv.gz.metadata.rds,f2a3565d64d1d922915aa3169c9e3b0e
+data/raw/stitch/README.v5.rds,a58c896e2fc2d83beb2b4fed2e3dfbdd
+data/raw/stitch/download_page.v5.rds,a695b3318d5d0f777d928bad77b863cf
+scripts/helpers/stream_stitch_targets.R,c329a304b7053185d886207a8477c8c8
