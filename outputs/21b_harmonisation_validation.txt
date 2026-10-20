@@ -1,0 +1,6 @@
+PASS: explicit current/historical alias provenance, unique-node acceptance, ambiguity holds, exact human anchor labels.
+PASS: all 200 entities retained; network nodes include isolates; canonical unique edge keys and protected input hashes verified.
+PASS: independent complete raw source scan of 10826054 directed rows reproduces every human eEF1A-anchor edge and score channel.
+PASS: induced edges exactly match source endpoints/channel values; nodes retain all mapped proteins/anchors, including isolates.
+PASS: all 200 entities retained; ambiguous historical mappings have no assigned current node; unique bridge acceptance and protected input hashes verified.
+PASS: all project R scripts parse. Source/current-release mapping and functional-association scope remain explicit.

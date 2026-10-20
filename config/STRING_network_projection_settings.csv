@@ -1,0 +1,7 @@
+setting,value,basis
+primary_combined_score,700,"Declared project adaptation; retain full published network and explicit sensitivity layers, not a reproduction claim"
+sensitivity_combined_scores,400|900,"Declared project adaptation; retain full published network and explicit sensitivity layers, not a reproduction claim"
+expansion_scope,Induced network over accepted inventory protein nodes plus two human eEF1A anchors; no neighbour expansion,"Declared project adaptation; retain full published network and explicit sensitivity layers, not a reproduction claim"
+current_alias_sources,UniProt_AC|Ensembl_UniProt|Ensembl_HGNC_uniprot_ids,"Declared project adaptation; retain full published network and explicit sensitivity layers, not a reproduction claim"
+legacy_bridge_policy,All direct historical UniProt aliases bridged to current aliases; accept only one distinct current node per legacy node; no gene-name or same-ENSP fallback,"Declared project adaptation; retain full published network and explicit sensitivity layers, not a reproduction claim"
+affinity_required,FALSE,"Declared project adaptation; retain full published network and explicit sensitivity layers, not a reproduction claim"

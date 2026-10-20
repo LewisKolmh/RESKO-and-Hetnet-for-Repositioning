@@ -1,25 +1,25 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 20 October 2026
 
-CURRENT CHECKPOINT - SCRIPT 20c BROAD STITCH INTEGRATION COMPLETE
-SCRIPT 20c - BROAD STITCH CHEMICAL NEIGHBOURS AND HISTORICAL PROTEIN ALIASES
+CURRENT CHECKPOINT - HUMAN STRING ACQUISITION/HARMONISATION 21a/21b COMPLETE
+SCRIPT 21b - INVENTORY PROTEIN HARMONISATION AND HUMAN NETWORK PREPARATION
 Inventory entities retained: 200
-Entities with chemical identifier leads: 139
-Complete human source rows scanned: 15473939
-Distinct selected chemical/protein source rows: 37701
-Inventory entities with associations: 116
-Inventory source-ID/protein links: 38940
-Distinct legacy human protein IDs: 9438
-Legacy proteins with unique current Reactome-supported accession projection: 6369
-All source score channels retained separately on original 0..1000 scale; no API neighbour cap or new score threshold.
-Merged chemical groups, current-PubChem-only identities and current-key-supported stereo leads remain separate.
-Experimental channel is association support, not proof of direct human binding. Source overlap with DrugBank/ChEMBL is not independent confirmation.
-Only direct Ensembl/UniProt accession aliases accepted; BLAST-only mappings excluded; multiple current accessions held.
-Historical alias to current Reactome is a labelled projection, not proof of sequence/isoform equivalence. Missing/ambiguous mappings remain explicit.
-Source-rich rows/projections/pathway features stay local; compact source, channel, mapping and coverage reports in outputs/20c_*.
-No drug excluded for missing affinity, no enrichment/BH test and no allostery claim.
-Core stage derives chemical leads from identity tables independently of optional eEF1A binding/literature scripts.
-Next: human STRING network acquisition and network-ready identifier harmonisation, followed by GO/DO integration.
+Entities with accepted current STRING protein links: 181
+DrugBank entities with current protein links: 164
+STITCH entities with projected current protein links: 116
+Distinct current inventory-associated protein nodes: 8969
+Legacy STITCH protein IDs with unique accession bridge: 8946
+All-published-confidence induced network edges: 2011287
+Declared primary combined-score threshold: 700
+Both human EEF1A anchors map by exact UniProt accession and agree with current STRING gene labels.
+Current exact-accession links and historical accession-bridge projections stay separate; no gene-name, BLAST-only or identical-ENSP fallback.
+Ambiguous/missing proteins are retained in coverage. Isoform suffixes are not stripped; historical bridges do not establish sequence equivalence.
+Complete source and all-published-confidence induced network retained; threshold 700 and sensitivity 400/900 are explicit project adaptations, not significance tests.
+Induced nodes are accepted inventory proteins plus anchors, with no external-neighbour expansion. Nodes without edges remain present.
+DrugBank roles and STITCH chemical-identity strata remain separate. Shared source reports do not become independent experiments.
+Network degree/proximity cannot establish compound binding, inhibition, allostery or RT-PPI disruption. No affinity exclusion or BH correction.
+Outputs: source-rich bridges/coverage/network locally; compact source-layer, anchor and confidence-sensitivity summaries in outputs/21b_*.
+Next: GO and DO human annotations, followed by declared feature matrices, network statistics, integration and validation.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -2024,3 +2024,30 @@ Functional protein associations are not necessarily physical interactions or evi
 This is a version-pinned current-source adaptation; legacy STITCH/STRING10 identifiers are not silently treated as current nodes.
 Raw files, aliases and full source-rich network remain local; compact source, channel and network reports in outputs/21a_*.
 Next: exact-accession and legacy-to-current protein harmonisation with missing/ambiguous mappings explicit.
+
+SCRIPT 21b RUN - 2026-10-20 12:00:48 BST
+Script: scripts/21b_harmonise_inventory_STRING_network.R
+SCRIPT 21b - INVENTORY PROTEIN HARMONISATION AND HUMAN NETWORK PREPARATION
+Inventory entities retained: 200
+Entities with accepted current STRING protein links: 181
+DrugBank entities with current protein links: 164
+STITCH entities with projected current protein links: 116
+Distinct current inventory-associated protein nodes: 8969
+Legacy STITCH protein IDs with unique accession bridge: 8946
+All-published-confidence induced network edges: 2011287
+Declared primary combined-score threshold: 700
+Both human EEF1A anchors map by exact UniProt accession and agree with current STRING gene labels.
+Current exact-accession links and historical accession-bridge projections stay separate; no gene-name, BLAST-only or identical-ENSP fallback.
+Ambiguous/missing proteins are retained in coverage. Isoform suffixes are not stripped; historical bridges do not establish sequence equivalence.
+Complete source and all-published-confidence induced network retained; threshold 700 and sensitivity 400/900 are explicit project adaptations, not significance tests.
+Induced nodes are accepted inventory proteins plus anchors, with no external-neighbour expansion. Nodes without edges remain present.
+DrugBank roles and STITCH chemical-identity strata remain separate. Shared source reports do not become independent experiments.
+Network degree/proximity cannot establish compound binding, inhibition, allostery or RT-PPI disruption. No affinity exclusion or BH correction.
+Outputs: source-rich bridges/coverage/network locally; compact source-layer, anchor and confidence-sensitivity summaries in outputs/21b_*.
+Next: GO and DO human annotations, followed by declared feature matrices, network statistics, integration and validation.
+
+SCRIPT 21b - INDEPENDENT VALIDATION
+PASS: independent complete raw source scan of 10826054 directed rows reproduces every human eEF1A-anchor edge and score channel.
+PASS: induced edges exactly match source endpoints/channel values; nodes retain all mapped proteins/anchors, including isolates.
+PASS: all 200 entities retained; ambiguous historical mappings have no assigned current node; unique bridge acceptance and protected input hashes verified.
+PASS: all project R scripts parse. Source/current-release mapping and functional-association scope remain explicit.

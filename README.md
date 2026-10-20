@@ -55,6 +55,9 @@ source("scripts/20a_acquire_reactome.R")
 source("scripts/20b_integrate_drugbank_proteins_pathways.R")
 source("scripts/helpers/validate_drugbank_pathway_integration.R")
 source("scripts/20c_integrate_broad_STITCH_associations.R")
+source("scripts/21a_acquire_human_STRING.R")
+source("scripts/21b_harmonise_inventory_STRING_network.R")
+source("scripts/helpers/validate_inventory_STRING_network.R")
 ```
 
 Optional target-specific evidence collection lives in
@@ -114,3 +117,31 @@ projections; eight proteins have multiple current accession matches and remain
 held. Other missing mappings remain explicit. Compound identity strata and source
 score channels are separate; these are association/context results, not a new
 list of proven binding hits. See `outputs/20c_*` for coverage and validation.
+
+## Human STRING network layer (scripts 21a–21b)
+
+The complete human STRING 12.5 functional-association release is acquired locally:
+19,699 registry proteins, 10,826,054 directed source rows and 5,413,027 unique
+undirected edges. Reciprocal rows were checked for exact score-channel equality
+before deduplication. Source URLs, checksums, release and retrieval/file dates are
+retained; full source data are not committed.
+
+Current direct UniProt aliases link 164 DrugBank inventory entries into the
+network. Explicit historical-accession bridges project STITCH associations for
+116 entries, with 181 entries covered across the two sources. All 200 entries
+remain in coverage. There are 8,946 unique legacy protein bridges, 184 ambiguous
+bridges held and 308 missing/unsupported legacy mappings. Gene names and equal
+Ensembl identifier text across releases are not used as mapping fallbacks.
+
+The induced inventory network contains 8,969 current protein nodes and 2,011,287
+edges at the published source floor of 150. All nodes and full source scores are
+retained. The declared primary cutoff of 700 yields 113,712 edges; cutoffs 400
+and 900 are separate sensitivity layers. These are documented project adaptations,
+not significance tests or claims of exact original-paper replication.
+
+Human EEF1A1 and EEF1A2 have separately verified accession/gene-label anchors.
+Historical projections, DrugBank protein roles and STITCH chemical identity
+strata remain distinct. Functional associations and network proximity do not
+establish direct binding, inhibition, allostery or RT-PPI disruption. GO/DO
+annotations, feature matrices, topology statistics and final RESKO ranking remain
+unfinished. Compact reports are in `outputs/21a_*` and `outputs/21b_*`.

@@ -17,6 +17,8 @@ counts and limitations. The complete RESKO model and final ranking are unfinishe
 | 20a | Acquire human Reactome mapping and pathway hierarchy |
 | 20b | Extract broad DrugBank protein roles and join accepted human proteins to Reactome |
 | 20c | Extract all STITCH neighbours for accepted inventory chemical IDs and review historical protein/pathway projections |
+| 21a | Acquire the complete human STRING functional network, protein registry and aliases |
+| 21b | Harmonise current/legacy protein links and prepare the source-aware human inventory network |
 
 The existing inventory is an integration/review cohort, not a completed
 paper-matched candidate ranking. The disease-wise SIDER joint-pattern baseline,
@@ -46,3 +48,9 @@ remain auditable; active code references use the current script locations.
 
 After 20c, run `scripts/helpers/validate_broad_STITCH_integration.R` to independently
 rescan the full source and verify all retained chemical/protein/score fields.
+
+After 21b, run `scripts/helpers/validate_inventory_STRING_network.R` to independently
+check raw eEF1A-anchor source edges, all induced source values and mapping holds.
+The primary confidence cutoff and sensitivity cutoffs are declared in
+`config/STRING_network_projection_settings.csv`; functional associations do not
+imply physical binding. Source/role/identity layers remain separate.

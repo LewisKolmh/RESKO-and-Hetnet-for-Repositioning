@@ -1,0 +1,5 @@
+combined_score_cutoff,layer,inventory_and_anchor_nodes,induced_undirected_edges,nodes_with_edges,nodes_retained_without_edges
+150,all_published_source_edges,8969,2011287,8969,0
+400,declared_sensitivity,8969,429475,8950,19
+700,declared_primary,8969,113712,8276,693
+900,declared_sensitivity,8969,50472,6955,2014

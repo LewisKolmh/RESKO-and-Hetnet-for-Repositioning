@@ -1,0 +1,3 @@
+gene,uniprot,current_STRING_id,combined_score_cutoff,full_human_network_associations,induced_inventory_network_associations,interpretation
+EEF1A1,P68104,9606.ENSP00000339063,700,223,164,Functional protein association degree; not number of compounds binding eEF1A
+EEF1A2,Q05639,9606.ENSP00000217182,700,40,27,Functional protein association degree; not number of compounds binding eEF1A

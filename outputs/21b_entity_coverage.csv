@@ -1,0 +1,5 @@
+origin,network_mapping_status,inventory_entities
+candidate,accepted_current_protein_links,28
+candidate,no_accepted_current_protein_links,2
+seed,accepted_current_protein_links,153
+seed,no_accepted_current_protein_links,17

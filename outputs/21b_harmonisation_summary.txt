@@ -1,0 +1,18 @@
+SCRIPT 21b - INVENTORY PROTEIN HARMONISATION AND HUMAN NETWORK PREPARATION
+Inventory entities retained: 200
+Entities with accepted current STRING protein links: 181
+DrugBank entities with current protein links: 164
+STITCH entities with projected current protein links: 116
+Distinct current inventory-associated protein nodes: 8969
+Legacy STITCH protein IDs with unique accession bridge: 8946
+All-published-confidence induced network edges: 2011287
+Declared primary combined-score threshold: 700
+Both human EEF1A anchors map by exact UniProt accession and agree with current STRING gene labels.
+Current exact-accession links and historical accession-bridge projections stay separate; no gene-name, BLAST-only or identical-ENSP fallback.
+Ambiguous/missing proteins are retained in coverage. Isoform suffixes are not stripped; historical bridges do not establish sequence equivalence.
+Complete source and all-published-confidence induced network retained; threshold 700 and sensitivity 400/900 are explicit project adaptations, not significance tests.
+Induced nodes are accepted inventory proteins plus anchors, with no external-neighbour expansion. Nodes without edges remain present.
+DrugBank roles and STITCH chemical-identity strata remain separate. Shared source reports do not become independent experiments.
+Network degree/proximity cannot establish compound binding, inhibition, allostery or RT-PPI disruption. No affinity exclusion or BH correction.
+Outputs: source-rich bridges/coverage/network locally; compact source-layer, anchor and confidence-sensitivity summaries in outputs/21b_*.
+Next: GO and DO human annotations, followed by declared feature matrices, network statistics, integration and validation.

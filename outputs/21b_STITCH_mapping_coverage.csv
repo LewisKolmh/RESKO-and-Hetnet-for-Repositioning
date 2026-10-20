@@ -1,0 +1,5 @@
+mapping_status,legacy_protein_ids
+ambiguous_legacy_to_current_nodes_hold,184
+historical_alias_no_current_node_match,78
+no_direct_historical_UniProt_alias,230
+unique_historical_accession_bridge_projection,8946

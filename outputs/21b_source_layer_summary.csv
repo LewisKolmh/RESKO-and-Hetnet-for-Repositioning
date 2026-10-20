@@ -1,0 +1,8 @@
+source_layer,evidence_stratum,inventory_entities,distinct_current_proteins,distinct_entity_protein_links
+DrugBank,DrugBank_role:carrier,26,7,43
+DrugBank,DrugBank_role:enzyme,79,100,369
+DrugBank,DrugBank_role:target,156,245,439
+DrugBank,DrugBank_role:transporter,65,56,262
+STITCH_5,current_PubChem_only_identity_review,9,557,581
+STITCH_5,current_key_supported_stereo_ID_historical_identity_not_revalidated,107,8724,19782
+STITCH_5,merged_group_context_only,60,7770,16829
