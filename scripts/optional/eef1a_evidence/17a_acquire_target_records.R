@@ -112,5 +112,5 @@ writeLines(report,'outputs/17a_target_acquisition_summary.txt')
 writeLines('PASS: exact human accessions and one-component target identity, exhaustive activity page totals, unique activity IDs, and checked STITCH returned identities.',
  'outputs/17a_target_acquisition_validation.txt')
 cat(paste0('\nSCRIPT 17a RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\n',
- 'Script: scripts/17a_acquire_target_records.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+ 'Script: scripts/optional/eef1a_evidence/17a_acquire_target_records.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

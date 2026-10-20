@@ -1,0 +1,18 @@
+SCRIPT 20c - BROAD STITCH CHEMICAL NEIGHBOURS AND HISTORICAL PROTEIN ALIASES
+Inventory entities retained: 200
+Entities with chemical identifier leads: 139
+Complete human source rows scanned: 15473939
+Distinct selected chemical/protein source rows: 37701
+Inventory entities with associations: 116
+Inventory source-ID/protein links: 38940
+Distinct legacy human protein IDs: 9438
+Legacy proteins with unique current Reactome-supported accession projection: 6369
+All source score channels retained separately on original 0..1000 scale; no API neighbour cap or new score threshold.
+Merged chemical groups, current-PubChem-only identities and current-key-supported stereo leads remain separate.
+Experimental channel is association support, not proof of direct human binding. Source overlap with DrugBank/ChEMBL is not independent confirmation.
+Only direct Ensembl/UniProt accession aliases accepted; BLAST-only mappings excluded; multiple current accessions held.
+Historical alias to current Reactome is a labelled projection, not proof of sequence/isoform equivalence. Missing/ambiguous mappings remain explicit.
+Source-rich rows/projections/pathway features stay local; compact source, channel, mapping and coverage reports in outputs/20c_*.
+No drug excluded for missing affinity, no enrichment/BH test and no allostery claim.
+Core stage derives chemical leads from identity tables independently of optional eEF1A binding/literature scripts.
+Next: human STRING network acquisition and network-ready identifier harmonisation, followed by GO/DO integration.

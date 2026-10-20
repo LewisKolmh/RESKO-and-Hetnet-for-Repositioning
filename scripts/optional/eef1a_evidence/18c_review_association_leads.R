@@ -121,5 +121,5 @@ notes <- readLines('Notes.txt',warn=FALSE);start<-grep('^SCRIPT 17f - HUMAN TARG
 if(!is.na(start)&&!is.na(end)&&start<end){notes<-c(notes[seq_len(start-1)],
  'CURRENT CHECKPOINT - SECTION 18a/18b/18c COMPLETE; FULL-TEXT AND ORIGINAL STITCH PROVENANCE REVIEW OPEN',
  report,'',notes[end:length(notes)]);writeLines(notes,'Notes.txt')}
-cat(paste0('\nSCRIPT 18c RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/18c_review_association_leads.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+cat(paste0('\nSCRIPT 18c RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/optional/eef1a_evidence/18c_review_association_leads.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

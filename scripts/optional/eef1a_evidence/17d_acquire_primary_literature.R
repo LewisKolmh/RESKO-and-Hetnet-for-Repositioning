@@ -67,5 +67,5 @@ writeLines(report,'outputs/17d_literature_summary.txt')
 writeLines('PASS: all seven original document PMIDs resolved exactly; public XML front-matter PMID matches metadata; notice relations and protected input hashes retained.',
  'outputs/17d_literature_validation.txt')
 cat(paste0('\nSCRIPT 17d RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\n',
- 'Script: scripts/17d_acquire_primary_literature.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+ 'Script: scripts/optional/eef1a_evidence/17d_acquire_primary_literature.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

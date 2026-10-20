@@ -83,5 +83,5 @@ writeLines(c('PASS: source PDF magic/header and checksum, original source manife
  'outputs/19_method_audit_validation.txt')
 notes<-readLines('Notes.txt',warn=FALSE);start<-grep('^CURRENT CHECKPOINT',notes)[1];end<-grep('^PROJECT AIM',notes)[1]
 stopifnot(start<end);writeLines(c(notes[seq_len(start-1)],'CURRENT CHECKPOINT - RETURN TO CORE RESKO; SCRIPT 19 METHOD AUDIT COMPLETE',report,'',notes[end:length(notes)]),'Notes.txt')
-cat(paste0('\nSCRIPT 19 RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/19_audit_RESKO_method_completion.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+cat(paste0('\nSCRIPT 19 RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/maintenance/19_audit_RESKO_method_completion.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

@@ -106,5 +106,5 @@ report <- c('SCRIPT 18b - ASSOCIATION SOURCE TRACING AND LITERATURE TRIAGE',
 writeLines(report,'outputs/18b_source_summary.txt')
 writeLines('PASS: every search record status-accounted; exact supplementary reference PMIDs/compound-row anchors verified; STITCH HTTP/application status retained; input unchanged.',
  'outputs/18b_source_validation.txt')
-cat(paste0('\nSCRIPT 18b RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/18b_trace_association_sources.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+cat(paste0('\nSCRIPT 18b RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/optional/eef1a_evidence/18b_trace_association_sources.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

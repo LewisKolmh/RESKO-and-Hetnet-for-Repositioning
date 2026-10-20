@@ -1,0 +1,7 @@
+origin,coverage_status,inventory_entities
+candidate,identifier_lead_no_source_rows,1
+candidate,no_accepted_chemical_identifier_lead,1
+candidate,source_associations_available,28
+seed,identifier_lead_no_source_rows,22
+seed,no_accepted_chemical_identifier_lead,60
+seed,source_associations_available,88

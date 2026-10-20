@@ -1,0 +1,4 @@
+compound_identity_layer,inventory_entities,source_ID_protein_links,distinct_proteins,experimental_channel_links,database_channel_links,textmining_only_links
+current_PubChem_only_identity_review,9,604,580,17,14,406
+current_key_supported_stereo_ID_historical_identity_not_revalidated,107,20742,9226,778,7931,12156
+merged_group_context_only,60,17594,8168,483,7442,9581

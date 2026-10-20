@@ -1,0 +1,6 @@
+PASS: complete source scan, exact chemical/protein fields and bounded score validation; unique entity/source-ID/protein links.
+PASS: full 200-entity coverage and protected inputs unchanged; blocked sacrosidase structure excluded.
+PASS: chemical identity strata, direct-versus-BLAST alias provenance and ambiguous historical mappings retained.
+PASS: independent readr second scan of all 15,473,939 rows exactly reproduces all 37,701 retained chemical/protein/channel rows.
+PASS: earlier 13 eEF1A inventory links are exactly recoverable from broad extraction with unchanged score fields.
+PASS: all 200 inventory entries retained and unique; ambiguity holds preserved; all R scripts parse and literal source paths exist.

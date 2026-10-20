@@ -1,0 +1,3 @@
+source,url,md5,retrieved_utc,file_bytes
+human_STITCH_detailed,http://stitch.embl.de/download/protein_chemical.links.detailed.v5.0/9606.protein_chemical.links.detailed.v5.0.tsv.gz,89051211a13b998a72deebdf3b88a63e,2026-10-20 09:01:07 UTC,84697010
+human_STRING_10_aliases,https://version-10.string-db.org/download/protein.aliases.v10/9606.protein.aliases.v10.txt.gz,b3c950415a1e4a33f0ed2218243d31f6,2026-10-20 09:54:04 UTC,14276633

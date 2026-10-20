@@ -127,5 +127,5 @@ writeLines(report,'outputs/17b_assay_ligand_summary.txt')
 writeLines('PASS: unique source assay/ligand/activity IDs; exact source-target agreement; full-key inventory links; protected inputs unchanged and sacrosidase wrong structure excluded.',
  'outputs/17b_assay_ligand_validation.txt')
 cat(paste0('\nSCRIPT 17b RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\n',
- 'Script: scripts/17b_expand_assays_and_match_ligands.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+ 'Script: scripts/optional/eef1a_evidence/17b_expand_assays_and_match_ligands.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

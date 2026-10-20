@@ -152,5 +152,5 @@ writeLines(c('PASS: source gzip/MD5 and exact target protein fields; unique chem
  'Scope: ID links are not proof of historical structure equivalence or direct binding; source channel provenance remains explicit.'),
  'outputs/17c_STITCH_validation.txt')
 cat(paste0('\nSCRIPT 17c RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\n',
- 'Script: scripts/17c_acquire_stitch_associations.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+ 'Script: scripts/optional/eef1a_evidence/17c_acquire_stitch_associations.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

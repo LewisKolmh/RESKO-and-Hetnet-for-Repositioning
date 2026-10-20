@@ -77,5 +77,5 @@ report <- c('SCRIPT 18a - SIX-LEAD PRIMARY LITERATURE SEARCH ACQUISITION',
 writeLines(report,'outputs/18a_search_summary.txt')
 writeLines('PASS: six queries, exact compound names, complete pagination, no duplicate entity/publication keys and input hash unchanged.',
  'outputs/18a_search_validation.txt')
-cat(paste0('\nSCRIPT 18a RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/18a_search_association_literature.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+cat(paste0('\nSCRIPT 18a RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/optional/eef1a_evidence/18a_search_association_literature.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')

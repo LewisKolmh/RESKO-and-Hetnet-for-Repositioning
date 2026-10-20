@@ -20,7 +20,7 @@ stopifnot(nrow(expected)==nrow(links),!anyDuplicated(links[c('entity_id','chemic
 cov<-r('outputs/17c_STITCH_inventory_coverage.csv');inventory<-r('outputs/16f_target_evidence_handoff_summary.csv')
 stopifnot(nrow(cov)==2L*nrow(inventory),setequal(cov$entity_id,inventory$entity_id),
  !anyDuplicated(cov[c('entity_id','gene')]),sum(as.integer(cov$associated_chemical_IDs))==nrow(links))
-for(f in c('scripts/17c_acquire_stitch_associations.R','scripts/helpers/stream_stitch_targets.R'))invisible(parse(f))
+for(f in c('scripts/optional/eef1a_evidence/17c_acquire_stitch_associations.R','scripts/helpers/stream_stitch_targets.R'))invisible(parse(f))
 msg<-c('PASS: independent second scan of all 15,473,939 source rows exactly reproduces every retained chemical/protein/channel field.',
  'PASS: text-mining-only counts independently recomputed from raw score fields; inventory join accounts for all 13 unique source-ID/protein links.',
  'PASS: all 200 entities/two isoforms retained in coverage; zero inventory experimental-channel links; no direct-binding status assigned.',

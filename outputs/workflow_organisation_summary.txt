@@ -1,0 +1,8 @@
+WORKFLOW ORGANISATION REVIEW - 20 October 2026
+Removed three zero-byte placeholders: scripts/00_Setup.R, scripts/01_define_cancers.R, scripts/02_database_manifest.R.
+All nonempty scientific scripts retained: they collect, curate, integrate or validate workflow evidence.
+Moved ten targeted binding/literature/association-slice scripts to scripts/optional/eef1a_evidence/; these annotate target hypotheses and are not an affinity gate.
+Moved the paper-completion audit to scripts/maintenance/; source/config/input/output names unchanged.
+Updated active code/documentation path references; historical run entries and generated reports remain unchanged as provenance.
+Core stages 20a/20b/20c collect and integrate broad protein/pathway data; optional 17c retains the earlier eEF1A-specific source slice.
+Fresh-checkout setup gaps and unfinished RESKO integration remain explicit; no claim that historical work or evidence gaps disappeared.

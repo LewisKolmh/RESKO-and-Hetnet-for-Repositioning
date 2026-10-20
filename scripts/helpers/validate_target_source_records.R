@@ -13,7 +13,7 @@ expected<-h |> filter(!is.na(current_inchikey),structure_mapping_blocked=='FALSE
  inner_join(m |> filter(!is.na(standard_inchikey)),by=c('current_inchikey'='standard_inchikey'),relationship='many-to-many')
 stopifnot(nrow(expected)==nrow(links),all(a$source_assay_target_agreement=='TRUE'),
  all(a$evidence_review_status[a$isoform_description_conflict=='TRUE']=='hold_isoform_description_target_conflict'))
-for(p in c('scripts/17a_acquire_target_records.R','scripts/17b_expand_assays_and_match_ligands.R','scripts/helpers/target_public_get.R'))invisible(parse(p))
+for(p in c('scripts/optional/eef1a_evidence/17a_acquire_target_records.R','scripts/optional/eef1a_evidence/17b_expand_assays_and_match_ligands.R','scripts/helpers/target_public_get.R'))invisible(parse(p))
 msg<-c('PASS: all 20 ligand structure keys and 23 assay target/confidence records independently checked against raw cached JSON.',
  'PASS: full inventory exact-key join independently recomputed; 39 source activities retained and isoform conflict held.',
  'PASS: source input hashes unchanged and section R scripts parse. No negative binding conclusion follows from absent matches.')

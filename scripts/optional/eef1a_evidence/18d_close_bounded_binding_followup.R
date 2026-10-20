@@ -54,5 +54,5 @@ report<-c('SCRIPT 18d - BOUNDED BINDING FOLLOW-UP CLOSED; RETURN TO CORE RESKO I
 writeLines(report,'outputs/18d_followup_summary.txt')
 writeLines('PASS: five contexts accounted for, three XML PMIDs validated, source hash unchanged, optional-affinity scope explicitly configured.',
  'outputs/18d_followup_validation.txt')
-cat(paste0('\nSCRIPT 18d RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/18d_close_bounded_binding_followup.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
+cat(paste0('\nSCRIPT 18d RUN - ',format(Sys.time(),tz='Europe/London',usetz=TRUE),'\nScript: scripts/optional/eef1a_evidence/18d_close_bounded_binding_followup.R\n',paste(report,collapse='\n'),'\n'),file='Notes.txt',append=TRUE)
 cat(paste(report,collapse='\n'),'\n')
