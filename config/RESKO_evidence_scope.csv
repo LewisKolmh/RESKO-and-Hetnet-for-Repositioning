@@ -1,0 +1,6 @@
+setting,value,authority
+require_published_eef1a_affinity_for_RESKO_inclusion,FALSE,User clarification 20 October 2026
+target_species,Homo sapiens,User clarification 20 October 2026
+binding_review_role,Optional evidence annotation; not RESKO completion criterion,User clarification 20 October 2026
+missing_affinity_encoding,NA/unreported/unknown; never zero or inactive,User clarification 20 October 2026
+candidate_retention,Retain original candidates regardless of affinity availability,User clarification 20 October 2026

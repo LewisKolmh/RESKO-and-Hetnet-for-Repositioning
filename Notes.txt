@@ -1874,3 +1874,14 @@ Original STITCH upstream study provenance remains unresolved; no claim of exhaus
 No inventory additions, seed-tier changes, binding score or BH adjustment. Original 200-entity inventory protected.
 Outputs: detailed review/status tables locally; six-drug findings, review coverage and validation in outputs/18c_*.
 Next: retrieve primary gene-level tables and full methods, review the five testosterone-enanthate contexts and recover high-value full-text sources before expanding prioritisation.
+
+SCRIPT 18d RUN - 2026-10-20 10:37:54 BST
+Script: scripts/18d_close_bounded_binding_followup.R
+SCRIPT 18d - BOUNDED BINDING FOLLOW-UP CLOSED; RETURN TO CORE RESKO INTEGRATION
+User confirms that published affinity is not required for RESKO completion or candidate retention.
+Five testosterone-enanthate contexts: three XML sources acquired/reviewed, one additional PMC HTML context reviewed, one access hold.
+Reviewed contexts concern separate compounds, expression/proteomics or placebo-group changes, not a measured testosterone-enanthate/human eEF1A affinity.
+This is a bounded contextual review, not proof that no binding publication exists. Original STITCH provenance remains unresolved.
+All six leads remain in the inventory; missing affinity does not exclude a drug or imply inactivity.
+Outputs: context source/status review in outputs/18d_*; source passages local; user scope policy in config/RESKO_evidence_scope.csv.
+Next: audit the actual RESKO paper against completed code, then acquire/integrate the remaining original data sources; do not continue open-ended affinity searching.

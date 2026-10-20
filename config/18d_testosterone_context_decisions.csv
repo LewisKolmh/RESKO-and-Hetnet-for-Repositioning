@@ -1,0 +1,6 @@
+pmcid,context_conclusion,review_basis
+PMC9996746,Male-contraception review discusses testosterone enanthate separately from gamendazole/eEF1A1; no transfer of binding claim,Cached XML targeted paragraphs/table
+PMC6563988,Human bed-rest/exercise/testosterone proteomics: EEF1A1 abundance/phosphorylation measurements are not affinity assays; significant control-group changes cannot be assigned to drug,"Cached XML intervention paragraph, EEF1A1 result paragraph and tables 1-4"
+PMC9184684,Human cancer skeletal-muscle proteomics: EEF1A2 S-nitrosylation change appears in cancer-treatment plus placebo context; not evidence of testosterone-enanthate binding,Cached XML treatment and S-nitrosylation paragraphs
+PMC9426764,Unresolved: full-text endpoint failure; retain pending context review,Acquisition status only; no mechanistic conclusion
+PMC4381878,Nonhormonal-contraception review: testosterone formulations in introduction; eEF1A1 claim concerns biotinylated gamendazole in separate section,PMC HTML manually checked 2026-10-20: introduction and section 2.5.2; XML endpoint failed
