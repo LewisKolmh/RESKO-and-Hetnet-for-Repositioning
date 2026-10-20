@@ -1,0 +1,24 @@
+assay_chembl_id,review_layer,review_reason
+CHEMBL1228364,functional_partner_readout,tRNA ternary-complex readout does not measure compound binding to eEF1A
+CHEMBL1228365,translation_function,Peptidyl-transfer readout does not measure compound binding to eEF1A
+CHEMBL1805138,affinity_capture,Biotinylated-probe pull-down; direct affinity and probe/parent identity need full methods
+CHEMBL1805291,reported_SPR_pending_methods,Reported EEF1A1 SPR; full primary methods and probe/parent identities not verified
+CHEMBL1805281,reported_SPR_pending_methods,Reported EEF1A2 SPR; full primary methods and probe/parent identities not verified
+CHEMBL1805284,translation_function,Cellular methionine incorporation is not physical binding
+CHEMBL1805285,translation_function,Cellular methionine incorporation is not physical binding
+CHEMBL1805286,isoform_conflict_hold,EEF1A2 target annotation conflicts with EEF1A1 assay description
+CHEMBL1805287,translation_function,Cellular methionine incorporation is not physical binding
+CHEMBL1805288,downstream_signalling,Akt phosphorylation is not physical binding
+CHEMBL1805289,downstream_signalling,Akt phosphorylation is not physical binding
+CHEMBL3803738,chemoproteomic_enrichment,"C646-yne enrichment; reactive-probe and abundant-protein liabilities, no affinity measurement"
+CHEMBL4024027,source_integrity_hold,Expression of Concern PMID 31496240 linked to source PMID 29498519
+CHEMBL4024030,source_integrity_hold,Expression of Concern PMID 31496240 linked to source PMID 29498519
+CHEMBL4024033,source_integrity_hold,ITC does not override the linked Expression of Concern; quarantine derived activities
+CHEMBL4270827,chemoproteomic_enrichment,Gymnemic acid I ribosome-complex proteomics; enrichment is not direct eEF1A affinity
+CHEMBL5697473,competition_profile_not_positive,Molibresib competition profile; near-unit fold changes do not establish positive binding
+CHEMBL5698173,competition_profile_not_positive,Molibresib competition profile; preserve source concentrations and ratios
+CHEMBL5698873,competition_profile_not_positive,Molibresib competition profile; preserve source concentrations and ratios
+CHEMBL5699573,competition_profile_not_positive,Molibresib competition profile; preserve source concentrations and ratios
+CHEMBL5700273,competition_profile_not_positive,Molibresib competition profile; preserve source concentrations and ratios
+CHEMBL5700973,competition_profile_not_positive,Censored IC50 >=10000 nM is not a positive inhibition hit or proof of absent binding
+CHEMBL5650978,kinobead_competition,"Same molecule/assay/value with Kd and ED50 labels: one competition-derived observation, not purified affinity"

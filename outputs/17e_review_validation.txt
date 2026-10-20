@@ -1,0 +1,1 @@
+PASS: exact assay coverage, all source rows accounted for, integrity quarantine, duplicate grouping, source XML control check and protected input hashes.

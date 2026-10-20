@@ -1823,3 +1823,15 @@ No returned notice is not proof that a paper is error-free. Full-text availabili
 Metadata, notices and available source XML are cached locally with source URLs, dates and license metadata.
 Original activity/inventory data are unchanged; no binding or allosteric claim is accepted merely from paper titles or assay type.
 Next: apply explicit assay-level evidence decisions, preserve limited-access holds and evaluate positive/RT-binding controls separately from the inventory.
+
+SCRIPT 17e RUN - 2026-10-20 10:23:26 BST
+SCRIPT 17e - BOUNDED ASSAY ADJUDICATION AND CONTROL
+39 source activity records accounted for across 23 assays and 20 ligands.
+11 records from PMID 29498519 quarantined because of linked Expression of Concern; this is not described as a retraction.
+6 SPR records retained as reported binding pending full methods; no inventory identity match.
+One isoform contradiction held. Two kinobead endpoint labels represent one observation.
+Plitidepsin is a separate positive reference: reported rabbit eEF1A2 Kd 79 +/- 30 nM, not proven A2-exclusive or allosteric.
+13 inventory STITCH links retain association-only status and unresolved upstream study provenance.
+Primary full-text retrieval remains incomplete; this is a bounded review, not exhaustive adjudication.
+Outputs: reviewed activity evidence, STITCH review and control registry locally; compact review/control reports in outputs/17e_*.
+No BH adjustment: no valid statistical test family or null/background is defined here.
