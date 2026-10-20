@@ -1,0 +1,7 @@
+issue,paper_locations,handling
+Common-side-effect pruning,3.1 versus Figure 3,Keep top-decile term removal and above-10-percent drug-prevalence removal separate sensitivity settings
+Minimum seed side effects,3.2 prose versus Algorithm 1 lines 4/13,Record >3 versus >=3 explicitly and report boundary sensitivity
+Candidate similarity boundary,Methods summary versus Algorithm 1,Report >50 percent and >=50 percent separately at exact ties; retain numerator/denominator
+Fallback seed reduction,Figure 3 versus Algorithm 1,Do not choose a favourable half of the cohort after viewing candidates; predeclare any fallback and preserve full-cohort result
+Matrix factorisation reproducibility,3.7 / equation 7,Obtain/verify implementation details; disclose adaptations and do not claim bit-for-bit reproduction
+Cancer application versus original Alzheimer example,Disease-forward workflow,Describe cancer runs as a method adaptation; reproduce an Alzheimer reference run if original data and settings are available

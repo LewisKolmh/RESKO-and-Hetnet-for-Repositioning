@@ -17,3 +17,8 @@
 - Raw downloads/caches and session files stay outside Git. Commit code, configuration,
   approved compact feature exports, compact reports and notes. Source-rich curated
   tables stay local; use `.gitignore` to retain the public-repository boundary. Follow the repository's `.gitignore`.
+- User clarification 2026-10-20: complete the core McGarry RESKO data/method workflow;
+  published eEF1A binding affinity is optional annotation, never a candidate
+  inclusion filter or completion gate. Do not extend affinity searching indefinitely.
+- Track core completion against config/RESKO_method_completion_checklist.csv and
+  record paper ambiguities/adaptations explicitly; STITCH is an original paper source.

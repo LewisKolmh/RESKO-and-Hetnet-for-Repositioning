@@ -1,0 +1,2 @@
+PASS: source PDF magic/header and checksum, original source manifest retained, scope forbids affinity exclusion.
+PASS: all 200 entities/six leads preserved; protected input hashes unchanged; method gaps and paper ambiguities explicit.

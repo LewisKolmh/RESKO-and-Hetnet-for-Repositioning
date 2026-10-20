@@ -1,20 +1,18 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 20 October 2026
 
-CURRENT CHECKPOINT - SECTION 18a/18b/18c COMPLETE; FULL-TEXT AND ORIGINAL STITCH PROVENANCE REVIEW OPEN
-SCRIPT 18c - BOUNDED SIX-LEAD ABSTRACT REVIEW
-15 priority index records reviewed as 14 evidence groups; duplicate AGR/MED title and abstract verified, not independent experiments.
-2754 indexed full-text-context records remain explicitly pending. Lexical triage is not a full-text exclusion decision.
-Fluorouracil: indirect human EEF1A1 expression context and a human-cell EEF1A2 resistance pathway; neither establishes drug binding.
-Doxorubicin: human EEF1A1 senescence-associated reduction; differs from original EEF1A2 association and does not establish binding.
-Estradiol/dexamethasone/doxorubicin: supplementary EEF1A2 expression annotations traced to primary references, but gene-level rows remain unverified.
-Dexamethasone combination-treatment abstracts do not transfer plitidepsin target binding to dexamethasone.
-Testosterone enanthate and epirubicin remain unresolved; parent/ester and anthracycline identities are not pooled.
-Zero six-lead compounds qualify as direct human eEF1A binders or selective allosteric RT-PPI inhibitors on this bounded abstract review.
-Original STITCH upstream study provenance remains unresolved; no claim of exhaustive absence or completion of full-text review.
-No inventory additions, seed-tier changes, binding score or BH adjustment. Original 200-entity inventory protected.
-Outputs: detailed review/status tables locally; six-drug findings, review coverage and validation in outputs/18c_*.
-Next: retrieve primary gene-level tables and full methods, review the five testosterone-enanthate contexts and recover high-value full-text sources before expanding prioritisation.
+CURRENT CHECKPOINT - RETURN TO CORE RESKO; SCRIPT 19 METHOD AUDIT COMPLETE
+SCRIPT 19 - PAPER-ALIGNED RESKO COMPLETION AUDIT
+Method reference: McGarry et al. (2018), DOI 10.1016/j.knosys.2018.06.017; accepted manuscript acquired and hashed locally.
+Nine original source registrations audited; UMLS, STRING, Reactome, GO and DO are still not acquired in the manifest.
+DrugBank and SIDER data are available; ChEMBL and STITCH integration is partial, not full candidate-network completion.
+14 method/extension checklist components and six interpretation/reproducibility issues documented.
+Published eEF1A affinity is an optional annotation, never a candidate inclusion gate. All six association leads and original 200 entities retained.
+Core unfinished work includes disease-wise SIDER pattern baseline, atom-pair chemical similarity, broad human protein/pathway/ontology integration, matrix factorisation and validated ranking.
+Current-label supplements, cancer seed expansion and target follow-up remain labelled adaptations; STITCH is already an original paper source.
+No claim that RESKO is complete or that exploratory Jaccard/association evidence reproduces the published integrated ranking.
+Outputs: method checklist, original database coverage, ambiguity register, input hashes and validation in outputs/19_* and config/RESKO_*.
+Next core acquisition: Reactome human protein-pathway mappings, then broad seed/candidate targets and remaining human network/ontology sources.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1885,3 +1883,17 @@ This is a bounded contextual review, not proof that no binding publication exist
 All six leads remain in the inventory; missing affinity does not exclude a drug or imply inactivity.
 Outputs: context source/status review in outputs/18d_*; source passages local; user scope policy in config/RESKO_evidence_scope.csv.
 Next: audit the actual RESKO paper against completed code, then acquire/integrate the remaining original data sources; do not continue open-ended affinity searching.
+
+SCRIPT 19 RUN - 2026-10-20 10:39:01 BST
+Script: scripts/19_audit_RESKO_method_completion.R
+SCRIPT 19 - PAPER-ALIGNED RESKO COMPLETION AUDIT
+Method reference: McGarry et al. (2018), DOI 10.1016/j.knosys.2018.06.017; accepted manuscript acquired and hashed locally.
+Nine original source registrations audited; UMLS, STRING, Reactome, GO and DO are still not acquired in the manifest.
+DrugBank and SIDER data are available; ChEMBL and STITCH integration is partial, not full candidate-network completion.
+14 method/extension checklist components and six interpretation/reproducibility issues documented.
+Published eEF1A affinity is an optional annotation, never a candidate inclusion gate. All six association leads and original 200 entities retained.
+Core unfinished work includes disease-wise SIDER pattern baseline, atom-pair chemical similarity, broad human protein/pathway/ontology integration, matrix factorisation and validated ranking.
+Current-label supplements, cancer seed expansion and target follow-up remain labelled adaptations; STITCH is already an original paper source.
+No claim that RESKO is complete or that exploratory Jaccard/association evidence reproduces the published integrated ranking.
+Outputs: method checklist, original database coverage, ambiguity register, input hashes and validation in outputs/19_* and config/RESKO_*.
+Next core acquisition: Reactome human protein-pathway mappings, then broad seed/candidate targets and remaining human network/ontology sources.

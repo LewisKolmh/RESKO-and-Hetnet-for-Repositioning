@@ -1,0 +1,10 @@
+source_id,source_name,status,release_version
+umls,Unified Medical Language System,not_acquired,
+drugbank,DrugBank,local_file_registered,XML header version 5.1
+sider,SIDER,aggregate_release_acquired,4.1 (2015-10-21)
+chembl,ChEMBL,partial_identity_and_eef1a_target_activities_acquired,ChEMBL_37
+stitch,STITCH,human_v5_detailed_acquired_eef1a_subset_extracted,5.0 (legacy/unsupported; source file modified 2016-08-16)
+string,STRING,not_acquired,
+reactome,Reactome,not_acquired,
+go,Gene Ontology,not_acquired,
+do,Disease Ontology,not_acquired,

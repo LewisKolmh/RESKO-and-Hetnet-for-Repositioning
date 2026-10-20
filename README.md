@@ -399,3 +399,19 @@ distinct, as do testosterone enanthate and testosterone.
 Findings are in `outputs/18c_six_lead_summary.csv`; exact queries, source response
 statuses, pending review coverage and input hashes are retained. Original human
 target requirements and all 200 inventory identities/seed tiers remain unchanged.
+
+### Core RESKO completion scope (20 October 2026)
+
+Published human eEF1A binding affinity is an optional evidence annotation, not a
+requirement for retaining a RESKO candidate or completing the computational
+workflow. Missing affinity remains unknown. The core workflow is tracked against
+McGarry et al. (2018), DOI `10.1016/j.knosys.2018.06.017`, in
+`config/RESKO_method_completion_checklist.csv` and `outputs/19_*`.
+
+RESKO is not yet fully reproduced: broad candidate targets/PPI networks,
+Reactome, GO/DO annotations, chemical fingerprints, matrix integration and final
+validation/ranking remain unfinished. The original paper already includes
+STITCH. Current-label supplements and BH correction are explicitly labelled
+adaptations/extensions. Conflicting paper threshold descriptions and missing
+implementation detail are recorded in `config/RESKO_method_ambiguities.csv`;
+these must not be hidden behind a claim of exact replication.
