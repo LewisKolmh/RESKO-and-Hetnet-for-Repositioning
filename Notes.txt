@@ -1842,3 +1842,16 @@ Search hits are not evidence of direct binding and do not establish the original
 Testosterone enanthate remains distinct from testosterone; epirubicin remains distinct from doxorubicin.
 Raw core metadata/abstract caches and source-rich hits remain local; queries and compact coverage are versioned.
 No BH adjustment or binding ranking applies to these search counts. Next: primary-source adjudication and provenance tracing.
+
+SCRIPT 18b RUN - 2026-10-20 10:32:54 BST
+Script: scripts/18b_trace_association_sources.R
+SCRIPT 18b - ASSOCIATION SOURCE TRACING AND LITERATURE TRIAGE
+Priority title/abstract co-occurrence records: 15
+Remaining search records explicitly pending full-text context: 2754
+Lexical triage is a reading queue, not a binding classifier; index tokenization can broaden named-alias query matches.
+Three DrugMAP EEF1A2 expression annotations traced to exact primary PMIDs: doxorubicin 29803840, estradiol 20106945, dexamethasone 16144937.
+These are supplementary expression links, not verified STITCH 5 upstream records or physical-binding measurements.
+All 13 direct STITCH edge-details attempts are retained with response validation; no original study provenance established.
+Additional interactive probes also returned blank edge popups; failures do not indicate absent evidence.
+Outputs: source-rich triage, annotations, primary metadata and provenance attempts locally; compact coverage in outputs/18b_*.
+Next: manually adjudicate priority abstracts and distinguish exact compound, human isoform, expression, combination therapy and nonhuman context.

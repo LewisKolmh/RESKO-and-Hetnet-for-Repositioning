@@ -1,0 +1,1 @@
+PASS: every search record status-accounted; exact supplementary reference PMIDs/compound-row anchors verified; STITCH HTTP/application status retained; input unchanged.

@@ -1,0 +1,4 @@
+entity_id,source_name,gene,pmid,relation,STITCH_original_source_link_verified
+seed:DB00997,Doxorubicin,EEF1A2,29803840,expression_annotation_not_binding,FALSE
+seed:DB00783,Estradiol,EEF1A2,20106945,expression_annotation_not_binding,FALSE
+seed:DB01234,Dexamethasone,EEF1A2,16144937,expression_annotation_not_binding,FALSE
