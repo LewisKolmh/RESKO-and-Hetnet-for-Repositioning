@@ -1,17 +1,20 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 20 October 2026
 
-SCRIPT 17f - HUMAN TARGET EVIDENCE CONSOLIDATION; BOUNDED SECTION 17 COMPLETE
-Scope: human EEF1A1 (P68104) and EEF1A2 (Q05639); nonhuman evidence cannot qualify a human binder.
-200 original inventory entities retained as 400 human entity/isoform coverage rows.
-39 ChEMBL records / 23 assays / 20 noninventory ligands / 7 source publications; zero exact inventory matches.
-11 records quarantined for Expression of Concern; six reported SPR records await full methods; one isoform contradiction held.
-STITCH: 3198 target association rows; 13 inventory links across six drugs, zero inventory experimental-channel links.
-Plitidepsin remains a separate contextual binding reference, not a seed: rabbit eEF1A2 Kd 79 +/- 30 nM does not qualify purified-human binding.
-No inventory compound qualifies for human direct binding plus selective/allosteric RT-PPI inhibition on evidence reviewed here. This is not evidence that no such compound exists.
-Full-text, upstream STITCH provenance and human selectivity gaps remain explicit; completion is bounded source accounting, not exhaustive literature adjudication.
-Outputs: full human coverage and noninventory references locally; compact coverage, limitations, control scope, hashes and validation in outputs/17f_*.
-Next: section 18 should resolve human binding/SPR identity gaps and expand original-source coverage before any candidate ranking or structural allostery claims.
+CURRENT CHECKPOINT - SECTION 18a/18b/18c COMPLETE; FULL-TEXT AND ORIGINAL STITCH PROVENANCE REVIEW OPEN
+SCRIPT 18c - BOUNDED SIX-LEAD ABSTRACT REVIEW
+15 priority index records reviewed as 14 evidence groups; duplicate AGR/MED title and abstract verified, not independent experiments.
+2754 indexed full-text-context records remain explicitly pending. Lexical triage is not a full-text exclusion decision.
+Fluorouracil: indirect human EEF1A1 expression context and a human-cell EEF1A2 resistance pathway; neither establishes drug binding.
+Doxorubicin: human EEF1A1 senescence-associated reduction; differs from original EEF1A2 association and does not establish binding.
+Estradiol/dexamethasone/doxorubicin: supplementary EEF1A2 expression annotations traced to primary references, but gene-level rows remain unverified.
+Dexamethasone combination-treatment abstracts do not transfer plitidepsin target binding to dexamethasone.
+Testosterone enanthate and epirubicin remain unresolved; parent/ester and anthracycline identities are not pooled.
+Zero six-lead compounds qualify as direct human eEF1A binders or selective allosteric RT-PPI inhibitors on this bounded abstract review.
+Original STITCH upstream study provenance remains unresolved; no claim of exhaustive absence or completion of full-text review.
+No inventory additions, seed-tier changes, binding score or BH adjustment. Original 200-entity inventory protected.
+Outputs: detailed review/status tables locally; six-drug findings, review coverage and validation in outputs/18c_*.
+Next: retrieve primary gene-level tables and full methods, review the five testosterone-enanthate contexts and recover high-value full-text sources before expanding prioritisation.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1855,3 +1858,19 @@ All 13 direct STITCH edge-details attempts are retained with response validation
 Additional interactive probes also returned blank edge popups; failures do not indicate absent evidence.
 Outputs: source-rich triage, annotations, primary metadata and provenance attempts locally; compact coverage in outputs/18b_*.
 Next: manually adjudicate priority abstracts and distinguish exact compound, human isoform, expression, combination therapy and nonhuman context.
+
+SCRIPT 18c RUN - 2026-10-20 10:34:32 BST
+Script: scripts/18c_review_association_leads.R
+SCRIPT 18c - BOUNDED SIX-LEAD ABSTRACT REVIEW
+15 priority index records reviewed as 14 evidence groups; duplicate AGR/MED title and abstract verified, not independent experiments.
+2754 indexed full-text-context records remain explicitly pending. Lexical triage is not a full-text exclusion decision.
+Fluorouracil: indirect human EEF1A1 expression context and a human-cell EEF1A2 resistance pathway; neither establishes drug binding.
+Doxorubicin: human EEF1A1 senescence-associated reduction; differs from original EEF1A2 association and does not establish binding.
+Estradiol/dexamethasone/doxorubicin: supplementary EEF1A2 expression annotations traced to primary references, but gene-level rows remain unverified.
+Dexamethasone combination-treatment abstracts do not transfer plitidepsin target binding to dexamethasone.
+Testosterone enanthate and epirubicin remain unresolved; parent/ester and anthracycline identities are not pooled.
+Zero six-lead compounds qualify as direct human eEF1A binders or selective allosteric RT-PPI inhibitors on this bounded abstract review.
+Original STITCH upstream study provenance remains unresolved; no claim of exhaustive absence or completion of full-text review.
+No inventory additions, seed-tier changes, binding score or BH adjustment. Original 200-entity inventory protected.
+Outputs: detailed review/status tables locally; six-drug findings, review coverage and validation in outputs/18c_*.
+Next: retrieve primary gene-level tables and full methods, review the five testosterone-enanthate contexts and recover high-value full-text sources before expanding prioritisation.

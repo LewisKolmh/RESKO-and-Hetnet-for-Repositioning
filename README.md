@@ -376,3 +376,26 @@ Run `scripts/17e_review_target_evidence.R` after 17d, then
 `scripts/17f_consolidate_target_evidence.R`. Full source-rich tables remain local;
 compact results and validations are in `outputs/17e_*` and `outputs/17f_*`.
 Section 18 should resolve human binding and identity gaps before ranking candidates.
+
+### Section 18: association provenance follow-up
+
+Scripts 18a–18c search and review the six STITCH-linked inventory drugs without
+promoting associations into binding hits. Six fully paginated Europe PMC searches
+returned 2,769 entity/publication index records. Title/abstract co-mention triage
+selected 15 records (14 evidence groups after checking an AGR/MED duplicate).
+The other 2,754 records remain pending full-text context, not rejected.
+
+The bounded abstract review identifies human expression/resistance context for
+fluorouracil and doxorubicin, not direct compound–eEF1A binding. Isoforms remain
+separate: doxorubicin's eEF1A1 expression context does not verify its original
+EEF1A2 STITCH edge. Three supplementary DrugMAP expression annotations were traced
+to primary PMIDs, but the EEF1A2-specific gene-level data still need verification.
+These supplementary references are not established as STITCH 5 upstream sources.
+Direct legacy edge-page attempts returned application errors; HTTP 200 responses
+were not accepted as evidence. Combination-treatment reviews cannot transfer
+plitidepsin binding claims to dexamethasone. Epirubicin and doxorubicin remain
+distinct, as do testosterone enanthate and testosterone.
+
+Findings are in `outputs/18c_six_lead_summary.csv`; exact queries, source response
+statuses, pending review coverage and input hashes are retained. Original human
+target requirements and all 200 inventory identities/seed tiers remain unchanged.

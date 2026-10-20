@@ -1,0 +1,4 @@
+PASS: all 2769 entity/publication search records accounted for; 15 priority rows manually adjudicated.
+PASS: duplicate AGR/MED abstracts verified and grouped; original six leads and 200-entity inventory preserved.
+PASS: human A1/A2 distinction, compound identity differences, pending gene-level expression annotations and unresolved provenance retained.
+PASS: protected input hashes unchanged; no direct-binding or allostery claim promoted.
