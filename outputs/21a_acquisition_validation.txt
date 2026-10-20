@@ -1,0 +1,2 @@
+PASS: official gzip downloads and source hashes verified; full network, registry and aliases parse without problems.
+PASS: human endpoints, score ranges, no self-edges/duplicate directed edges, exact reciprocal channel equality and registry referential integrity.

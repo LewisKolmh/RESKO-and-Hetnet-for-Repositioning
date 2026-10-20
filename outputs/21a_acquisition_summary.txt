@@ -1,0 +1,13 @@
+SCRIPT 21a - HUMAN STRING FUNCTIONAL NETWORK ACQUISITION
+Pinned source release: 12.5
+Registry proteins: 19699
+Directed source edge rows: 10826054
+Unique undirected edges after reciprocal validation: 5413027
+Alias rows acquired: 3889207
+Published minimum combined score: 150
+Complete human detailed network acquired; no API neighbour cap and no added confidence cutoff.
+Every published score channel retained on original 0..1000 scale. Symmetric reciprocal rows agree exactly on all channels.
+Functional protein associations are not necessarily physical interactions or evidence of compound binding.
+This is a version-pinned current-source adaptation; legacy STITCH/STRING10 identifiers are not silently treated as current nodes.
+Raw files, aliases and full source-rich network remain local; compact source, channel and network reports in outputs/21a_*.
+Next: exact-accession and legacy-to-current protein harmonisation with missing/ambiguous mappings explicit.

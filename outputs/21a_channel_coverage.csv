@@ -1,0 +1,9 @@
+channel,source_undirected_edges,edges_with_channel_support,minimum_score,maximum_score
+neighborhood,5413027,182306,0,357
+fusion,5413027,12119,0,900
+cooccurence,5413027,105949,0,537
+coexpression,5413027,3180434,0,998
+experimental,5413027,1783091,0,999
+database,5413027,345841,0,989
+textmining,5413027,4526251,0,998
+combined_score,5413027,5413027,150,999
