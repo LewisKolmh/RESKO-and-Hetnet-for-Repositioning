@@ -1,0 +1,1 @@
+PASS: six queries, exact compound names, complete pagination, no duplicate entity/publication keys and input hash unchanged.

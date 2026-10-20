@@ -1,0 +1,9 @@
+SCRIPT 18a - SIX-LEAD PRIMARY LITERATURE SEARCH ACQUISITION
+Compound/publication search hits: 2769
+Distinct publication keys: 2383
+All six exact-compound query scopes fully paginated; search cutoff 20 October 2026.
+Indexed full-text co-occurrence can include reference lists, housekeeping genes, combination therapies and nonhuman experiments.
+Search hits are not evidence of direct binding and do not establish the original source of STITCH 5 edges.
+Testosterone enanthate remains distinct from testosterone; epirubicin remains distinct from doxorubicin.
+Raw core metadata/abstract caches and source-rich hits remain local; queries and compact coverage are versioned.
+No BH adjustment or binding ranking applies to these search counts. Next: primary-source adjudication and provenance tracing.

@@ -1830,3 +1830,15 @@ No inventory compound qualifies for human direct binding plus selective/alloster
 Full-text, upstream STITCH provenance and human selectivity gaps remain explicit; completion is bounded source accounting, not exhaustive literature adjudication.
 Outputs: full human coverage and noninventory references locally; compact coverage, limitations, control scope, hashes and validation in outputs/17f_*.
 Next: section 18 should resolve human binding/SPR identity gaps and expand original-source coverage before any candidate ranking or structural allostery claims.
+
+SCRIPT 18a RUN - 2026-10-20 10:30:26 BST
+Script: scripts/18a_search_association_literature.R
+SCRIPT 18a - SIX-LEAD PRIMARY LITERATURE SEARCH ACQUISITION
+Compound/publication search hits: 2769
+Distinct publication keys: 2383
+All six exact-compound query scopes fully paginated; search cutoff 20 October 2026.
+Indexed full-text co-occurrence can include reference lists, housekeeping genes, combination therapies and nonhuman experiments.
+Search hits are not evidence of direct binding and do not establish the original source of STITCH 5 edges.
+Testosterone enanthate remains distinct from testosterone; epirubicin remains distinct from doxorubicin.
+Raw core metadata/abstract caches and source-rich hits remain local; queries and compact coverage are versioned.
+No BH adjustment or binding ranking applies to these search counts. Next: primary-source adjudication and provenance tracing.

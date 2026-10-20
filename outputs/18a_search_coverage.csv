@@ -1,0 +1,7 @@
+entity_id,source_name,total_hits,acquired_records,pages
+seed:DB00445,Epirubicin,1125,1125,12
+seed:DB00544,Fluorouracil,282,282,3
+seed:DB00783,Estradiol,384,384,4
+seed:DB00997,Doxorubicin,466,466,5
+seed:DB01234,Dexamethasone,507,507,6
+seed:DB13944,Testosterone enanthate,5,5,1
