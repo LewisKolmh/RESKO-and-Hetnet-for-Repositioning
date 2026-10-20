@@ -415,3 +415,19 @@ STITCH. Current-label supplements and BH correction are explicitly labelled
 adaptations/extensions. Conflicting paper threshold descriptions and missing
 implementation detail are recorded in `config/RESKO_method_ambiguities.csv`;
 these must not be hidden behind a claim of exact replication.
+
+### Script 20a: Reactome human pathway layer acquired
+
+Four official Reactome mapping/hierarchy files are frozen locally with source
+URLs, retrieval/file-modification dates and checksums. The database-version
+service reported version 97 before and after acquisition. There are 54,699
+human lowest-level annotation rows, 161,425 all-level rows, 2,883 human pathway
+nodes and 2,899 hierarchy edges. Lowest/all-level mappings remain separate to
+avoid counting inherited memberships as independent observations.
+
+The human mapping layer covers the database broadly for later seed/candidate
+protein joins. Acquisition is complete; candidate-network integration and
+pathway enrichment remain pending. This is a current-data adaptation of the
+paper, not recovery of its original 2018 release. Full source-rich mappings stay
+local; compact source, coverage, hierarchy and validation reports are in
+`outputs/20a_*`. No affinity requirement or enrichment p-value is introduced.

@@ -1,18 +1,21 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 20 October 2026
 
-CURRENT CHECKPOINT - RETURN TO CORE RESKO; SCRIPT 19 METHOD AUDIT COMPLETE
-SCRIPT 19 - PAPER-ALIGNED RESKO COMPLETION AUDIT
-Method reference: McGarry et al. (2018), DOI 10.1016/j.knosys.2018.06.017; accepted manuscript acquired and hashed locally.
-Nine original source registrations audited; UMLS, STRING, Reactome, GO and DO are still not acquired in the manifest.
-DrugBank and SIDER data are available; ChEMBL and STITCH integration is partial, not full candidate-network completion.
-14 method/extension checklist components and six interpretation/reproducibility issues documented.
-Published eEF1A affinity is an optional annotation, never a candidate inclusion gate. All six association leads and original 200 entities retained.
-Core unfinished work includes disease-wise SIDER pattern baseline, atom-pair chemical similarity, broad human protein/pathway/ontology integration, matrix factorisation and validated ranking.
-Current-label supplements, cancer seed expansion and target follow-up remain labelled adaptations; STITCH is already an original paper source.
-No claim that RESKO is complete or that exploratory Jaccard/association evidence reproduces the published integrated ranking.
-Outputs: method checklist, original database coverage, ambiguity register, input hashes and validation in outputs/19_* and config/RESKO_*.
-Next core acquisition: Reactome human protein-pathway mappings, then broad seed/candidate targets and remaining human network/ontology sources.
+CURRENT CHECKPOINT - CORE RESKO CONTINUES; REACTOME SCRIPT 20a COMPLETE
+SCRIPT 20a - CORE RESKO REACTOME ACQUISITION
+Reported Reactome database version: 97
+Official source files acquired: 4
+Human lowest-level protein/pathway annotation rows: 54699
+Human all-level protein/pathway annotation rows: 161425
+Human pathway nodes: 2883
+Human parent/child pathway edges: 2899
+Lowest-level and all-level annotations are separate; ancestor-expanded rows are not independent experiments.
+Human pathway membership does not establish drug binding, inhibition, allostery or treatment direction.
+All-human mapping layer is acquired for later broad candidate-network integration, not restricted to eEF1A.
+Current data are a versioned/hash-frozen adaptation, not the original 2018 release. Source file modification/retrieval dates are distinct.
+Raw source files and full human mapping tables remain local; compact coverage/provenance/hierarchy reports in outputs/20a_*.
+No enrichment or BH test performed yet; selected drug-protein sets and an explicit background are required.
+Next: broad drug-protein extraction and human network/GO/DO integration; the complete RESKO analysis remains unfinished.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1897,3 +1900,20 @@ Current-label supplements, cancer seed expansion and target follow-up remain lab
 No claim that RESKO is complete or that exploratory Jaccard/association evidence reproduces the published integrated ranking.
 Outputs: method checklist, original database coverage, ambiguity register, input hashes and validation in outputs/19_* and config/RESKO_*.
 Next core acquisition: Reactome human protein-pathway mappings, then broad seed/candidate targets and remaining human network/ontology sources.
+
+SCRIPT 20a RUN - 2026-10-20 10:41:01 BST
+Script: scripts/20a_acquire_reactome.R
+SCRIPT 20a - CORE RESKO REACTOME ACQUISITION
+Reported Reactome database version: 97
+Official source files acquired: 4
+Human lowest-level protein/pathway annotation rows: 54699
+Human all-level protein/pathway annotation rows: 161425
+Human pathway nodes: 2883
+Human parent/child pathway edges: 2899
+Lowest-level and all-level annotations are separate; ancestor-expanded rows are not independent experiments.
+Human pathway membership does not establish drug binding, inhibition, allostery or treatment direction.
+All-human mapping layer is acquired for later broad candidate-network integration, not restricted to eEF1A.
+Current data are a versioned/hash-frozen adaptation, not the original 2018 release. Source file modification/retrieval dates are distinct.
+Raw source files and full human mapping tables remain local; compact coverage/provenance/hierarchy reports in outputs/20a_*.
+No enrichment or BH test performed yet; selected drug-protein sets and an explicit background are required.
+Next: broad drug-protein extraction and human network/GO/DO integration; the complete RESKO analysis remains unfinished.

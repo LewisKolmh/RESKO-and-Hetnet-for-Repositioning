@@ -1,0 +1,3 @@
+PASS: official downloads/checksums and version checks; all files parse without problems.
+PASS: human pathway referential integrity; all lowest-level protein/pathway pairs occur in all-level mappings.
+PASS: protected inventory/target input hashes unchanged; no binding-affinity gate or statistical ranking introduced.

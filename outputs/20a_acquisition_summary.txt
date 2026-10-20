@@ -1,0 +1,14 @@
+SCRIPT 20a - CORE RESKO REACTOME ACQUISITION
+Reported Reactome database version: 97
+Official source files acquired: 4
+Human lowest-level protein/pathway annotation rows: 54699
+Human all-level protein/pathway annotation rows: 161425
+Human pathway nodes: 2883
+Human parent/child pathway edges: 2899
+Lowest-level and all-level annotations are separate; ancestor-expanded rows are not independent experiments.
+Human pathway membership does not establish drug binding, inhibition, allostery or treatment direction.
+All-human mapping layer is acquired for later broad candidate-network integration, not restricted to eEF1A.
+Current data are a versioned/hash-frozen adaptation, not the original 2018 release. Source file modification/retrieval dates are distinct.
+Raw source files and full human mapping tables remain local; compact coverage/provenance/hierarchy reports in outputs/20a_*.
+No enrichment or BH test performed yet; selected drug-protein sets and an explicit background are required.
+Next: broad drug-protein extraction and human network/GO/DO integration; the complete RESKO analysis remains unfinished.
