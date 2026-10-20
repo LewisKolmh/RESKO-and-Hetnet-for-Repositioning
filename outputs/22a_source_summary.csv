@@ -1,0 +1,3 @@
+url,file_bytes,md5,retrieved_utc,last_modified,ontology_release
+https://current.geneontology.org/ontology/go-basic.obo,32227785,26de643e50af9a1588f9a31062348cc4,2026-10-20 14:11:42 UTC,"Sat, 08 Aug 2026 22:27:06 GMT",releases/2026-07-26
+https://current.geneontology.org/annotations/gaf/HUMAN-uniprot.gaf.gz,12109254,f74b40c53bdf8ed39d300a491eaf852d,2026-10-20 14:11:44 UTC,"Sat, 08 Aug 2026 22:15:52 GMT",releases/2026-07-26

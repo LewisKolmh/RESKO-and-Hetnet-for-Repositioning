@@ -1,0 +1,15 @@
+source_layer,evidence_stratum,ontology_layer,inventory_entities,distinct_terms,feature_rows
+DrugBank,DrugBank_role:carrier,GO_positive_annotations,26,67,986
+DrugBank,DrugBank_role:enzyme,GO_positive_annotations,79,1177,10518
+DrugBank,DrugBank_role:target,GO_positive_annotations,156,3343,19319
+DrugBank,DrugBank_role:transporter,GO_positive_annotations,65,579,7512
+STITCH_5,current_PubChem_only_identity_review,GO_positive_annotations,9,3802,9175
+STITCH_5,current_key_supported_stereo_ID_historical_identity_not_revalidated,GO_positive_annotations,107,15426,278422
+STITCH_5,merged_group_context_only,GO_positive_annotations,60,15150,223906
+DrugBank,DrugBank_role:carrier,DO_compiled_legacy_context,26,117,1337
+DrugBank,DrugBank_role:enzyme,DO_compiled_legacy_context,79,733,5876
+DrugBank,DrugBank_role:target,DO_compiled_legacy_context,156,1406,12574
+DrugBank,DrugBank_role:transporter,DO_compiled_legacy_context,65,262,5992
+STITCH_5,current_PubChem_only_identity_review,DO_compiled_legacy_context,9,1168,2399
+STITCH_5,current_key_supported_stereo_ID_historical_identity_not_revalidated,DO_compiled_legacy_context,107,4837,64023
+STITCH_5,merged_group_context_only,DO_compiled_legacy_context,60,4684,46563

@@ -1,0 +1,1 @@
+PASS: source checksums, ontology DAG, matching release headers, 17-column GAF parsing, all-row statuses, human/qualifier/aspect checks.

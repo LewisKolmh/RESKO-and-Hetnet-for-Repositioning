@@ -1,0 +1,10 @@
+namespace,evidence_layer,annotation_rows,distinct_protein_forms,distinct_terms
+biological_process,electronic,52453,13115,7639
+biological_process,experimental_annotation,62192,11475,7600
+biological_process,other_evidence_code,68880,16374,7810
+cellular_component,electronic,66659,18102,1378
+cellular_component,experimental_annotation,68391,14063,1459
+cellular_component,other_evidence_code,132969,17445,1459
+molecular_function,electronic,45867,12569,3841
+molecular_function,experimental_annotation,327912,19047,4064
+molecular_function,other_evidence_code,35620,14313,3437

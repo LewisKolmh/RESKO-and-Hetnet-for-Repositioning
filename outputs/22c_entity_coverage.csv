@@ -1,0 +1,5 @@
+origin,GO_coverage,DO_coverage,inventory_entities
+candidate,annotations_available,compiled_legacy_context_available,28
+candidate,no_accepted_annotation_links,no_accepted_context_links,2
+seed,annotations_available,compiled_legacy_context_available,153
+seed,no_accepted_annotation_links,no_accepted_context_links,17

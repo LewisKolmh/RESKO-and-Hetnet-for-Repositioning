@@ -1,0 +1,1 @@
+PASS: source hashes, package SQLite read-only extraction, mixed-provenance build audit, ontology DAG, all-row status and human/current-term checks.

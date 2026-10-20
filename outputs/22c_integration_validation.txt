@@ -1,0 +1,5 @@
+PASS: exact/unique protein-form and Entrez mapping, current active ontology IDs, source/identity strata and all 200 entries preserved; protected input hashes unchanged.
+PASS: independent scan of all 910476 GAF rows; human eEF1A anchor positive/negative selection and every retained reference/evidence/form field agree with raw data.
+PASS: OBO fixture verifies term/typedef boundaries, relation parsing, duplicate aliases, ambiguity holds, obsolete and unknown IDs.
+PASS: 200-entity coverage and unique source-layer features preserved; generic roots and blocked sacrosidase structure excluded; DO legacy evidence label retained.
+PASS: protected input hashes unchanged and all R scripts parse; no significance, binding or causal evidence promoted.

@@ -1,0 +1,4 @@
+mapping_status,STRING_registry_nodes
+ambiguous_Entrez_gene_hold,1
+no_direct_Entrez_alias,502
+unique_direct_Entrez_gene_alias,19196

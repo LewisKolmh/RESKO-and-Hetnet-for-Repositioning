@@ -1,25 +1,24 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 20 October 2026
 
-CURRENT CHECKPOINT - HUMAN STRING ACQUISITION/HARMONISATION 21a/21b COMPLETE
-SCRIPT 21b - INVENTORY PROTEIN HARMONISATION AND HUMAN NETWORK PREPARATION
-Inventory entities retained: 200
-Entities with accepted current STRING protein links: 181
-DrugBank entities with current protein links: 164
-STITCH entities with projected current protein links: 116
-Distinct current inventory-associated protein nodes: 8969
-Legacy STITCH protein IDs with unique accession bridge: 8946
-All-published-confidence induced network edges: 2011287
-Declared primary combined-score threshold: 700
-Both human EEF1A anchors map by exact UniProt accession and agree with current STRING gene labels.
-Current exact-accession links and historical accession-bridge projections stay separate; no gene-name, BLAST-only or identical-ENSP fallback.
-Ambiguous/missing proteins are retained in coverage. Isoform suffixes are not stripped; historical bridges do not establish sequence equivalence.
-Complete source and all-published-confidence induced network retained; threshold 700 and sensitivity 400/900 are explicit project adaptations, not significance tests.
-Induced nodes are accepted inventory proteins plus anchors, with no external-neighbour expansion. Nodes without edges remain present.
-DrugBank roles and STITCH chemical-identity strata remain separate. Shared source reports do not become independent experiments.
-Network degree/proximity cannot establish compound binding, inhibition, allostery or RT-PPI disruption. No affinity exclusion or BH correction.
-Outputs: source-rich bridges/coverage/network locally; compact source-layer, anchor and confidence-sensitivity summaries in outputs/21b_*.
-Next: GO and DO human annotations, followed by declared feature matrices, network statistics, integration and validation.
+CURRENT CHECKPOINT - GO AND VERSIONED DO CONTEXT ANNOTATION STAGES 22a/22b/22c COMPLETE
+SCRIPT 22c - HUMAN INVENTORY GO/DO ANNOTATION INTEGRATION
+Inventory entries retained: 200
+Entries with GO term features: 181
+Entries with DO compiled legacy context: 181
+Current protein nodes with GO features: 18615
+Current protein nodes with DO legacy context: 9950
+GO uses exact current protein-form accession aliases with unique-node mapping; NOT/ND and unknown/obsolete terms stay excluded from positive features.
+Positive GO annotation relation qualifiers remain explicit in node/entity feature tables; differently qualified relationships are not silently equated.
+DO uses unique direct Entrez gene aliases; gene-level compiled contexts are not isoform-specific causal evidence and remain separate from GO evidence.
+Source protein roles, STITCH chemical-identity strata, evidence types, seed tiers and cancers retained. All 200 original entries remain in coverage.
+Three cancer concepts mapped by exact active DO names; ontology crossrefs do not constitute full UMLS acquisition.
+Feature tables are deduplicated presence-only associations, not independent experiment counts. Generic ontology roots excluded from features.
+Hierarchy DAGs are available for later propagation; no new ancestor-expanded observations or semantic/enrichment ranking claimed here.
+Current Alliance raw annotations remain unavailable; DO legacy snapshot provenance limitations explicitly retained.
+No drug-binding/allostery inference, no affinity filter, no p-values/BH adjustment at this annotation stage.
+Outputs: source-rich node evidence and entity feature RDS locally; coverage, anchor, cancer concept and source-layer reports in outputs/22c_*.
+Next: paper-aligned feature/ontology-similarity matrices and the remaining chemistry/SIDER-baseline prerequisites; define enrichment background before testing.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -2051,3 +2050,83 @@ PASS: independent complete raw source scan of 10826054 directed rows reproduces 
 PASS: induced edges exactly match source endpoints/channel values; nodes retain all mapped proteins/anchors, including isolates.
 PASS: all 200 entities retained; ambiguous historical mappings have no assigned current node; unique bridge acceptance and protected input hashes verified.
 PASS: all project R scripts parse. Source/current-release mapping and functional-association scope remain explicit.
+
+SCRIPT 22a RUN - 2026-10-20 15:30:10 BST
+Script: scripts/22a_acquire_GO_annotations.R
+SCRIPT 22a - GO ONTOLOGY AND HUMAN GAF ANNOTATIONS
+Ontology release: releases/2026-07-26
+Ontology terms: 48340
+Human GAF source rows: 910476
+Accepted positive human annotation rows: 860943
+GO ontology and GAF headers agree on ontology release. All source rows status-accounted.
+NOT qualifiers and ND evidence do not become positive features; obsolete/unknown terms and unresolved protein forms are held.
+Exact protein-form identifiers, evidence codes, references, assignment dates and providers retained. Electronic and other evidence layers remain separate.
+All source relations retained; only active is_a/part_of edges are declared safe for later annotation propagation and verified acyclic.
+No enrichment/BH tests, semantic-similarity ranking or binding inference performed at source acquisition.
+Outputs: full ontology/annotation evidence locally; source, status, aspect/evidence coverage and validation in outputs/22a_*.
+
+SCRIPT 22b RUN - 2026-10-20 15:31:56 BST
+Script: scripts/22b_acquire_DO_annotations.R
+SCRIPT 22b - DISEASE ONTOLOGY AND VERSIONED HUMAN GENE CONTEXT
+Ontology release: releases/2026-09-30/doid.obo
+Ontology terms: 14854
+Compiled gene/disease source rows: 77019
+Accepted human context rows: 76544
+Annotation metadata date: 20240723
+Current raw Alliance annotation download timed out; current raw source acquisition remains incomplete.
+HDO.db 1.0.0 build merges Alliance-derived and older DO2EG mappings without per-row source, qualifier, evidence or reference fields.
+Compiled rows are legacy association context, not newly adjudicated causal/positive disease evidence. Source limitations are explicit.
+Human Entrez keys checked against versioned org.Hs.eg.db; current DO primary/alternative identifiers checked, obsolete/unknown terms held.
+All source ontology relations retained; active is_a hierarchy verified acyclic for later propagation.
+No enrichment/BH tests or drug-binding/allostery claims. Outputs: source-rich data locally and compact coverage/source limitations in outputs/22b_*.
+
+SCRIPT 22c RUN - 2026-10-20 15:34:02 BST
+Script: scripts/22c_integrate_inventory_ontology_annotations.R
+SCRIPT 22c - HUMAN INVENTORY GO/DO ANNOTATION INTEGRATION
+Inventory entries retained: 200
+Entries with GO term features: 181
+Entries with DO compiled legacy context: 181
+Current protein nodes with GO features: 18615
+Current protein nodes with DO legacy context: 9950
+GO uses exact current protein-form accession aliases with unique-node mapping; NOT/ND and unknown/obsolete terms stay excluded from positive features.
+DO uses unique direct Entrez gene aliases; gene-level compiled contexts are not isoform-specific causal evidence and remain separate from GO evidence.
+Source protein roles, STITCH chemical-identity strata, evidence types, seed tiers and cancers retained. All 200 original entries remain in coverage.
+Three cancer concepts mapped by exact active DO names; ontology crossrefs do not constitute full UMLS acquisition.
+Feature tables are deduplicated presence-only associations, not independent experiment counts. Generic ontology roots excluded from features.
+Hierarchy DAGs are available for later propagation; no new ancestor-expanded observations or semantic/enrichment ranking claimed here.
+Current Alliance raw annotations remain unavailable; DO legacy snapshot provenance limitations explicitly retained.
+No drug-binding/allostery inference, no affinity filter, no p-values/BH adjustment at this annotation stage.
+Outputs: source-rich node evidence and entity feature RDS locally; coverage, anchor, cancer concept and source-layer reports in outputs/22c_*.
+Next: paper-aligned feature/ontology-similarity matrices and the remaining chemistry/SIDER-baseline prerequisites; define enrichment background before testing.
+
+SCRIPT 22c - INDEPENDENT VALIDATION
+PASS: independent scan of all 910476 GAF rows; human eEF1A anchor positive/negative selection and every retained reference/evidence/form field agree with raw data.
+PASS: OBO fixture verifies term/typedef boundaries, relation parsing, duplicate aliases, ambiguity holds, obsolete and unknown IDs.
+PASS: 200-entity coverage and unique source-layer features preserved; generic roots and blocked sacrosidase structure excluded; DO legacy evidence label retained.
+PASS: protected input hashes unchanged and all R scripts parse; no significance, binding or causal evidence promoted.
+
+SCRIPT 22c RUN - 2026-10-20 15:37:34 BST
+Script: scripts/22c_integrate_inventory_ontology_annotations.R
+SCRIPT 22c - HUMAN INVENTORY GO/DO ANNOTATION INTEGRATION
+Inventory entries retained: 200
+Entries with GO term features: 181
+Entries with DO compiled legacy context: 181
+Current protein nodes with GO features: 18615
+Current protein nodes with DO legacy context: 9950
+GO uses exact current protein-form accession aliases with unique-node mapping; NOT/ND and unknown/obsolete terms stay excluded from positive features.
+Positive GO annotation relation qualifiers remain explicit in node/entity feature tables; differently qualified relationships are not silently equated.
+DO uses unique direct Entrez gene aliases; gene-level compiled contexts are not isoform-specific causal evidence and remain separate from GO evidence.
+Source protein roles, STITCH chemical-identity strata, evidence types, seed tiers and cancers retained. All 200 original entries remain in coverage.
+Three cancer concepts mapped by exact active DO names; ontology crossrefs do not constitute full UMLS acquisition.
+Feature tables are deduplicated presence-only associations, not independent experiment counts. Generic ontology roots excluded from features.
+Hierarchy DAGs are available for later propagation; no new ancestor-expanded observations or semantic/enrichment ranking claimed here.
+Current Alliance raw annotations remain unavailable; DO legacy snapshot provenance limitations explicitly retained.
+No drug-binding/allostery inference, no affinity filter, no p-values/BH adjustment at this annotation stage.
+Outputs: source-rich node evidence and entity feature RDS locally; coverage, anchor, cancer concept and source-layer reports in outputs/22c_*.
+Next: paper-aligned feature/ontology-similarity matrices and the remaining chemistry/SIDER-baseline prerequisites; define enrichment background before testing.
+
+SCRIPT 22c - INDEPENDENT VALIDATION
+PASS: independent scan of all 910476 GAF rows; human eEF1A anchor positive/negative selection and every retained reference/evidence/form field agree with raw data.
+PASS: OBO fixture verifies term/typedef boundaries, relation parsing, duplicate aliases, ambiguity holds, obsolete and unknown IDs.
+PASS: 200-entity coverage and unique source-layer features preserved; generic roots and blocked sacrosidase structure excluded; DO legacy evidence label retained.
+PASS: protected input hashes unchanged and all R scripts parse; no significance, binding or causal evidence promoted.

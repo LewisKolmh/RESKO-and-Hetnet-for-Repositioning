@@ -1,0 +1,17 @@
+SCRIPT 22c - HUMAN INVENTORY GO/DO ANNOTATION INTEGRATION
+Inventory entries retained: 200
+Entries with GO term features: 181
+Entries with DO compiled legacy context: 181
+Current protein nodes with GO features: 18615
+Current protein nodes with DO legacy context: 9950
+GO uses exact current protein-form accession aliases with unique-node mapping; NOT/ND and unknown/obsolete terms stay excluded from positive features.
+Positive GO annotation relation qualifiers remain explicit in node/entity feature tables; differently qualified relationships are not silently equated.
+DO uses unique direct Entrez gene aliases; gene-level compiled contexts are not isoform-specific causal evidence and remain separate from GO evidence.
+Source protein roles, STITCH chemical-identity strata, evidence types, seed tiers and cancers retained. All 200 original entries remain in coverage.
+Three cancer concepts mapped by exact active DO names; ontology crossrefs do not constitute full UMLS acquisition.
+Feature tables are deduplicated presence-only associations, not independent experiment counts. Generic ontology roots excluded from features.
+Hierarchy DAGs are available for later propagation; no new ancestor-expanded observations or semantic/enrichment ranking claimed here.
+Current Alliance raw annotations remain unavailable; DO legacy snapshot provenance limitations explicitly retained.
+No drug-binding/allostery inference, no affinity filter, no p-values/BH adjustment at this annotation stage.
+Outputs: source-rich node evidence and entity feature RDS locally; coverage, anchor, cancer concept and source-layer reports in outputs/22c_*.
+Next: paper-aligned feature/ontology-similarity matrices and the remaining chemistry/SIDER-baseline prerequisites; define enrichment background before testing.

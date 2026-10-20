@@ -19,6 +19,9 @@ counts and limitations. The complete RESKO model and final ranking are unfinishe
 | 20c | Extract all STITCH neighbours for accepted inventory chemical IDs and review historical protein/pathway projections |
 | 21a | Acquire the complete human STRING functional network, protein registry and aliases |
 | 21b | Harmonise current/legacy protein links and prepare the source-aware human inventory network |
+| 22a | Acquire GO hierarchy and human GAF evidence, retaining qualifiers, references and protein forms |
+| 22b | Acquire current DO hierarchy and audit/version the available compiled human gene-context snapshot |
+| 22c | Join ontology annotations to inventory proteins and preserve evidence/source strata |
 
 The existing inventory is an integration/review cohort, not a completed
 paper-matched candidate ranking. The disease-wise SIDER joint-pattern baseline,
@@ -54,3 +57,9 @@ check raw eEF1A-anchor source edges, all induced source values and mapping holds
 The primary confidence cutoff and sensitivity cutoffs are declared in
 `config/STRING_network_projection_settings.csv`; functional associations do not
 imply physical binding. Source/role/identity layers remain separate.
+
+After 22c, run `scripts/helpers/validate_inventory_ontology_annotations.R` for raw
+GAF anchor verification, ontology-ID ambiguity fixtures and feature checks. DO
+compiled-context provenance limits are in `config/DO_annotation_source_policy.csv`;
+current raw Alliance gene annotations remain an acquisition gap. Neither ontology
+annotation nor missing annotation is a binding-activity result.

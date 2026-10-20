@@ -1,0 +1,4 @@
+component,status,workflow_use
+current_Alliance_human_gene_annotations,Earlier official endpoint GET timed out with zero bytes; current raw annotations not acquired,Coverage limitation remains open; do not imply current raw source acquisition
+HDO_compiled_gene_term_map,Frozen HDO.db 1.0.0 snapshot used as legacy context; metadata date 20240723; mixed historical row origins,Source-aware disease/function context only; exact human Entrez and current DO identifier checks
+positive_causal_training_labels,Not established from compiled map: qualifiers/evidence/references unavailable,Do not use these rows as independently verified causal positives or evidence of compound binding

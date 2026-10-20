@@ -58,6 +58,10 @@ source("scripts/20c_integrate_broad_STITCH_associations.R")
 source("scripts/21a_acquire_human_STRING.R")
 source("scripts/21b_harmonise_inventory_STRING_network.R")
 source("scripts/helpers/validate_inventory_STRING_network.R")
+source("scripts/22a_acquire_GO_annotations.R")
+source("scripts/22b_acquire_DO_annotations.R")
+source("scripts/22c_integrate_inventory_ontology_annotations.R")
+source("scripts/helpers/validate_inventory_ontology_annotations.R")
 ```
 
 Optional target-specific evidence collection lives in
@@ -145,3 +149,35 @@ strata remain distinct. Functional associations and network proximity do not
 establish direct binding, inhibition, allostery or RT-PPI disruption. GO/DO
 annotations, feature matrices, topology statistics and final RESKO ranking remain
 unfinished. Compact reports are in `outputs/21a_*` and `outputs/21b_*`.
+
+## GO and Disease Ontology annotation layers (scripts 22a–22c)
+
+GO ontology release 2026-07-26 and its matching human GAF source are frozen
+locally with URLs/checksums and release headers. Of 910,476 source annotation
+rows, 860,943 are accepted positive human annotations. Negative NOT qualifiers,
+ND evidence and non-UniProt objects remain explicitly status-accounted rather
+than becoming positive protein features. Exact protein-form accessions, relation
+qualifiers, references, dates, providers and evidence-code layers are preserved.
+Only active is_a/part_of hierarchy relations are declared for later GO propagation.
+
+DO hierarchy release 2026-09-30 is acquired. The current raw Alliance human
+annotation endpoint timed out; **current raw DO gene annotation acquisition
+remains incomplete**. The available annotation layer uses a frozen HDO.db 1.0.0
+compiled snapshot with metadata date 2024-07-23: 76,544 of 77,019 gene/term rows
+pass current human Entrez and DO-term checks. Its build merges Alliance-derived
+and older DO2EG mappings without per-row qualifiers, evidence codes or references.
+It is retained as **compiled legacy context**, not adjudicated causal evidence.
+See `config/DO_annotation_source_policy.csv` for the explicit use boundary.
+
+GO and DO legacy-context features each cover 181 of the 200 inventory entries;
+all 200 remain tracked. Current protein-form mappings and gene-level disease
+projections stay separate. Cancer concepts map by exact active DO names to
+DOID:1612 (breast cancer), DOID:2394 (ovarian cancer) and DOID:9538 (multiple
+myeloma); DO cross-references do not imply full UMLS acquisition.
+
+Source-rich annotations and feature RDS files stay local. Compact source/status,
+protein/gene mapping, evidence-layer, cancer-concept and validation reports are
+in `outputs/22a_*`, `outputs/22b_*` and `outputs/22c_*`. Generic ontology roots
+are excluded from features. Wang similarity, ancestor-expanded matrices,
+valid enrichment/BH testing and final RESKO ranking remain unfinished. Annotation
+membership does not establish compound binding, inhibition or allostery.

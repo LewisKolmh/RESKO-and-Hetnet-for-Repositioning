@@ -1,0 +1,12 @@
+SCRIPT 22b - DISEASE ONTOLOGY AND VERSIONED HUMAN GENE CONTEXT
+Ontology release: releases/2026-09-30/doid.obo
+Ontology terms: 14854
+Compiled gene/disease source rows: 77019
+Accepted human context rows: 76544
+Annotation metadata date: 20240723
+Current raw Alliance annotation download timed out; current raw source acquisition remains incomplete.
+HDO.db 1.0.0 build merges Alliance-derived and older DO2EG mappings without per-row source, qualifier, evidence or reference fields.
+Compiled rows are legacy association context, not newly adjudicated causal/positive disease evidence. Source limitations are explicit.
+Human Entrez keys checked against versioned org.Hs.eg.db; current DO primary/alternative identifiers checked, obsolete/unknown terms held.
+All source ontology relations retained; active is_a hierarchy verified acyclic for later propagation.
+No enrichment/BH tests or drug-binding/allostery claims. Outputs: source-rich data locally and compact coverage/source limitations in outputs/22b_*.

@@ -1,0 +1,11 @@
+SCRIPT 22a - GO ONTOLOGY AND HUMAN GAF ANNOTATIONS
+Ontology release: releases/2026-07-26
+Ontology terms: 48340
+Human GAF source rows: 910476
+Accepted positive human annotation rows: 860943
+GO ontology and GAF headers agree on ontology release. All source rows status-accounted.
+NOT qualifiers and ND evidence do not become positive features; obsolete/unknown terms and unresolved protein forms are held.
+Exact protein-form identifiers, evidence codes, references, assignment dates and providers retained. Electronic and other evidence layers remain separate.
+All source relations retained; only active is_a/part_of edges are declared safe for later annotation propagation and verified acyclic.
+No enrichment/BH tests, semantic-similarity ranking or binding inference performed at source acquisition.
+Outputs: full ontology/annotation evidence locally; source, status, aspect/evidence coverage and validation in outputs/22a_*.
