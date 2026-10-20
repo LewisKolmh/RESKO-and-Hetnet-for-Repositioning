@@ -1,0 +1,8 @@
+protein_role,human_mapping_status,source_annotation_rows
+carrier,human_exact_UniProt_accession,43
+enzyme,human_exact_UniProt_accession,374
+enzyme,nonhuman_context,2
+target,human_exact_UniProt_accession,458
+target,no_polypeptide_identifier,25
+target,nonhuman_context,16
+transporter,human_exact_UniProt_accession,261

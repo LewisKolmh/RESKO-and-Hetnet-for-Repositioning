@@ -431,3 +431,33 @@ pathway enrichment remain pending. This is a current-data adaptation of the
 paper, not recovery of its original 2018 release. Full source-rich mappings stay
 local; compact source, coverage, hierarchy and validation reports are in
 `outputs/20a_*`. No affinity requirement or enrichment p-value is introduced.
+
+### Script 20b: broad DrugBank protein roles joined to human pathways
+
+The 200-entity inventory is retained. Reviewed identifiers connect 190 entities
+to 189 DrugBank records; ten entities have no reviewed DrugBank identifier.
+Selective streaming scanned the full XML export and extracted 1,096 role entries,
+with 2,249 source article references. The new reader skips unselected target
+sections before XML parsing; a boundary fixture and an independent full-record
+comparison validate the extraction.
+
+There are 164 entities with accepted human protein links, spanning 393 exact
+UniProt accessions across targets, enzymes, carriers and transporters. Target-role
+links alone cover 156 entities and 251 distinct human proteins. Roles remain
+separate: metabolism/transport proteins are not automatically therapeutic targets.
+Human joins require explicit taxonomy 9606, consistent organism labels and exact
+accessions; isoform suffixes are not stripped. Named-biologic identity context
+and sacrosidase's historical wrong structure remain separated/excluded from
+strict structure-linked candidate evidence.
+
+Reactome all-level features cover 161 inventory entities and 1,461 pathways
+across all roles. Target-role pathway features cover 151 entities and 1,337
+pathways. Lowest-level and ancestor-expanded evidence remain separate. Pathway
+membership and source action annotations do not establish drug inhibition,
+binding affinity, selectivity or allostery. Missing coverage remains unknown.
+
+Full joins, references, record metadata and role-specific features are local under
+`data/curated/`; compact source, role, entity and pathway counts plus input hashes
+and validation are in `outputs/20b_*`. Published affinity is never an inclusion
+gate. Broad STITCH chemical/protein associations, historical protein crosswalks,
+STRING and GO/DO integration remain open; the core RESKO analysis is unfinished.

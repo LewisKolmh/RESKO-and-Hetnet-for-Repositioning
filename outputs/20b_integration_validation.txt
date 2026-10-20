@@ -1,0 +1,6 @@
+PASS: selected-record streaming fixture crosses chunk boundaries, skips unselected records and drops unwanted fields.
+PASS: requested records all present, unique role/protein row IDs, source-reference and human pathway joins validated.
+PASS: all 200 identities/tiers retained; original protected input hashes unchanged; source size/mtime unchanged.
+PASS: source roles, identity contexts, taxon restrictions and exact accession matching retained; no affinity exclusion.
+PASS: independent complete XML record DB00014 reproduces every selected role, polypeptide accession and PMID list.
+PASS: all 200 inventory entities preserved; strict human accession and blocked-structure restrictions hold; role/pathway features unique.

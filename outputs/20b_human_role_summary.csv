@@ -1,0 +1,5 @@
+protein_role,inventory_entities,distinct_human_proteins,entity_annotation_rows
+carrier,26,7,43
+enzyme,79,102,374
+target,156,251,464
+transporter,65,56,262

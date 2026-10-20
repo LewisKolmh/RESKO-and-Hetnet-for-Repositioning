@@ -1,0 +1,5 @@
+protein_role,inventory_entities,distinct_pathways,entity_pathway_features
+carrier,23,42,720
+enzyme,79,346,2148
+target,151,1337,8618
+transporter,65,127,1677

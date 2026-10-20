@@ -1,21 +1,26 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 20 October 2026
 
-CURRENT CHECKPOINT - CORE RESKO CONTINUES; REACTOME SCRIPT 20a COMPLETE
-SCRIPT 20a - CORE RESKO REACTOME ACQUISITION
-Reported Reactome database version: 97
-Official source files acquired: 4
-Human lowest-level protein/pathway annotation rows: 54699
-Human all-level protein/pathway annotation rows: 161425
-Human pathway nodes: 2883
-Human parent/child pathway edges: 2899
-Lowest-level and all-level annotations are separate; ancestor-expanded rows are not independent experiments.
-Human pathway membership does not establish drug binding, inhibition, allostery or treatment direction.
-All-human mapping layer is acquired for later broad candidate-network integration, not restricted to eEF1A.
-Current data are a versioned/hash-frozen adaptation, not the original 2018 release. Source file modification/retrieval dates are distinct.
-Raw source files and full human mapping tables remain local; compact coverage/provenance/hierarchy reports in outputs/20a_*.
-No enrichment or BH test performed yet; selected drug-protein sets and an explicit background are required.
-Next: broad drug-protein extraction and human network/GO/DO integration; the complete RESKO analysis remains unfinished.
+CURRENT CHECKPOINT - SCRIPT 20b BROAD DRUGBANK/HUMAN PATHWAY INTEGRATION COMPLETE
+SCRIPT 20b - BROAD DRUGBANK PROTEIN ROLES AND HUMAN REACTOME JOINS
+Inventory entities retained: 200
+Entities with reviewed DrugBank record links: 190
+Selected DrugBank records: 189
+Source protein-role entries: 1096
+Source article references preserved: 2249
+Entities with strict human protein links: 164
+Distinct strict human UniProt accessions across all roles: 393
+Entities with target-role human protein links: 156
+Entities with all-level Reactome features: 161
+Distinct all-level pathways across all roles: 1461
+Targets, enzymes, carriers and transporters remain separate; pharmacokinetic proteins are not automatically therapeutic targets.
+Human mapping requires explicit taxon 9606, consistent organism labels and an exact UniProt accession; isoform suffixes are not stripped.
+Candidate current-key links, named-biologic context and identity/missing-coverage holds stay separate; sacrosidase wrong structure excluded.
+Article references are source citations, not independently adjudicated affinity measurements. Known-action/action annotations do not prove selective binding.
+Lowest-level and ancestor-expanded pathways stay separate. Pathway membership does not show drug inhibition or allostery.
+No inventory filtering by affinity, no enrichment p-values and no BH correction at this acquisition/integration stage.
+Outputs: source-rich protein/reference/pathway joins locally; compact counts, source hashes and validation in outputs/20b_*.
+Next: broad STITCH chemical/protein links and historical protein crosswalks, followed by human STRING and GO/DO integration.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1917,3 +1922,29 @@ Current data are a versioned/hash-frozen adaptation, not the original 2018 relea
 Raw source files and full human mapping tables remain local; compact coverage/provenance/hierarchy reports in outputs/20a_*.
 No enrichment or BH test performed yet; selected drug-protein sets and an explicit background are required.
 Next: broad drug-protein extraction and human network/GO/DO integration; the complete RESKO analysis remains unfinished.
+
+SCRIPT 20b RUN - 2026-10-20 10:46:44 BST
+Script: scripts/20b_integrate_drugbank_proteins_pathways.R
+SCRIPT 20b - BROAD DRUGBANK PROTEIN ROLES AND HUMAN REACTOME JOINS
+Inventory entities retained: 200
+Entities with reviewed DrugBank record links: 190
+Selected DrugBank records: 189
+Source protein-role entries: 1096
+Source article references preserved: 2249
+Entities with strict human protein links: 164
+Distinct strict human UniProt accessions across all roles: 393
+Entities with target-role human protein links: 156
+Entities with all-level Reactome features: 161
+Distinct all-level pathways across all roles: 1461
+Targets, enzymes, carriers and transporters remain separate; pharmacokinetic proteins are not automatically therapeutic targets.
+Human mapping requires explicit taxon 9606, consistent organism labels and an exact UniProt accession; isoform suffixes are not stripped.
+Candidate current-key links, named-biologic context and identity/missing-coverage holds stay separate; sacrosidase wrong structure excluded.
+Article references are source citations, not independently adjudicated affinity measurements. Known-action/action annotations do not prove selective binding.
+Lowest-level and ancestor-expanded pathways stay separate. Pathway membership does not show drug inhibition or allostery.
+No inventory filtering by affinity, no enrichment p-values and no BH correction at this acquisition/integration stage.
+Outputs: source-rich protein/reference/pathway joins locally; compact counts, source hashes and validation in outputs/20b_*.
+Next: broad STITCH chemical/protein links and historical protein crosswalks, followed by human STRING and GO/DO integration.
+
+SCRIPT 20b - INDEPENDENT VALIDATION
+PASS: independent complete XML record DB00014 reproduces every selected role, polypeptide accession and PMID list.
+PASS: all 200 inventory entities preserved; strict human accession and blocked-structure restrictions hold; role/pathway features unique.

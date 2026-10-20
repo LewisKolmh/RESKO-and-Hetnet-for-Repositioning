@@ -1,0 +1,8 @@
+origin,protein_coverage_status,inventory_entities
+candidate,human_protein_annotations_available,15
+candidate,no_reviewed_DrugBank_identifier,10
+candidate,record_present_no_protein_roles,2
+candidate,roles_present_no_accepted_human_UniProt,3
+seed,human_protein_annotations_available,149
+seed,record_present_no_protein_roles,19
+seed,roles_present_no_accepted_human_UniProt,2

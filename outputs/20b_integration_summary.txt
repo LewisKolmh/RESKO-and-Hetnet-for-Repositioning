@@ -1,0 +1,19 @@
+SCRIPT 20b - BROAD DRUGBANK PROTEIN ROLES AND HUMAN REACTOME JOINS
+Inventory entities retained: 200
+Entities with reviewed DrugBank record links: 190
+Selected DrugBank records: 189
+Source protein-role entries: 1096
+Source article references preserved: 2249
+Entities with strict human protein links: 164
+Distinct strict human UniProt accessions across all roles: 393
+Entities with target-role human protein links: 156
+Entities with all-level Reactome features: 161
+Distinct all-level pathways across all roles: 1461
+Targets, enzymes, carriers and transporters remain separate; pharmacokinetic proteins are not automatically therapeutic targets.
+Human mapping requires explicit taxon 9606, consistent organism labels and an exact UniProt accession; isoform suffixes are not stripped.
+Candidate current-key links, named-biologic context and identity/missing-coverage holds stay separate; sacrosidase wrong structure excluded.
+Article references are source citations, not independently adjudicated affinity measurements. Known-action/action annotations do not prove selective binding.
+Lowest-level and ancestor-expanded pathways stay separate. Pathway membership does not show drug inhibition or allostery.
+No inventory filtering by affinity, no enrichment p-values and no BH correction at this acquisition/integration stage.
+Outputs: source-rich protein/reference/pathway joins locally; compact counts, source hashes and validation in outputs/20b_*.
+Next: broad STITCH chemical/protein links and historical protein crosswalks, followed by human STRING and GO/DO integration.
