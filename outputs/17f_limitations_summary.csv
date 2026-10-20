@@ -1,0 +1,10 @@
+issue,status,next_action
+Human isoform-specific direct binding,Not established for the 200 inventory entities,Acquire verified human EEF1A1/EEF1A2 binding evidence before qualification
+SPR source PMID 21599001,Six reported records; full methodology/probe identity pending,Retrieve and review full methods and supporting information
+PMID 29498519,Eleven source activities quarantined; Expression of Concern,Retain hold until source integrity can be resolved
+STITCH upstream study identifiers,Unresolved in detailed export; six inventory association leads only,Trace original supporting studies; do not count overlapping sources independently
+Primary full-text access,Only two of eleven scoped papers acquired as full XML,Recover remaining full texts; endpoint errors are access failures
+RT/eEF1A context literature,PPI mechanism context acquired; chemical countercontrol full-text unavailable,Verify compound-binding partner from primary methods before using as control
+Human selectivity/allostery/translation sparing,Not established by this bounded section,Keep separate evidence requirements; modelling alone cannot qualify allostery
+Database completeness,ChEMBL exact-target and STITCH legacy queries are bounded,Continue remaining original source coverage and targeted human literature searches
+Statistical ranking,No valid enrichment test family defined in section 17,Specify null/background and test family before BH adjustment

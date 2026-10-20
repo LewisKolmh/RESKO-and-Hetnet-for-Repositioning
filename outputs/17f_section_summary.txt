@@ -1,0 +1,11 @@
+SCRIPT 17f - HUMAN TARGET EVIDENCE CONSOLIDATION; BOUNDED SECTION 17 COMPLETE
+Scope: human EEF1A1 (P68104) and EEF1A2 (Q05639); nonhuman evidence cannot qualify a human binder.
+200 original inventory entities retained as 400 human entity/isoform coverage rows.
+39 ChEMBL records / 23 assays / 20 noninventory ligands / 7 source publications; zero exact inventory matches.
+11 records quarantined for Expression of Concern; six reported SPR records await full methods; one isoform contradiction held.
+STITCH: 3198 target association rows; 13 inventory links across six drugs, zero inventory experimental-channel links.
+Plitidepsin remains a separate contextual binding reference, not a seed: rabbit eEF1A2 Kd 79 +/- 30 nM does not qualify purified-human binding.
+No inventory compound qualifies for human direct binding plus selective/allosteric RT-PPI inhibition on evidence reviewed here. This is not evidence that no such compound exists.
+Full-text, upstream STITCH provenance and human selectivity gaps remain explicit; completion is bounded source accounting, not exhaustive literature adjudication.
+Outputs: full human coverage and noninventory references locally; compact coverage, limitations, control scope, hashes and validation in outputs/17f_*.
+Next: section 18 should resolve human binding/SPR identity gaps and expand original-source coverage before any candidate ranking or structural allostery claims.

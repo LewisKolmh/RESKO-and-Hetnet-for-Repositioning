@@ -1,35 +1,17 @@
 RESKO side project: eEF1A-binding candidate discovery
 Updated: 20 October 2026
 
-CURRENT CHECKPOINT - SECTION 17 UNDERWAY; 17a/17b/17c COMPLETE
-17c acquired the complete human STITCH 5.0 detailed file (84,697,010 compressed
-bytes; source modified 2016-08-16; legacy/unsupported dataset). Scanned all
-15,473,939 source rows, retaining 3,198 exact eEF1A protein-ID association rows
-(1,651 EEF1A1 and 1,547 EEF1A2) across 1,769 distinct chemical IDs. There are
-3,069 text-mining-only rows and 36 with experimental-channel support; these are
-source rows, not independent experiments or measured direct binding events.
-Thirteen source-ID/protein links touch six inventory drugs: fluorouracil,
-estradiol, doxorubicin, dexamethasone, testosterone enanthate and epirubicin.
-None of these links has experimental-channel support. Five drugs have stereo-ID
-links backed by existing current identity checks; epirubicin is merged-group
-context only. STITCH 5 chemical InChIKeys were not separately revalidated, and
-merged salt/isomer/stereo rows are not pooled into independent biological evidence.
-Scores retain separate experimental/prediction/database/textmining/combined
-channels on 0..1000 scale; they are not p-values, affinities or inhibition scores.
-All 200 entities have coverage for both genes (400 rows), and sacrosidase's wrong
-structure remains excluded. Public HTTP transport and archive/build/retrieval
-provenance are explicit; TLS checks were not disabled. The raw file, publisher
-README/download documentation and detailed source-rich tables remain local.
-Independent second full-file scan, inventory join, source checksums and R parsing
-passed. Notes and compact outputs are synced to the designated GitHub repository.
-17a/17b findings remain: 39 exact-target ChEMBL activities, 23 assays, 20 ligands,
-seven document references; no exact inventory ligand matches in that bounded
-query, and one EEF1A1-description/EEF1A2-target contradiction is held. These are
-coverage findings, not evidence of absent binding. No activity claim is promoted.
-Next: 17d primary-source review and provenance tracing of experimental/database
-association leads, historical chemical forms, positive controls and overlap among
-STITCH/ChEMBL/DrugBank. Keep EEF1A1/2, binding, inhibition, RT-PPI disruption,
-allostery and translation sparing separate.
+SCRIPT 17f - HUMAN TARGET EVIDENCE CONSOLIDATION; BOUNDED SECTION 17 COMPLETE
+Scope: human EEF1A1 (P68104) and EEF1A2 (Q05639); nonhuman evidence cannot qualify a human binder.
+200 original inventory entities retained as 400 human entity/isoform coverage rows.
+39 ChEMBL records / 23 assays / 20 noninventory ligands / 7 source publications; zero exact inventory matches.
+11 records quarantined for Expression of Concern; six reported SPR records await full methods; one isoform contradiction held.
+STITCH: 3198 target association rows; 13 inventory links across six drugs, zero inventory experimental-channel links.
+Plitidepsin remains a separate contextual binding reference, not a seed: rabbit eEF1A2 Kd 79 +/- 30 nM does not qualify purified-human binding.
+No inventory compound qualifies for human direct binding plus selective/allosteric RT-PPI inhibition on evidence reviewed here. This is not evidence that no such compound exists.
+Full-text, upstream STITCH provenance and human selectivity gaps remain explicit; completion is bounded source accounting, not exhaustive literature adjudication.
+Outputs: full human coverage and noninventory references locally; compact coverage, limitations, control scope, hashes and validation in outputs/17f_*.
+Next: section 18 should resolve human binding/SPR identity gaps and expand original-source coverage before any candidate ranking or structural allostery claims.
 
 PROJECT AIM
 Use a disease-forward, RESKO-inspired approach to identify cancer-associated
@@ -1835,3 +1817,16 @@ Plitidepsin is a separate positive reference: reported rabbit eEF1A2 Kd 79 +/- 3
 Primary full-text retrieval remains incomplete; this is a bounded review, not exhaustive adjudication.
 Outputs: reviewed activity evidence, STITCH review and control registry locally; compact review/control reports in outputs/17e_*.
 No BH adjustment: no valid statistical test family or null/background is defined here.
+
+SCRIPT 17f RUN - 2026-10-20 10:24:46 BST
+SCRIPT 17f - HUMAN TARGET EVIDENCE CONSOLIDATION; BOUNDED SECTION 17 COMPLETE
+Scope: human EEF1A1 (P68104) and EEF1A2 (Q05639); nonhuman evidence cannot qualify a human binder.
+200 original inventory entities retained as 400 human entity/isoform coverage rows.
+39 ChEMBL records / 23 assays / 20 noninventory ligands / 7 source publications; zero exact inventory matches.
+11 records quarantined for Expression of Concern; six reported SPR records await full methods; one isoform contradiction held.
+STITCH: 3198 target association rows; 13 inventory links across six drugs, zero inventory experimental-channel links.
+Plitidepsin remains a separate contextual binding reference, not a seed: rabbit eEF1A2 Kd 79 +/- 30 nM does not qualify purified-human binding.
+No inventory compound qualifies for human direct binding plus selective/allosteric RT-PPI inhibition on evidence reviewed here. This is not evidence that no such compound exists.
+Full-text, upstream STITCH provenance and human selectivity gaps remain explicit; completion is bounded source accounting, not exhaustive literature adjudication.
+Outputs: full human coverage and noninventory references locally; compact coverage, limitations, control scope, hashes and validation in outputs/17f_*.
+Next: section 18 should resolve human binding/SPR identity gaps and expand original-source coverage before any candidate ranking or structural allostery claims.

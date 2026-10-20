@@ -346,3 +346,33 @@ Next: 17d primary-source/provenance review of experimental/database-supported
 leads, historical chemical forms and positive controls before binding
 prioritisation. STITCH imports can overlap ChEMBL/DrugBank evidence and must not
 be counted as independent confirmation.
+
+### Section 17 completion: human target evidence
+
+The bounded acquisition/review/consolidation stages 17a–17f are complete. The
+required targets are **human EEF1A1 (P68104)** and **human EEF1A2 (Q05639)**.
+Nonhuman experiments are contextual references and cannot qualify human binding.
+
+The 200 original inventory entities remain unchanged, with 400 human
+entity/isoform coverage rows. Exact-target ChEMBL acquisition yielded 39 activity
+records, 23 assays and 20 ligands; none exactly matches the inventory. Eleven
+records are quarantined because their source paper has an Expression of Concern;
+six reported SPR records await full-method/probe-identity review. An isoform
+annotation conflict remains held. STITCH contributes association-only leads for
+six inventory drugs, with no experimental-channel inventory links.
+
+Plitidepsin is a separate reference, not an added cancer seed. The reviewed
+radioligand affinity experiment used rabbit muscle eEF1A2; its human-cell evidence
+and modelled binding site do not establish purified-human affinity, isoform
+selectivity, experimental allostery or translation sparing.
+
+No inventory compound meets the combined human binding/selectivity/allosteric
+RT-PPI requirements in this bounded review. Missing coverage is not inactivity.
+Full-text access gaps and unresolved original STITCH study provenance remain open;
+see `outputs/17f_limitations_summary.csv`. No statistical test family was defined,
+so section 17 does not apply BH to association scores or affinity values.
+
+Run `scripts/17e_review_target_evidence.R` after 17d, then
+`scripts/17f_consolidate_target_evidence.R`. Full source-rich tables remain local;
+compact results and validations are in `outputs/17e_*` and `outputs/17f_*`.
+Section 18 should resolve human binding and identity gaps before ranking candidates.

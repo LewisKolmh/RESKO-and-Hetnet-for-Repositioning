@@ -1,0 +1,4 @@
+PASS: 200 original identities and tiers retained, 400 unique human entity/isoform rows.
+PASS: 39 source activities / 23 assays / 20 ligands accounted for; zero exact inventory links.
+PASS: 13 STITCH inventory links accounted for; zero inventory experimental-channel links.
+PASS: nonhuman positive control remains outside inventory and cannot qualify human binding; protected inputs unchanged.
