@@ -1,0 +1,8 @@
+Package,Version,LibPath
+ChemmineR,3.64.0,/Users/lewis/Desktop/Newcastle University/PhD/GitHub Repos/RESKO HetNet eEF1A_Cancer/data/raw/chemistry24/R_library
+Rcpp,1.1.2,/Library/Frameworks/R.framework/Versions/4.6/Resources/library
+rsvg,2.7.0,/Users/lewis/Desktop/Newcastle University/PhD/GitHub Repos/RESKO HetNet eEF1A_Cancer/data/raw/chemistry24/R_library
+RCurl,1.98-1.20,/Users/lewis/Desktop/Newcastle University/PhD/GitHub Repos/RESKO HetNet eEF1A_Cancer/data/raw/chemistry24/R_library
+rjson,0.2.23,/Users/lewis/Desktop/Newcastle University/PhD/GitHub Repos/RESKO HetNet eEF1A_Cancer/data/raw/chemistry24/R_library
+BH,1.90.0-1,/Users/lewis/Desktop/Newcastle University/PhD/GitHub Repos/RESKO HetNet eEF1A_Cancer/data/raw/chemistry24/R_library
+DT,0.34.0,/Users/lewis/Desktop/Newcastle University/PhD/GitHub Repos/RESKO HetNet eEF1A_Cancer/data/raw/chemistry24/R_library

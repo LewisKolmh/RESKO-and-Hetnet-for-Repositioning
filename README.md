@@ -213,7 +213,19 @@ valid structure key and one identity is blocked. Missing coverage is not zero
 similarity or inactivity. The original integration inventory remains unchanged.
 
 Raw responses and supplied molfile/SDF blocks stay local. Source consistency and
-exact-key linkage are validated; chemical parsing, the R chemistry runtime,
-2048-bit atom-pair fingerprints and Tanimoto matrices remain the next stage.
+exact-key linkage are validated; chemical parsing, the R runtime, fingerprints
+and Tanimoto matrices are implemented in 24b with additional coverage holds.
 The paper does not specify its exact fingerprint encoding, so the planned
 ChemmineR implementation choice is explicit in the chemistry structure policy.
+
+## R chemistry matrices (script 24b)
+
+All workflow and helper scripts remain R. ChemmineR 3.64.0 is installed in the ignored project-local library.
+Validated 2048-bit atom-pair fingerprints cover 127 structure records / 128 of the 204 chemistry-stage entities, including all five 23f proposals.
+The 127-structure and 204-entity Tanimoto matrices use unsmoothed intersection/union; every missing/held entity comparison remains NA.
+Radium is held for insufficient atoms; pinaverium bromide and calcium acetate are held as disconnected supplied structures.
+The original 200-entry integration inventory is unchanged.
+
+Independent R checks reconstruct all bits and every score, source graph counts/components, entity projections and missingness.
+The finite vocabulary can give identical fingerprints for distinct structures and omits many AP descriptors.
+Next is source-aware candidate/seed comparison and full-descriptor sensitivity, not a binding-affinity or final RESKO ranking claim.

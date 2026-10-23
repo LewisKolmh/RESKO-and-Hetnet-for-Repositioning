@@ -1,0 +1,7 @@
+PASS: 127 2048-bit fingerprints independently rebuilt from frozen AP descriptors/vocabulary.
+PASS: 8001 unique structure-pair scores and all diagonal/directed cells verified by set arithmetic.
+PASS: all raw SDF atom/bond counts and graph components agree; no disconnected graph fingerprinted.
+PASS: full 204-entity matrix/projection agrees; missing/held rows and diagonals stay NA.
+PASS: partial overlap, disjoint, identity, empty-bit, disconnected and invalid-bond fixtures.
+PASS: protected hashes unchanged; 88 workflow scripts parse as R; no non-R analysis scripts.
+LIMIT: descriptor implementation and finite vocabulary are documented choices; 2D similarity is not identity, affinity or allostery.

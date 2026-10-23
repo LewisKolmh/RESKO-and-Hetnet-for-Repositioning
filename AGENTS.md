@@ -1,6 +1,7 @@
 # Project working instructions
 
 - Implement the scientific workflow in R and use the project root as the working directory.
+- User clarification 2026-10-23: All workflow and helper scripts must be R; do not add non-R analysis scripts or a Python/Java chemistry backend.
 - Identify the project by its contents, not its folder basename. The local folder is
   now named `RESKO HetNet eEF1A_Cancer`; older notes refer to `RESKONew`.
 - After every successful numbered-script run, update `Notes.txt`, separated by

@@ -1,0 +1,12 @@
+parameter,value
+R_runtime,ChemmineR 3.64.0; Bioconductor 3.23; no Python or Java backend
+fingerprint,binary 2048-bit ChemmineR atom-pair vocabulary fingerprint
+vocabulary,"first 2048 built-in apfp descriptors; frozen order, not selected from this cohort"
+uniquePairs,TRUE; preserve ChemmineR descriptor encoding including its multiplicity conventions
+similarity,shared set bits / union set bits
+addone,0; no smoothing
+fragment_policy,hold disconnected graphs; do not strip salts/fragments or invent cross-fragment distances
+AP_errors,"hold parse/graph/AP failures, sentinel returns and warnings"
+empty_fingerprint,hold all-zero bits; undefined empty/empty comparison is NA
+entity_projection,keep all 204 entities; missing/held similarities NA; same-key labels remain separate
+interpretation,2D descriptors only; encoding choice not bit-for-bit original-paper reproduction

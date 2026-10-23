@@ -1,0 +1,8 @@
+scope,entity_status,n
+original_inventory,blocked_identity_hold,1
+original_inventory,fingerprint_available,124
+original_inventory,no_exact_ChEMBL_match,15
+original_inventory,no_valid_current_structure_key,57
+original_inventory,structure_fingerprint_hold,3
+proposed_current_representation,fingerprint_available,3
+supplemental_known_treatment_comparator,fingerprint_available,1

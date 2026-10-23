@@ -29,6 +29,7 @@ counts and limitations. The complete RESKO model and final ranking are unfinishe
 | 23e | Audit label-discovered thalidomide seed gap with a separately recorded augmented IMiD cohort |
 | 23f | Validate and close the SIDER section; export final source-aware handoff and chemistry proposals |
 | 24a | Acquire exact-full-key ChEMBL molecule structures/SDF blocks and preserve all chemistry coverage gaps |
+| 24b | Prepare the R chemistry runtime, validate graphs and generate 2048-bit atom-pair/Tanimoto matrices with explicit NA holds |
 
 The existing inventory is an integration/review cohort, not a completed
 paper-matched candidate ranking. The bounded disease-wise SIDER analysis is complete in section 23; chemistry,
@@ -93,4 +94,10 @@ five eEF1A inhibitors or proven novel indications. Historical forms remain unver
 and held records remain in the handoff. The original 200-entry inventory is unchanged.
 Next is chemistry, followed by the remaining ontology/network/model work.
 
-After 24a, run `scripts/helpers/validate_RESKO24_structure_acquisition.R`. This checks source consistency, not chemical parsing or fingerprints. R chemistry packages are not yet installed; 24b will establish the runtime and generate the declared atom-pair fingerprints/Tanimoto matrices. The structure policy explicitly records the paper's unspecified encoding choice.
+After 24a, run `scripts/helpers/validate_RESKO24_structure_acquisition.R`. This checks source consistency, not chemical parsing or fingerprints. The R chemistry runtime and fingerprint matrices are now available after 24b. The structure policy explicitly records the paper's unspecified encoding choice.
+
+After 24b, run `scripts/helpers/validate_RESKO24_atom_pair_fingerprints.R`.
+The R-only runtime helper adds `data/raw/chemistry24/R_library` to `.libPaths()` in each fresh session.
+All 204 entity labels remain in the matrix; missing/held rows are NA. All five 23f proposals have fingerprints.
+The 2048-bit vocabulary and unsmoothed Tanimoto settings are frozen in `config/RESKO_atom_pair_fingerprint_settings.csv`.
+Distinct structures can have equal fingerprints, and the retained vocabulary omits descriptors. 24c will assess source-aware candidate/seed comparisons and full-AP sensitivity; chemical similarity is not binding evidence.
