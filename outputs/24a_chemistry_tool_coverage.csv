@@ -1,0 +1,6 @@
+package,available
+ChemmineR,FALSE
+ChemmineOB,FALSE
+rcdk,FALSE
+fingerprint,FALSE
+BiocManager,TRUE

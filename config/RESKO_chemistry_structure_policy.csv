@@ -1,0 +1,11 @@
+parameter,value
+structure_match,exact full standard InChIKey only; retain all returned exact-key records
+entity_scope,original 200 entries plus unrepresented 23f proposals; supplemental thalidomide as separate comparator
+missingness,all entries retained in coverage; missing structures are not inactive or zero similarity
+forms,"no fragment stripping, neutralisation, stereochemistry removal or name-based merge"
+parent_hierarchy,record parent ID only; never replace queried structure with its parent
+fingerprint_plan,planned ChemmineR sdf2ap -> desc2fp(descnames=2048) -> binary Tanimoto
+encoding_limit,paper specifies atom-pair 2048 bits but not encoding/vocabulary; this implementation is an explicit choice
+stereochemistry_limit,2D atom-pair similarities cannot establish stereo/form equivalence; full keys remain separate
+source,live ChEMBL snapshot cached with status release before/after and hashes; not a 2018 snapshot
+affinity,no binding-affinity filter

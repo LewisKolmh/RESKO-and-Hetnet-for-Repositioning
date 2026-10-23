@@ -28,6 +28,7 @@ counts and limitations. The complete RESKO model and final ranking are unfinishe
 | 23d | Summarise cutoff robustness and known treatments without an integrated ranking |
 | 23e | Audit label-discovered thalidomide seed gap with a separately recorded augmented IMiD cohort |
 | 23f | Validate and close the SIDER section; export final source-aware handoff and chemistry proposals |
+| 24a | Acquire exact-full-key ChEMBL molecule structures/SDF blocks and preserve all chemistry coverage gaps |
 
 The existing inventory is an integration/review cohort, not a completed
 paper-matched candidate ranking. The bounded disease-wise SIDER analysis is complete in section 23; chemistry,
@@ -91,3 +92,5 @@ Five current-representation proposals meet all strict setting checks; they are n
 five eEF1A inhibitors or proven novel indications. Historical forms remain unverified,
 and held records remain in the handoff. The original 200-entry inventory is unchanged.
 Next is chemistry, followed by the remaining ontology/network/model work.
+
+After 24a, run `scripts/helpers/validate_RESKO24_structure_acquisition.R`. This checks source consistency, not chemical parsing or fingerprints. R chemistry packages are not yet installed; 24b will establish the runtime and generate the declared atom-pair fingerprints/Tanimoto matrices. The structure policy explicitly records the paper's unspecified encoding choice.

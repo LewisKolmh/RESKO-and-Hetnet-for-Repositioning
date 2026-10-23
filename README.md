@@ -202,3 +202,18 @@ inventory is unchanged. See outputs/23f_section_completion_summary.txt.
 Next is the paper-matched atom-pair fingerprint/Tanimoto layer. Seed completeness,
 current raw DO coverage, remaining matrices/statistics, valid enrichment/BH and
 model validation remain explicit unfinished parts of the overall workflow.
+
+## Chemistry source layer (script 24a)
+
+An exact-full-InChIKey ChEMBL_37 snapshot now supplies 130 molecule structures
+for 131 chemistry-stage entities: 127 original inventory entries, three new 23f
+proposals and one separately labelled thalidomide comparator. All original 200
+entries remain accounted for: 15 lack an exact ChEMBL match, 57 lack a current
+valid structure key and one identity is blocked. Missing coverage is not zero
+similarity or inactivity. The original integration inventory remains unchanged.
+
+Raw responses and supplied molfile/SDF blocks stay local. Source consistency and
+exact-key linkage are validated; chemical parsing, the R chemistry runtime,
+2048-bit atom-pair fingerprints and Tanimoto matrices remain the next stage.
+The paper does not specify its exact fingerprint encoding, so the planned
+ChemmineR implementation choice is explicit in the chemistry structure policy.

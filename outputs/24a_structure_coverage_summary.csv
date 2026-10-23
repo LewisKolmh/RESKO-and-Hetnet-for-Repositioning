@@ -1,0 +1,7 @@
+scope,structure_status,n
+original_inventory,blocked_identity_hold,1
+original_inventory,exact_ChEMBL_molfile_available,127
+original_inventory,no_exact_ChEMBL_match,15
+original_inventory,no_valid_current_structure_key,57
+proposed_current_representation,exact_ChEMBL_molfile_available,3
+supplemental_known_treatment_comparator,exact_ChEMBL_molfile_available,1
