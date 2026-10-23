@@ -24,10 +24,14 @@ counts and limitations. The complete RESKO model and final ranking are unfinishe
 | 22c | Join ontology annotations to inventory proteins and preserve evidence/source strata |
 | 23a | Disease-wise SIDER-only joint-pattern baseline, threshold sensitivities and explicit coverage limits |
 | 23b | Predeclared mechanism-cohort adaptation with full and incomplete coverage kept separate |
+| 23c | Resolve all qualifying historical stereo-CID leads; reconcile current structures, seed tiers and inventory |
+| 23d | Summarise cutoff robustness and known treatments without an integrated ranking |
+| 23e | Audit label-discovered thalidomide seed gap with a separately recorded augmented IMiD cohort |
+| 23f | Validate and close the SIDER section; export final source-aware handoff and chemistry proposals |
 
 The existing inventory is an integration/review cohort, not a completed
-paper-matched candidate ranking. The disease-wise SIDER joint-pattern baseline,
-chemistry, broader network and ontology layers and final model still need work.
+paper-matched candidate ranking. The bounded disease-wise SIDER analysis is complete in section 23; chemistry,
+network/ontology similarity and statistics, and the final model still need work.
 
 ## Optional human eEF1A evidence annotation
 
@@ -69,3 +73,21 @@ annotation nor missing annotation is a binding-activity result.
 After 23a, run `scripts/helpers/validate_disease_SIDER_baseline.R`. No current full-cohort cancer pattern is assessable; covered-subset results do not meet the five-term flowchart minimum. Do not promote the two-term ovarian review queue to a final shortlist.
 
 After 23b, run `scripts/helpers/validate_mechanism_SIDER_cohorts.R`. Membership/policy are frozen in `config/RESKO_mechanism_cohort_*.csv`; edits require explicit scientific rationale. Candidate queues contain historical group labels pending identity and known-treatment review, not a final ranking.
+
+## Completed section 23
+
+23a and 23b preserve the broad baseline and original declared mechanism cohorts.
+For a fresh local rebuild, run **23c → identity validator → 23d → 23e → 23c → identity validator → 23d → 23e → 23f**.
+The second 23c pass includes the additional 23e queue; GET responses are cached.
+On subsequent runs the augmented queue already exists. 23f audits every protected
+stage hash and reconstructs the augmented overlaps directly from SIDER.
+Run the original 23a/23b validators as well when refreshing their inputs.
+
+`data/curated/RESKO23_completed_SIDER_handoff.csv` is the final local handoff;
+`outputs/23f_section_completion_summary.txt` records scope and limitations.
+The original two-seed myeloma IMiD results remain sensitivity-only after discovery
+of the omitted labelled thalidomide treatment. Corrected-cohort results are separate.
+Five current-representation proposals meet all strict setting checks; they are not
+five eEF1A inhibitors or proven novel indications. Historical forms remain unverified,
+and held records remain in the handoff. The original 200-entry inventory is unchanged.
+Next is chemistry, followed by the remaining ontology/network/model work.

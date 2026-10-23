@@ -1,0 +1,5 @@
+branch,minimum_seed_terms,intended_seeds,eligible_seeds,joint_PT_count,augmented_cohort_gate,nonknown_ge_50,nonknown_gt_50
+top_decile_types,3,3,3,6,TRUE,9,1
+top_decile_types,4,3,3,6,TRUE,9,1
+prevalence_gt_0.10,3,3,3,12,TRUE,20,6
+prevalence_gt_0.10,4,3,3,12,TRUE,20,6

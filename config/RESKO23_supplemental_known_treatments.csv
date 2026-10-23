@@ -1,0 +1,2 @@
+flat,cancer_id,drugbank_id,drug_name,decision,evidence_url,evidence_summary,jurisdiction,reviewed_on,handling
+CID100005426,multiple_myeloma,DB01041,Thalidomide,known_labelled_treatment,https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2eda833b-1357-4ed4-a093-194524fcb061,US label section 1.1 includes thalidomide with dexamethasone for newly diagnosed multiple myeloma,US,2026-10-23,Known comparator; original seed inventory unchanged; augmented IMiD sensitivity required

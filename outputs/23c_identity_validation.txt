@@ -1,0 +1,4 @@
+PASS: 40 qualifying groups / 47 stereo-CID leads retained without pooling.
+PASS: raw cached PubChem properties, names and requested/returned CIDs agree for every lead.
+PASS: exact full-key DrugBank and inventory links agree with source; original inventory remains 200.
+PASS: historical equivalence never asserted; blocked sacrosidase structure not recovered; input/cache hashes unchanged.

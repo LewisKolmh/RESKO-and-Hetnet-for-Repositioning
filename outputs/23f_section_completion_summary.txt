@@ -1,0 +1,13 @@
+SECTION 23 COMPLETE: bounded SIDER analysis and source-aware handoff, not full RESKO completion.
+23a broad cancer baselines: coverage limited, no five-term pattern.
+23b all 75 original primary drugs / 85 associations retained in 53 predeclared mechanism cohorts.
+23c identity dispositions cover 40 historical groups / 47 stereo-CID leads.
+23d setting robustness, known-treatment comparators and historical form holds retained.
+23e label-verified thalidomide seed gap: added sensitivity gives 6 / 12 joint PT; original IMiD cohort sensitivity-only.
+23f completed handoff candidate/cohort contexts: 62
+Distinct current-representation chemistry proposals: 5
+PASS: all original setting summaries and corrected IMiD raw-source overlaps independently verified.
+PASS: all protected stage hashes unchanged; all R scripts parse; original inventory remains 200.
+Unresolved historical forms are explicit holds. Known seed gaps do not establish exhaustive clinical cohort coverage.
+No p-values/BH, affinity filter, clinical recommendation, target-binding or allostery claim.
+NEXT: paper-matched chemical fingerprints and similarity matrices using source-aware proposals; then ontology/network integration and valid enrichment families.

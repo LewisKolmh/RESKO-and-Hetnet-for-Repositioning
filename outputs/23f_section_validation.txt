@@ -1,0 +1,2 @@
+PASS: all original setting summaries and corrected IMiD raw-source overlaps independently verified.
+PASS: all protected stage hashes unchanged; all R scripts parse; original inventory remains 200.

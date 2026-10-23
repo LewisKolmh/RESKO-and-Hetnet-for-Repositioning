@@ -181,3 +181,24 @@ in `outputs/22a_*`, `outputs/22b_*` and `outputs/22c_*`. Generic ontology roots
 are excluded from features. Wang similarity, ancestor-expanded matrices,
 valid enrichment/BH testing and final RESKO ranking remain unfinished. Annotation
 membership does not establish compound binding, inhibition or allostery.
+
+## Completed SIDER candidate stage (scripts 23a–23f)
+
+Section 23 preserves the broad cancer baseline, predeclared mechanism cohorts,
+cutoff sensitivities, current structure reconciliation and known-treatment context.
+Final identity accounting covers 40 historical groups / 47 stereo-CID leads.
+Historical forms are never silently pooled. A label-verified omitted thalidomide
+myeloma indication prompted a separate corrected-cohort analysis; the original
+IMiD results remain sensitivity context. Full run order is in scripts/README.md.
+
+Five current-representation leads pass all strict setting checks without an
+outstanding form/name-support hold: memantine and aripiprazole (breast aromatase
+cohort); busulfan, methotrexate and bortezomib (ovarian nitrogen-mustard cohort).
+These are chemistry-annotation proposals, not eEF1A inhibitors, a final RESKO
+ranking or proven novel indications. Threshold-sensitive, known-treatment and
+identity-held contexts remain in the final local handoff. The original 200-entry
+inventory is unchanged. See outputs/23f_section_completion_summary.txt.
+
+Next is the paper-matched atom-pair fingerprint/Tanimoto layer. Seed completeness,
+current raw DO coverage, remaining matrices/statistics, valid enrichment/BH and
+model validation remain explicit unfinished parts of the overall workflow.
