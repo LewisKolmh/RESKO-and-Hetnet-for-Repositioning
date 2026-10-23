@@ -1,0 +1,3 @@
+PASS: independent raw-source PT set intersections and every candidate overlap/boundary agree.
+PASS: intersection/union, exact 50-percent tie, empty pattern and missing-mapping fixtures.
+PASS: protected input hashes unchanged; all R scripts parse.

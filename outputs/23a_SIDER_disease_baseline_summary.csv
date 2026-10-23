@@ -1,0 +1,13 @@
+cancer_id,branch,minimum_seed_terms,total_primary_seeds,eligible_seeds,missing_mapping,joint_PT_count,full_cohort_assessable,figure3_minimum_met,scope,new_groups_ge_50,new_groups_gt_50
+breast_cancer,top_decile_types,3,45,15,30,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+multiple_myeloma,top_decile_types,3,22,9,13,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+ovarian_cancer,top_decile_types,3,18,4,14,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+breast_cancer,top_decile_types,4,45,15,30,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+multiple_myeloma,top_decile_types,4,22,9,13,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+ovarian_cancer,top_decile_types,4,18,4,14,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+breast_cancer,prevalence_gt_0.10,3,45,15,30,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+multiple_myeloma,prevalence_gt_0.10,3,22,9,13,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+ovarian_cancer,prevalence_gt_0.10,3,18,4,14,2,FALSE,FALSE,eligible_covered_subset_adaptation,148,36
+breast_cancer,prevalence_gt_0.10,4,45,15,30,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+multiple_myeloma,prevalence_gt_0.10,4,22,9,13,0,FALSE,FALSE,eligible_covered_subset_adaptation,0,0
+ovarian_cancer,prevalence_gt_0.10,4,18,4,14,2,FALSE,FALSE,eligible_covered_subset_adaptation,148,36

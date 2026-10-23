@@ -1,0 +1,12 @@
+parameter,value
+source,SIDER 4.1 PT only
+cohort,"reviewed primary conventional seeds, separately per cancer"
+pruning_branches,top_decile_types|prevalence_gt_0.10
+top_decile_ties,remove all tied at ceiling(0.10 * number of PT types)
+minimum_seed_terms,>=3 and >3 after pruning
+candidate_boundary,>=0.50 and >0.50
+coverage_denominator,distinct joint PT count; overlap / joint PT count
+missing_seed_policy,report missing; covered-subset adaptation does not establish full-cohort pattern
+fallback,none; no seed-halving selected after results
+small_pattern_policy,score nonempty patterns; flag joint count <5 as insufficient for Figure 3
+identity_unit,"historical SIDER flat group, not an exact modern structure"

@@ -2130,3 +2130,17 @@ PASS: independent scan of all 910476 GAF rows; human eEF1A anchor positive/negat
 PASS: OBO fixture verifies term/typedef boundaries, relation parsing, duplicate aliases, ambiguity holds, obsolete and unknown IDs.
 PASS: 200-entity coverage and unique source-layer features preserved; generic roots and blocked sacrosidase structure excluded; DO legacy evidence label retained.
 PASS: protected input hashes unchanged and all R scripts parse; no significance, binding or causal evidence promoted.
+
+SCRIPT 23a - DISEASE-WISE SIDER BASELINE (2026-10-23)
+Inputs: frozen SIDER 4.1 PT source, reviewed expanded PRIMARY cancer seeds, accepted SIDER mappings, included cancer configuration. Investigational/documented tiers and current labels not pooled.
+Declared settings: config/RESKO_SIDER_baseline_settings.csv. Joint pattern is an intersection across eligible seeds; candidate score = shared joint PT / joint PT count. This is an explicit operational interpretation, not a recovered implementation of the paper's unspecified CalcPercentageSimilarity function.
+1430 historical flat-group profiles; 4251 distinct PTs. Top-decile rank 426, tied prevalence cutoff 81 profiles: 428 terms removed. Alternate >10%-profile prevalence branch removes 253 terms. All cutoff ties retained consistently in removal.
+Primary cohort coverage: breast 15/45; myeloma 9/22; ovarian 4/18. Remaining seeds lack accepted SIDER mapping; no seed was removed for insufficient post-pruning terms. >=3 versus >3 eligibility gives identical results.
+All full primary cohorts remain unassessable because of missing coverage. Covered-subset intersections are explicitly labelled adaptations, never asserted as full-cohort patterns.
+Breast and myeloma: zero shared retained PTs under both pruning branches. Ovarian: zero for top-decile removal, two for >10%-prevalence removal (extravasation and febrile neutropenia).
+Ovarian's two-term pattern gives 148 non-primary historical flat groups at >=50% and 36 at >50%, identical across minimum-term settings. These are weak-pattern review leads only; NONE of the branches meets Figure 3's five-joint-term minimum. No empty-pattern division or automatic half-cohort fallback.
+Known sacrosidase flat-group structure conflict explicitly flagged and excluded from review queue. Other new group identities require review; flat groups are not exact current compounds and prior 200-entry inventory is unchanged.
+Outputs: outputs/23a_* compact summary/coverage/hashes; data/curated/RESKO_SIDER_* local source-derived prevalence, seed coverage/mapping, joint patterns, all group scores and review queue.
+Interpretation: broad cancer treatment cohorts are heterogeneous and historical SIDER coverage is limited. These results do not establish eEF1A binding, allostery, efficacy or a final shortlist. No p-values or BH tests applied to descriptive overlap.
+Independent validation: raw-source set reconstruction agrees with every branch's joint pattern and every candidate overlap/boundary; intersection, empty-pattern, missing-mapping and exact-half fixtures pass; input MD5 unchanged; all scripts parse.
+Next: predeclare clinically coherent treatment-mechanism/subtype seed cohorts before rerunning any fallback; inspect coverage and avoid choosing subsets by resulting hit counts. Keep full-cohort null/coverage results. Chemistry and other model prerequisites remain pending.

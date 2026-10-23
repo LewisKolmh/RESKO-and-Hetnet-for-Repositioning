@@ -22,6 +22,7 @@ counts and limitations. The complete RESKO model and final ranking are unfinishe
 | 22a | Acquire GO hierarchy and human GAF evidence, retaining qualifiers, references and protein forms |
 | 22b | Acquire current DO hierarchy and audit/version the available compiled human gene-context snapshot |
 | 22c | Join ontology annotations to inventory proteins and preserve evidence/source strata |
+| 23a | Disease-wise SIDER-only joint-pattern baseline, threshold sensitivities and explicit coverage limits |
 
 The existing inventory is an integration/review cohort, not a completed
 paper-matched candidate ranking. The disease-wise SIDER joint-pattern baseline,
@@ -63,3 +64,5 @@ GAF anchor verification, ontology-ID ambiguity fixtures and feature checks. DO
 compiled-context provenance limits are in `config/DO_annotation_source_policy.csv`;
 current raw Alliance gene annotations remain an acquisition gap. Neither ontology
 annotation nor missing annotation is a binding-activity result.
+
+After 23a, run `scripts/helpers/validate_disease_SIDER_baseline.R`. No current full-cohort cancer pattern is assessable; covered-subset results do not meet the five-term flowchart minimum. Do not promote the two-term ovarian review queue to a final shortlist.
