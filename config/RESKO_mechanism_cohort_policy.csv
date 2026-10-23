@@ -1,0 +1,12 @@
+parameter,value
+adaptation,mechanism-stratified primary cancer seeds; not original paper fallback
+cohort_formation,all declared classes crossed with each seed disease; no subset optimisation
+minimum_independent_profiles,2 distinct accepted SIDER flat groups; singleton coverage never a multi-drug pattern
+minimum_joint_PT,5 retained joint PT for qualifying search
+missingness,full intended class required for primary gate; incomplete covered subsets exploratory only
+pruning,top-decile types with all cutoff ties; prevalence >10%; same global SIDER universe
+seed_minimum,>=3 and >3 post-pruning PT
+candidate_boundaries,">=50% and >50%, both reported"
+known_treatments,exclude accepted primary groups and hold unresolved primary mapping leads; no identity pooling
+identity,historical flat groups require fresh identity review; known sacrosidase conflict excluded
+mechanism_limits,"broad pharmacological classes do not imply interchangeable indications, patient subtypes or identical mechanisms; ADC payloads may differ"

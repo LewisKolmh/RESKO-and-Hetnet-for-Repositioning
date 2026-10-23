@@ -1,0 +1,4 @@
+PASS: 212 branch/cohort cases independently reconstructed from raw PT sets.
+PASS: all overlaps, eligibility, distinct-profile counts, gates and known-treatment holds.
+PASS: 85 disease/seed associations and all 75 primary drugs retained, including singleton/uncovered cohorts.
+PASS: singleton, incomplete-coverage and exact-half fixtures; protected hashes unchanged; all scripts parse.

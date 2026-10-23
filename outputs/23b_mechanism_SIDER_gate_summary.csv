@@ -1,0 +1,13 @@
+branch,minimum_seed_terms,primary_gate,exploratory_covered_subset_gate,n
+prevalence_gt_0.10,3,FALSE,FALSE,47
+prevalence_gt_0.10,3,FALSE,TRUE,2
+prevalence_gt_0.10,3,TRUE,FALSE,4
+prevalence_gt_0.10,4,FALSE,FALSE,47
+prevalence_gt_0.10,4,FALSE,TRUE,2
+prevalence_gt_0.10,4,TRUE,FALSE,4
+top_decile_types,3,FALSE,FALSE,47
+top_decile_types,3,FALSE,TRUE,2
+top_decile_types,3,TRUE,FALSE,4
+top_decile_types,4,FALSE,FALSE,47
+top_decile_types,4,FALSE,TRUE,2
+top_decile_types,4,TRUE,FALSE,4
